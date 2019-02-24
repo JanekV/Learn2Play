@@ -5,10 +5,58 @@
     <e p="C:\Users\Janek\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Janek\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.1517788127.00" t="ExcludeRecursive" />
     <e p="C:\Users\Janek\RiderProjects\DistSySGit\Learn2Play" t="IncludeFlat">
+      <e p="DAL" t="IncludeRecursive">
+        <e p="AppDbContext.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DAL.csproj" t="IncludeRecursive" />
+        <e p="Migrations" t="Include">
+          <e p="20190224123157_InitialDbCreation.cs" t="Include" />
+          <e p="20190224123157_InitialDbCreation.Designer.cs" t="Include" />
+          <e p="AppDbContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DAL.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Domain" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Chord.cs" t="Include" />
+        <e p="ChordNote.cs" t="Include" />
+        <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="Folder.cs" t="Include" />
+        <e p="Identity" t="Include">
+          <e p="AppRole.cs" t="Include" />
+          <e p="AppUser.cs" t="Include" />
+        </e>
+        <e p="Instrument.cs" t="Include" />
+        <e p="Note.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Song.cs" t="Include" />
+        <e p="SongChord.cs" t="Include" />
+        <e p="SongInFolder.cs" t="Include" />
+        <e p="SongInstrument.cs" t="Include" />
+        <e p="SongKey.cs" t="Include" />
+        <e p="SongStyle.cs" t="Include" />
+        <e p="Style.cs" t="Include" />
+        <e p="Tab.cs" t="Include" />
+        <e p="TuningNote.cs" t="Include" />
+        <e p="UserFolder.cs" t="Include" />
+        <e p="UserInstrument.cs" t="Include" />
+        <e p="Video.cs" t="Include" />
+      </e>
       <e p="Learn2Play.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="WebApp" t="IncludeRecursive">
-        <e p="app.db" t="Include" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="Areas" t="Include">
@@ -21,14 +69,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
-        </e>
-        <e p="Data" t="Include">
-          <e p="ApplicationDbContext.cs" t="Include" />
-          <e p="Migrations" t="Include">
-            <e p="00000000000000_CreateIdentitySchema.cs" t="Include" />
-            <e p="00000000000000_CreateIdentitySchema.Designer.cs" t="Include" />
-            <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
-          </e>
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />

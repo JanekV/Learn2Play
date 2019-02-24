@@ -14,7 +14,11 @@
     ],
     "frameworks": {
       "netcoreapp2.2": {
-        "projectReferences": {}
+        "projectReferences": {
+          "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL\\DAL.csproj": {
+            "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL\\DAL.csproj"
+          }
+        }
       }
     },
     "warningProperties": {
@@ -37,15 +41,23 @@
           "target": "Package",
           "version": "[2.2.0, )"
         },
-        "Microsoft.EntityFrameworkCore.Sqlite": {
+        "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[2.2.1, )"
+          "version": "[2.2.2, )"
         },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
+        },
+        "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "target": "Package",
+          "version": "[2.2.2, )"
+        },
+        "Pomelo.EntityFrameworkCore.MySql": {
+          "target": "Package",
+          "version": "[2.2.0, )"
         }
       },
       "imports": [
