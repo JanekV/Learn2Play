@@ -7,9 +7,6 @@ namespace Domain
     {
         public int UserFolderId { get; set; }
 
-        [MaxLength(64)]
-        [MinLength(1)]
-        [Required]
         public int AppUserId { get; set; }
         public AppUser AppUser { get; set; }
 
