@@ -1,0 +1,30 @@
+@model Domain.SongStyle
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SongStyle</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Song)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Song.Author)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Style)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Style.Name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.SongStyleId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

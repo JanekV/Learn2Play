@@ -1,0 +1,53 @@
+@model IEnumerable<Domain.Video>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.YouTubeUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AuthorChannelLink)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LocalPath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Song)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.YouTubeUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AuthorChannelLink)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LocalPath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song.Author)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.VideoId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.VideoId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.VideoId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
