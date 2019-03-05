@@ -8,7 +8,7 @@ namespace Domain
     {
         public int FolderId { get; set; }
 
-        public Type FolderType { get; set; }
+        public FolderType FolderType { get; set; }
         
         [MaxLength(64)]
         [MinLength(1)]
@@ -21,7 +21,7 @@ namespace Domain
              
     }
 
-    public enum Type
+    public enum FolderType
     {
         CurrentlyLearning,
         Favorites

@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Domain\\Domain.csproj",
+    "projectUniqueName": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj",
     "projectName": "Domain",
-    "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Domain\\Domain.csproj",
-    "outputPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Domain\\obj\\",
+    "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj",
+    "outputPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

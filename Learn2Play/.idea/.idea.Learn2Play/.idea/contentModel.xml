@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Janek\.Rider2018.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\Janek\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Janek\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.1517788127.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Janek\RiderProjects\DistSySGit\Learn2Play" t="IncludeFlat">
-      <e p="DAL" t="IncludeRecursive">
-        <e p="AppDbContext.cs" t="Include" />
+    <e p="C:\Users\X\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\X\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.616467547.00" t="ExcludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2Play" t="IncludeFlat">
+      <e p="Contracts.DAL.App" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="DAL.csproj" t="IncludeRecursive" />
+        <e p="Contracts.DAL.App.csproj" t="IncludeRecursive" />
+        <e p="IAppUnitOfWork.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contracts.DAL.App.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="IChordNoteRepository.cs" t="Include" />
+          <e p="IChordRepository.cs" t="Include" />
+          <e p="IFolderRepository.cs" t="Include" />
+          <e p="IInstrumentRepository.cs" t="Include" />
+          <e p="INoteRepository.cs" t="Include" />
+          <e p="ISongChordRepository.cs" t="Include" />
+          <e p="ISongInFolderRepository.cs" t="Include" />
+          <e p="ISongInstrumentRepository.cs" t="Include" />
+          <e p="ISongKeyRepository.cs" t="Include" />
+          <e p="ISongRepository.cs" t="Include" />
+          <e p="ISongStyleRepository.cs" t="Include" />
+          <e p="IStyleRepository.cs" t="Include" />
+          <e p="ITabRepository.cs" t="Include" />
+          <e p="ITuningNoteRepository.cs" t="Include" />
+          <e p="IUserFolderRepository.cs" t="Include" />
+          <e p="IUserInstrumentRepository.cs" t="Include" />
+          <e p="IVideoRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Contracts.DAL.Base" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts.DAL.Base.csproj" t="IncludeRecursive" />
+        <e p="IUnitOfWork.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contracts.DAL.Base.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="IBaseRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DAL.App.EF" t="IncludeRecursive">
+        <e p="AppDbContext.cs" t="Include" />
+        <e p="AppUnitOfWork.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DAL.App.EF.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
           <e p="20190224123157_InitialDbCreation.cs" t="Include" />
           <e p="20190224123157_InitialDbCreation.Designer.cs" t="Include" />
@@ -17,9 +63,42 @@
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
-              <e p="DAL.AssemblyInfo.cs" t="Include" />
+              <e p="DAL.App.EF.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="ChordNoteRepository.cs" t="Include" />
+          <e p="ChordRepository.cs" t="Include" />
+          <e p="FolderRepository.cs" t="Include" />
+          <e p="InstrumentRepository.cs" t="Include" />
+          <e p="NoteRepository.cs" t="Include" />
+          <e p="SongChordRepository.cs" t="Include" />
+          <e p="SongInFolderRepository.cs" t="Include" />
+          <e p="SongInstrumentRepository.cs" t="Include" />
+          <e p="SongKeyRepository.cs" t="Include" />
+          <e p="SongRepository.cs" t="Include" />
+          <e p="SongStyleRepository.cs" t="Include" />
+          <e p="StyleRepository.cs" t="Include" />
+          <e p="TabRepository.cs" t="Include" />
+          <e p="TuningNoteRepository.cs" t="Include" />
+          <e p="UserFolderRepository.cs" t="Include" />
+          <e p="UserInstrumentRepository.cs" t="Include" />
+          <e p="VideoRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DAL.Base.EF" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DAL.Base.EF.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DAL.Base.EF.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="BaseRepository.cs" t="Include" />
         </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
