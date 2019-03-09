@@ -1,10 +1,12 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Contracts.DAL.Base.Repositories;
 using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IUserFolderRepository: IBaseRepository<UserFolder>
+    public interface IUserFolderRepository: IBaseRepositoryAsync<UserFolder>
     {
-        
+        Task<IEnumerable<UserFolder>> AllAsyncWithInclude();
     }
 }

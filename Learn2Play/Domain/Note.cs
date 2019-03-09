@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Note
+    public class Note: BaseEntity
     {
-        public int NoteId { get; set; }
         
         [MaxLength(5)]
         [MinLength(1)]

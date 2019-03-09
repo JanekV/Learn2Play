@@ -3,9 +3,8 @@ using Domain.Identity;
 
 namespace Domain
 {
-    public class UserInstrument
+    public class UserInstrument: BaseEntity
     {
-        public int UserInstrumentId { get; set; }
 
         public int AppUserId { get; set; }
         public AppUser AppUser { get; set; }

@@ -1,8 +1,7 @@
 namespace Domain
 {
-    public class SongInFolder
+    public class SongInFolder: BaseEntity
     {
-        public int SongInFolderId { get; set; }
 
         public int FolderId { get; set; }
         public Folder Folder { get; set; }

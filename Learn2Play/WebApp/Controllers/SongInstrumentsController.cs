@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +13,20 @@ namespace WebApp.Controllers
 {
     public class SongInstrumentsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongInstrumentsController(AppDbContext context)
+        public SongInstrumentsController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: SongInstruments
         public async Task<IActionResult> Index()
         {
+/*
             var appDbContext = _context.SongInstruments.Include(s => s.Instrument).Include(s => s.Song);
-            return View(await appDbContext.ToListAsync());
+*/
+            return View(await _uow.SongInstruments.AllAsyncWithInclude());
         }
 
         // GET: SongInstruments/Details/5
@@ -34,10 +37,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInstrument = await _context.SongInstruments
+            /*var songInstrument = await _context.SongInstruments
                 .Include(s => s.Instrument)
                 .Include(s => s.Song)
-                .FirstOrDefaultAsync(m => m.SongInstrumentId == id);
+                .FirstOrDefaultAsync(m => m.SongInstrumentId == id);*/
+            var songInstrument = await _uow.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
@@ -49,8 +53,10 @@ namespace WebApp.Controllers
         // GET: SongInstruments/Create
         public IActionResult Create()
         {
+            /* :TODO fix
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name");
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
+            */
             return View();
         }
 
@@ -59,16 +65,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SongInstrumentId,SongId,InstrumentId")] SongInstrument songInstrument)
+        public async Task<IActionResult> Create([Bind("Id,SongId,InstrumentId")] SongInstrument songInstrument)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(songInstrument);
-                await _context.SaveChangesAsync();
+                await _uow.SongInstruments.AddAsync(songInstrument);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", songInstrument.InstrumentId);
+            /*ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", songInstrument.InstrumentId);
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInstrument.SongId);
+            */
             return View(songInstrument);
         }
 
@@ -80,13 +87,15 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInstrument = await _context.SongInstruments.FindAsync(id);
+            var songInstrument = await _uow.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
             }
+            /*
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", songInstrument.InstrumentId);
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInstrument.SongId);
+            */
             return View(songInstrument);
         }
 
@@ -95,35 +104,23 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SongInstrumentId,SongId,InstrumentId")] SongInstrument songInstrument)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,SongId,InstrumentId")] SongInstrument songInstrument)
         {
-            if (id != songInstrument.SongInstrumentId)
+            if (id != songInstrument.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(songInstrument);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SongInstrumentExists(songInstrument.SongInstrumentId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.SongInstruments.Update(songInstrument);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            /*
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", songInstrument.InstrumentId);
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInstrument.SongId);
+            */
             return View(songInstrument);
         }
 
@@ -135,10 +132,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInstrument = await _context.SongInstruments
+            /*var songInstrument = await _context.SongInstruments
                 .Include(s => s.Instrument)
                 .Include(s => s.Song)
-                .FirstOrDefaultAsync(m => m.SongInstrumentId == id);
+                .FirstOrDefaultAsync(m => m.SongInstrumentId == id);*/
+            var songInstrument = await _uow.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
@@ -152,15 +150,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var songInstrument = await _context.SongInstruments.FindAsync(id);
-            _context.SongInstruments.Remove(songInstrument);
-            await _context.SaveChangesAsync();
+            _uow.SongInstruments.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool SongInstrumentExists(int id)
-        {
-            return _context.SongInstruments.Any(e => e.SongInstrumentId == id);
         }
     }
 }

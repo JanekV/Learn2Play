@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Chord
+    public class Chord: BaseEntity
     {
-        public int ChordId { get; set; }
         
         [MaxLength(10)]
         [MinLength(1)]

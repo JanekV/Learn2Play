@@ -3,9 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class SongKey
+    public class SongKey: BaseEntity
     {
-        public int SongKeyId { get; set; }
 
         [MaxLength(1000)]
         [MinLength(1)]

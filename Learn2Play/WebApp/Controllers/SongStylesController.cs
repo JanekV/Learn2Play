@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +13,20 @@ namespace WebApp.Controllers
 {
     public class SongStylesController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongStylesController(AppDbContext context)
+        public SongStylesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: SongStyles
         public async Task<IActionResult> Index()
         {
+/*
             var appDbContext = _context.SongStyles.Include(s => s.Song).Include(s => s.Style);
-            return View(await appDbContext.ToListAsync());
+*/
+            return View(await _uow.SongStyles.AllAsyncWithInclude());
         }
 
         // GET: SongStyles/Details/5
@@ -34,10 +37,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songStyle = await _context.SongStyles
+            /*var songStyle = await _context.SongStyles
                 .Include(s => s.Song)
                 .Include(s => s.Style)
-                .FirstOrDefaultAsync(m => m.SongStyleId == id);
+                .FirstOrDefaultAsync(m => m.SongStyleId == id);*/
+            var songStyle = await _uow.SongStyles.FindAsync(id);
             if (songStyle == null)
             {
                 return NotFound();
@@ -49,8 +53,9 @@ namespace WebApp.Controllers
         // GET: SongStyles/Create
         public IActionResult Create()
         {
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
+            /*ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
             ViewData["StyleId"] = new SelectList(_context.Styles, "StyleId", "Name");
+            */
             return View();
         }
 
@@ -59,16 +64,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SongStyleId,SongId,StyleId")] SongStyle songStyle)
+        public async Task<IActionResult> Create([Bind("Id,SongId,StyleId")] SongStyle songStyle)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(songStyle);
-                await _context.SaveChangesAsync();
+                await _uow.SongStyles.AddAsync(songStyle);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songStyle.SongId);
+            /*ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songStyle.SongId);
             ViewData["StyleId"] = new SelectList(_context.Styles, "StyleId", "Name", songStyle.StyleId);
+            */
             return View(songStyle);
         }
 
@@ -80,13 +86,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songStyle = await _context.SongStyles.FindAsync(id);
+            var songStyle = await _uow.SongStyles.FindAsync(id);
             if (songStyle == null)
             {
                 return NotFound();
             }
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songStyle.SongId);
+            /*ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songStyle.SongId);
             ViewData["StyleId"] = new SelectList(_context.Styles, "StyleId", "Name", songStyle.StyleId);
+            */
             return View(songStyle);
         }
 
@@ -95,35 +102,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SongStyleId,SongId,StyleId")] SongStyle songStyle)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,SongId,StyleId")] SongStyle songStyle)
         {
-            if (id != songStyle.SongStyleId)
+            if (id != songStyle.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(songStyle);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SongStyleExists(songStyle.SongStyleId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.SongStyles.Update(songStyle);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songStyle.SongId);
+            /*ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songStyle.SongId);
             ViewData["StyleId"] = new SelectList(_context.Styles, "StyleId", "Name", songStyle.StyleId);
+            */
             return View(songStyle);
         }
 
@@ -135,10 +129,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songStyle = await _context.SongStyles
+            /*var songStyle = await _context.SongStyles
                 .Include(s => s.Song)
                 .Include(s => s.Style)
-                .FirstOrDefaultAsync(m => m.SongStyleId == id);
+                .FirstOrDefaultAsync(m => m.SongStyleId == id);*/
+            var songStyle = await _uow.SongStyles.FindAsync(id);
             if (songStyle == null)
             {
                 return NotFound();
@@ -152,15 +147,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var songStyle = await _context.SongStyles.FindAsync(id);
-            _context.SongStyles.Remove(songStyle);
-            await _context.SaveChangesAsync();
+            _uow.SongStyles.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool SongStyleExists(int id)
-        {
-            return _context.SongStyles.Any(e => e.SongStyleId == id);
         }
     }
 }

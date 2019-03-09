@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Contracts.DAL.Base;
 using Domain;
 using Domain.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -7,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL
 {
-    public class AppDbContext: IdentityDbContext<AppUser, AppRole, int>
+    public class AppDbContext: IdentityDbContext<AppUser, AppRole, int>, IDataContext
     {
         public DbSet<Folder> Folders { get; set; }
         public DbSet<Song> Songs { get; set; }

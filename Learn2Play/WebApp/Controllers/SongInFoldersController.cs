@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +13,21 @@ namespace WebApp.Controllers
 {
     public class SongInFoldersController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongInFoldersController(AppDbContext context)
+        public SongInFoldersController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: SongInFolders
         public async Task<IActionResult> Index()
         {
+            /*
             var appDbContext = _context.SongInFolders.Include(s => s.Folder).Include(s => s.Song);
             return View(await appDbContext.ToListAsync());
+            */
+            return View(await _uow.SongInFolders.AllAsyncWithInclude());
         }
 
         // GET: SongInFolders/Details/5
@@ -34,10 +38,13 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
+            /*
             var songInFolder = await _context.SongInFolders
                 .Include(s => s.Folder)
                 .Include(s => s.Song)
                 .FirstOrDefaultAsync(m => m.SongInFolderId == id);
+            */
+            var songInFolder = await _uow.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
@@ -49,8 +56,10 @@ namespace WebApp.Controllers
         // GET: SongInFolders/Create
         public IActionResult Create()
         {
+            /* :TODO fix this somehow pls future me
             ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name");
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
+            */
             return View();
         }
 
@@ -59,16 +68,18 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SongInFolderId,FolderId,SongId")] SongInFolder songInFolder)
+        public async Task<IActionResult> Create([Bind("Id,FolderId,SongId")] SongInFolder songInFolder)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(songInFolder);
-                await _context.SaveChangesAsync();
+                await _uow.SongInFolders.AddAsync(songInFolder);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            /* :TODO fix this somehow pls future me
             ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name", songInFolder.FolderId);
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInFolder.SongId);
+            */
             return View(songInFolder);
         }
 
@@ -80,13 +91,15 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInFolder = await _context.SongInFolders.FindAsync(id);
+            var songInFolder = await _uow.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
             }
+            /* :TODO fix this somehow pls future me
             ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name", songInFolder.FolderId);
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInFolder.SongId);
+            */
             return View(songInFolder);
         }
 
@@ -95,35 +108,23 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SongInFolderId,FolderId,SongId")] SongInFolder songInFolder)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FolderId,SongId")] SongInFolder songInFolder)
         {
-            if (id != songInFolder.SongInFolderId)
+            if (id != songInFolder.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(songInFolder);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SongInFolderExists(songInFolder.SongInFolderId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.SongInFolders.Update(songInFolder);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            /* :TODO fix this somehow pls future me
             ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name", songInFolder.FolderId);
             ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInFolder.SongId);
+            */
             return View(songInFolder);
         }
 
@@ -135,10 +136,13 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
+            /*
             var songInFolder = await _context.SongInFolders
                 .Include(s => s.Folder)
                 .Include(s => s.Song)
                 .FirstOrDefaultAsync(m => m.SongInFolderId == id);
+            */
+            var songInFolder = await _uow.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
@@ -152,15 +156,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var songInFolder = await _context.SongInFolders.FindAsync(id);
-            _context.SongInFolders.Remove(songInFolder);
-            await _context.SaveChangesAsync();
+            _uow.SongInFolders.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool SongInFolderExists(int id)
-        {
-            return _context.SongInFolders.Any(e => e.SongInFolderId == id);
         }
     }
 }

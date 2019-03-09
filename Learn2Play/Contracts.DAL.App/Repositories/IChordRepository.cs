@@ -3,7 +3,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IChordRepository: IBaseRepository<Chord>
+    public interface IChordRepository: IBaseRepositoryAsync<Chord>
     {
         
     }

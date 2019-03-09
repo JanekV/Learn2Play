@@ -2,19 +2,21 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.Base;
 using Contracts.DAL.Base.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Base.EF.Repositories
 {
-    public class BaseRepository<TEntity> : IBaseRepository<TEntity> where TEntity : class, new()
+    public class BaseRepository<TEntity> : IBaseRepositoryAsync<TEntity> 
+        where TEntity : class, IBaseEntity, new()
     {
         protected readonly DbContext RepositoryDbContext;
         protected readonly DbSet<TEntity> RepositoryDbSet;
 
-        public BaseRepository(DbContext dbContext)
+        public BaseRepository(IDataContext dataContext)
         {
-            RepositoryDbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+            RepositoryDbContext = (dataContext as DbContext) ?? throw new ArgumentNullException(nameof(dataContext));
             RepositoryDbSet = RepositoryDbContext.Set<TEntity>();
         }
 

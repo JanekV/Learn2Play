@@ -2,28 +2,34 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using Domain.Identity;
 
 namespace WebApp.Controllers
 {
     public class ChordNotesController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public ChordNotesController(AppDbContext context)
+        public ChordNotesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: ChordNotes
         public async Task<IActionResult> Index()
         {
+            //Chord notes with included Chord and Note Entities
+            /*
             var appDbContext = _context.ChordNotes.Include(c => c.Chord).Include(c => c.Note);
             return View(await appDbContext.ToListAsync());
+            */
+            return View(await _uow.ChordNotes.AllAsyncWithInclude());
         }
 
         // GET: ChordNotes/Details/5
@@ -34,10 +40,13 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
+            /* :TODO maybe include is needed?
             var chordNote = await _context.ChordNotes
                 .Include(c => c.Chord)
                 .Include(c => c.Note)
                 .FirstOrDefaultAsync(m => m.ChordNoteId == id);
+            */
+            var chordNote = await _uow.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
@@ -49,8 +58,6 @@ namespace WebApp.Controllers
         // GET: ChordNotes/Create
         public IActionResult Create()
         {
-            ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name");
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name");
             return View();
         }
 
@@ -59,16 +66,16 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChordNoteId,ChordId,NoteId")] ChordNote chordNote)
+        public async Task<IActionResult> Create([Bind("Id,ChordId,NoteId")] ChordNote chordNote)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(chordNote);
-                await _context.SaveChangesAsync();
+                await _uow.ChordNotes.AddAsync(chordNote);
+                await _uow.SaveChangesAsync();
+                
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name", chordNote.ChordId);
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", chordNote.NoteId);
+            
             return View(chordNote);
         }
 
@@ -80,13 +87,15 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chordNote = await _context.ChordNotes.FindAsync(id);
+            var chordNote = await _uow.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
             }
+            /* :TODO fix this somehow pls future me
             ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name", chordNote.ChordId);
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", chordNote.NoteId);
+            */
             return View(chordNote);
         }
 
@@ -95,35 +104,25 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ChordNoteId,ChordId,NoteId")] ChordNote chordNote)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ChordId,NoteId")] ChordNote chordNote)
         {
-            if (id != chordNote.ChordNoteId)
+            if (id != chordNote.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(chordNote);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!ChordNoteExists(chordNote.ChordNoteId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.ChordNotes.Update(chordNote);
+                await _uow.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
+            /* :TODO fix this somehow pls future me
             ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name", chordNote.ChordId);
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", chordNote.NoteId);
+            */
+
             return View(chordNote);
         }
 
@@ -135,10 +134,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chordNote = await _context.ChordNotes
-                .Include(c => c.Chord)
-                .Include(c => c.Note)
-                .FirstOrDefaultAsync(m => m.ChordNoteId == id);
+            var chordNote = await _uow.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
@@ -152,15 +148,10 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var chordNote = await _context.ChordNotes.FindAsync(id);
-            _context.ChordNotes.Remove(chordNote);
-            await _context.SaveChangesAsync();
+            _uow.ChordNotes.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ChordNoteExists(int id)
-        {
-            return _context.ChordNotes.Any(e => e.ChordNoteId == id);
-        }
     }
 }

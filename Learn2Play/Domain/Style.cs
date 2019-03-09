@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Style
+    public class Style: BaseEntity
     {
-        public int StyleId { get; set; }
 
         [MaxLength(64)]
         [MinLength(1)]

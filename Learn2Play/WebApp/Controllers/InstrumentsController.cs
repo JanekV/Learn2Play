@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,17 +13,17 @@ namespace WebApp.Controllers
 {
     public class InstrumentsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public InstrumentsController(AppDbContext context)
+        public InstrumentsController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: Instruments
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Instruments.ToListAsync());
+            return View(await _uow.Instruments.AllAsync());
         }
 
         // GET: Instruments/Details/5
@@ -33,8 +34,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var instrument = await _context.Instruments
-                .FirstOrDefaultAsync(m => m.InstrumentId == id);
+            var instrument = await _uow.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
@@ -54,12 +54,12 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("InstrumentId,Name,Description")] Instrument instrument)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Instrument instrument)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(instrument);
-                await _context.SaveChangesAsync();
+                await _uow.Instruments.AddAsync(instrument);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(instrument);
@@ -73,7 +73,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var instrument = await _context.Instruments.FindAsync(id);
+            var instrument = await _uow.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
@@ -86,31 +86,18 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("InstrumentId,Name,Description")] Instrument instrument)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Instrument instrument)
         {
-            if (id != instrument.InstrumentId)
+            if (id != instrument.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(instrument);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!InstrumentExists(instrument.InstrumentId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+
+                    _uow.Instruments.Update(instrument);
+                    await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(instrument);
@@ -124,8 +111,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var instrument = await _context.Instruments
-                .FirstOrDefaultAsync(m => m.InstrumentId == id);
+            var instrument = await _uow.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
@@ -139,15 +125,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var instrument = await _context.Instruments.FindAsync(id);
-            _context.Instruments.Remove(instrument);
-            await _context.SaveChangesAsync();
+            _uow.Instruments.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool InstrumentExists(int id)
-        {
-            return _context.Instruments.Any(e => e.InstrumentId == id);
         }
     }
 }

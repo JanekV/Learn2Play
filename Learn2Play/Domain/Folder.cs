@@ -4,9 +4,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Folder
+    public class Folder: BaseEntity
     {
-        public int FolderId { get; set; }
 
         public FolderType FolderType { get; set; }
         

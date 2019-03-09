@@ -1,8 +1,7 @@
 namespace Domain
 {
-    public class ChordNote
+    public class ChordNote: BaseEntity
     {
-        public int ChordNoteId { get; set; }
 
         public int ChordId { get; set; }
         public Chord Chord { get; set; }

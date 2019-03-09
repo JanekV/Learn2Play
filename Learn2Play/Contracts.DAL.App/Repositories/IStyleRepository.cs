@@ -3,7 +3,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IStyleRepository: IBaseRepository<Style>
+    public interface IStyleRepository: IBaseRepositoryAsync<Style>
     {
         
     }

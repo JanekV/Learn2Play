@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class TuningNote
+    public class TuningNote: BaseEntity
     {
-        public int TuningNoteId { get; set; }
 
         public int InstrumentId { get; set; }
         public Instrument Instrument { get; set; }

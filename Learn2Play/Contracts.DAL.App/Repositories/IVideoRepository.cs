@@ -3,7 +3,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IVideoRepository : IBaseRepository<Video>
+    public interface IVideoRepository : IBaseRepositoryAsync<Video>
     {
         
     }

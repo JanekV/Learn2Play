@@ -4,9 +4,8 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Domain
 {
-    public class Song
+    public class Song: BaseEntity
     {
-        public int SongId { get; set; }
 
         [MaxLength(64)]
         [MinLength(1)]

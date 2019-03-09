@@ -1,8 +1,7 @@
 namespace Domain
 {
-    public class SongInstrument
+    public class SongInstrument: BaseEntity
     {
-        public int SongInstrumentId { get; set; }
 
         public int SongId { get; set; }
         public Song Song { get; set; }

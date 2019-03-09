@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +13,20 @@ namespace WebApp.Controllers
 {
     public class SongKeysController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongKeysController(AppDbContext context)
+        public SongKeysController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: SongKeys
         public async Task<IActionResult> Index()
         {
+/*
             var appDbContext = _context.SongKeys.Include(s => s.Note);
-            return View(await appDbContext.ToListAsync());
+*/
+            return View(await _uow.SongKeys.AllAsyncWithInclude());
         }
 
         // GET: SongKeys/Details/5
@@ -34,9 +37,10 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songKey = await _context.SongKeys
+            /*var songKey = await _context.SongKeys
                 .Include(s => s.Note)
-                .FirstOrDefaultAsync(m => m.SongKeyId == id);
+                .FirstOrDefaultAsync(m => m.SongKeyId == id);*/
+            var songKey = await _uow.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
@@ -48,7 +52,9 @@ namespace WebApp.Controllers
         // GET: SongKeys/Create
         public IActionResult Create()
         {
+/*
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name");
+*/
             return View();
         }
 
@@ -57,15 +63,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SongKeyId,Description,NoteId")] SongKey songKey)
+        public async Task<IActionResult> Create([Bind("Id,Description,NoteId")] SongKey songKey)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(songKey);
-                await _context.SaveChangesAsync();
+                await _uow.SongKeys.AddAsync(songKey);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+/*
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", songKey.NoteId);
+*/
             return View(songKey);
         }
 
@@ -77,12 +85,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songKey = await _context.SongKeys.FindAsync(id);
+            var songKey = await _uow.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
             }
+/*
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", songKey.NoteId);
+*/
             return View(songKey);
         }
 
@@ -91,34 +101,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SongKeyId,Description,NoteId")] SongKey songKey)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Description,NoteId")] SongKey songKey)
         {
-            if (id != songKey.SongKeyId)
+            if (id != songKey.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(songKey);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!SongKeyExists(songKey.SongKeyId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.SongKeys.Update(songKey);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+/*
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", songKey.NoteId);
+*/
             return View(songKey);
         }
 
@@ -130,9 +128,10 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songKey = await _context.SongKeys
+            /*var songKey = await _context.SongKeys
                 .Include(s => s.Note)
-                .FirstOrDefaultAsync(m => m.SongKeyId == id);
+                .FirstOrDefaultAsync(m => m.SongKeyId == id);*/
+            var songKey = await _uow.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
@@ -146,15 +145,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var songKey = await _context.SongKeys.FindAsync(id);
-            _context.SongKeys.Remove(songKey);
-            await _context.SaveChangesAsync();
+            _uow.SongKeys.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool SongKeyExists(int id)
-        {
-            return _context.SongKeys.Any(e => e.SongKeyId == id);
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,17 +13,17 @@ namespace WebApp.Controllers
 {
     public class NotesController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public NotesController(AppDbContext context)
+        public NotesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: Notes
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Notes.ToListAsync());
+            return View(await _uow.Notes.AllAsync());
         }
 
         // GET: Notes/Details/5
@@ -33,8 +34,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var note = await _context.Notes
-                .FirstOrDefaultAsync(m => m.NoteId == id);
+            var note = await _uow.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -54,12 +54,12 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("NoteId,Name")] Note note)
+        public async Task<IActionResult> Create([Bind("Id,Name")] Note note)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(note);
-                await _context.SaveChangesAsync();
+                await _uow.Notes.AddAsync(note);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(note);
@@ -73,7 +73,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _uow.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -86,31 +86,18 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("NoteId,Name")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Note note)
         {
-            if (id != note.NoteId)
+            if (id != note.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(note);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!NoteExists(note.NoteId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                    _uow.Notes.Update(note);
+                    await _uow.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
             return View(note);
@@ -124,8 +111,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var note = await _context.Notes
-                .FirstOrDefaultAsync(m => m.NoteId == id);
+            var note = await _uow.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -139,15 +125,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var note = await _context.Notes.FindAsync(id);
-            _context.Notes.Remove(note);
-            await _context.SaveChangesAsync();
+            _uow.Notes.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool NoteExists(int id)
-        {
-            return _context.Notes.Any(e => e.NoteId == id);
         }
     }
 }

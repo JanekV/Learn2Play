@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Instrument
+    public class Instrument: BaseEntity
     {
-        public int InstrumentId { get; set; }
 
         [MaxLength(64)]
         [MinLength(1)]

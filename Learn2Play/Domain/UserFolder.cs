@@ -3,9 +3,8 @@ using Domain.Identity;
 
 namespace Domain
 {
-    public class UserFolder
+    public class UserFolder: BaseEntity
     {
-        public int UserFolderId { get; set; }
 
         public int AppUserId { get; set; }
         public AppUser AppUser { get; set; }

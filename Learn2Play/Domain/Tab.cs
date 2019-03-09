@@ -2,9 +2,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Tab
+    public class Tab: BaseEntity
     {
-        public int TabId { get; set; }
 
         [Required]
         public SongPart SongPart { get; set; }

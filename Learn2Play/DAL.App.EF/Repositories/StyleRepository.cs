@@ -1,4 +1,5 @@
 using Contracts.DAL.App.Repositories;
+using Contracts.DAL.Base;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
@@ -7,7 +8,7 @@ namespace DAL.Repositories
 {
     public class StyleRepository: BaseRepository<Style>, IStyleRepository
     {
-        public StyleRepository(DbContext dbContext) : base(dbContext)
+        public StyleRepository(IDataContext dataContext) : base(dataContext)
         {
         }
     }

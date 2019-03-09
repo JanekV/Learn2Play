@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +13,20 @@ namespace WebApp.Controllers
 {
     public class UserInstrumentsController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public UserInstrumentsController(AppDbContext context)
+        public UserInstrumentsController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: UserInstruments
         public async Task<IActionResult> Index()
         {
+/*
             var appDbContext = _context.UserInstruments.Include(u => u.AppUser).Include(u => u.Instrument);
-            return View(await appDbContext.ToListAsync());
+*/
+            return View(await _uow.UserInstruments.AllAsyncWithInclude());
         }
 
         // GET: UserInstruments/Details/5
@@ -34,10 +37,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var userInstrument = await _context.UserInstruments
+            /*var userInstrument = await _context.UserInstruments
                 .Include(u => u.AppUser)
                 .Include(u => u.Instrument)
-                .FirstOrDefaultAsync(m => m.UserInstrumentId == id);
+                .FirstOrDefaultAsync(m => m.UserInstrumentId == id);*/
+            var userInstrument = await _uow.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
@@ -49,8 +53,9 @@ namespace WebApp.Controllers
         // GET: UserInstruments/Create
         public IActionResult Create()
         {
-            ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id");
+            /*ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id");
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name");
+            */
             return View();
         }
 
@@ -59,16 +64,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("UserInstrumentId,AppUserId,InstrumentId,Comment")] UserInstrument userInstrument)
+        public async Task<IActionResult> Create([Bind("Id,AppUserId,InstrumentId,Comment")] UserInstrument userInstrument)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(userInstrument);
-                await _context.SaveChangesAsync();
+               await _uow.UserInstruments.AddAsync(userInstrument);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
+            /*ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", userInstrument.InstrumentId);
+            */
             return View(userInstrument);
         }
 
@@ -80,13 +86,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var userInstrument = await _context.UserInstruments.FindAsync(id);
+            var userInstrument = await _uow.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
             }
-            ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
+            /*ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", userInstrument.InstrumentId);
+            */
             return View(userInstrument);
         }
 
@@ -95,35 +102,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("UserInstrumentId,AppUserId,InstrumentId,Comment")] UserInstrument userInstrument)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,AppUserId,InstrumentId,Comment")] UserInstrument userInstrument)
         {
-            if (id != userInstrument.UserInstrumentId)
+            if (id != userInstrument.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(userInstrument);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!UserInstrumentExists(userInstrument.UserInstrumentId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.UserInstruments.Update(userInstrument);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
+            /*ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
             ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", userInstrument.InstrumentId);
+            */
             return View(userInstrument);
         }
 
@@ -135,10 +129,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var userInstrument = await _context.UserInstruments
+            /*var userInstrument = await _context.UserInstruments
                 .Include(u => u.AppUser)
                 .Include(u => u.Instrument)
-                .FirstOrDefaultAsync(m => m.UserInstrumentId == id);
+                .FirstOrDefaultAsync(m => m.UserInstrumentId == id);*/
+            var userInstrument = await _uow.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
@@ -152,15 +147,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var userInstrument = await _context.UserInstruments.FindAsync(id);
-            _context.UserInstruments.Remove(userInstrument);
-            await _context.SaveChangesAsync();
+            _uow.UserInstruments.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool UserInstrumentExists(int id)
-        {
-            return _context.UserInstruments.Any(e => e.UserInstrumentId == id);
         }
     }
 }

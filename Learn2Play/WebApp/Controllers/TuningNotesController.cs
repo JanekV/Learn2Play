@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,18 +13,20 @@ namespace WebApp.Controllers
 {
     public class TuningNotesController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public TuningNotesController(AppDbContext context)
+        public TuningNotesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: TuningNotes
         public async Task<IActionResult> Index()
         {
+/*
             var appDbContext = _context.TuningNotes.Include(t => t.Instrument).Include(t => t.Note);
-            return View(await appDbContext.ToListAsync());
+*/
+            return View(await _uow.TuningNotes.AllAsyncWithInclude());
         }
 
         // GET: TuningNotes/Details/5
@@ -34,10 +37,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tuningNote = await _context.TuningNotes
+            /*var tuningNote = await _context.TuningNotes
                 .Include(t => t.Instrument)
                 .Include(t => t.Note)
-                .FirstOrDefaultAsync(m => m.TuningNoteId == id);
+                .FirstOrDefaultAsync(m => m.TuningNoteId == id);*/
+            var tuningNote = await _uow.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
@@ -49,8 +53,9 @@ namespace WebApp.Controllers
         // GET: TuningNotes/Create
         public IActionResult Create()
         {
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name");
+            /*ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name");
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name");
+            */
             return View();
         }
 
@@ -59,16 +64,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TuningNoteId,InstrumentId,NoteId,Name")] TuningNote tuningNote)
+        public async Task<IActionResult> Create([Bind("Id,InstrumentId,NoteId,Name")] TuningNote tuningNote)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(tuningNote);
-                await _context.SaveChangesAsync();
+                await _uow.TuningNotes.AddAsync()(tuningNote);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", tuningNote.InstrumentId);
+            /*ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", tuningNote.InstrumentId);
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", tuningNote.NoteId);
+            */
             return View(tuningNote);
         }
 
@@ -80,13 +86,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tuningNote = await _context.TuningNotes.FindAsync(id);
+            var tuningNote = await _uow.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
             }
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", tuningNote.InstrumentId);
+            /*ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", tuningNote.InstrumentId);
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", tuningNote.NoteId);
+            */
             return View(tuningNote);
         }
 
@@ -95,35 +102,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TuningNoteId,InstrumentId,NoteId,Name")] TuningNote tuningNote)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,InstrumentId,NoteId,Name")] TuningNote tuningNote)
         {
-            if (id != tuningNote.TuningNoteId)
+            if (id != tuningNote.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(tuningNote);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TuningNoteExists(tuningNote.TuningNoteId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.TuningNotes.Update(tuningNote);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", tuningNote.InstrumentId);
+            /*ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", tuningNote.InstrumentId);
             ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", tuningNote.NoteId);
+            */
             return View(tuningNote);
         }
 
@@ -135,10 +129,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tuningNote = await _context.TuningNotes
+            /*var tuningNote = await _context.TuningNotes
                 .Include(t => t.Instrument)
                 .Include(t => t.Note)
-                .FirstOrDefaultAsync(m => m.TuningNoteId == id);
+                .FirstOrDefaultAsync(m => m.TuningNoteId == id);*/
+            var tuningNote = await _uow.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
@@ -152,15 +147,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var tuningNote = await _context.TuningNotes.FindAsync(id);
-            _context.TuningNotes.Remove(tuningNote);
-            await _context.SaveChangesAsync();
+            _uow.TuningNotes.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool TuningNoteExists(int id)
-        {
-            return _context.TuningNotes.Any(e => e.TuningNoteId == id);
         }
     }
 }

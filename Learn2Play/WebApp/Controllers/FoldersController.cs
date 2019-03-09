@@ -2,27 +2,29 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using Domain.Identity;
 
 namespace WebApp.Controllers
 {
     public class FoldersController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public FoldersController(AppDbContext context)
+        public FoldersController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: Folders
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Folders.ToListAsync());
+            return View(await _uow.Folders.AllAsync());
         }
 
         // GET: Folders/Details/5
@@ -33,8 +35,8 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var folder = await _context.Folders
-                .FirstOrDefaultAsync(m => m.FolderId == id);
+            var folder = await _uow.Folders.FindAsync(id);
+                
             if (folder == null)
             {
                 return NotFound();
@@ -54,12 +56,12 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("FolderId,FolderType,Name,Comment")] Folder folder)
+        public async Task<IActionResult> Create([Bind("Id,FolderType,Name,Comment")] Folder folder)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(folder);
-                await _context.SaveChangesAsync();
+                await _uow.Folders.AddAsync(folder);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(folder);
@@ -73,7 +75,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var folder = await _context.Folders.FindAsync(id);
+            var folder = await _uow.Folders.FindAsync(id);
             if (folder == null)
             {
                 return NotFound();
@@ -86,31 +88,19 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("FolderId,FolderType,Name,Comment")] Folder folder)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,FolderType,Name,Comment")] Folder folder)
         {
-            if (id != folder.FolderId)
+            if (id != folder.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(folder);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!FolderExists(folder.FolderId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+
+                _uow.Folders.Update(folder);
+                await _uow.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
             return View(folder);
@@ -124,8 +114,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var folder = await _context.Folders
-                .FirstOrDefaultAsync(m => m.FolderId == id);
+            var folder = await _uow.Folders.FindAsync(id);
             if (folder == null)
             {
                 return NotFound();
@@ -139,15 +128,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var folder = await _context.Folders.FindAsync(id);
-            _context.Folders.Remove(folder);
-            await _context.SaveChangesAsync();
+            _uow.Folders.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool FolderExists(int id)
-        {
-            return _context.Folders.Any(e => e.FolderId == id);
         }
     }
 }

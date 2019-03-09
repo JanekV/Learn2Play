@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -12,17 +13,17 @@ namespace WebApp.Controllers
 {
     public class StylesController : Controller
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public StylesController(AppDbContext context)
+        public StylesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: Styles
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Styles.ToListAsync());
+            return View(await _uow.Styles.AllAsync());
         }
 
         // GET: Styles/Details/5
@@ -33,8 +34,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _context.Styles
-                .FirstOrDefaultAsync(m => m.StyleId == id);
+            var style = await _uow.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
@@ -54,12 +54,12 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("StyleId,Name,Description")] Style style)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description")] Style style)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(style);
-                await _context.SaveChangesAsync();
+                await _uow.Styles.AddAsync(style);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(style);
@@ -73,7 +73,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _context.Styles.FindAsync(id);
+            var style = await _uow.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
@@ -86,31 +86,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("StyleId,Name,Description")] Style style)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description")] Style style)
         {
-            if (id != style.StyleId)
+            if (id != style.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(style);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!StyleExists(style.StyleId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.Styles.Update(style);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(style);
@@ -124,8 +110,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _context.Styles
-                .FirstOrDefaultAsync(m => m.StyleId == id);
+            var style = await _uow.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
@@ -139,15 +124,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var style = await _context.Styles.FindAsync(id);
-            _context.Styles.Remove(style);
-            await _context.SaveChangesAsync();
+            _uow.Styles.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool StyleExists(int id)
-        {
-            return _context.Styles.Any(e => e.StyleId == id);
         }
     }
 }

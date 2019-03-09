@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Contracts.DAL.App;
 using Contracts.DAL.App.Repositories;
+using Contracts.DAL.Base;
+using Contracts.DAL.Base.Helpers;
 using Contracts.DAL.Base.Repositories;
 using DAL.Base.EF.Repositories;
 using DAL.Repositories;
@@ -12,90 +14,53 @@ namespace DAL
     public class AppUnitOfWork: IAppUnitOfWork
     {
         private readonly AppDbContext _appDbContext;
-        
-        // repo cache
-        private readonly Dictionary<Type, object> _repositoryCache = new Dictionary<Type, object>();
+
+        private readonly IRepositoryProvider _repositoryProvider;
 
         public IChordRepository Chords =>
-            GetOrCreateRepository(dataContext => new ChordRepository(dataContext));
-        
+            _repositoryProvider.GetRepository<IChordRepository>();
         public IChordNoteRepository ChordNotes =>
-            GetOrCreateRepository(dataContext => new ChordNoteRepository(dataContext));
-
+            _repositoryProvider.GetRepository<IChordNoteRepository>();
         public IFolderRepository Folders =>
-            GetOrCreateRepository(dataContext => new FolderRepository(dataContext));
-
+            _repositoryProvider.GetRepository<IFolderRepository>();
         public IInstrumentRepository Instruments =>
-            GetOrCreateRepository(dataContext => new InstrumentRepository(dataContext));
-
+            _repositoryProvider.GetRepository<IInstrumentRepository>();
         public INoteRepository Notes =>
-            GetOrCreateRepository(dataContext => new NoteRepository(dataContext));
-
+            _repositoryProvider.GetRepository<INoteRepository>();
         public ISongRepository Songs =>
-            GetOrCreateRepository(dataContext => new SongRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ISongRepository>();
         public ISongChordRepository SongChords =>
-            GetOrCreateRepository(dataContext => new SongChordRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ISongChordRepository>();
         public ISongInFolderRepository SongInFolders =>
-            GetOrCreateRepository(dataContext => new SongInFolderRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ISongInFolderRepository>();
         public ISongInstrumentRepository SongInstruments =>
-            GetOrCreateRepository(dataContext => new SongInstrumentRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ISongInstrumentRepository>();
         public ISongKeyRepository SongKeys =>
-            GetOrCreateRepository(dataContext => new SongKeyRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ISongKeyRepository>();
         public ISongStyleRepository SongStyles =>
-            GetOrCreateRepository(dataContext => new SongStyleRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ISongStyleRepository>();
         public IStyleRepository Styles =>
-            GetOrCreateRepository(dataContext => new StyleRepository(dataContext));
-
+            _repositoryProvider.GetRepository<IStyleRepository>();
         public ITabRepository Tabs =>
-            GetOrCreateRepository(dataContext => new TabRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ITabRepository>();
         public ITuningNoteRepository TuningNotes =>
-            GetOrCreateRepository(dataContext => new TuningNoteRepository(dataContext));
-
+            _repositoryProvider.GetRepository<ITuningNoteRepository>();
         public IUserFolderRepository UserFolders =>
-            GetOrCreateRepository(dataContext => new UserFolderRepository(dataContext));
-
+            _repositoryProvider.GetRepository<IUserFolderRepository>();
         public IUserInstrumentRepository UserInstruments =>
-            GetOrCreateRepository(dataContext => new UserInstrumentRepository(dataContext));
-
+            _repositoryProvider.GetRepository<IUserInstrumentRepository>();
         public IVideoRepository Videos =>
-            GetOrCreateRepository(dataContext => new VideoRepository(dataContext));
-
-
-
+            _repositoryProvider.GetRepository<IVideoRepository>();
         
-        public IBaseRepository<TEntity> BaseRepository<TEntity>() where TEntity : class, new() => 
-            GetOrCreateRepository((dataContext) => new BaseRepository<TEntity>(dataContext));
+        public IBaseRepositoryAsync<TEntity> BaseRepository<TEntity>() where TEntity : class, IBaseEntity, new() => 
+            _repositoryProvider.GetRepositoryForEntity<TEntity>();
 
-        public AppUnitOfWork(AppDbContext appDbContext)
+        public AppUnitOfWork(AppDbContext appDbContext, IRepositoryProvider repositoryProvider)
         {
             _appDbContext = appDbContext;
+            _repositoryProvider = repositoryProvider;
         }
 
-        private TRepository GetOrCreateRepository<TRepository>(Func<AppDbContext, TRepository> factoryMethod)
-        {
-            // try to get repo by type from cache dictionary
-            _repositoryCache.TryGetValue(typeof(TRepository), out var repoObject);
-            if (repoObject != null)
-            {
-                // we have it, cat it to correct type and return
-                return (TRepository) repoObject;
-            }
-
-            // call the factory method to actually create the repo object
-            repoObject = factoryMethod(_appDbContext);
-            // add it to cache
-            _repositoryCache[typeof(TRepository)] = repoObject;
-            return (TRepository) repoObject;
-        }
-
-        
         public virtual int SaveChanges()
         {
             return _appDbContext.SaveChanges();
