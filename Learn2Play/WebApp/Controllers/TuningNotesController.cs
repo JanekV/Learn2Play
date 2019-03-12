@@ -68,7 +68,7 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.TuningNotes.AddAsync()(tuningNote);
+                await _uow.TuningNotes.AddAsync(tuningNote);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

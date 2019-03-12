@@ -23,8 +23,8 @@ namespace WebApp.Controllers
         // GET: Videos
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Videos.Include(v => v.Song);
-            return View(await appDbContext.ToListAsync());
+            //var appDbContext = _context.Videos.Include(v => v.Song);
+            return View(await _uow.Videos.AllAsyncWithInclude());
         }
 
         // GET: Videos/Details/5
@@ -35,9 +35,10 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var video = await _context.Videos
+            /*var video = await _context.Videos
                 .Include(v => v.Song)
-                .FirstOrDefaultAsync(m => m.VideoId == id);
+                .FirstOrDefaultAsync(m => m.VideoId == id);*/
+            var video = await _uow.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
@@ -49,7 +50,7 @@ namespace WebApp.Controllers
         // GET: Videos/Create
         public IActionResult Create()
         {
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
+            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
             return View();
         }
 
@@ -58,15 +59,15 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("VideoId,YouTubeUrl,AuthorChannelLink,LocalPath,SongId")] Video video)
+        public async Task<IActionResult> Create([Bind("Id,YouTubeUrl,AuthorChannelLink,LocalPath,SongId")] Video video)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(video);
-                await _context.SaveChangesAsync();
+                await _uow.Videos.AddAsync(video);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
+            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
             return View(video);
         }
 
@@ -78,12 +79,12 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var video = await _context.Videos.FindAsync(id);
+            var video = await _uow.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
             }
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
+            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
             return View(video);
         }
 
@@ -92,34 +93,20 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("VideoId,YouTubeUrl,AuthorChannelLink,LocalPath,SongId")] Video video)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,YouTubeUrl,AuthorChannelLink,LocalPath,SongId")] Video video)
         {
-            if (id != video.VideoId)
+            if (id != video.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(video);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!VideoExists(video.VideoId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.Videos.Update(video);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
+            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
             return View(video);
         }
 
@@ -131,9 +118,10 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var video = await _context.Videos
+            /*var video = await _context.Videos
                 .Include(v => v.Song)
-                .FirstOrDefaultAsync(m => m.VideoId == id);
+                .FirstOrDefaultAsync(m => m.VideoId == id);*/
+            var video = await _uow.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
@@ -147,15 +135,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var video = await _context.Videos.FindAsync(id);
-            _context.Videos.Remove(video);
-            await _context.SaveChangesAsync();
+            _uow.Videos.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool VideoExists(int id)
-        {
-            return _context.Videos.Any(e => e.VideoId == id);
         }
     }
 }

@@ -23,8 +23,8 @@ namespace WebApp.Controllers
         // GET: Tabs
         public async Task<IActionResult> Index()
         {
-            var appDbContext = _context.Tabs.Include(t => t.Video);
-            return View(await appDbContext.ToListAsync());
+            //var appDbContext = _context.Tabs.Include(t => t.Video);
+            return View(await _uow.Tabs.AllAsyncWithInclude());
         }
 
         // GET: Tabs/Details/5
@@ -35,9 +35,10 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tab = await _context.Tabs
+            /*var tab = await _context.Tabs
                 .Include(t => t.Video)
-                .FirstOrDefaultAsync(m => m.TabId == id);
+                .FirstOrDefaultAsync(m => m.TabId == id);*/
+            var tab = await _uow.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
@@ -49,7 +50,7 @@ namespace WebApp.Controllers
         // GET: Tabs/Create
         public IActionResult Create()
         {
-            ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink");
+            //ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink");
             return View();
         }
 
@@ -58,15 +59,15 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TabId,SongPart,StrummingPattern,PicturePath,Link,Author,VideoId")] Tab tab)
+        public async Task<IActionResult> Create([Bind("Id,SongPart,StrummingPattern,PicturePath,Link,Author,VideoId")] Tab tab)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(tab);
-                await _context.SaveChangesAsync();
+                await _uow.Tabs.AddAsync(tab);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
+            //ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
             return View(tab);
         }
 
@@ -78,12 +79,12 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tab = await _context.Tabs.FindAsync(id);
+            var tab = await _uow.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
             }
-            ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
+           // ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
             return View(tab);
         }
 
@@ -92,34 +93,20 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("TabId,SongPart,StrummingPattern,PicturePath,Link,Author,VideoId")] Tab tab)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,SongPart,StrummingPattern,PicturePath,Link,Author,VideoId")] Tab tab)
         {
-            if (id != tab.TabId)
+            if (id != tab.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                try
-                {
-                    _context.Update(tab);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TabExists(tab.TabId))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
+                _uow.Tabs.Update(tab);
+                await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
+           // ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
             return View(tab);
         }
 
@@ -131,9 +118,10 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tab = await _context.Tabs
+            /*var tab = await _context.Tabs
                 .Include(t => t.Video)
-                .FirstOrDefaultAsync(m => m.TabId == id);
+                .FirstOrDefaultAsync(m => m.TabId == id);*/
+            var tab = await _uow.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
@@ -147,15 +135,9 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var tab = await _context.Tabs.FindAsync(id);
-            _context.Tabs.Remove(tab);
-            await _context.SaveChangesAsync();
+            _uow.Tabs.Remove(id);
+            await _uow.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        private bool TabExists(int id)
-        {
-            return _context.Tabs.Any(e => e.TabId == id);
         }
     }
 }
