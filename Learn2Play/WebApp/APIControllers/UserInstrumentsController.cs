@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class UserInstrumentsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public UserInstrumentsController(AppDbContext context)
+        public UserInstrumentsController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/UserInstruments
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserInstrument>>> GetUserInstruments()
         {
-            return await _context.UserInstruments.ToListAsync();
+            return Ok(await _uow.UserInstruments.AllAsyncWithInclude());
         }
 
         // GET: api/UserInstruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<UserInstrument>> GetUserInstrument(int id)
         {
-            var userInstrument = await _context.UserInstruments.FindAsync(id);
+            var userInstrument = await _uow.UserInstruments.FindAsync(id);
 
             if (userInstrument == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutUserInstrument(int id, UserInstrument userInstrument)
         {
-            if (id != userInstrument.UserInstrumentId)
+            if (id != userInstrument.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(userInstrument).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!UserInstrumentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.UserInstruments.Update(userInstrument);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<UserInstrument>> PostUserInstrument(UserInstrument userInstrument)
         {
-            _context.UserInstruments.Add(userInstrument);
-            await _context.SaveChangesAsync();
+            await _uow.UserInstruments.AddAsync(userInstrument);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetUserInstrument", new { id = userInstrument.UserInstrumentId }, userInstrument);
+            return CreatedAtAction("GetUserInstrument", new { id = userInstrument.Id }, userInstrument);
         }
 
         // DELETE: api/UserInstruments/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<UserInstrument>> DeleteUserInstrument(int id)
         {
-            var userInstrument = await _context.UserInstruments.FindAsync(id);
+            var userInstrument = await _uow.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
             }
 
-            _context.UserInstruments.Remove(userInstrument);
-            await _context.SaveChangesAsync();
+            _uow.UserInstruments.Remove(userInstrument);
+            await _uow.SaveChangesAsync();
 
             return userInstrument;
-        }
-
-        private bool UserInstrumentExists(int id)
-        {
-            return _context.UserInstruments.Any(e => e.UserInstrumentId == id);
         }
     }
 }

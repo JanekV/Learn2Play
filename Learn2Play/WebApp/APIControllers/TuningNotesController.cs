@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class TuningNotesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public TuningNotesController(AppDbContext context)
+        public TuningNotesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/TuningNotes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TuningNote>>> GetTuningNotes()
         {
-            return await _context.TuningNotes.ToListAsync();
+            return Ok(await _uow.TuningNotes.AllAsyncWithInclude());
         }
 
         // GET: api/TuningNotes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TuningNote>> GetTuningNote(int id)
         {
-            var tuningNote = await _context.TuningNotes.FindAsync(id);
+            var tuningNote = await _uow.TuningNotes.FindAsync(id);
 
             if (tuningNote == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutTuningNote(int id, TuningNote tuningNote)
         {
-            if (id != tuningNote.TuningNoteId)
+            if (id != tuningNote.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(tuningNote).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TuningNoteExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.TuningNotes.Update(tuningNote);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<TuningNote>> PostTuningNote(TuningNote tuningNote)
         {
-            _context.TuningNotes.Add(tuningNote);
-            await _context.SaveChangesAsync();
+            await _uow.TuningNotes.AddAsync(tuningNote);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetTuningNote", new { id = tuningNote.TuningNoteId }, tuningNote);
+            return CreatedAtAction("GetTuningNote", new { id = tuningNote.Id }, tuningNote);
         }
 
         // DELETE: api/TuningNotes/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<TuningNote>> DeleteTuningNote(int id)
         {
-            var tuningNote = await _context.TuningNotes.FindAsync(id);
+            var tuningNote = await _uow.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
             }
 
-            _context.TuningNotes.Remove(tuningNote);
-            await _context.SaveChangesAsync();
+            _uow.TuningNotes.Remove(tuningNote);
+            await _uow.SaveChangesAsync();
 
             return tuningNote;
-        }
-
-        private bool TuningNoteExists(int id)
-        {
-            return _context.TuningNotes.Any(e => e.TuningNoteId == id);
         }
     }
 }

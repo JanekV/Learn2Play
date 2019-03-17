@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongKeysController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongKeysController(AppDbContext context)
+        public SongKeysController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/SongKeys
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongKey>>> GetSongKeys()
         {
-            return await _context.SongKeys.ToListAsync();
+            return Ok(await _uow.SongKeys.AllAsyncWithInclude());
         }
 
         // GET: api/SongKeys/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongKey>> GetSongKey(int id)
         {
-            var songKey = await _context.SongKeys.FindAsync(id);
+            var songKey = await _uow.SongKeys.FindAsync(id);
 
             if (songKey == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSongKey(int id, SongKey songKey)
         {
-            if (id != songKey.SongKeyId)
+            if (id != songKey.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(songKey).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SongKeyExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.SongKeys.Update(songKey);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongKey>> PostSongKey(SongKey songKey)
         {
-            _context.SongKeys.Add(songKey);
-            await _context.SaveChangesAsync();
+            await _uow.SongKeys.AddAsync(songKey);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetSongKey", new { id = songKey.SongKeyId }, songKey);
+            return CreatedAtAction("GetSongKey", new { id = songKey.Id }, songKey);
         }
 
         // DELETE: api/SongKeys/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongKey>> DeleteSongKey(int id)
         {
-            var songKey = await _context.SongKeys.FindAsync(id);
+            var songKey = await _uow.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
             }
 
-            _context.SongKeys.Remove(songKey);
-            await _context.SaveChangesAsync();
+            _uow.SongKeys.Remove(songKey);
+            await _uow.SaveChangesAsync();
 
             return songKey;
-        }
-
-        private bool SongKeyExists(int id)
-        {
-            return _context.SongKeys.Any(e => e.SongKeyId == id);
         }
     }
 }

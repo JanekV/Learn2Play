@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class ChordNotesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public ChordNotesController(AppDbContext context)
+        public ChordNotesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/ChordNotes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ChordNote>>> GetChordNotes()
         {
-            return await _context.ChordNotes.ToListAsync();
+            return Ok(await _uow.ChordNotes.AllAsyncWithInclude());
         }
 
         // GET: api/ChordNotes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ChordNote>> GetChordNote(int id)
         {
-            var chordNote = await _context.ChordNotes.FindAsync(id);
+            var chordNote = await _uow.ChordNotes.FindAsync(id);
 
             if (chordNote == null)
             {
@@ -47,28 +48,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutChordNote(int id, ChordNote chordNote)
         {
-            if (id != chordNote.ChordNoteId)
+            if (id != chordNote.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(chordNote).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ChordNoteExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.ChordNotes.Update(chordNote);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -77,31 +63,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<ChordNote>> PostChordNote(ChordNote chordNote)
         {
-            _context.ChordNotes.Add(chordNote);
-            await _context.SaveChangesAsync();
+            await _uow.ChordNotes.AddAsync(chordNote);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetChordNote", new { id = chordNote.ChordNoteId }, chordNote);
+            return CreatedAtAction("GetChordNote", new { id = chordNote.Id }, chordNote);
         }
 
         // DELETE: api/ChordNotes/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<ChordNote>> DeleteChordNote(int id)
         {
-            var chordNote = await _context.ChordNotes.FindAsync(id);
+            var chordNote = await _uow.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
             }
 
-            _context.ChordNotes.Remove(chordNote);
-            await _context.SaveChangesAsync();
+            _uow.ChordNotes.Remove(chordNote);
+            await _uow.SaveChangesAsync();
 
             return chordNote;
-        }
-
-        private bool ChordNoteExists(int id)
-        {
-            return _context.ChordNotes.Any(e => e.ChordNoteId == id);
         }
     }
 }

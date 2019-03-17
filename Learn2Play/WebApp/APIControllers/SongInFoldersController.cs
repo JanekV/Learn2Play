@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongInFoldersController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongInFoldersController(AppDbContext context)
+        public SongInFoldersController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/SongInFolders
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongInFolder>>> GetSongInFolders()
         {
-            return await _context.SongInFolders.ToListAsync();
+            return Ok(await _uow.SongInFolders.AllAsyncWithInclude());
         }
 
         // GET: api/SongInFolders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongInFolder>> GetSongInFolder(int id)
         {
-            var songInFolder = await _context.SongInFolders.FindAsync(id);
+            var songInFolder = await _uow.SongInFolders.FindAsync(id);
 
             if (songInFolder == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSongInFolder(int id, SongInFolder songInFolder)
         {
-            if (id != songInFolder.SongInFolderId)
+            if (id != songInFolder.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(songInFolder).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SongInFolderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.SongInFolders.Update(songInFolder);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongInFolder>> PostSongInFolder(SongInFolder songInFolder)
         {
-            _context.SongInFolders.Add(songInFolder);
-            await _context.SaveChangesAsync();
+            await _uow.SongInFolders.AddAsync(songInFolder);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetSongInFolder", new { id = songInFolder.SongInFolderId }, songInFolder);
+            return CreatedAtAction("GetSongInFolder", new { id = songInFolder.Id }, songInFolder);
         }
 
         // DELETE: api/SongInFolders/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongInFolder>> DeleteSongInFolder(int id)
         {
-            var songInFolder = await _context.SongInFolders.FindAsync(id);
+            var songInFolder = await _uow.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
             }
 
-            _context.SongInFolders.Remove(songInFolder);
-            await _context.SaveChangesAsync();
+            _uow.SongInFolders.Remove(songInFolder);
+            await _uow.SaveChangesAsync();
 
             return songInFolder;
-        }
-
-        private bool SongInFolderExists(int id)
-        {
-            return _context.SongInFolders.Any(e => e.SongInFolderId == id);
         }
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class VideosController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public VideosController(AppDbContext context)
+        public VideosController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/Videos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Video>>> GetVideos()
         {
-            return await _context.Videos.ToListAsync();
+            return Ok(await _uow.Videos.AllAsyncWithInclude());
         }
 
         // GET: api/Videos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Video>> GetVideo(int id)
         {
-            var video = await _context.Videos.FindAsync(id);
+            var video = await _uow.Videos.FindAsync(id);
 
             if (video == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutVideo(int id, Video video)
         {
-            if (id != video.VideoId)
+            if (id != video.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(video).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!VideoExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.Videos.Update(video);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Video>> PostVideo(Video video)
         {
-            _context.Videos.Add(video);
-            await _context.SaveChangesAsync();
+            await _uow.Videos.AddAsync(video);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetVideo", new { id = video.VideoId }, video);
+            return CreatedAtAction("GetVideo", new { id = video.Id }, video);
         }
 
         // DELETE: api/Videos/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Video>> DeleteVideo(int id)
         {
-            var video = await _context.Videos.FindAsync(id);
+            var video = await _uow.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
             }
 
-            _context.Videos.Remove(video);
-            await _context.SaveChangesAsync();
+            _uow.Videos.Remove(video);
+            await _uow.SaveChangesAsync();
 
             return video;
-        }
-
-        private bool VideoExists(int id)
-        {
-            return _context.Videos.Any(e => e.VideoId == id);
         }
     }
 }

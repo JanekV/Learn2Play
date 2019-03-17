@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,26 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongInstrumentsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongInstrumentsController(AppDbContext context)
+        public SongInstrumentsController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
+
 
         // GET: api/SongInstruments
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongInstrument>>> GetSongInstruments()
         {
-            return await _context.SongInstruments.ToListAsync();
+            return Ok(await _uow.SongInstruments.AllAsyncWithInclude());
         }
 
         // GET: api/SongInstruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongInstrument>> GetSongInstrument(int id)
         {
-            var songInstrument = await _context.SongInstruments.FindAsync(id);
+            var songInstrument = await _uow.SongInstruments.FindAsync(id);
 
             if (songInstrument == null)
             {
@@ -46,28 +48,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSongInstrument(int id, SongInstrument songInstrument)
         {
-            if (id != songInstrument.SongInstrumentId)
+            if (id != songInstrument.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(songInstrument).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SongInstrumentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.SongInstruments.Update(songInstrument);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +63,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongInstrument>> PostSongInstrument(SongInstrument songInstrument)
         {
-            _context.SongInstruments.Add(songInstrument);
-            await _context.SaveChangesAsync();
+            await _uow.SongInstruments.AddAsync(songInstrument);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetSongInstrument", new { id = songInstrument.SongInstrumentId }, songInstrument);
+            return CreatedAtAction("GetSongInstrument", new { id = songInstrument.Id }, songInstrument);
         }
 
         // DELETE: api/SongInstruments/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongInstrument>> DeleteSongInstrument(int id)
         {
-            var songInstrument = await _context.SongInstruments.FindAsync(id);
+            var songInstrument = await _uow.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
             }
 
-            _context.SongInstruments.Remove(songInstrument);
-            await _context.SaveChangesAsync();
+            _uow.SongInstruments.Remove(songInstrument);
+            await _uow.SaveChangesAsync();
 
             return songInstrument;
-        }
-
-        private bool SongInstrumentExists(int id)
-        {
-            return _context.SongInstruments.Any(e => e.SongInstrumentId == id);
         }
     }
 }

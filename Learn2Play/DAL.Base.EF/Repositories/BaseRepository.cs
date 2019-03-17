@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Base.EF.Repositories
 {
-    public class BaseRepository<TEntity> : IBaseRepositoryAsync<TEntity> 
+    public class BaseRepository<TEntity> : IBaseRepositoryAsync<TEntity>
         where TEntity : class, IBaseEntity, new()
     {
         protected readonly DbContext RepositoryDbContext;

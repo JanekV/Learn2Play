@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class NotesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public NotesController(AppDbContext context)
+        public NotesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/Notes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
         {
-            return await _context.Notes.ToListAsync();
+            return Ok(await _uow.Notes.AllAsync());
         }
 
         // GET: api/Notes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Note>> GetNote(int id)
         {
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _uow.Notes.FindAsync(id);
 
             if (note == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutNote(int id, Note note)
         {
-            if (id != note.NoteId)
+            if (id != note.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(note).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!NoteExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.Notes.Update(note);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Note>> PostNote(Note note)
         {
-            _context.Notes.Add(note);
-            await _context.SaveChangesAsync();
+            await _uow.Notes.AddAsync(note);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetNote", new { id = note.NoteId }, note);
+            return CreatedAtAction("GetNote", new { id = note.Id }, note);
         }
 
         // DELETE: api/Notes/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Note>> DeleteNote(int id)
         {
-            var note = await _context.Notes.FindAsync(id);
+            var note = await _uow.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
             }
 
-            _context.Notes.Remove(note);
-            await _context.SaveChangesAsync();
+            _uow.Notes.Remove(note);
+            await _uow.SaveChangesAsync();
 
             return note;
-        }
-
-        private bool NoteExists(int id)
-        {
-            return _context.Notes.Any(e => e.NoteId == id);
         }
     }
 }

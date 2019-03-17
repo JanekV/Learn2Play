@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -92,10 +93,18 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            /* :TODO fix this somehow pls future me
-            ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name", chordNote.ChordId);
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", chordNote.NoteId);
+            
+            ViewData["ChordId"] = new SelectList(
+                await _uow.BaseRepository<Chord>().AllAsync(),
+                "ChordId", "Name", chordNote.ChordId);
+            
+            /* :TODO _uow.Notes is not IEnumerable
+
+            ViewData["NoteId"] = new SelectList(
+                _uow.Notes, "NoteId", "Name", chordNote.NoteId);
             */
+
+
             return View(chordNote);
         }
 
@@ -118,9 +127,15 @@ namespace WebApp.Controllers
 
                 return RedirectToAction(nameof(Index));
             }
-            /* :TODO fix this somehow pls future me
-            ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name", chordNote.ChordId);
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", chordNote.NoteId);
+            
+            ViewData["ChordId"] = new SelectList(
+                await _uow.BaseRepository<Chord>().AllAsync(),
+                "ChordId", "Name", chordNote.ChordId);
+            
+            /* :TODO _uow.Notes is not IEnumerable
+            ViewData["NoteId"] = new SelectList(
+                _context.Notes,
+                "NoteId", "Name", chordNote.NoteId);
             */
 
             return View(chordNote);

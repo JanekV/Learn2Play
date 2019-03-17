@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class FoldersController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public FoldersController(AppDbContext context)
+        public FoldersController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/Folders
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Folder>>> GetFolders()
         {
-            return await _context.Folders.ToListAsync();
+            return Ok(await _uow.Folders.AllAsync());
         }
 
         // GET: api/Folders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Folder>> GetFolder(int id)
         {
-            var folder = await _context.Folders.FindAsync(id);
+            var folder = await _uow.Folders.FindAsync(id);
 
             if (folder == null)
             {
@@ -47,28 +48,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutFolder(int id, Folder folder)
         {
-            if (id != folder.FolderId)
+            if (id != folder.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(folder).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FolderExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.Folders.Update(folder);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -77,31 +63,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Folder>> PostFolder(Folder folder)
         {
-            _context.Folders.Add(folder);
-            await _context.SaveChangesAsync();
+            await _uow.Folders.AddAsync(folder);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetFolder", new { id = folder.FolderId }, folder);
+            return CreatedAtAction("GetFolder", new { id = folder.Id }, folder);
         }
 
         // DELETE: api/Folders/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Folder>> DeleteFolder(int id)
         {
-            var folder = await _context.Folders.FindAsync(id);
+            var folder = await _uow.Folders.FindAsync(id);
             if (folder == null)
             {
                 return NotFound();
             }
 
-            _context.Folders.Remove(folder);
-            await _context.SaveChangesAsync();
+            _uow.Folders.Remove(folder);
+            await _uow.SaveChangesAsync();
 
             return folder;
-        }
-
-        private bool FolderExists(int id)
-        {
-            return _context.Folders.Any(e => e.FolderId == id);
         }
     }
 }

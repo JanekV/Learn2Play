@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class StylesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public StylesController(AppDbContext context)
+        public StylesController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/Styles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Style>>> GetStyles()
         {
-            return await _context.Styles.ToListAsync();
+            return Ok(await _uow.Styles.AllAsync());
         }
 
         // GET: api/Styles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Style>> GetStyle(int id)
         {
-            var style = await _context.Styles.FindAsync(id);
+            var style = await _uow.Styles.FindAsync(id);
 
             if (style == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStyle(int id, Style style)
         {
-            if (id != style.StyleId)
+            if (id != style.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(style).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StyleExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.Styles.Update(style);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Style>> PostStyle(Style style)
         {
-            _context.Styles.Add(style);
-            await _context.SaveChangesAsync();
+            await _uow.Styles.AddAsync(style);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetStyle", new { id = style.StyleId }, style);
+            return CreatedAtAction("GetStyle", new { id = style.Id }, style);
         }
 
         // DELETE: api/Styles/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Style>> DeleteStyle(int id)
         {
-            var style = await _context.Styles.FindAsync(id);
+            var style = await _uow.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
             }
 
-            _context.Styles.Remove(style);
-            await _context.SaveChangesAsync();
+            _uow.Styles.Remove(style);
+            await _uow.SaveChangesAsync();
 
             return style;
-        }
-
-        private bool StyleExists(int id)
-        {
-            return _context.Styles.Any(e => e.StyleId == id);
         }
     }
 }

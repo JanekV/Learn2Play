@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,25 +15,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAppUnitOfWork _uow;
 
-        public SongsController(AppDbContext context)
+        public SongsController(IAppUnitOfWork uow)
         {
-            _context = context;
+            _uow = uow;
         }
 
         // GET: api/Songs
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Song>>> GetSongs()
         {
-            return await _context.Songs.ToListAsync();
+            return Ok(await _uow.Songs.AllAsyncWithInclude());
         }
 
         // GET: api/Songs/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Song>> GetSong(int id)
         {
-            var song = await _context.Songs.FindAsync(id);
+            var song = await _uow.Songs.FindAsync(id);
 
             if (song == null)
             {
@@ -46,28 +47,13 @@ namespace WebApp.APIControllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutSong(int id, Song song)
         {
-            if (id != song.SongId)
+            if (id != song.Id)
             {
                 return BadRequest();
             }
 
-            _context.Entry(song).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SongExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            _uow.Songs.Update(song);
+            await _uow.SaveChangesAsync();
 
             return NoContent();
         }
@@ -76,31 +62,26 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Song>> PostSong(Song song)
         {
-            _context.Songs.Add(song);
-            await _context.SaveChangesAsync();
+            await _uow.Songs.AddAsync(song);
+            await _uow.SaveChangesAsync();
 
-            return CreatedAtAction("GetSong", new { id = song.SongId }, song);
+            return CreatedAtAction("GetSong", new { id = song.Id }, song);
         }
 
         // DELETE: api/Songs/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Song>> DeleteSong(int id)
         {
-            var song = await _context.Songs.FindAsync(id);
+            var song = await _uow.Songs.FindAsync(id);
             if (song == null)
             {
                 return NotFound();
             }
 
-            _context.Songs.Remove(song);
-            await _context.SaveChangesAsync();
+            _uow.Songs.Remove(song);
+            await _uow.SaveChangesAsync();
 
             return song;
-        }
-
-        private bool SongExists(int id)
-        {
-            return _context.Songs.Any(e => e.SongId == id);
         }
     }
 }
