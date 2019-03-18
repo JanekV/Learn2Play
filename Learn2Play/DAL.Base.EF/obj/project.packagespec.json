@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj",
+    "projectUniqueName": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj",
     "projectName": "DAL.Base.EF",
-    "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj",
-    "outputPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\obj\\",
+    "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj",
+    "outputPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.Base.EF\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
-            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
+          "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
+            "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
           }
         }
       }

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\X\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\X\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.616467547.00" t="ExcludeRecursive" />
-    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2Play" t="IncludeFlat">
+    <e p="C:\Users\Janek\.Rider2018.3\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\Janek\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Janek\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.1517788127.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Janek\RiderProjects\DistSySGit\Learn2Play" t="IncludeFlat">
       <e p="Contracts.DAL.App" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.DAL.App.csproj" t="IncludeRecursive" />

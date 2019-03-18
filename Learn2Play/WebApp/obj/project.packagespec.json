@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\WebApp\\WebApp.csproj",
+    "projectUniqueName": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\WebApp\\WebApp.csproj",
     "projectName": "WebApp",
-    "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\WebApp\\WebApp.csproj",
-    "outputPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\WebApp\\obj\\",
+    "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\WebApp\\WebApp.csproj",
+    "outputPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\WebApp\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,8 +15,8 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
-          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj": {
-            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj"
+          "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj": {
+            "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj"
           }
         }
       }

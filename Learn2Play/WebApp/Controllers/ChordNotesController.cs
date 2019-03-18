@@ -40,13 +40,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /* :TODO maybe include is needed?
-            var chordNote = await _context.ChordNotes
-                .Include(c => c.Chord)
-                .Include(c => c.Note)
-                .FirstOrDefaultAsync(m => m.ChordNoteId == id);
-            */
             var chordNote = await _uow.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
@@ -98,13 +91,9 @@ namespace WebApp.Controllers
                 await _uow.BaseRepository<Chord>().AllAsync(),
                 "ChordId", "Name", chordNote.ChordId);
             
-            /* :TODO _uow.Notes is not IEnumerable
-
             ViewData["NoteId"] = new SelectList(
-                _uow.Notes, "NoteId", "Name", chordNote.NoteId);
-            */
-
-
+                _uow.Notes.AllAsync().Result, "NoteId", "Name", chordNote.NoteId);
+            
             return View(chordNote);
         }
 
@@ -132,11 +121,9 @@ namespace WebApp.Controllers
                 await _uow.BaseRepository<Chord>().AllAsync(),
                 "ChordId", "Name", chordNote.ChordId);
             
-            /* :TODO _uow.Notes is not IEnumerable
             ViewData["NoteId"] = new SelectList(
-                _context.Notes,
+                _uow.Notes.AllAsync().Result,
                 "NoteId", "Name", chordNote.NoteId);
-            */
 
             return View(chordNote);
         }
