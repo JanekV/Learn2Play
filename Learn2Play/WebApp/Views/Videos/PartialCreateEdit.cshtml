@@ -1,0 +1,22 @@
+@model WebApp.ViewModels.VideoCreateEditViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="Video.YouTubeUrl" class="control-label"></label>
+    <input asp-for="Video.YouTubeUrl" class="form-control" />
+    <span asp-validation-for="Video.YouTubeUrl" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Video.AuthorChannelLink" class="control-label"></label>
+    <input asp-for="Video.AuthorChannelLink" class="form-control" />
+    <span asp-validation-for="Video.AuthorChannelLink" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Video.LocalPath" class="control-label"></label>
+    <input asp-for="Video.LocalPath" class="form-control" />
+    <span asp-validation-for="Video.LocalPath" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Video.SongId" class="control-label"></label>
+    <select asp-for="Video.SongId" class ="form-control" asp-items="Model.SongSelectList"></select>
+</div>

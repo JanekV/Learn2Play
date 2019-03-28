@@ -1,0 +1,13 @@
+@model WebApp.ViewModels.ChordNoteCreateEditViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="ChordNote.ChordId" class="control-label"></label>
+    <select asp-for="ChordNote.ChordId" class="form-control" asp-items="Model.ChordSelectList"></select>
+    <span asp-validation-for="ChordNote.ChordId" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="ChordNote.NoteId" class="control-label"></label>
+    <select asp-for="ChordNote.NoteId" class="form-control" asp-items="Model.NoteSelectList"></select>
+    <span asp-validation-for="ChordNote.NoteId" class="text-danger"></span>
+</div>

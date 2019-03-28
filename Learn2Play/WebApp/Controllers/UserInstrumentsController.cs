@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using Domain.Identity;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -23,9 +25,6 @@ namespace WebApp.Controllers
         // GET: UserInstruments
         public async Task<IActionResult> Index()
         {
-/*
-            var appDbContext = _context.UserInstruments.Include(u => u.AppUser).Include(u => u.Instrument);
-*/
             return View(await _uow.UserInstruments.AllAsyncWithInclude());
         }
 
@@ -36,11 +35,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var userInstrument = await _context.UserInstruments
-                .Include(u => u.AppUser)
-                .Include(u => u.Instrument)
-                .FirstOrDefaultAsync(m => m.UserInstrumentId == id);*/
             var userInstrument = await _uow.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
@@ -53,9 +47,6 @@ namespace WebApp.Controllers
         // GET: UserInstruments/Create
         public IActionResult Create()
         {
-            /*ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id");
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name");
-            */
             return View();
         }
 
@@ -64,18 +55,19 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,AppUserId,InstrumentId,Comment")] UserInstrument userInstrument)
+        public async Task<IActionResult> Create(UserInstrumentCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-               await _uow.UserInstruments.AddAsync(userInstrument);
+               await _uow.UserInstruments.AddAsync(vm.UserInstrument);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            /*ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", userInstrument.AppUserId);
-            ViewData["InstrumentId"] = new SelectList(_context.Instruments, "InstrumentId", "Name", userInstrument.InstrumentId);
-            */
-            return View(userInstrument);
+            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+                "Id", "Id", userInstrument.AppUserId);
+            vm.InstrumentSelectList = new SelectList(_context.Instruments,
+                "InstrumentId", "Name", userInstrument.InstrumentId);
+            return View(vm);
         }
 
         // GET: UserInstruments/Edit/5

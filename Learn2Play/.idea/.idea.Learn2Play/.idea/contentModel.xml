@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Janek\.Rider2018.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\Janek\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Janek\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.1517788127.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Janek\RiderProjects\DistSySGit\Learn2Play" t="IncludeFlat">
+    <e p="C:\Users\X\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\X\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.616467547.00" t="ExcludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2Play" t="IncludeFlat">
       <e p="Contracts.DAL.App" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.DAL.App.csproj" t="IncludeRecursive" />
@@ -17,6 +16,7 @@
           </e>
         </e>
         <e p="Repositories" t="Include">
+          <e p="IAppUserRepository.cs" t="Include" />
           <e p="IChordNoteRepository.cs" t="Include" />
           <e p="IChordRepository.cs" t="Include" />
           <e p="IFolderRepository.cs" t="Include" />
@@ -63,8 +63,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.App.EF.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20190224123157_InitialDbCreation.cs" t="Include" />
-          <e p="20190224123157_InitialDbCreation.Designer.cs" t="Include" />
+          <e p="20190324184329_InitialDbCreation.cs" t="Include" />
+          <e p="20190324184329_InitialDbCreation.Designer.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -75,6 +75,7 @@
           </e>
         </e>
         <e p="Repositories" t="Include">
+          <e p="AppUserRepository.cs" t="Include" />
           <e p="ChordNoteRepository.cs" t="Include" />
           <e p="ChordRepository.cs" t="Include" />
           <e p="FolderRepository.cs" t="Include" />
@@ -194,9 +195,6 @@
           <e p="UserInstrumentsController.cs" t="Include" />
           <e p="VideosController.cs" t="Include" />
         </e>
-        <e p="Models" t="Include">
-          <e p="ErrorViewModel.cs" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">
@@ -209,6 +207,20 @@
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="ChordNoteCreateEditViewModel.cs" t="Include" />
+          <e p="ErrorViewModel.cs" t="Include" />
+          <e p="SongChordCreateEditViewModel.cs" t="Include" />
+          <e p="SongCreateEditViewModel.cs" t="Include" />
+          <e p="SongInFolderCreateEditViewModel.cs" t="Include" />
+          <e p="SongInstrumentCreateEditViewModel.cs" t="Include" />
+          <e p="SongKeyCreateEditViewModel.cs" t="Include" />
+          <e p="SongStyleCreateEditViewModel.cs" t="Include" />
+          <e p="TabCreateEditViewModel.cs" t="Include" />
+          <e p="TuningNoteCreateEditViewModel.cs" t="Include" />
+          <e p="UserInstrumentCreateEditViewModel.cs" t="Include" />
+          <e p="VideoCreateEditViewModel.cs" t="Include" />
+        </e>
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
@@ -218,6 +230,8 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
+            <e p="PartialDeleteDetails.cshtml" t="Include" />
           </e>
           <e p="Folders" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -257,6 +271,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="SongInFolders" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -264,6 +279,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="SongInstruments" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -271,6 +287,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="SongKeys" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -278,6 +295,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="Songs" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -285,6 +303,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="SongStyles" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -292,6 +311,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="Styles" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -306,6 +326,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="TuningNotes" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -313,6 +334,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
           <e p="UserInstruments" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -327,6 +349,7 @@
             <e p="Details.cshtml" t="Include" />
             <e p="Edit.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="PartialCreateEdit.cshtml" t="Include" />
           </e>
         </e>
         <e p="WebApp.csproj" t="IncludeRecursive" />

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -23,7 +24,6 @@ namespace WebApp.Controllers
         // GET: Songs
         public async Task<IActionResult> Index()
         {
-            //var appDbContext = _context.Songs.Include(s => s.Key);
             return View(await _uow.Songs.AllAsyncWithInclude());
         }
 
@@ -34,10 +34,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var song = await _context.Songs
-                .Include(s => s.Key)
-                .FirstOrDefaultAsync(m => m.SongId == id);*/
             var song = await _uow.Songs.FindAsync(id);
             if (song == null)
             {
@@ -50,7 +46,6 @@ namespace WebApp.Controllers
         // GET: Songs/Create
         public IActionResult Create()
         {
-            //ViewData["SongKeyId"] = new SelectList(_context.SongKeys, "SongKeyId", "Description");
             return View();
         }
 
@@ -59,16 +54,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Author,SpotifyLink,Description,SongKeyId")] Song song)
+        public async Task<IActionResult> Create(SongCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _uow.Songs.AddAsync(song);
+                await _uow.Songs.AddAsync(vm.Song);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["SongKeyId"] = new SelectList(_context.SongKeys, "SongKeyId", "Description", song.SongKeyId);
-            return View(song);
+            vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
+                "SongKeyId", "Description", vm.Song.SongKeyId);
+            return View(vm);
         }
 
         // GET: Songs/Edit/5
@@ -84,8 +80,10 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            //ViewData["SongKeyId"] = new SelectList(_context.SongKeys, "SongKeyId", "Description", song.SongKeyId);
-            return View(song);
+            var vm = new SongCreateEditViewModel();
+            vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
+                "SongKeyId", "Description", vm.Song.SongKeyId);
+            return View(vm);
         }
 
         // POST: Songs/Edit/5
@@ -93,21 +91,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Author,SpotifyLink,Description,SongKeyId")] Song song)
+        public async Task<IActionResult> Edit(int id, SongCreateEditViewModel vm)
         {
-            if (id != song.Id)
+            if (id != vm.Song.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _uow.Songs.Update(song);
+                _uow.Songs.Update(vm.Song);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["SongKeyId"] = new SelectList(_context.SongKeys, "SongKeyId", "Description", song.SongKeyId);
-            return View(song);
+            vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
+                "SongKeyId", "Description", vm.Song.SongKeyId);
+            return View(vm);
         }
 
         // GET: Songs/Delete/5
@@ -117,10 +116,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var song = await _context.Songs
-                .Include(s => s.Key)
-                .FirstOrDefaultAsync(m => m.SongId == id);*/
             var song = await _uow.Songs.FindAsync(id);
             if (song == null)
             {

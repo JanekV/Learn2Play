@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -23,7 +24,6 @@ namespace WebApp.Controllers
         // GET: Videos
         public async Task<IActionResult> Index()
         {
-            //var appDbContext = _context.Videos.Include(v => v.Song);
             return View(await _uow.Videos.AllAsyncWithInclude());
         }
 
@@ -34,10 +34,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var video = await _context.Videos
-                .Include(v => v.Song)
-                .FirstOrDefaultAsync(m => m.VideoId == id);*/
             var video = await _uow.Videos.FindAsync(id);
             if (video == null)
             {
@@ -50,7 +46,6 @@ namespace WebApp.Controllers
         // GET: Videos/Create
         public IActionResult Create()
         {
-            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
             return View();
         }
 
@@ -59,16 +54,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,YouTubeUrl,AuthorChannelLink,LocalPath,SongId")] Video video)
+        public async Task<IActionResult> Create(VideoCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _uow.Videos.AddAsync(video);
+                await _uow.Videos.AddAsync(vm.Video);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
-            return View(video);
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                "SongId", "Author", vm.Video.SongId);
+            return View(vm);
         }
 
         // GET: Videos/Edit/5
@@ -84,8 +80,10 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
-            return View(video);
+            var vm = new VideoCreateEditViewModel();
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                "SongId", "Author", vm.Video.SongId);
+            return View(vm);
         }
 
         // POST: Videos/Edit/5
@@ -93,21 +91,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,YouTubeUrl,AuthorChannelLink,LocalPath,SongId")] Video video)
+        public async Task<IActionResult> Edit(int id, VideoCreateEditViewModel vm)
         {
-            if (id != video.Id)
+            if (id != vm.Video.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _uow.Videos.Update(video);
+                _uow.Videos.Update(vm.Video);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", video.SongId);
-            return View(video);
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                "SongId", "Author", vm.Video.SongId);
+            return View(vm);
         }
 
         // GET: Videos/Delete/5
@@ -117,10 +116,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var video = await _context.Videos
-                .Include(v => v.Song)
-                .FirstOrDefaultAsync(m => m.VideoId == id);*/
             var video = await _uow.Videos.FindAsync(id);
             if (video == null)
             {

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -23,7 +24,6 @@ namespace WebApp.Controllers
         // GET: Tabs
         public async Task<IActionResult> Index()
         {
-            //var appDbContext = _context.Tabs.Include(t => t.Video);
             return View(await _uow.Tabs.AllAsyncWithInclude());
         }
 
@@ -34,10 +34,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var tab = await _context.Tabs
-                .Include(t => t.Video)
-                .FirstOrDefaultAsync(m => m.TabId == id);*/
             var tab = await _uow.Tabs.FindAsync(id);
             if (tab == null)
             {
@@ -50,7 +46,6 @@ namespace WebApp.Controllers
         // GET: Tabs/Create
         public IActionResult Create()
         {
-            //ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink");
             return View();
         }
 
@@ -59,16 +54,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,SongPart,StrummingPattern,PicturePath,Link,Author,VideoId")] Tab tab)
+        public async Task<IActionResult> Create(TabCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _uow.Tabs.AddAsync(tab);
+                await _uow.Tabs.AddAsync(vm.Tab);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
-            return View(tab);
+            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+                "VideoId", "AuthorChannelLink", vm.Tab.VideoId);
+            return View(vm);
         }
 
         // GET: Tabs/Edit/5
@@ -84,8 +80,10 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-           // ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
-            return View(tab);
+            var vm = new TabCreateEditViewModel();
+            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+                "VideoId", "AuthorChannelLink", vm.Tab.VideoId);
+            return View(vm);
         }
 
         // POST: Tabs/Edit/5
@@ -93,21 +91,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,SongPart,StrummingPattern,PicturePath,Link,Author,VideoId")] Tab tab)
+        public async Task<IActionResult> Edit(int id, TabCreateEditViewModel vm)
         {
-            if (id != tab.Id)
+            if (id != vm.Tab.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _uow.Tabs.Update(tab);
+                _uow.Tabs.Update(vm.Tab);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-           // ViewData["VideoId"] = new SelectList(_context.Videos, "VideoId", "AuthorChannelLink", tab.VideoId);
-            return View(tab);
+            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+                "VideoId", "AuthorChannelLink", vm.Tab.VideoId);
+            return View(vm);
         }
 
         // GET: Tabs/Delete/5
@@ -117,10 +116,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var tab = await _context.Tabs
-                .Include(t => t.Video)
-                .FirstOrDefaultAsync(m => m.TabId == id);*/
             var tab = await _uow.Tabs.FindAsync(id);
             if (tab == null)
             {

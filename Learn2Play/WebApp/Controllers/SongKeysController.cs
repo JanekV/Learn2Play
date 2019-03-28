@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -23,9 +24,6 @@ namespace WebApp.Controllers
         // GET: SongKeys
         public async Task<IActionResult> Index()
         {
-/*
-            var appDbContext = _context.SongKeys.Include(s => s.Note);
-*/
             return View(await _uow.SongKeys.AllAsyncWithInclude());
         }
 
@@ -36,10 +34,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var songKey = await _context.SongKeys
-                .Include(s => s.Note)
-                .FirstOrDefaultAsync(m => m.SongKeyId == id);*/
             var songKey = await _uow.SongKeys.FindAsync(id);
             if (songKey == null)
             {
@@ -52,9 +46,6 @@ namespace WebApp.Controllers
         // GET: SongKeys/Create
         public IActionResult Create()
         {
-/*
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name");
-*/
             return View();
         }
 
@@ -63,18 +54,18 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Description,NoteId")] SongKey songKey)
+        public async Task<IActionResult> Create(SongKeyCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _uow.SongKeys.AddAsync(songKey);
+                await _uow.SongKeys.AddAsync(vm.SongKey);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-/*
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", songKey.NoteId);
-*/
-            return View(songKey);
+
+            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+                "NoteId", "Name", vm.SongKey.NoteId);
+            return View(vm);
         }
 
         // GET: SongKeys/Edit/5
@@ -90,10 +81,10 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-/*
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", songKey.NoteId);
-*/
-            return View(songKey);
+            var vm = new SongKeyCreateEditViewModel();
+            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+                "NoteId", "Name", vm.SongKey.NoteId);
+            return View(vm);
         }
 
         // POST: SongKeys/Edit/5
@@ -101,23 +92,22 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Description,NoteId")] SongKey songKey)
+        public async Task<IActionResult> Edit(int id, SongKeyCreateEditViewModel vm)
         {
-            if (id != songKey.Id)
+            if (id != vm.SongKey.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _uow.SongKeys.Update(songKey);
+                _uow.SongKeys.Update(vm.SongKey);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-/*
-            ViewData["NoteId"] = new SelectList(_context.Notes, "NoteId", "Name", songKey.NoteId);
-*/
-            return View(songKey);
+            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+                "NoteId", "Name", vm.SongKey.NoteId);
+            return View(vm);
         }
 
         // GET: SongKeys/Delete/5
@@ -127,10 +117,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /*var songKey = await _context.SongKeys
-                .Include(s => s.Note)
-                .FirstOrDefaultAsync(m => m.SongKeyId == id);*/
             var songKey = await _uow.SongKeys.FindAsync(id);
             if (songKey == null)
             {

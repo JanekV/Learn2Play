@@ -1,0 +1,11 @@
+@model WebApp.ViewModels.SongChordCreateEditViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="SongChord.SongId" class="control-label"></label>
+    <select asp-for="SongChord.SongId" class ="form-control" asp-items="Model.SongSelectList"></select>
+</div>
+<div class="form-group">
+    <label asp-for="SongChord.ChordId" class="control-label"></label>
+    <select asp-for="SongChord.ChordId" class ="form-control" asp-items="Model.ChordSelectList"></select>
+</div>

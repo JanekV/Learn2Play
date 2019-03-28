@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -23,10 +24,6 @@ namespace WebApp.Controllers
         // GET: SongInFolders
         public async Task<IActionResult> Index()
         {
-            /*
-            var appDbContext = _context.SongInFolders.Include(s => s.Folder).Include(s => s.Song);
-            return View(await appDbContext.ToListAsync());
-            */
             return View(await _uow.SongInFolders.AllAsyncWithInclude());
         }
 
@@ -38,12 +35,6 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            /*
-            var songInFolder = await _context.SongInFolders
-                .Include(s => s.Folder)
-                .Include(s => s.Song)
-                .FirstOrDefaultAsync(m => m.SongInFolderId == id);
-            */
             var songInFolder = await _uow.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
@@ -56,10 +47,6 @@ namespace WebApp.Controllers
         // GET: SongInFolders/Create
         public IActionResult Create()
         {
-            /* :TODO fix this somehow pls future me
-            ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name");
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
-            */
             return View();
         }
 
@@ -68,19 +55,21 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FolderId,SongId")] SongInFolder songInFolder)
+        public async Task<IActionResult> Create(SongInFolderCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _uow.SongInFolders.AddAsync(songInFolder);
+                await _uow.SongInFolders.AddAsync(vm.SongInFolder);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            /* :TODO fix this somehow pls future me
-            ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name", songInFolder.FolderId);
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInFolder.SongId);
-            */
-            return View(songInFolder);
+
+            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+                nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
+
+            return View(vm);
         }
 
         // GET: SongInFolders/Edit/5
@@ -96,11 +85,15 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            /* :TODO fix this somehow pls future me
-            ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name", songInFolder.FolderId);
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInFolder.SongId);
-            */
-            return View(songInFolder);
+
+            var vm = new SongInFolderCreateEditViewModel();
+            
+            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+                nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
+
+            return View(vm);
         }
 
         // POST: SongInFolders/Edit/5
@@ -108,24 +101,25 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,FolderId,SongId")] SongInFolder songInFolder)
+        public async Task<IActionResult> Edit(int id, SongInFolderCreateEditViewModel vm)
         {
-            if (id != songInFolder.Id)
+            if (id != vm.SongInFolder.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _uow.SongInFolders.Update(songInFolder);
+                _uow.SongInFolders.Update(vm.SongInFolder);
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            /* :TODO fix this somehow pls future me
-            ViewData["FolderId"] = new SelectList(_context.Folders, "FolderId", "Name", songInFolder.FolderId);
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author", songInFolder.SongId);
-            */
-            return View(songInFolder);
+            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+                nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
+            
+            return View(vm);
         }
 
         // GET: SongInFolders/Delete/5

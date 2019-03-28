@@ -16,7 +16,8 @@ namespace DAL
         private readonly AppDbContext _appDbContext;
 
         private readonly IRepositoryProvider _repositoryProvider;
-
+        public IAppUserRepository AppUsers =>
+            _repositoryProvider.GetRepository<IAppUserRepository>();
         public IChordRepository Chords =>
             _repositoryProvider.GetRepository<IChordRepository>();
         public IChordNoteRepository ChordNotes =>

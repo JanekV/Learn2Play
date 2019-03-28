@@ -116,9 +116,7 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\We
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\WebApp.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\WebApp.Views.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\WebApp.Views.pdb
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Domain.dll
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Domain.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.csprojAssemblyReference.cache
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.csproj.CoreCompileInputs.cache
@@ -220,3 +218,11 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\We
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.csproj.CopyComplete
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.DAL.App.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.DAL.Base.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.App.EF.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.Base.EF.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.App.EF.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.DAL.App.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.DAL.Base.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.Base.EF.pdb

@@ -1,0 +1,34 @@
+
+@using Domain
+@model WebApp.ViewModels.TabCreateEditViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="Tab.SongPart" class="control-label"></label>
+    <select asp-for="Tab.SongPart" asp-items="Html.GetEnumSelectList<SongPart>()" class="form-control"></select>
+    <span asp-validation-for="Tab.SongPart" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Tab.StrummingPattern" class="control-label"></label>
+    <input asp-for="Tab.StrummingPattern" class="form-control" />
+    <span asp-validation-for="Tab.StrummingPattern" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Tab.PicturePath" class="control-label"></label>
+    <input asp-for="Tab.PicturePath" class="form-control" />
+    <span asp-validation-for="Tab.PicturePath" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Tab.Link" class="control-label"></label>
+    <input asp-for="Tab.Link" class="form-control" />
+    <span asp-validation-for="Tab.Link" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Tab.Author" class="control-label"></label>
+    <input asp-for="Tab.Author" class="form-control" />
+    <span asp-validation-for="Tab.Author" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Tab.VideoId" class="control-label"></label>
+    <select asp-for="Tab.VideoId" class ="form-control" asp-items="Model.VideoSelectList"></select>
+</div>

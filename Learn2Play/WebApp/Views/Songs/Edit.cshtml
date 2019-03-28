@@ -1,4 +1,4 @@
-@model Domain.Song
+@model WebApp.ViewModels.SongCreateEditViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -12,32 +12,8 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Author" class="control-label"></label>
-                <input asp-for="Author" class="form-control" />
-                <span asp-validation-for="Author" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SpotifyLink" class="control-label"></label>
-                <input asp-for="SpotifyLink" class="form-control" />
-                <span asp-validation-for="SpotifyLink" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SongKeyId" class="control-label"></label>
-                <select asp-for="SongKeyId" class="form-control" asp-items="ViewBag.SongKeyId"></select>
-                <span asp-validation-for="SongKeyId" class="text-danger"></span>
-            </div>
+            <input type="hidden" asp-for="Song.Id" />
+            <partial name="PartialCreateEdit" model="Model"/>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

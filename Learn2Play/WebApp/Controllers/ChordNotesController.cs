@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using DAL;
 using Domain;
 using Domain.Identity;
+using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
@@ -25,11 +26,6 @@ namespace WebApp.Controllers
         // GET: ChordNotes
         public async Task<IActionResult> Index()
         {
-            //Chord notes with included Chord and Note Entities
-            /*
-            var appDbContext = _context.ChordNotes.Include(c => c.Chord).Include(c => c.Note);
-            return View(await appDbContext.ToListAsync());
-            */
             return View(await _uow.ChordNotes.AllAsyncWithInclude());
         }
 
@@ -60,17 +56,17 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,ChordId,NoteId")] ChordNote chordNote)
+        public async Task<IActionResult> Create(ChordNoteCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _uow.ChordNotes.AddAsync(chordNote);
+                await _uow.ChordNotes.AddAsync(vm.ChordNote);
                 await _uow.SaveChangesAsync();
                 
                 return RedirectToAction(nameof(Index));
             }
             
-            return View(chordNote);
+            return View(vm);
         }
 
         // GET: ChordNotes/Edit/5
@@ -86,15 +82,16 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            
-            ViewData["ChordId"] = new SelectList(
+
+            var vm = new ChordNoteCreateEditViewModel();
+            vm.ChordSelectList = new SelectList(
                 await _uow.BaseRepository<Chord>().AllAsync(),
                 "ChordId", "Name", chordNote.ChordId);
             
-            ViewData["NoteId"] = new SelectList(
-                _uow.Notes.AllAsync().Result, "NoteId", "Name", chordNote.NoteId);
+            vm.NoteSelectList = new SelectList(
+                await _uow.Notes.AllAsync(), "NoteId", "Name", chordNote.NoteId);
             
-            return View(chordNote);
+            return View(vm);
         }
 
         // POST: ChordNotes/Edit/5
@@ -102,30 +99,30 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,ChordId,NoteId")] ChordNote chordNote)
+        public async Task<IActionResult> Edit(int id, ChordNoteCreateEditViewModel vm)
         {
-            if (id != chordNote.Id)
+            if (id != vm.ChordNote.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _uow.ChordNotes.Update(chordNote);
+                _uow.ChordNotes.Update(vm.ChordNote);
                 await _uow.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
             }
             
-            ViewData["ChordId"] = new SelectList(
+            vm.ChordSelectList = new SelectList(
                 await _uow.BaseRepository<Chord>().AllAsync(),
-                "ChordId", "Name", chordNote.ChordId);
+                "ChordId", "Name", vm.ChordNote.ChordId);
             
-            ViewData["NoteId"] = new SelectList(
-                _uow.Notes.AllAsync().Result,
-                "NoteId", "Name", chordNote.NoteId);
+            vm.NoteSelectList = new SelectList(
+                await _uow.Notes.AllAsync(),
+                "NoteId", "Name", vm.ChordNote.NoteId);
 
-            return View(chordNote);
+            return View(vm);
         }
 
         // GET: ChordNotes/Delete/5

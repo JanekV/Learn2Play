@@ -19,7 +19,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.Chord", b =>
                 {
-                    b.Property<int>("ChordId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
@@ -30,21 +30,21 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasMaxLength(255);
 
-                    b.HasKey("ChordId");
+                    b.HasKey("Id");
 
                     b.ToTable("Chord");
                 });
 
             modelBuilder.Entity("Domain.ChordNote", b =>
                 {
-                    b.Property<int>("ChordNoteId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("ChordId");
 
                     b.Property<int>("NoteId");
 
-                    b.HasKey("ChordNoteId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ChordId");
 
@@ -55,7 +55,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.Folder", b =>
                 {
-                    b.Property<int>("FolderId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Comment")
@@ -67,7 +67,7 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasMaxLength(64);
 
-                    b.HasKey("FolderId");
+                    b.HasKey("Id");
 
                     b.ToTable("Folders");
                 });
@@ -147,7 +147,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.Instrument", b =>
                 {
-                    b.Property<int>("InstrumentId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
@@ -157,28 +157,28 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasMaxLength(64);
 
-                    b.HasKey("InstrumentId");
+                    b.HasKey("Id");
 
                     b.ToTable("Instruments");
                 });
 
             modelBuilder.Entity("Domain.Note", b =>
                 {
-                    b.Property<int>("NoteId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(5);
 
-                    b.HasKey("NoteId");
+                    b.HasKey("Id");
 
                     b.ToTable("Notes");
                 });
 
             modelBuilder.Entity("Domain.Song", b =>
                 {
-                    b.Property<int>("SongId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author")
@@ -197,7 +197,7 @@ namespace DAL.Migrations
                     b.Property<string>("SpotifyLink")
                         .HasMaxLength(255);
 
-                    b.HasKey("SongId");
+                    b.HasKey("Id");
 
                     b.HasIndex("SongKeyId");
 
@@ -206,14 +206,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.SongChord", b =>
                 {
-                    b.Property<int>("SongChordId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("ChordId");
 
                     b.Property<int>("SongId");
 
-                    b.HasKey("SongChordId");
+                    b.HasKey("Id");
 
                     b.HasIndex("ChordId");
 
@@ -224,14 +224,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.SongInFolder", b =>
                 {
-                    b.Property<int>("SongInFolderId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("FolderId");
 
                     b.Property<int>("SongId");
 
-                    b.HasKey("SongInFolderId");
+                    b.HasKey("Id");
 
                     b.HasIndex("FolderId");
 
@@ -242,14 +242,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.SongInstrument", b =>
                 {
-                    b.Property<int>("SongInstrumentId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("InstrumentId");
 
                     b.Property<int>("SongId");
 
-                    b.HasKey("SongInstrumentId");
+                    b.HasKey("Id");
 
                     b.HasIndex("InstrumentId");
 
@@ -260,7 +260,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.SongKey", b =>
                 {
-                    b.Property<int>("SongKeyId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
@@ -269,7 +269,7 @@ namespace DAL.Migrations
 
                     b.Property<int>("NoteId");
 
-                    b.HasKey("SongKeyId");
+                    b.HasKey("Id");
 
                     b.HasIndex("NoteId");
 
@@ -278,14 +278,14 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.SongStyle", b =>
                 {
-                    b.Property<int>("SongStyleId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("SongId");
 
                     b.Property<int>("StyleId");
 
-                    b.HasKey("SongStyleId");
+                    b.HasKey("Id");
 
                     b.HasIndex("SongId");
 
@@ -296,7 +296,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.Style", b =>
                 {
-                    b.Property<int>("StyleId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Description")
@@ -306,14 +306,14 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasMaxLength(64);
 
-                    b.HasKey("StyleId");
+                    b.HasKey("Id");
 
                     b.ToTable("Styles");
                 });
 
             modelBuilder.Entity("Domain.Tab", b =>
                 {
-                    b.Property<int>("TabId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("Author")
@@ -333,7 +333,7 @@ namespace DAL.Migrations
 
                     b.Property<int>("VideoId");
 
-                    b.HasKey("TabId");
+                    b.HasKey("Id");
 
                     b.HasIndex("VideoId");
 
@@ -342,7 +342,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.TuningNote", b =>
                 {
-                    b.Property<int>("TuningNoteId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<int>("InstrumentId");
@@ -353,7 +353,7 @@ namespace DAL.Migrations
 
                     b.Property<int>("NoteId");
 
-                    b.HasKey("TuningNoteId");
+                    b.HasKey("Id");
 
                     b.HasIndex("InstrumentId");
 
@@ -364,18 +364,17 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.UserFolder", b =>
                 {
-                    b.Property<int>("UserFolderId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AppUserId")
-                        .HasMaxLength(64);
+                    b.Property<int>("AppUserId");
 
                     b.Property<string>("Comment")
                         .HasMaxLength(1000);
 
                     b.Property<int>("FolderId");
 
-                    b.HasKey("UserFolderId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
 
@@ -386,18 +385,17 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.UserInstrument", b =>
                 {
-                    b.Property<int>("UserInstrumentId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<int>("AppUserId")
-                        .HasMaxLength(64);
+                    b.Property<int>("AppUserId");
 
                     b.Property<string>("Comment")
                         .HasMaxLength(1000);
 
                     b.Property<int>("InstrumentId");
 
-                    b.HasKey("UserInstrumentId");
+                    b.HasKey("Id");
 
                     b.HasIndex("AppUserId");
 
@@ -408,7 +406,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Domain.Video", b =>
                 {
-                    b.Property<int>("VideoId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("AuthorChannelLink")
@@ -424,7 +422,7 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasMaxLength(255);
 
-                    b.HasKey("VideoId");
+                    b.HasKey("Id");
 
                     b.HasIndex("SongId");
 
