@@ -63,7 +63,7 @@ namespace WebApp.Controllers
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _uow.AppUser.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
                 "Id", "Id", vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
                 "InstrumentId", "Name", vm.UserInstrument.InstrumentId);
@@ -84,7 +84,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new UserInstrumentCreateEditViewModel();
-            vm.AppUserSelectList = new SelectList(await _uow.AppUser.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
                 "Id", "Id", vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
                 "InstrumentId", "Name", vm.UserInstrument.InstrumentId);
@@ -109,7 +109,7 @@ namespace WebApp.Controllers
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _uow.AppUser.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
                 "Id", "Id", vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
                 "InstrumentId", "Name", vm.UserInstrument.InstrumentId);

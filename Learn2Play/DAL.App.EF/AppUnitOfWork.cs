@@ -42,6 +42,7 @@ namespace DAL
             _repositoryProvider.GetRepository<ISongStyleRepository>();
         public IStyleRepository Styles =>
             _repositoryProvider.GetRepository<IStyleRepository>();
+
         public ITabRepository Tabs =>
             _repositoryProvider.GetRepository<ITabRepository>();
         public ITuningNoteRepository TuningNotes =>
