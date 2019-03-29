@@ -1,0 +1,16 @@
+@model WebApp.ViewModels.UserInstrumentCreateEditViewModel
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="form-group">
+    <label asp-for="UserInstrument.AppUserId" class="control-label"></label>
+    <select asp-for="UserInstrument.AppUserId" class ="form-control" asp-items="Model.AppUserSelectList"></select>
+</div>
+<div class="form-group">
+    <label asp-for="UserInstrument.InstrumentId" class="control-label"></label>
+    <select asp-for="UserInstrument.InstrumentId" class ="form-control" asp-items="Model.InstrumentSelectList"></select>
+</div>
+<div class="form-group">
+    <label asp-for="UserInstrument.Comment" class="control-label"></label>
+    <input asp-for="UserInstrument.Comment" class="form-control" />
+    <span asp-validation-for="UserInstrument.Comment" class="text-danger"></span>
+</div>

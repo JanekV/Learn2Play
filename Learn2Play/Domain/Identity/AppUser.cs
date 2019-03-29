@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Domain.Identity
 {
-    public class AppUser :  IdentityUser<int>, IBaseEntity<int>
+    public class AppUser :  IdentityUser<int>, IBaseEntity
 // PK type is int
     {
         // add relationships and data fields you need

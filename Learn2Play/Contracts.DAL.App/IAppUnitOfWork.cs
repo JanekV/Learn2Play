@@ -23,5 +23,6 @@ namespace Contracts.DAL.App
         ITuningNoteRepository TuningNotes { get; }
         IVideoRepository Videos { get; }
         IStyleRepository Styles { get; }
+        IAppUserRepository AppUser { get; set; }
     }
 }
