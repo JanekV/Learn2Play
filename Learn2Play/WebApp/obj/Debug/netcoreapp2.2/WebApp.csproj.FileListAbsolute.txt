@@ -271,3 +271,8 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Ra
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\ResetPassword.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\ResetPasswordConfirmation.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Create.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Delete.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Details.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Edit.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Index.g.cshtml.cs

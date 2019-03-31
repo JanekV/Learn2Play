@@ -48,7 +48,16 @@ namespace WebApp.Controllers
         // GET: ChordNotes/Create
         public IActionResult Create()
         {
-            return View();
+            var vm = new ChordNoteCreateEditViewModel();
+            vm.ChordSelectList = new SelectList(
+                _uow.Chords.AllAsync().Result,
+                nameof(Chord.Id), nameof(Chord.Name));
+            
+            vm.NoteSelectList = new SelectList(
+                _uow.Notes.AllAsync().Result,
+                nameof(Note.Id), nameof(Note.Name));
+
+            return View(vm);
         }
 
         // POST: ChordNotes/Create
@@ -65,7 +74,14 @@ namespace WebApp.Controllers
                 
                 return RedirectToAction(nameof(Index));
             }
+            vm.ChordSelectList = new SelectList(
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);
             
+            vm.NoteSelectList = new SelectList(
+                await _uow.Notes.AllAsync(),
+                nameof(Note.Id), nameof(Note.Name), vm.ChordNote.NoteId);
+
             return View(vm);
         }
 
@@ -85,12 +101,13 @@ namespace WebApp.Controllers
 
             var vm = new ChordNoteCreateEditViewModel();
             vm.ChordSelectList = new SelectList(
-                await _uow.BaseRepository<Chord>().AllAsync(),
-                "ChordId", "Name", chordNote.ChordId);
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);
             
             vm.NoteSelectList = new SelectList(
-                await _uow.Notes.AllAsync(), "NoteId", "Name", chordNote.NoteId);
-            
+                await _uow.Notes.AllAsync(),
+                nameof(Note.Id), nameof(Note.Name), vm.ChordNote.NoteId);
+
             return View(vm);
         }
 
@@ -115,12 +132,12 @@ namespace WebApp.Controllers
             }
             
             vm.ChordSelectList = new SelectList(
-                await _uow.BaseRepository<Chord>().AllAsync(),
-                "ChordId", "Name", vm.ChordNote.ChordId);
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);
             
             vm.NoteSelectList = new SelectList(
                 await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.ChordNote.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.ChordNote.NoteId);
 
             return View(vm);
         }

@@ -28,3 +28,4 @@ dotnet aspnet-codegenerator controller -name TuningNotesController -actions -m T
 
 dotnet aspnet-codegenerator controller -name UserInstrumentsController -actions -m UserInstrument -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 
+dotnet aspnet-codegenerator controller -name ChordsController -actions -m Chord -dc AppDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f

@@ -13,13 +13,13 @@ namespace WebApp.Areas.Identity.Pages.Account.Manage
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#line 2 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
-using WebApp.Areas.Identity;
+#line 1 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
 
 #line default
 #line hidden
-#line 3 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
+#line 2 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
+using WebApp.Areas.Identity;
 
 #line default
 #line hidden
@@ -34,7 +34,7 @@ using WebApp.Areas.Identity.Pages.Account.Manage;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"bf3d6faa4fe6d4e244383627bcd7e6fcbbbad076", @"/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"42a55d9e3563f208d5d9fb61490eef14c27b09f0", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ddc4d07b4c54ead6c715932754c7c67c701a24e1", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4aaf0565ac9a286b9a5ca546f5f75d7baa1c4fbf", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c672a1fef38fdfb5bee098b457280b7afdd6d90c", @"/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_Manage_PersonalData : global::Microsoft.AspNetCore.Mvc.RazorPages.Page

@@ -13,18 +13,18 @@ namespace WebApp.Areas.Identity.Pages
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#line 1 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
 #line 2 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
 using WebApp.Areas.Identity;
 
 #line default
 #line hidden
-#line 3 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Areas\Identity\Pages\_ViewImports.cshtml"
-using Microsoft.AspNetCore.Identity;
-
-#line default
-#line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f6ebae86d40004d00768c35aea29f9fd0820dc4a", @"/Areas/Identity/Pages/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"42a55d9e3563f208d5d9fb61490eef14c27b09f0", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ddc4d07b4c54ead6c715932754c7c67c701a24e1", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Error : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

@@ -16,6 +16,7 @@ namespace DAL.App.EF
         public DbSet<Style> Styles { get; set; }
         public DbSet<Tab> Tabs { get; set; }
         public DbSet<Video> Videos { get; set; }
+        public DbSet<Chord> Chords { get; set; }
 
         public DbSet<ChordNote> ChordNotes { get; set; }
         public DbSet<SongChord> SongChords { get; set; }

@@ -28,3 +28,5 @@ dotnet aspnet-codegenerator controller -name TuningNotesController -actions -m T
 
 dotnet aspnet-codegenerator controller -name UserInstrumentsController -actions -m UserInstrument -dc AppDbContext -outDir APIControllers -api --useAsyncActions -f
 
+dotnet aspnet-codegenerator controller -name ChordsController -actions -m Chord -dc AppDbContext -outDir APIControllers -api --useAsyncActions -f
+
