@@ -2,20 +2,259 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/DateJS/build/production/i18n/id-ID.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/DateJS/build/production/i18n/is-IS.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/DateJS/build/production/i18n/it-CH.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/DateJS/build/production/i18n/it-IT.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/DateJS/build/production/i18n/ja-JP.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/css/select2.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/az.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/bg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ca.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/cs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/da.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/de.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/el.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/en.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/es.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/et.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/eu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/fa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/fi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/fr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/gl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/he.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/hi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/hr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/hu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/id.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/is.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/it.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ja.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/km.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ko.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/lt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/lv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/mk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ms.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/nb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/nl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/pl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/pt-BR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/pt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/ru.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/sk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/sr-Cyrl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/sr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/sv.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/th.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/tr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/uk.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/vi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/zh-CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/i18n/zh-TW.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/select2.full.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/select2.full.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/select2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/dist/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_layouts/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_anchorjs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_dl-panels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_examples.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_featurette.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_hamburger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_jumbotron.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_prettify.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_result-repository.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_sidenav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_social.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_syntax-highlighting.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/_typography.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_alerts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_badges.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_breadcrumbs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_button-groups.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_code.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_component-animations.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_dropdowns.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_glyphicons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_input-groups.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_jumbotron.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_media.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_modals.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_navs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_normalize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_pager.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_panels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_popovers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_progress-bars.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_responsive-embed.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_responsive-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_scaffolding.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_theme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_thumbnails.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/_wells.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_alerts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_background-variant.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_center-block.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_grid-framework.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_hide-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_nav-divider.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_nav-vertical-align.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_opacity.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_panels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_progress-bar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_reset-filter.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_responsive-visibility.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_size.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_tab-focus.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_table-row.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_text-emphasis.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_text-overflow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/bootstrap/mixins/_vendor-prefixes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_animated.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_bordered-pulled.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_core.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_fixed-width.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_icons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_larger.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_list.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_path.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_rotated-flipped.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_stacked.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/_sass/vendor/font-awesome/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/css/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/css/font-awesome.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/css/s2-docs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/android-chrome-36x36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/android-chrome-48x48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/android-chrome-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/apple-touch-icon-57x57.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/apple-touch-icon-60x60.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/apple-touch-icon-72x72.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/apple-touch-icon-precomposed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/favicon-16x16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/favicon-32x32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/mstile-150x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/mstile-310x150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/mstile-70x70.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/images/safari-pinned-tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ak.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/al.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/az.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ca.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/co.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ct.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/de.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/fl.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ga.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/hi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/id.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/il.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/in.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ks.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ky.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/la.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ma.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/md.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/me.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/mi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/mn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/mo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ms.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/mt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/nc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/nd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/nh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/nj.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/nm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/nv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ny.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/oh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ok.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/or.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/pa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ri.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/sc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/sd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/tn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/tx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/ut.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/va.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/vt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/wa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/wi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/wv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/images/flags/wy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/js/anchor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/js/jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/js/placeholders.jquery.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/vendors/select2/docs/vendor/js/prettify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/dist/css/adminlte.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/dist/css/adminlte.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/dist/css/adminlte.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,76 +278,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1725">
-              <caret line="140" selection-start-line="140" selection-end-line="140" />
-              <folding>
-                <marker date="1554051170251" expanded="false" signature="6:338" ph="..." />
-                <marker date="1554051170251" expanded="true" signature="368:5303" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="421:5301" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="530:574" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="651:741" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="837:1148" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="875:938" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="1038:1101" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="1221:1639" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="1649:1862" ph="/* POST: ChordNotes/Create ... */" />
-                <marker date="1554051170251" expanded="true" signature="1997:2645" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="2043:2253" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="2735:3450" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="2773:2836" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="2937:3000" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="3460:3673" ph="/* POST: ChordNotes/Edit/5 ... */" />
-                <marker date="1554051170251" expanded="true" signature="3814:4554" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="3863:3926" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="3963:4149" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="4648:4960" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="4686:4749" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="4850:4913" ph="{...}" />
-                <marker date="1554051170251" expanded="true" signature="5139:5294" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/ChordNoteRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-              <folding>
-                <marker date="1553882663817" expanded="false" signature="6:229" ph="..." />
-                <marker date="1553882663817" expanded="true" signature="257:1223" ph="{...}" />
-                <marker date="1553882663817" expanded="true" signature="345:1221" ph="{...}" />
-                <marker date="1553882663817" expanded="true" signature="432:452" ph="{...}" />
-                <marker date="1553882663817" expanded="true" signature="525:699" ph="{...}" />
-                <marker date="1553882663817" expanded="true" signature="784:1215" ph="{...}" />
-                <marker date="1553882663817" expanded="true" signature="883:1149" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs">
+        <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="221">
+              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
               <folding>
-                <marker date="1554055109831" expanded="false" signature="6:239" ph="..." />
-                <marker date="1554055109831" expanded="true" signature="262:3245" ph="{...}" />
-                <marker date="1554055109831" expanded="true" signature="311:3243" ph="{...}" />
-                <marker date="1554055109831" expanded="true" signature="2848:2979" ph="{...}" />
-                <marker date="1554055109831" expanded="true" signature="3021:3089" ph="{...}" />
-                <marker date="1554055109831" expanded="true" signature="3148:3227" ph="{...}" />
+                <marker date="1554064864858" expanded="true" signature="17:5781" ph="&lt;html.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="24:1045" ph="&lt;head.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="193:327" ph="&lt;environment.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="332:825" ph="&lt;environment.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1046:5773" ph="&lt;body.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1081:4230" ph="&lt;header.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1099:4220" ph="&lt;nav.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1221:4209" ph="&lt;div.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1376:1667" ph="&lt;button.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1680:4194" ph="&lt;div.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1820:4175" ph="&lt;ul.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="1876:2043" ph="@*...*@" />
+                <marker date="1554064864858" expanded="true" signature="2064:2232" ph="&lt;li.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="2253:4153" ph="&lt;li.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="2299:4127" ph="&lt;div.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="2350:2577" ph="&lt;button.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="2606:4096" ph="&lt;div.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4235:4400" ph="&lt;div.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4316:4389" ph="&lt;main.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4406:4621" ph="&lt;footer.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4460:4607" ph="&lt;div.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4627:4817" ph="&lt;environment.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4822:5650" ph="&lt;environment.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="4866:5201" ph="&lt;script.../&gt;" />
+                <marker date="1554064864858" expanded="true" signature="5210:5631" ph="&lt;script.../&gt;" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="105" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="27" selection-end-column="105" />
+              <folding>
+                <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#li#0;n#ul#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/pages/widgets.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="206">
+              <caret line="886" column="10" selection-start-line="886" selection-start-column="10" selection-end-line="886" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sidebar-mini</find>
+      <find>dropdown</find>
+      <find>expanda</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -338,7 +574,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebApp/Controllers/SongInstrumentsController.cs" />
         <option value="$PROJECT_DIR$/WebApp/Views/SongInstruments/PartialCreateEdit.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Views/SongInstruments/Create.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Views/SongInstruments/Edit.cshtml" />
@@ -386,15 +621,16 @@
         <option value="$PROJECT_DIR$/WebApp/Views/ChordNotes/Edit.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Views/ChordNotes/Create.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialCreateEdit.cshtml" />
-        <option value="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" />
         <option value="$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs" />
+        <option value="$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/pages/widgets.html" />
+        <option value="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="width" value="1058" />
+    <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -427,18 +663,74 @@
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="DAL.App.EF" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Domain" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Controllers" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Folders" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Shared" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AdminLTE" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AdminLTE" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="dist" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AdminLTE" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="pages" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="css" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -506,7 +798,7 @@
       <workItem from="1553797149056" duration="4374000" />
       <workItem from="1553877395969" duration="7143000" />
       <workItem from="1554047038838" duration="618000" />
-      <workItem from="1554047924792" duration="7020000" />
+      <workItem from="1554047924792" duration="14610000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -599,11 +891,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554053873642</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fixed issue with not being able to add stuff to the database and added Chords API controller">
+      <created>1554055338231</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1554055338231</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70976000" />
+    <option name="totallyTimeSpent" value="78566000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,16 +914,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1058" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3006012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24311183" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.498998" visible="true" weight="0.23522976" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" visible="true" weight="0.23522976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.68490154" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -667,7 +966,8 @@
     <MESSAGE value="nm" />
     <MESSAGE value="Added Chord controllers which I had forgot" />
     <MESSAGE value="ChordNotes made more easy to test" />
-    <option name="LAST_COMMIT_MESSAGE" value="ChordNotes made more easy to test" />
+    <MESSAGE value="Fixed issue with not being able to add stuff to the database and added Chords API controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issue with not being able to add stuff to the database and added Chords API controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -680,131 +980,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/TabRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1553882897566" expanded="true" signature="6:210" ph="..." />
-            <marker date="1553882897566" expanded="true" signature="245:962" ph="{...}" />
-            <marker date="1553882897566" expanded="true" signature="315:960" ph="{...}" />
-            <marker date="1553882897566" expanded="true" signature="396:416" ph="{...}" />
-            <marker date="1553882897566" expanded="true" signature="483:615" ph="{...}" />
-            <marker date="1553882897566" expanded="true" signature="694:954" ph="{...}" />
-            <marker date="1553882897566" expanded="true" signature="781:920" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/TuningNoteRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1553882897574" expanded="true" signature="6:210" ph="..." />
-            <marker date="1553882897574" expanded="true" signature="245:1205" ph="{...}" />
-            <marker date="1553882897574" expanded="true" signature="336:1203" ph="{...}" />
-            <marker date="1553882897574" expanded="true" signature="424:444" ph="{...}" />
-            <marker date="1553882897574" expanded="true" signature="518:697" ph="{...}" />
-            <marker date="1553882897574" expanded="true" signature="783:1197" ph="{...}" />
-            <marker date="1553882897574" expanded="true" signature="884:1156" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1553882897536" expanded="true" signature="6:210" ph="..." />
-            <marker date="1553882897536" expanded="true" signature="245:1203" ph="{...}" />
-            <marker date="1553882897536" expanded="true" signature="336:1201" ph="{...}" />
-            <marker date="1553882897536" expanded="true" signature="424:444" ph="{...}" />
-            <marker date="1553882897536" expanded="true" signature="518:696" ph="{...}" />
-            <marker date="1553882897536" expanded="true" signature="782:1195" ph="{...}" />
-            <marker date="1553882897536" expanded="true" signature="883:1154" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/VideoRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1553882897554" expanded="true" signature="6:210" ph="..." />
-            <marker date="1553882897554" expanded="true" signature="245:980" ph="{...}" />
-            <marker date="1553882897554" expanded="true" signature="321:978" ph="{...}" />
-            <marker date="1553882897554" expanded="true" signature="404:424" ph="{...}" />
-            <marker date="1553882897554" expanded="true" signature="493:624" ph="{...}" />
-            <marker date="1553882897554" expanded="true" signature="705:972" ph="{...}" />
-            <marker date="1553882897554" expanded="true" signature="796:936" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Migrations/20190329171652_InitialDbCreation.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Migrations/AppDbContextModelSnapshot.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding>
-            <marker date="1553882551587" expanded="false" signature="28:203" ph="..." />
-            <marker date="1553882551587" expanded="true" signature="236:21733" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="336:21731" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="412:21725" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="678:1153" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="1213:1606" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="1663:2146" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="2213:2861" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="2928:4413" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="4474:4912" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="4967:5299" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="5354:6115" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="6175:6568" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="6631:7029" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="7094:7502" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="7560:7996" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="8056:8449" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="8505:8939" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="8993:9765" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="9826:10359" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="10420:10918" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="10983:11493" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="11549:12221" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="12317:12732" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="12828:13243" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="13339:13758" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="13853:14129" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="14225:14583" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="14643:15077" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="15132:15370" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="15430:15864" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="15927:16364" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="16429:16878" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="16936:17169" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="17229:17663" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="17717:17959" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="18020:18469" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="18530:18985" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="19050:19517" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="19573:19814" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="19910:20147" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="20243:20480" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="20576:20813" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="20908:21347" ph="{...}" />
-            <marker date="1553882551587" expanded="true" signature="21443:21680" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -884,15 +1059,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/gentelella-Gentelella-BS4/production/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/gentelella-Gentelella-BS4/production/index2.html">
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/production/index2.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/gentelella-Gentelella-BS4/production/index3.html">
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/production/index3.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Domain/Identity/AppUser.cs">
@@ -1475,37 +1645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="127" selection-start-line="40" selection-start-column="127" selection-end-line="40" selection-end-column="127" />
-          <folding>
-            <marker date="1554053791119" expanded="true" signature="16:4025" ph="&lt;html.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="23:976" ph="&lt;head.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="188:322" ph="&lt;environment.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="327:820" ph="&lt;environment.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="977:4017" ph="&lt;body.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="988:2478" ph="&lt;header.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1005:2464" ph="&lt;nav.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1128:2449" ph="&lt;div.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1272:1575" ph="&lt;button.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1592:2430" ph="&lt;div.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1741:2407" ph="&lt;ul.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1801:1972" ph="&lt;li.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="1997:2173" ph="&lt;li.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="2198:2381" ph="&lt;li.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="2483:2648" ph="&lt;div.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="2564:2637" ph="&lt;main.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="2654:2865" ph="&lt;footer.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="2708:2851" ph="&lt;div.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="2871:3061" ph="&lt;environment.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="3066:3894" ph="&lt;environment.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="3110:3445" ph="&lt;script.../&gt;" />
-            <marker date="1554053791119" expanded="true" signature="3454:3875" ph="&lt;script.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1725">
@@ -1556,8 +1695,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="62" column="9" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="105">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <marker date="1554055109831" expanded="false" signature="6:239" ph="..." />
             <marker date="1554055109831" expanded="true" signature="262:3245" ph="{...}" />
@@ -1565,6 +1704,84 @@
             <marker date="1554055109831" expanded="true" signature="2848:2979" ph="{...}" />
             <marker date="1554055109831" expanded="true" signature="3021:3089" ph="{...}" />
             <marker date="1554055109831" expanded="true" signature="3148:3227" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/build/css/style-extra-bs4.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/build/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/build/css/custom.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/css/site.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminGentelellaBS4/production/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="167" column="26" lean-forward="true" selection-start-line="62" selection-start-column="20" selection-end-line="167" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/pages/widgets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="886" column="10" selection-start-line="886" selection-start-column="10" selection-end-line="886" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/wwwroot/AdminLTE/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="105" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="27" selection-end-column="105" />
+          <folding>
+            <element signature="n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#li#0;n#ul#1;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#aside#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+          <folding>
+            <marker date="1554064864858" expanded="true" signature="17:5781" ph="&lt;html.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="24:1045" ph="&lt;head.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="193:327" ph="&lt;environment.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="332:825" ph="&lt;environment.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1046:5773" ph="&lt;body.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1081:4230" ph="&lt;header.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1099:4220" ph="&lt;nav.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1221:4209" ph="&lt;div.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1376:1667" ph="&lt;button.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1680:4194" ph="&lt;div.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1820:4175" ph="&lt;ul.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="1876:2043" ph="@*...*@" />
+            <marker date="1554064864858" expanded="true" signature="2064:2232" ph="&lt;li.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="2253:4153" ph="&lt;li.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="2299:4127" ph="&lt;div.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="2350:2577" ph="&lt;button.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="2606:4096" ph="&lt;div.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4235:4400" ph="&lt;div.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4316:4389" ph="&lt;main.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4406:4621" ph="&lt;footer.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4460:4607" ph="&lt;div.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4627:4817" ph="&lt;environment.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4822:5650" ph="&lt;environment.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="4866:5201" ph="&lt;script.../&gt;" />
+            <marker date="1554064864858" expanded="true" signature="5210:5631" ph="&lt;script.../&gt;" />
           </folding>
         </state>
       </provider>
