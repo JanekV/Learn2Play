@@ -63,7 +63,7 @@ namespace WebApp.Controllers
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _uow.BaseRepository<AppUser>().AllAsync(),
                 "Id", "Id", vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
                 "InstrumentId", "Name", vm.UserInstrument.InstrumentId);
