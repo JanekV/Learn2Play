@@ -6,10 +6,9 @@ using Contracts.DAL.App.Repositories;
 using Contracts.DAL.Base;
 using Contracts.DAL.Base.Helpers;
 using Contracts.DAL.Base.Repositories;
-using DAL.Base.EF.Repositories;
-using DAL.Repositories;
 
-namespace DAL
+
+namespace DAL.App.EF
 {
     public class AppUnitOfWork: IAppUnitOfWork
     {

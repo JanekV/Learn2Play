@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj",
+    "projectUniqueName": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj",
     "projectName": "DAL.App.EF",
-    "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj",
-    "outputPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.App.EF\\obj\\",
+    "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj",
+    "outputPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15,14 +15,14 @@
     "frameworks": {
       "netstandard2.0": {
         "projectReferences": {
-          "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Contracts.DAL.App\\Contracts.DAL.App.csproj": {
-            "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Contracts.DAL.App\\Contracts.DAL.App.csproj"
+          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.App\\Contracts.DAL.App.csproj": {
+            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.App\\Contracts.DAL.App.csproj"
           },
-          "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj": {
-            "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj"
+          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj": {
+            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj"
           },
-          "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Domain\\Domain.csproj": {
-            "projectPath": "C:\\Users\\Janek\\RiderProjects\\DistSySGit\\Learn2Play\\Domain\\Domain.csproj"
+          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj": {
+            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj"
           }
         }
       }

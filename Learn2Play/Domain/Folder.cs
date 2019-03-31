@@ -23,6 +23,7 @@ namespace Domain
     public enum FolderType
     {
         CurrentlyLearning,
-        Favorites
+        Favorites,
+        Other
     }
 }

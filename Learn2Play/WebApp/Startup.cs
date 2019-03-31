@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.DAL.App;
+using Contracts.DAL.Base;
+using Contracts.DAL.Base.Helpers;
 using DAL;
+using DAL.App.EF;
+using DAL.App.EF.Helpers;
+using DAL.Base.EF.Helpers;
 using Domain.Identity;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
@@ -10,10 +16,12 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebApp.Helpers;
 
 namespace WebApp
 {
@@ -39,9 +47,20 @@ namespace WebApp
             services.AddDbContext<AppDbContext>(options =>
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<AppUser>()
-                .AddDefaultUI(UIFramework.Bootstrap4)
-                .AddEntityFrameworkStores<AppDbContext>();
+            
+            services.AddScoped<IDataContext, AppDbContext>();
+            services.AddSingleton<IRepositoryFactory, AppRepositoryFactory>();
+            services.AddScoped<IRepositoryProvider, BaseRepositoryProvider>();
+            services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
+
+            
+            services
+                .AddIdentity<AppUser, AppRole>()
+                //.AddDefaultIdentity<AppUser>()
+                //.AddDefaultUI(UIFramework.Bootstrap4)
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
+
 
             // TODO: Remove in production
             services.Configure<IdentityOptions>(options =>
@@ -54,6 +73,8 @@ namespace WebApp
                 options.Password.RequireNonAlphanumeric = false;
 
             });
+            
+            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

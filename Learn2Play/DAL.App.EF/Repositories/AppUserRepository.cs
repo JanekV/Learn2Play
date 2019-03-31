@@ -5,7 +5,7 @@ using Contracts.DAL.Base;
 using DAL.Base.EF.Repositories;
 using Domain.Identity;
 
-namespace DAL.Repositories
+namespace DAL.App.EF.Repositories
 {
     public class AppUserRepository: BaseRepository<AppUser>, IAppUserRepository
     {

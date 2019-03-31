@@ -1,0 +1,14 @@
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.App.deps.json
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.App.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.App.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.Base.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Domain.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.Base.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Domain.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.csprojAssemblyReference.cache
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.csproj.CoreCompileInputs.cache
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.AssemblyInfoInputs.cache
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.AssemblyInfo.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.csproj.CopyComplete
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.pdb
