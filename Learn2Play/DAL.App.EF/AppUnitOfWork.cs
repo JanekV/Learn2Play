@@ -56,9 +56,9 @@ namespace DAL.App.EF
         public IBaseRepositoryAsync<TEntity> BaseRepository<TEntity>() where TEntity : class, IBaseEntity, new() => 
             _repositoryProvider.GetRepositoryForEntity<TEntity>();
 
-        public AppUnitOfWork(AppDbContext appDbContext, IRepositoryProvider repositoryProvider)
+        public AppUnitOfWork(IDataContext dataContext, IRepositoryProvider repositoryProvider)
         {
-            _appDbContext = appDbContext;
+            _appDbContext = dataContext as AppDbContext;
             _repositoryProvider = repositoryProvider;
         }
 
