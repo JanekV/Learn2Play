@@ -7037,5 +7037,48 @@
         </e>
       </e>
     </e>
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules" t="ExcludeRecursive">
+      <e p="@types" t="IncludeRecursive">
+        <e p="anymatch" t="IncludeRecursive" />
+        <e p="lodash" t="IncludeRecursive" />
+        <e p="node" t="IncludeRecursive" />
+        <e p="tapable" t="IncludeRecursive" />
+        <e p="uglify-js" t="IncludeRecursive" />
+        <e p="webpack" t="IncludeRecursive" />
+      </e>
+      <e p="aurelia-animator-css" t="IncludeRecursive" />
+      <e p="aurelia-bootstrapper" t="IncludeRecursive" />
+      <e p="aurelia-cli" t="IncludeRecursive" />
+      <e p="aurelia-testing" t="IncludeRecursive" />
+      <e p="aurelia-tools" t="IncludeRecursive" />
+      <e p="aurelia-webpack-plugin" t="IncludeRecursive" />
+      <e p="copy-webpack-plugin" t="IncludeRecursive" />
+      <e p="core-js" t="IncludeRecursive" />
+      <e p="css-loader" t="IncludeRecursive" />
+      <e p="del" t="IncludeRecursive" />
+      <e p="duplicate-package-checker-webpack-plugin" t="IncludeRecursive" />
+      <e p="expose-loader" t="IncludeRecursive" />
+      <e p="file-loader" t="IncludeRecursive" />
+      <e p="gulp" t="IncludeRecursive" />
+      <e p="gulp-rename" t="IncludeRecursive" />
+      <e p="html-loader" t="IncludeRecursive" />
+      <e p="html-webpack-plugin" t="IncludeRecursive" />
+      <e p="istanbul-instrumenter-loader" t="IncludeRecursive" />
+      <e p="json-loader" t="IncludeRecursive" />
+      <e p="mini-css-extract-plugin" t="IncludeRecursive" />
+      <e p="minimatch" t="IncludeRecursive" />
+      <e p="opn" t="IncludeRecursive" />
+      <e p="source-map" t="IncludeRecursive" />
+      <e p="style-loader" t="IncludeRecursive" />
+      <e p="through2" t="IncludeRecursive" />
+      <e p="ts-loader" t="IncludeRecursive" />
+      <e p="ts-node" t="IncludeRecursive" />
+      <e p="url-loader" t="IncludeRecursive" />
+      <e p="vinyl-fs" t="IncludeRecursive" />
+      <e p="webpack" t="IncludeRecursive" />
+      <e p="webpack-bundle-analyzer" t="IncludeRecursive" />
+      <e p="webpack-cli" t="IncludeRecursive" />
+      <e p="webpack-dev-server" t="IncludeRecursive" />
+    </e>
   </component>
 </project>
