@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain
@@ -14,6 +15,9 @@ namespace Domain
         [MinLength(1)]
         [Required]
         public string ShapePicturePath { get; set; }
-        
+
+
+        public ICollection<SongChord> SongChords { get; set; }
+        public ICollection<ChordNote> ChordNotes { get; set; }
     }
 }

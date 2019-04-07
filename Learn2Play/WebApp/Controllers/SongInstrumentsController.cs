@@ -44,9 +44,17 @@ namespace WebApp.Controllers
         }
 
         // GET: SongInstruments/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var vm = new SongInstrumentCreateEditViewModel();
+            vm.InstrumentSelectList = new SelectList(
+                await _uow.Instruments.AllAsync(),
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
+            vm.SongSelectList = new SelectList(
+                await _uow.Songs.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
+           
+            return View(vm);
         }
 
         // POST: SongInstruments/Create
@@ -63,10 +71,10 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.SongInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongInstrument.SongId);
-           
+                nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
+
             return View(vm);
         }
 
@@ -84,10 +92,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new SongInstrumentCreateEditViewModel();
+            vm.SongInstrument = songInstrument;
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.SongInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongInstrument.SongId);
+                nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
            
             return View(vm);
         }
@@ -111,10 +120,10 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.SongInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongInstrument.SongId);
-           
+                nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
+
             return View(vm);
         }
 

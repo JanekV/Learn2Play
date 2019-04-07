@@ -44,10 +44,12 @@ namespace WebApp.Controllers
         }
 
         // GET: Videos/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
-        }
+            var vm = new VideoCreateEditViewModel();
+            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
+            return View(vm);        }
 
         // POST: Videos/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -63,7 +65,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.Video.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);
         }
 
@@ -81,8 +83,9 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new VideoCreateEditViewModel();
+            vm.Video = video;
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.Video.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);
         }
 
@@ -105,7 +108,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.Video.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);
         }
 

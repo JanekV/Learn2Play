@@ -44,9 +44,15 @@ namespace WebApp.Controllers
         }
 
         // GET: SongStyles/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var vm = new SongStyleCreateEditViewModel();
+            vm.SongSelectList = new SelectList(await _uow.SongStyles.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
+            vm.StyleSelectList = new SelectList(await _uow.Styles.AllAsync(),
+                nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
+            
+            return View(vm);
         }
 
         // POST: SongStyles/Create
@@ -63,9 +69,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _uow.SongStyles.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongStyle.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
             vm.StyleSelectList = new SelectList(await _uow.Styles.AllAsync(),
-                "StyleId", "Name", vm.SongStyle.StyleId);
+                nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
             
             return View(vm);
         }
@@ -85,10 +91,11 @@ namespace WebApp.Controllers
             }
 
             var vm = new SongStyleCreateEditViewModel();
+            vm.SongStyle = songStyle;
             vm.SongSelectList = new SelectList(await _uow.SongStyles.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongStyle.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
             vm.StyleSelectList = new SelectList(await _uow.Styles.AllAsync(),
-                "StyleId", "Name", vm.SongStyle.StyleId);
+                nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
             
             return View(vm);
         }
@@ -112,9 +119,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _uow.SongStyles.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongStyle.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
             vm.StyleSelectList = new SelectList(await _uow.Styles.AllAsync(),
-                "StyleId", "Name", vm.SongStyle.StyleId);
+                nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
             
             return View(vm);
         }

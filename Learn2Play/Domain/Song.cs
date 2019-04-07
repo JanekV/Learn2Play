@@ -25,9 +25,13 @@ namespace Domain
         [MinLength(1)]
         public string Description { get; set; }
 
-        public List<Video> Videos { get; set; }
-
         public int SongKeyId { get; set; }
         public SongKey Key { get; set; }
+
+        public ICollection<SongInFolder> SongInFolders { get; set; }
+        public ICollection<SongInstrument> SongInstruments { get; set; }
+        public ICollection<SongStyle> SongStyles { get; set; }
+        public ICollection<SongChord> SongChords { get; set; }
+        public ICollection<Video> Videos { get; set; }
     }
 }

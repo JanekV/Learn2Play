@@ -45,13 +45,17 @@ namespace WebApp.Controllers
         }
 
         // GET: SongChords/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            /* :TODO not needed?
-            ViewData["ChordId"] = new SelectList(_context.Set<Chord>(), "ChordId", "Name");
-            ViewData["SongId"] = new SelectList(_context.Songs, "SongId", "Author");
-            */
-            return View();
+            var vm = new SongChordCreateEditViewModel();
+            
+            vm.ChordSelectList = new SelectList(
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
+            vm.SongSelectList = new SelectList(
+                await _uow.Songs.AllAsyncWithInclude(),
+                nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
+            return View(vm);
         }
 
         // POST: SongChords/Create
@@ -68,10 +72,10 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.ChordSelectList = new SelectList(
-                await _uow.BaseRepository<Chord>().AllAsync(),
-                "ChordId", "Name", vm.SongChord.ChordId);
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongChord.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
 
@@ -89,12 +93,12 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new SongChordCreateEditViewModel();
-            
+            vm.SongChord = songChord;
             vm.ChordSelectList = new SelectList(
-                await _uow.BaseRepository<Chord>().AllAsync(),
-                "ChordId", "Name", vm.SongChord.ChordId);
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongChord.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
 
@@ -117,10 +121,10 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.ChordSelectList = new SelectList(
-                await _uow.BaseRepository<Chord>().AllAsync(),
-                "ChordId", "Name", vm.SongChord.ChordId);
+                await _uow.Chords.AllAsync(),
+                nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
             vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
-                "SongId", "Author", vm.SongChord.SongId);
+                nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
 
@@ -131,13 +135,6 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-
-            /* :TODO maybe is needed to include? 
-            var songChord = await _context.SongChords
-                .Include(s => s.Chord)
-                .Include(s => s.Song)
-                .FirstOrDefaultAsync(m => m.SongChordId == id);
-            */
             var songChord = await _uow.SongChords.FindAsync(id);
             if (songChord == null)
             {

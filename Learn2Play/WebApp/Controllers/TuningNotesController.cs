@@ -44,9 +44,15 @@ namespace WebApp.Controllers
         }
 
         // GET: TuningNotes/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var vm = new TuningNoteCreateEditViewModel();
+            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
+            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+                nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
+           
+            return View(vm);
         }
 
         // POST: TuningNotes/Create
@@ -63,9 +69,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.TuningNote.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
             vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.TuningNote.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
         }
@@ -84,10 +90,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new TuningNoteCreateEditViewModel();
+            vm.TuningNote = tuningNote;
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.TuningNote.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
             vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.TuningNote.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
         }
@@ -111,9 +118,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.TuningNote.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
             vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.TuningNote.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
         }

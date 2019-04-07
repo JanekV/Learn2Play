@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain
@@ -13,5 +14,9 @@ namespace Domain
         [MaxLength(255)]
         [MinLength(1)]
         public string Description { get; set; }
+
+        public ICollection<UserInstrument> UserInstruments { get; set; }
+        public ICollection<TuningNote> TuningNotes { get; set; }
+        public ICollection<SongInstrument> SongInstruments { get; set; }
     }
 }

@@ -44,9 +44,12 @@ namespace WebApp.Controllers
         }
 
         // GET: Tabs/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var vm = new TabCreateEditViewModel();
+            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+                nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
+            return View(vm);
         }
 
         // POST: Tabs/Create
@@ -63,7 +66,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
-                "VideoId", "AuthorChannelLink", vm.Tab.VideoId);
+                nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
 
@@ -81,8 +84,9 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new TabCreateEditViewModel();
+            vm.Tab = tab;
             vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
-                "VideoId", "AuthorChannelLink", vm.Tab.VideoId);
+                nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
 
@@ -105,7 +109,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
-                "VideoId", "AuthorChannelLink", vm.Tab.VideoId);
+                nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
 

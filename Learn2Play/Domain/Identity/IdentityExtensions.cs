@@ -31,7 +31,7 @@ namespace Domain.Identity
             return (TKey) Convert.ChangeType(userId, typeof(TKey));
 
             // this is tiny bit slower, but handles GUID type also
-            return (TKey) TypeDescriptor.GetConverter(typeof(TKey)).ConvertFromInvariantString(userId);
+            //return (TKey) TypeDescriptor.GetConverter(typeof(TKey)).ConvertFromInvariantString(userId);
 
         }
     }

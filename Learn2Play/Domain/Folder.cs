@@ -17,7 +17,9 @@ namespace Domain
         [MaxLength(1000)]
         [MinLength(1)]
         public string Comment { get; set; }
-             
+
+        public ICollection<UserFolder> UserFolders { get; set; }
+        public ICollection<SongInFolder> SongInFolders { get; set; }
     }
 
     public enum FolderType

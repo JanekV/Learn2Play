@@ -19,10 +19,9 @@ namespace Domain
         [MaxLength(255)]
         [MinLength(1)]
         public string LocalPath { get; set; }
-
-        public List<Tab> Tabs { get; set; }
-
         public int SongId { get; set; }
         public Song Song { get; set; }
+
+        public ICollection<Tab> Tabs { get; set; }
     }
 }

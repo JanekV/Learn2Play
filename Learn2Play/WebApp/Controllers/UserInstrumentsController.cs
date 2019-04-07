@@ -9,10 +9,12 @@ using Microsoft.EntityFrameworkCore;
 using DAL.App.EF;
 using Domain;
 using Domain.Identity;
+using Microsoft.AspNetCore.Authorization;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
+    [Authorize]
     public class UserInstrumentsController : Controller
     {
         private readonly IAppUnitOfWork _uow;
@@ -45,9 +47,14 @@ namespace WebApp.Controllers
         }
 
         // GET: UserInstruments/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var vm = new UserInstrumentCreateEditViewModel();
+            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+                nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
+            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
+            return View(vm);
         }
 
         // POST: UserInstruments/Create
@@ -63,10 +70,10 @@ namespace WebApp.Controllers
                 await _uow.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _uow.BaseRepository<AppUser>().AllAsync(),
-                "Id", "Id", vm.UserInstrument.AppUserId);
+            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+                nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.UserInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
 
@@ -84,10 +91,11 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new UserInstrumentCreateEditViewModel();
+            vm.UserInstrument = userInstrument;
             vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
-                "Id", "Id", vm.UserInstrument.AppUserId);
+                nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.UserInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
 
@@ -110,9 +118,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
-                "Id", "Id", vm.UserInstrument.AppUserId);
+                nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
-                "InstrumentId", "Name", vm.UserInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
 

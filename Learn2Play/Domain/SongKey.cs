@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace Domain
@@ -13,5 +14,7 @@ namespace Domain
 
         public int NoteId { get; set; }
         public Note Note { get; set; }
+
+        public ICollection<Song> Songs { get; set; }
     }
 }

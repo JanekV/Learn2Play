@@ -46,15 +46,15 @@ namespace WebApp.Controllers
         }
 
         // GET: ChordNotes/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             var vm = new ChordNoteCreateEditViewModel();
             vm.ChordSelectList = new SelectList(
-                _uow.Chords.AllAsync().Result,
+                await _uow.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name));
             
             vm.NoteSelectList = new SelectList(
-                _uow.Notes.AllAsync().Result,
+                await _uow.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name));
 
             return View(vm);
@@ -100,6 +100,7 @@ namespace WebApp.Controllers
             }
 
             var vm = new ChordNoteCreateEditViewModel();
+            vm.ChordNote = chordNote;
             vm.ChordSelectList = new SelectList(
                 await _uow.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);

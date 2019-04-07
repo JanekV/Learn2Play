@@ -44,9 +44,12 @@ namespace WebApp.Controllers
         }
 
         // GET: Songs/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
-            return View();
+            var vm = new SongCreateEditViewModel();
+            vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
+                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
+            return View(vm);
         }
 
         // POST: Songs/Create
@@ -63,7 +66,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
-                "SongKeyId", "Description", vm.Song.SongKeyId);
+                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
             return View(vm);
         }
 
@@ -81,8 +84,9 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new SongCreateEditViewModel();
+            vm.Song = song;
             vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
-                "SongKeyId", "Description", vm.Song.SongKeyId);
+                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
             return View(vm);
         }
 
@@ -105,7 +109,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongKeySelectList = new SelectList(await _uow.SongKeys.AllAsyncWithInclude(),
-                "SongKeyId", "Description", vm.Song.SongKeyId);
+                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
             return View(vm);
         }
 

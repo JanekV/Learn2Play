@@ -44,8 +44,11 @@ namespace WebApp.Controllers
         }
 
         // GET: SongKeys/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            var vm = new SongKeyCreateEditViewModel();
+            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+                nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View();
         }
 
@@ -64,7 +67,7 @@ namespace WebApp.Controllers
             }
 
             vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.SongKey.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View(vm);
         }
 
@@ -82,8 +85,9 @@ namespace WebApp.Controllers
                 return NotFound();
             }
             var vm = new SongKeyCreateEditViewModel();
+            vm.SongKey = songKey;
             vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.SongKey.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View(vm);
         }
 
@@ -106,7 +110,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
-                "NoteId", "Name", vm.SongKey.NoteId);
+                nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View(vm);
         }
 
