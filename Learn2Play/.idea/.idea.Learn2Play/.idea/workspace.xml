@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Contracts.DAL.App.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Contracts.DAL.App.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Domain.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Domain.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/app.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/app.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL.Base.EF/obj/Debug/netstandard2.0/DAL.Base.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.Base.EF/obj/Debug/netstandard2.0/DAL.Base.EF.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/bin/Debug/netstandard2.0/Domain.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/bin/Debug/netstandard2.0/Domain.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/main-router.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/main-router.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+            <state relative-caret-position="825">
+              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
               <folding>
                 <marker date="1554064864858" expanded="true" signature="17:5781" ph="&lt;html.../&gt;" />
                 <marker date="1554064864858" expanded="true" signature="24:1045" ph="&lt;head.../&gt;" />
@@ -87,6 +83,29 @@
                 <marker date="1554064864858" expanded="true" signature="4822:5650" ph="&lt;environment.../&gt;" />
                 <marker date="1554064864858" expanded="true" signature="4866:5201" ph="&lt;script.../&gt;" />
                 <marker date="1554064864858" expanded="true" signature="5210:5631" ph="&lt;script.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+              <folding>
+                <marker date="1553882551752" expanded="false" signature="6:297" ph="..." />
+                <marker date="1553882551752" expanded="true" signature="330:2346" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="439:2344" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="548:592" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="722:810" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="942:1157" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="1053:1116" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="1300:1545" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="1346:1411" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="1683:1892" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="2033:2338" ph="{...}" />
+                <marker date="1553882551752" expanded="true" signature="2143:2206" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -398,6 +417,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -414,35 +435,19 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="APIControllers" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Home" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Shared" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -510,6 +515,7 @@
       <workItem from="1554640033087" duration="3757000" />
       <workItem from="1554644459093" duration="4206000" />
       <workItem from="1554894586440" duration="3292000" />
+      <workItem from="1554917630125" duration="2236000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -634,7 +640,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90349000" />
+    <option name="totallyTimeSpent" value="92585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -647,8 +653,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="749" y="0" width="784" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24723756" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25414366" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -715,38 +722,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/FoldersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding>
-            <marker date="1553882551898" expanded="false" signature="6:287" ph="..." />
-            <marker date="1553882551898" expanded="true" signature="317:3698" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="367:3696" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="473:517" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="591:667" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="760:1077" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="798:861" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="970:1033" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="1147:1194" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="1204:1414" ph="/* POST: Folders/Create ... */" />
-            <marker date="1553882551898" expanded="true" signature="1568:1841" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="1614:1798" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="1928:2227" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="1966:2029" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="2121:2184" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="2237:2447" ph="/* POST: Folders/Edit/5 ... */" />
-            <marker date="1553882551898" expanded="true" signature="2607:2971" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="2650:2713" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="2750:2928" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="3062:3362" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="3100:3163" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="3255:3318" ph="{...}" />
-            <marker date="1553882551898" expanded="true" signature="3538:3690" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Controllers/InstrumentsController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1632,8 +1607,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="55" column="23" lean-forward="true" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
+        <state relative-caret-position="825">
+          <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
           <folding>
             <marker date="1554064864858" expanded="true" signature="17:5781" ph="&lt;html.../&gt;" />
             <marker date="1554064864858" expanded="true" signature="24:1045" ph="&lt;head.../&gt;" />
@@ -1660,6 +1635,27 @@
             <marker date="1554064864858" expanded="true" signature="4822:5650" ph="&lt;environment.../&gt;" />
             <marker date="1554064864858" expanded="true" signature="4866:5201" ph="&lt;script.../&gt;" />
             <marker date="1554064864858" expanded="true" signature="5210:5631" ph="&lt;script.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <marker date="1553882551752" expanded="false" signature="6:297" ph="..." />
+            <marker date="1553882551752" expanded="true" signature="330:2346" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="439:2344" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="548:592" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="722:810" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="942:1157" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="1053:1116" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="1300:1545" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="1346:1411" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="1683:1892" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="2033:2338" ph="{...}" />
+            <marker date="1553882551752" expanded="true" signature="2143:2206" ph="{...}" />
           </folding>
         </state>
       </provider>
