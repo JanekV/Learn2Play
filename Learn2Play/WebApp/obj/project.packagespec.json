@@ -17,6 +17,9 @@
         "projectReferences": {
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj"
+          },
+          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj": {
+            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj"
           }
         }
       }

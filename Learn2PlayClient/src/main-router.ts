@@ -1,11 +1,14 @@
-import { PLATFORM, LogManager } from "aurelia-framework";
+import { PLATFORM, LogManager, autoinject } from "aurelia-framework";
 import {RouterConfiguration, Router} from "aurelia-router";
+import { AppConfig } from "app-config";
 
 export var log = LogManager.getLogger('MainRouter');
 
+@autoinject
 export class MainRouter{
 
   public router: Router;
+
   constructor(){
     log.debug('constructor');
   }
@@ -23,6 +26,12 @@ export class MainRouter{
         nav: true, 
         title: 'Home'
       },
+
+      //Identity login routes
+      {route: 'identity/login', name: 'identity' + 'Login', moduleId: PLATFORM.moduleName('identity/login'), nav: false, title: 'Login'},
+      {route: 'identity/register', name: 'identity' + 'Register', moduleId: PLATFORM.moduleName('identity/register'), nav: false, title: 'Register'},
+      {route: 'identity/logout', name: 'identity' + 'Logout', moduleId: PLATFORM.moduleName('identity/logout'), nav: false, title: 'Logout'},
+
       //Notes controller routes
       {route: ['notes' ,'notes/index'], name: 'notes' + 'Index', moduleId: PLATFORM.moduleName('notes/index'), nav: true, title: 'Notes'},
       {route: 'notes/create', name: 'notes' + 'Create', moduleId: PLATFORM.moduleName('notes/create'), nav: false, title: 'Notes Create'},

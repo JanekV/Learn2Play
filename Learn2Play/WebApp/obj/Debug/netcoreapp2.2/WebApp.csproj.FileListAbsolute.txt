@@ -276,3 +276,5 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Ra
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Details.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Edit.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Index.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Identity.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Identity.pdb

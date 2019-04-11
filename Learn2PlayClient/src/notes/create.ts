@@ -1,11 +1,34 @@
-import { LogManager, View } from "aurelia-framework";
-import { RouteConfig, NavigationInstruction } from "aurelia-router";
+import { LogManager, View, autoinject } from "aurelia-framework";
+import { RouteConfig, NavigationInstruction, Router } from "aurelia-router";
+import { INote } from "interfaces/INote";
+import { NotesService } from "services/notes-service";
 
 export var log = LogManager.getLogger('Notes.Create');
 
+@autoinject
 export class Create{
-  constructor(){
+
+  private note: INote;
+
+  constructor(
+    private router: Router,
+    private notesService: NotesService
+  ){
     log.debug('constructor');
+  }
+
+  // ============ View methods ==============
+  submit():void{
+    log.debug('note', this.note);
+    this.notesService.post(this.note).then(
+      response => {
+        if (response.status == 201){
+          this.router.navigateToRoute("notesIndex");
+        } else {
+          log.error('Error in response!', response);
+        }
+      }
+    );
   }
 
   // =============== View LifeCycle events ================

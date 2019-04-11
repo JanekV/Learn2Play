@@ -1,10 +1,18 @@
-import { LogManager, View } from "aurelia-framework";
+import { LogManager, View, autoinject } from "aurelia-framework";
 import { RouteConfig, NavigationInstruction } from "aurelia-router";
+import { INote } from "interfaces/INote";
+import { NotesService } from "services/notes-service";
 
 export var log = LogManager.getLogger('Notes.Index');
 
+@autoinject
 export class Index{
-  constructor(){
+
+  private notes: INote[] = [];
+
+  constructor(
+    private notesService: NotesService
+  ){
     log.debug('constructor');
   }
 
@@ -18,7 +26,14 @@ export class Index{
   }
 
   attached() {
-    log.debug('attatched');
+    log.debug('attached');
+    this.notesService.fetchAll().then(
+      jsonData => {
+        log.debug('jsonData', jsonData);
+        this.notes = jsonData;
+      }
+    );
+
   }
 
   detached() {

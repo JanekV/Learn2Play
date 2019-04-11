@@ -127,7 +127,6 @@
         <e p="Identity" t="Include">
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
-          <e p="IdentityExtensions.cs" t="Include" />
         </e>
         <e p="Instrument.cs" t="Include" />
         <e p="Note.cs" t="Include" />
@@ -151,6 +150,19 @@
         <e p="UserInstrument.cs" t="Include" />
         <e p="Video.cs" t="Include" />
       </e>
+      <e p="Identity" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Identity.csproj" t="IncludeRecursive" />
+        <e p="IdentityExtensions.cs" t="Include" />
+        <e p="JwtHelper.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Identity.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
       <e p="Learn2Play.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="WebApp" t="IncludeRecursive">
@@ -158,6 +170,9 @@
           <e p="ChordNotesController.cs" t="Include" />
           <e p="ChordsController.cs" t="Include" />
           <e p="FoldersController.cs" t="Include" />
+          <e p="Identity" t="Include">
+            <e p="AccountController.cs" t="Include" />
+          </e>
           <e p="InstrumentsController.cs" t="Include" />
           <e p="NotesController.cs" t="Include" />
           <e p="SongChordsController.cs" t="Include" />
@@ -7053,6 +7068,7 @@
       <e p="aurelia-animator-css" t="IncludeRecursive" />
       <e p="aurelia-bootstrapper" t="IncludeRecursive" />
       <e p="aurelia-cli" t="IncludeRecursive" />
+      <e p="aurelia-fetch-client" t="IncludeRecursive" />
       <e p="aurelia-testing" t="IncludeRecursive" />
       <e p="aurelia-tools" t="IncludeRecursive" />
       <e p="aurelia-webpack-plugin" t="IncludeRecursive" />

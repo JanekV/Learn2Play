@@ -1,10 +1,19 @@
-import { LogManager, View } from "aurelia-framework";
-import { RouteConfig, NavigationInstruction } from "aurelia-router";
+import { NotesService } from 'services/notes-service';
+import { LogManager, View, autoinject } from "aurelia-framework";
+import { RouteConfig, NavigationInstruction, Router } from "aurelia-router";
+import { INote } from "interfaces/INote";
 
 export var log = LogManager.getLogger('Notes.Details');
 
+@autoinject
 export class Details{
-  constructor(){
+
+  private note: INote | null = null;
+
+  constructor(
+    private router: Router,
+    private notesService: NotesService
+  ){
     log.debug('constructor');
   }
 
@@ -34,7 +43,14 @@ export class Details{
     log.debug('canActivate');
   }
   activate(params: any, routeConfig: RouteConfig, navigationInstruction: NavigationInstruction) {
-    log.debug('activate');
+    log.debug('activate', params);
+    this.notesService.fetch(params.id).then(
+      note => {
+        log.debug('note', note);
+        this.note = note;
+      }
+    );
+
   }
 
   canDeactivate() {
