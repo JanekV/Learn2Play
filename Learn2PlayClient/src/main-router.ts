@@ -9,7 +9,9 @@ export class MainRouter{
 
   public router: Router;
 
-  constructor(){
+  constructor(
+    private appConfig: AppConfig
+  ){
     log.debug('constructor');
   }
 
