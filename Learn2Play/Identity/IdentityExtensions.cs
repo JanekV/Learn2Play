@@ -1,8 +1,7 @@
 using System;
-using System.ComponentModel;
 using System.Security.Claims;
 
-namespace Domain.Identity
+namespace Identity
 {
     public static class IdentityExtensions
     {
