@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class UserInstrumentRepository: BaseRepository<UserInstrument>, IUserInstrumentRepository
+    public class UserInstrumentRepository: BaseRepository<UserInstrument, AppDbContext>, IUserInstrumentRepository
     {
-        public UserInstrumentRepository(IDataContext dataContext) : base(dataContext)
+        public UserInstrumentRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
 

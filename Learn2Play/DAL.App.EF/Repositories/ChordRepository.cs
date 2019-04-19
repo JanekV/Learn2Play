@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class ChordRepository: BaseRepository<Chord>, IChordRepository
+    public class ChordRepository: BaseRepository<Chord, AppDbContext>, IChordRepository
     {
-        public ChordRepository(IDataContext dataContext) : base(dataContext)
+        public ChordRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
     }

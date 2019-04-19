@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class VideoRepository: BaseRepository<Video>, IVideoRepository
+    public class VideoRepository: BaseRepository<Video, AppDbContext>, IVideoRepository
     {
-        public VideoRepository(IDataContext dataContext) : base(dataContext)
+        public VideoRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
 

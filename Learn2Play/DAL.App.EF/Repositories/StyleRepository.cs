@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class StyleRepository: BaseRepository<Style>, IStyleRepository
+    public class StyleRepository: BaseRepository<Style, AppDbContext>, IStyleRepository
     {
-        public StyleRepository(IDataContext dataContext) : base(dataContext)
+        public StyleRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
     }

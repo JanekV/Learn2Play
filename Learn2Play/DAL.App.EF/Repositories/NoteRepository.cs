@@ -6,9 +6,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class NoteRepository: BaseRepository<Note>, INoteRepository
+    public class NoteRepository: BaseRepository<Note, AppDbContext>, INoteRepository
     {
-        public NoteRepository(IDataContext dataContext) : base(dataContext)
+        public NoteRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
     }

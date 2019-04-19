@@ -5,7 +5,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface ISongInFolderRepository: IBaseRepositoryAsync<SongInFolder>
+    public interface ISongInFolderRepository: IBaseRepository<SongInFolder>
     {
         Task<IEnumerable<SongInFolder>> AllAsyncWithInclude();
     }

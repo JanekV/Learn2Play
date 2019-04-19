@@ -6,15 +6,17 @@ using Contracts.DAL.App.Repositories;
 using Contracts.DAL.Base;
 using Contracts.DAL.Base.Helpers;
 using Contracts.DAL.Base.Repositories;
+using DAL.Base.EF;
 
 
 namespace DAL.App.EF
 {
-    public class AppUnitOfWork: IAppUnitOfWork
+    public class AppUnitOfWork: BaseUnitOfWork<AppDbContext>, IAppUnitOfWork
     {
-        private readonly AppDbContext _appDbContext;
+        public AppUnitOfWork(AppDbContext dbContext, IBaseRepositoryProvider repositoryProvider): base(dbContext, repositoryProvider)
+        {
+        }
 
-        private readonly IRepositoryProvider _repositoryProvider;
         public IAppUserRepository AppUsers =>
             _repositoryProvider.GetRepository<IAppUserRepository>();
         public IChordRepository Chords =>
@@ -51,27 +53,6 @@ namespace DAL.App.EF
         public IUserInstrumentRepository UserInstruments =>
             _repositoryProvider.GetRepository<IUserInstrumentRepository>();
         public IVideoRepository Videos =>
-            _repositoryProvider.GetRepository<IVideoRepository>();
-        
-        public IBaseRepositoryAsync<TEntity> BaseRepository<TEntity>() where TEntity : class, IBaseEntity, new() => 
-            _repositoryProvider.GetRepositoryForEntity<TEntity>();
-
-        public AppUnitOfWork(IDataContext dataContext, IRepositoryProvider repositoryProvider)
-        {
-            _appDbContext = dataContext as AppDbContext;
-            _repositoryProvider = repositoryProvider;
-        }
-
-        public virtual int SaveChanges()
-        {
-            return _appDbContext.SaveChanges();
-        }
-
-        public virtual async Task<int> SaveChangesAsync()
-        {
-            return await _appDbContext.SaveChangesAsync();
-        }
-
-        
+            _repositoryProvider.GetRepository<IVideoRepository>();    
     }
 }

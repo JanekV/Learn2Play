@@ -975,6 +975,9 @@
         }
       },
       "Contracts.DAL.Base/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.2"
+        },
         "runtime": {
           "Contracts.DAL.Base.dll": {}
         }

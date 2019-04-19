@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class TuningNoteRepository: BaseRepository<TuningNote>, ITuningNoteRepository
+    public class TuningNoteRepository: BaseRepository<TuningNote, AppDbContext>, ITuningNoteRepository
     {
-        public TuningNoteRepository(IDataContext dataContext) : base(dataContext)
+        public TuningNoteRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
 

@@ -3,7 +3,7 @@ using Domain.Identity;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IAppUserRepository: IBaseRepositoryAsync<AppUser>
+    public interface IAppUserRepository: IBaseRepository<AppUser>
     {
         
     }

@@ -48,14 +48,16 @@ namespace WebApp.Controllers
         // GET: ChordNotes/Create
         public async Task<IActionResult> Create()
         {
-            var vm = new ChordNoteCreateEditViewModel();
-            vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
-                nameof(Chord.Id), nameof(Chord.Name));
-            
-            vm.NoteSelectList = new SelectList(
-                await _uow.Notes.AllAsync(),
-                nameof(Note.Id), nameof(Note.Name));
+            var vm = new ChordNoteCreateEditViewModel
+            {
+                ChordSelectList = new SelectList(
+                    await _uow.Chords.AllAsync(),
+                    nameof(Chord.Id), nameof(Chord.Name)),
+                NoteSelectList = new SelectList(
+                    await _uow.Notes.AllAsync(),
+                    nameof(Note.Id), nameof(Note.Name))
+            };
+
 
             return View(vm);
         }

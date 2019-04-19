@@ -5,7 +5,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IVideoRepository : IBaseRepositoryAsync<Video>
+    public interface IVideoRepository : IBaseRepository<Video>
     {
         Task<IEnumerable<Video>> AllAsyncWithInclude();
     }

@@ -3,7 +3,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface INoteRepository: IBaseRepositoryAsync<Note>
+    public interface INoteRepository: IBaseRepository<Note>
     {
         
     }

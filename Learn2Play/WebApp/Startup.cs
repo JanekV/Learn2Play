@@ -52,9 +52,10 @@ namespace WebApp
                 options.UseMySql(
                     Configuration.GetConnectionString("DefaultConnection")));
             
-            services.AddScoped<IDataContext, AppDbContext>();
-            services.AddSingleton<IRepositoryFactory, AppRepositoryFactory>();
-            services.AddScoped<IRepositoryProvider, BaseRepositoryProvider>();
+            // Unit of work and repositories
+            //services.AddScoped<IDataContext, AppDbContext>();
+            services.AddSingleton<IBaseRepositoryFactory<AppDbContext>, AppRepositoryFactory>();
+            services.AddScoped<IBaseRepositoryProvider, BaseRepositoryProvider<AppDbContext>>();
             services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
 
             

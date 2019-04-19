@@ -2,7 +2,7 @@ using Contracts.DAL.Base.Repositories;
 
 namespace Contracts.DAL.Base.Helpers
 {
-    public interface IRepositoryProvider
+    public interface IBaseRepositoryProvider
     {
         /// <summary>
         /// Return TRepository from cache, or call factory to create it
@@ -16,7 +16,7 @@ namespace Contracts.DAL.Base.Helpers
         /// </summary>
         /// <typeparam name="TEntity">Entity type</typeparam>
         /// <returns></returns>
-        IBaseRepositoryAsync<TEntity> GetRepositoryForEntity<TEntity>()
+        IBaseRepository<TEntity> GetEntityRepository<TEntity>()
             where TEntity : class, IBaseEntity, new();
     }
 

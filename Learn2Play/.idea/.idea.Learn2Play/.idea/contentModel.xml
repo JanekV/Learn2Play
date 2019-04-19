@@ -41,12 +41,12 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.DAL.Base.csproj" t="IncludeRecursive" />
         <e p="Helpers" t="Include">
-          <e p="IRepositoryFactory.cs" t="Include" />
-          <e p="IRepositoryProvider.cs" t="Include" />
+          <e p="IBaseRepositoryFactory.cs" t="Include" />
+          <e p="IBaseRepositoryProvider.cs" t="Include" />
         </e>
         <e p="IBaseEntity.cs" t="Include" />
+        <e p="IBaseUnitOfWork.cs" t="Include" />
         <e p="IDataContext.cs" t="Include" />
-        <e p="IUnitOfWork.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -100,6 +100,7 @@
         </e>
       </e>
       <e p="DAL.Base.EF" t="IncludeRecursive">
+        <e p="BaseUnitOfWork.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.Base.EF.csproj" t="IncludeRecursive" />
         <e p="Helpers" t="Include">

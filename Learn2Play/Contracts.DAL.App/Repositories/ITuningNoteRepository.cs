@@ -5,7 +5,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface ITuningNoteRepository: IBaseRepositoryAsync<TuningNote>
+    public interface ITuningNoteRepository: IBaseRepository<TuningNote>
     {
         Task<IEnumerable<TuningNote>> AllAsyncWithInclude();
     }

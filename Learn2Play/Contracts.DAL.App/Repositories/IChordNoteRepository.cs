@@ -5,7 +5,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IChordNoteRepository: IBaseRepositoryAsync<ChordNote>
+    public interface IChordNoteRepository: IBaseRepository<ChordNote>
     {
         Task<IEnumerable<ChordNote>> AllAsyncWithInclude();
     }

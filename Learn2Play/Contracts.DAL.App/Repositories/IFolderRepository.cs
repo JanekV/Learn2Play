@@ -5,7 +5,7 @@ using Domain;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IFolderRepository: IBaseRepositoryAsync<Folder>
+    public interface IFolderRepository: IBaseRepository<Folder>
     {
     }
 }

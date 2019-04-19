@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 using Contracts.DAL.Base;
 using Domain;
 using Domain.Identity;
@@ -7,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF
 {
-    public class AppDbContext: IdentityDbContext<AppUser, AppRole, int>, IDataContext
+    public class AppDbContext: IdentityDbContext<AppUser, AppRole, int>
     {
         public DbSet<Folder> Folders { get; set; }
         public DbSet<Song> Songs { get; set; }
@@ -42,7 +43,5 @@ namespace DAL.App.EF
                 relationship.DeleteBehavior = DeleteBehavior.Restrict;
             }
         }
-
-
     }
 }

@@ -9,9 +9,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class SongChordRepository: BaseRepository<SongChord>, ISongChordRepository
+    public class SongChordRepository: BaseRepository<SongChord, AppDbContext>, ISongChordRepository
     {
-        public SongChordRepository(IDataContext dataContext) : base(dataContext)
+        public SongChordRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {
         }
 
