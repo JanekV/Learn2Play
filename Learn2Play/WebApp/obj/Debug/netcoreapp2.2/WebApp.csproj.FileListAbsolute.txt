@@ -278,3 +278,13 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Ra
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Views\Chords\Index.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Identity.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Identity.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.App.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.Base.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.Base.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.BLL.App.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contrtacts.BLL.Base.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.App.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.Base.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contrtacts.BLL.Base.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.Base.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.BLL.App.pdb

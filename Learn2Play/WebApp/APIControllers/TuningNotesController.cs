@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class TuningNotesController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public TuningNotesController(IAppUnitOfWork uow)
+        public TuningNotesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/TuningNotes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<TuningNote>>> GetTuningNotes()
         {
-            return Ok(await _uow.TuningNotes.AllAsyncWithInclude());
+            return Ok(await _bll.TuningNotes.AllAsyncWithInclude());
         }
 
         // GET: api/TuningNotes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<TuningNote>> GetTuningNote(int id)
         {
-            var tuningNote = await _uow.TuningNotes.FindAsync(id);
+            var tuningNote = await _bll.TuningNotes.FindAsync(id);
 
             if (tuningNote == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.TuningNotes.Update(tuningNote);
-            await _uow.SaveChangesAsync();
+            _bll.TuningNotes.Update(tuningNote);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<TuningNote>> PostTuningNote(TuningNote tuningNote)
         {
-            await _uow.TuningNotes.AddAsync(tuningNote);
-            await _uow.SaveChangesAsync();
+            await _bll.TuningNotes.AddAsync(tuningNote);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetTuningNote", new { id = tuningNote.Id }, tuningNote);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<TuningNote>> DeleteTuningNote(int id)
         {
-            var tuningNote = await _uow.TuningNotes.FindAsync(id);
+            var tuningNote = await _bll.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
             }
 
-            _uow.TuningNotes.Remove(tuningNote);
-            await _uow.SaveChangesAsync();
+            _bll.TuningNotes.Remove(tuningNote);
+            await _bll.SaveChangesAsync();
 
             return tuningNote;
         }

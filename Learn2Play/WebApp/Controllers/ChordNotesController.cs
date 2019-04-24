@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -16,17 +17,17 @@ namespace WebApp.Controllers
 {
     public class ChordNotesController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public ChordNotesController(IAppUnitOfWork uow)
+        public ChordNotesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: ChordNotes
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.ChordNotes.AllAsyncWithInclude());
+            return View(await _bll.ChordNotes.AllAsyncWithInclude());
         }
 
         // GET: ChordNotes/Details/5
@@ -36,7 +37,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var chordNote = await _uow.ChordNotes.FindAsync(id);
+            var chordNote = await _bll.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
@@ -51,10 +52,10 @@ namespace WebApp.Controllers
             var vm = new ChordNoteCreateEditViewModel
             {
                 ChordSelectList = new SelectList(
-                    await _uow.Chords.AllAsync(),
+                    await _bll.Chords.AllAsync(),
                     nameof(Chord.Id), nameof(Chord.Name)),
                 NoteSelectList = new SelectList(
-                    await _uow.Notes.AllAsync(),
+                    await _bll.Notes.AllAsync(),
                     nameof(Note.Id), nameof(Note.Name))
             };
 
@@ -71,17 +72,17 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.ChordNotes.AddAsync(vm.ChordNote);
-                await _uow.SaveChangesAsync();
+                await _bll.ChordNotes.AddAsync(vm.ChordNote);
+                await _bll.SaveChangesAsync();
                 
                 return RedirectToAction(nameof(Index));
             }
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);
             
             vm.NoteSelectList = new SelectList(
-                await _uow.Notes.AllAsync(),
+                await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.ChordNote.NoteId);
 
             return View(vm);
@@ -95,7 +96,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chordNote = await _uow.ChordNotes.FindAsync(id);
+            var chordNote = await _bll.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
@@ -104,11 +105,11 @@ namespace WebApp.Controllers
             var vm = new ChordNoteCreateEditViewModel();
             vm.ChordNote = chordNote;
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);
             
             vm.NoteSelectList = new SelectList(
-                await _uow.Notes.AllAsync(),
+                await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.ChordNote.NoteId);
 
             return View(vm);
@@ -128,18 +129,18 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.ChordNotes.Update(vm.ChordNote);
-                await _uow.SaveChangesAsync();
+                _bll.ChordNotes.Update(vm.ChordNote);
+                await _bll.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
             }
             
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.ChordNote.ChordId);
             
             vm.NoteSelectList = new SelectList(
-                await _uow.Notes.AllAsync(),
+                await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.ChordNote.NoteId);
 
             return View(vm);
@@ -153,7 +154,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chordNote = await _uow.ChordNotes.FindAsync(id);
+            var chordNote = await _bll.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
@@ -167,8 +168,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.ChordNotes.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.ChordNotes.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

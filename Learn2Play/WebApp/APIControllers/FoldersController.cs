@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,25 +17,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class FoldersController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public FoldersController(IAppUnitOfWork uow)
+        public FoldersController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Folders
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Folder>>> GetFolders()
         {
-            return Ok(await _uow.Folders.AllAsync());
+            return Ok(await _bll.Folders.AllAsync());
         }
 
         // GET: api/Folders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Folder>> GetFolder(int id)
         {
-            var folder = await _uow.Folders.FindAsync(id);
+            var folder = await _bll.Folders.FindAsync(id);
 
             if (folder == null)
             {
@@ -53,8 +54,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Folders.Update(folder);
-            await _uow.SaveChangesAsync();
+            _bll.Folders.Update(folder);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -63,8 +64,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Folder>> PostFolder(Folder folder)
         {
-            await _uow.Folders.AddAsync(folder);
-            await _uow.SaveChangesAsync();
+            await _bll.Folders.AddAsync(folder);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetFolder", new { id = folder.Id }, folder);
         }
@@ -73,14 +74,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Folder>> DeleteFolder(int id)
         {
-            var folder = await _uow.Folders.FindAsync(id);
+            var folder = await _bll.Folders.FindAsync(id);
             if (folder == null)
             {
                 return NotFound();
             }
 
-            _uow.Folders.Remove(folder);
-            await _uow.SaveChangesAsync();
+            _bll.Folders.Remove(folder);
+            await _bll.SaveChangesAsync();
 
             return folder;
         }

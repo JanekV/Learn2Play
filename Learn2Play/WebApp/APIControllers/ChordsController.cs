@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class ChordsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public ChordsController(IAppUnitOfWork uow)
+        public ChordsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Chords
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Chord>>> GetChords()
         {
-            return Ok(await _uow.Chords.AllAsync());
+            return Ok(await _bll.Chords.AllAsync());
         }
 
         // GET: api/Chords/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Chord>> GetChord(int id)
         {
-            var chord = await _uow.Chords.FindAsync(id);
+            var chord = await _bll.Chords.FindAsync(id);
 
             if (chord == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Chords.Update(chord);
-            await _uow.SaveChangesAsync();
+            _bll.Chords.Update(chord);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Chord>> PostChord(Chord chord)
         {
-            await _uow.Chords.AddAsync(chord);
-            await _uow.SaveChangesAsync();
+            await _bll.Chords.AddAsync(chord);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetChord", new { id = chord.Id }, chord);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Chord>> DeleteChord(int id)
         {
-            var chord = await _uow.Chords.FindAsync(id);
+            var chord = await _bll.Chords.FindAsync(id);
             if (chord == null)
             {
                 return NotFound();
             }
 
-            _uow.Chords.Remove(chord);
-            await _uow.SaveChangesAsync();
+            _bll.Chords.Remove(chord);
+            await _bll.SaveChangesAsync();
 
             return chord;
         }

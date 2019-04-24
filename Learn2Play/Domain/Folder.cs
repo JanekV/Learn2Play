@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Domain.Enums;
 
 namespace Domain
 {
@@ -20,12 +21,5 @@ namespace Domain
 
         public ICollection<UserFolder> UserFolders { get; set; }
         public ICollection<SongInFolder> SongInFolders { get; set; }
-    }
-
-    public enum FolderType
-    {
-        CurrentlyLearning,
-        Favorites,
-        Other
     }
 }

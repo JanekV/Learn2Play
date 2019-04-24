@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -17,17 +18,17 @@ namespace WebApp.Controllers
     [Authorize]
     public class UserInstrumentsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public UserInstrumentsController(IAppUnitOfWork uow)
+        public UserInstrumentsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: UserInstruments
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.UserInstruments.AllAsyncWithInclude());
+            return View(await _bll.UserInstruments.AllAsyncWithInclude());
         }
 
         // GET: UserInstruments/Details/5
@@ -37,7 +38,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var userInstrument = await _uow.UserInstruments.FindAsync(id);
+            var userInstrument = await _bll.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
@@ -50,9 +51,9 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new UserInstrumentCreateEditViewModel();
-            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
@@ -66,13 +67,13 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-               await _uow.UserInstruments.AddAsync(vm.UserInstrument);
-                await _uow.SaveChangesAsync();
+               await _bll.UserInstruments.AddAsync(vm.UserInstrument);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
@@ -85,16 +86,16 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var userInstrument = await _uow.UserInstruments.FindAsync(id);
+            var userInstrument = await _bll.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
             }
             var vm = new UserInstrumentCreateEditViewModel();
             vm.UserInstrument = userInstrument;
-            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
@@ -113,13 +114,13 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.UserInstruments.Update(vm.UserInstrument);
-                await _uow.SaveChangesAsync();
+                _bll.UserInstruments.Update(vm.UserInstrument);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _uow.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
             return View(vm);
         }
@@ -131,7 +132,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var userInstrument = await _uow.UserInstruments.FindAsync(id);
+            var userInstrument = await _bll.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
@@ -145,8 +146,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.UserInstruments.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.UserInstruments.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

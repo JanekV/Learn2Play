@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class FoldersController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public FoldersController(IAppUnitOfWork uow)
+        public FoldersController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Folders
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Folders.AllAsync());
+            return View(await _bll.Folders.AllAsync());
         }
 
         // GET: Folders/Details/5
@@ -35,7 +36,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var folder = await _uow.Folders.FindAsync(id);
+            var folder = await _bll.Folders.FindAsync(id);
                 
             if (folder == null)
             {
@@ -60,8 +61,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Folders.AddAsync(folder);
-                await _uow.SaveChangesAsync();
+                await _bll.Folders.AddAsync(folder);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(folder);
@@ -75,7 +76,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var folder = await _uow.Folders.FindAsync(id);
+            var folder = await _bll.Folders.FindAsync(id);
             if (folder == null)
             {
                 return NotFound();
@@ -98,8 +99,8 @@ namespace WebApp.Controllers
             if (ModelState.IsValid)
             {
 
-                _uow.Folders.Update(folder);
-                await _uow.SaveChangesAsync();
+                _bll.Folders.Update(folder);
+                await _bll.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
             }
@@ -114,7 +115,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var folder = await _uow.Folders.FindAsync(id);
+            var folder = await _bll.Folders.FindAsync(id);
             if (folder == null)
             {
                 return NotFound();
@@ -128,8 +129,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Folders.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Folders.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

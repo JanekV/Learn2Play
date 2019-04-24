@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,17 +14,17 @@ namespace WebApp.Controllers
 {
     public class NotesController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public NotesController(IAppUnitOfWork uow)
+        public NotesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Notes
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Notes.AllAsync());
+            return View(await _bll.Notes.AllAsync());
         }
 
         // GET: Notes/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var note = await _uow.Notes.FindAsync(id);
+            var note = await _bll.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -58,8 +59,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Notes.AddAsync(note);
-                await _uow.SaveChangesAsync();
+                await _bll.Notes.AddAsync(note);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(note);
@@ -73,7 +74,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var note = await _uow.Notes.FindAsync(id);
+            var note = await _bll.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -95,8 +96,8 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                    _uow.Notes.Update(note);
-                    await _uow.SaveChangesAsync();
+                    _bll.Notes.Update(note);
+                    await _bll.SaveChangesAsync();
 
                 return RedirectToAction(nameof(Index));
             }
@@ -111,7 +112,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var note = await _uow.Notes.FindAsync(id);
+            var note = await _bll.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
@@ -125,8 +126,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Notes.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Notes.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

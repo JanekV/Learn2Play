@@ -4,9 +4,14 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLL.App;
+using BLL.App.Helpers;
+using BLL.Base.Helpers;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Contracts.DAL.Base;
 using Contracts.DAL.Base.Helpers;
+using Contrtacts.BLL.Base.Helpers;
 using DAL;
 using DAL.App.EF;
 using DAL.App.EF.Helpers;
@@ -58,6 +63,12 @@ namespace WebApp
             services.AddScoped<IBaseRepositoryProvider, BaseRepositoryProvider<AppDbContext>>();
             services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
 
+            // Business logic layer and services
+            services.AddSingleton<IBaseServiceFactory<IAppUnitOfWork>, AppServiceFactory>();
+            services.AddScoped<IBaseServiceProvider, BaseServiceProvider<IAppUnitOfWork>>();
+            services.AddScoped<IAppBLL, AppBLL>();
+
+            
             
             services
                 .AddIdentity<AppUser, AppRole>()

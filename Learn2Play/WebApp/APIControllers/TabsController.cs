@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class TabsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public TabsController(IAppUnitOfWork uow)
+        public TabsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Tabs
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Tab>>> GetTabs()
         {
-            return Ok(await _uow.Tabs.AllAsyncWithInclude());
+            return Ok(await _bll.Tabs.AllAsyncWithInclude());
         }
 
         // GET: api/Tabs/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Tab>> GetTab(int id)
         {
-            var tab = await _uow.Tabs.FindAsync(id);
+            var tab = await _bll.Tabs.FindAsync(id);
 
             if (tab == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Tabs.Update(tab);
-            await _uow.SaveChangesAsync();
+            _bll.Tabs.Update(tab);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Tab>> PostTab(Tab tab)
         {
-            await _uow.Tabs.AddAsync(tab);
-            await _uow.SaveChangesAsync();
+            await _bll.Tabs.AddAsync(tab);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetTab", new { id = tab.Id }, tab);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Tab>> DeleteTab(int id)
         {
-            var tab = await _uow.Tabs.FindAsync(id);
+            var tab = await _bll.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
             }
 
-            _uow.Tabs.Remove(tab);
-            await _uow.SaveChangesAsync();
+            _bll.Tabs.Remove(tab);
+            await _bll.SaveChangesAsync();
 
             return tab;
         }

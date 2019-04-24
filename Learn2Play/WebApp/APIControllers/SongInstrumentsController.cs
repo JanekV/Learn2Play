@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,11 +16,11 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongInstrumentsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongInstrumentsController(IAppUnitOfWork uow)
+        public SongInstrumentsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
 
@@ -27,14 +28,14 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongInstrument>>> GetSongInstruments()
         {
-            return Ok(await _uow.SongInstruments.AllAsyncWithInclude());
+            return Ok(await _bll.SongInstruments.AllAsyncWithInclude());
         }
 
         // GET: api/SongInstruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongInstrument>> GetSongInstrument(int id)
         {
-            var songInstrument = await _uow.SongInstruments.FindAsync(id);
+            var songInstrument = await _bll.SongInstruments.FindAsync(id);
 
             if (songInstrument == null)
             {
@@ -53,8 +54,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.SongInstruments.Update(songInstrument);
-            await _uow.SaveChangesAsync();
+            _bll.SongInstruments.Update(songInstrument);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -63,8 +64,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongInstrument>> PostSongInstrument(SongInstrument songInstrument)
         {
-            await _uow.SongInstruments.AddAsync(songInstrument);
-            await _uow.SaveChangesAsync();
+            await _bll.SongInstruments.AddAsync(songInstrument);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongInstrument", new { id = songInstrument.Id }, songInstrument);
         }
@@ -73,14 +74,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongInstrument>> DeleteSongInstrument(int id)
         {
-            var songInstrument = await _uow.SongInstruments.FindAsync(id);
+            var songInstrument = await _bll.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
             }
 
-            _uow.SongInstruments.Remove(songInstrument);
-            await _uow.SaveChangesAsync();
+            _bll.SongInstruments.Remove(songInstrument);
+            await _bll.SaveChangesAsync();
 
             return songInstrument;
         }

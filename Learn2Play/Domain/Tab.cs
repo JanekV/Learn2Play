@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using Domain.Enums;
 
 namespace Domain
 {
@@ -28,15 +29,5 @@ namespace Domain
         public int VideoId { get; set; }
         public Video Video { get; set; }
         
-    }
-
-    public enum SongPart
-    {
-        Intro,
-        PreChorus,
-        Chorus,
-        Bridge,
-        Verse,
-        End
     }
 }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,17 +14,17 @@ namespace WebApp.Controllers
 {
     public class ChordsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public ChordsController(IAppUnitOfWork uow)
+        public ChordsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Chords
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Chords.AllAsync());
+            return View(await _bll.Chords.AllAsync());
         }
 
         // GET: Chords/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chord = await _uow.Chords
+            var chord = await _bll.Chords
                 .FindAsync(id);
             if (chord == null)
             {
@@ -59,8 +60,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Chords.AddAsync(chord);
-                await _uow.SaveChangesAsync();
+                await _bll.Chords.AddAsync(chord);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(chord);
@@ -74,7 +75,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chord = await _uow.Chords.FindAsync(id);
+            var chord = await _bll.Chords.FindAsync(id);
             if (chord == null)
             {
                 return NotFound();
@@ -96,8 +97,8 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.Chords.Update(chord);
-                await _uow.SaveChangesAsync();
+                _bll.Chords.Update(chord);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(chord);
@@ -111,7 +112,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var chord = await _uow.Chords
+            var chord = await _bll.Chords
                 .FindAsync(id);
             if (chord == null)
             {
@@ -126,8 +127,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Chords.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Chords.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

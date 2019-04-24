@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongChordsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongChordsController(IAppUnitOfWork uow)
+        public SongChordsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/SongChords
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongChord>>> GetSongChords()
         {
-            return Ok(await _uow.SongChords.AllAsyncWithInclude());
+            return Ok(await _bll.SongChords.AllAsyncWithInclude());
         }
 
         // GET: api/SongChords/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongChord>> GetSongChord(int id)
         {
-            var songChord = await _uow.SongChords.FindAsync(id);
+            var songChord = await _bll.SongChords.FindAsync(id);
 
             if (songChord == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.SongChords.Update(songChord);
-            await _uow.SaveChangesAsync();
+            _bll.SongChords.Update(songChord);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongChord>> PostSongChord(SongChord songChord)
         {
-            await _uow.SongChords.AddAsync(songChord);
-            await _uow.SaveChangesAsync();
+            await _bll.SongChords.AddAsync(songChord);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongChord", new { id = songChord.Id }, songChord);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongChord>> DeleteSongChord(int id)
         {
-            var songChord = await _uow.SongChords.FindAsync(id);
+            var songChord = await _bll.SongChords.FindAsync(id);
             if (songChord == null)
             {
                 return NotFound();
             }
 
-            _uow.SongChords.Remove(songChord);
-            await _uow.SaveChangesAsync();
+            _bll.SongChords.Remove(songChord);
+            await _bll.SaveChangesAsync();
 
             return songChord;
         }

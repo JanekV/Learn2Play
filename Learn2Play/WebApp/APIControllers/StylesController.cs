@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class StylesController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public StylesController(IAppUnitOfWork uow)
+        public StylesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Styles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Style>>> GetStyles()
         {
-            return Ok(await _uow.Styles.AllAsync());
+            return Ok(await _bll.Styles.AllAsync());
         }
 
         // GET: api/Styles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Style>> GetStyle(int id)
         {
-            var style = await _uow.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id);
 
             if (style == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Styles.Update(style);
-            await _uow.SaveChangesAsync();
+            _bll.Styles.Update(style);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Style>> PostStyle(Style style)
         {
-            await _uow.Styles.AddAsync(style);
-            await _uow.SaveChangesAsync();
+            await _bll.Styles.AddAsync(style);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetStyle", new { id = style.Id }, style);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Style>> DeleteStyle(int id)
         {
-            var style = await _uow.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
             }
 
-            _uow.Styles.Remove(style);
-            await _uow.SaveChangesAsync();
+            _bll.Styles.Remove(style);
+            await _bll.SaveChangesAsync();
 
             return style;
         }

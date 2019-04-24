@@ -5,6 +5,116 @@
     <e p="C:\Users\X\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\X\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.616467547.00" t="ExcludeRecursive" />
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2Play" t="IncludeFlat">
+      <e p="BLL.App" t="IncludeRecursive">
+        <e p="AppBLL.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BLL.App.csproj" t="IncludeRecursive" />
+        <e p="Helpers" t="Include">
+          <e p="AppServiceFactory.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="BLL.App.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="services" t="Include">
+          <e p="AppUserService.cs" t="Include" />
+          <e p="ChordNoteService.cs" t="Include" />
+          <e p="ChordService.cs" t="Include" />
+          <e p="FolderService.cs" t="Include" />
+          <e p="InstrumentService.cs" t="Include" />
+          <e p="NoteService.cs" t="Include" />
+          <e p="SongChordService.cs" t="Include" />
+          <e p="SongInFolderService.cs" t="Include" />
+          <e p="SongInstrumentService.cs" t="Include" />
+          <e p="SongKeyService.cs" t="Include" />
+          <e p="SongService.cs" t="Include" />
+          <e p="SongStyleService.cs" t="Include" />
+          <e p="StyleService.cs" t="Include" />
+          <e p="TabService.cs" t="Include" />
+          <e p="TuningNoteService.cs" t="Include" />
+          <e p="UserFolderService.cs" t="Include" />
+          <e p="UserInstrumentService.cs" t="Include" />
+          <e p="VideoService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="BLL.App.DTO" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BLL.App.DTO.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="BLL.App.DTO.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="BLL.Base" t="IncludeRecursive">
+        <e p="BaseBLL.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BLL.Base.csproj" t="IncludeRecursive" />
+        <e p="Helpers" t="Include">
+          <e p="BaseServiceFactory.cs" t="Include" />
+          <e p="BaseServiceProvider.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="BLL.Base.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="services" t="Include">
+          <e p="BaseEntityService.cs" t="Include" />
+          <e p="BaseService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Contracts.Base" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts.Base.csproj" t="IncludeRecursive" />
+        <e p="ITrackableInstance.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contracts.Base.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Contracts.BLL.App" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts.BLL.App.csproj" t="IncludeRecursive" />
+        <e p="IAppBLL.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contracts.BLL.App.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="services" t="Include">
+          <e p="IAppUserService.cs" t="Include" />
+          <e p="IChordNoteService.cs" t="Include" />
+          <e p="IChordService.cs" t="Include" />
+          <e p="IFolderService.cs" t="Include" />
+          <e p="IInstrumentService.cs" t="Include" />
+          <e p="INoteService.cs" t="Include" />
+          <e p="ISongChordService.cs" t="Include" />
+          <e p="ISongInFolderService.cs" t="Include" />
+          <e p="ISongInstrumentService.cs" t="Include" />
+          <e p="ISongKeyService.cs" t="Include" />
+          <e p="ISongService.cs" t="Include" />
+          <e p="ISongStyleService.cs" t="Include" />
+          <e p="IStyleService.cs" t="Include" />
+          <e p="ITabService.cs" t="Include" />
+          <e p="ITuningNoteService.cs" t="Include" />
+          <e p="IUserFolderService.cs" t="Include" />
+          <e p="IUserInstrumentService.cs" t="Include" />
+          <e p="IVideoService.cs" t="Include" />
+        </e>
+      </e>
       <e p="Contracts.DAL.App" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.DAL.App.csproj" t="IncludeRecursive" />
@@ -56,6 +166,59 @@
         </e>
         <e p="Repositories" t="Include">
           <e p="IBaseRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Contrtacts.BLL.Base" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contrtacts.BLL.Base.csproj" t="IncludeRecursive" />
+        <e p="Helpers" t="Include">
+          <e p="IBaseServiceFactory.cs" t="Include" />
+          <e p="IBaseServiceProvider.cs" t="Include" />
+        </e>
+        <e p="IBaseBLL.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Contrtacts.BLL.Base.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="services" t="Include">
+          <e p="IBaseService.cs" t="Include" />
+        </e>
+      </e>
+      <e p="DAL.App.DTO" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DAL.App.DTO.csproj" t="IncludeRecursive" />
+        <e p="DomainEntityDTOs" t="Include">
+          <e p="Chord.cs" t="Include" />
+          <e p="ChordNote.cs" t="Include" />
+          <e p="Folder.cs" t="Include" />
+          <e p="Instrument.cs" t="Include" />
+          <e p="Note.cs" t="Include" />
+          <e p="Song.cs" t="Include" />
+          <e p="SongChord.cs" t="Include" />
+          <e p="SongInFolder.cs" t="Include" />
+          <e p="SongInstrument.cs" t="Include" />
+          <e p="SongKey.cs" t="Include" />
+          <e p="SongStyle.cs" t="Include" />
+          <e p="Style.cs" t="Include" />
+          <e p="Tab.cs" t="Include" />
+          <e p="TuningNote.cs" t="Include" />
+          <e p="UserFolder.cs" t="Include" />
+          <e p="UserInstrument.cs" t="Include" />
+          <e p="Video.cs" t="Include" />
+        </e>
+        <e p="Identity" t="Include">
+          <e p="AppRole.cs" t="Include" />
+          <e p="AppUser.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="DAL.App.DTO.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="DAL.App.EF" t="IncludeRecursive">
@@ -124,6 +287,10 @@
         <e p="Chord.cs" t="Include" />
         <e p="ChordNote.cs" t="Include" />
         <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="Enums" t="Include">
+          <e p="FolderType.cs" t="Include" />
+          <e p="SongPart.cs" t="Include" />
+        </e>
         <e p="Folder.cs" t="Include" />
         <e p="Identity" t="Include">
           <e p="AppRole.cs" t="Include" />

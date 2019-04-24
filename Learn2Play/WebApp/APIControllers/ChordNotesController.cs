@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -16,25 +17,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class ChordNotesController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public ChordNotesController(IAppUnitOfWork uow)
+        public ChordNotesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/ChordNotes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ChordNote>>> GetChordNotes()
         {
-            return Ok(await _uow.ChordNotes.AllAsyncWithInclude());
+            return Ok(await _bll.ChordNotes.AllAsyncWithInclude());
         }
 
         // GET: api/ChordNotes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ChordNote>> GetChordNote(int id)
         {
-            var chordNote = await _uow.ChordNotes.FindAsync(id);
+            var chordNote = await _bll.ChordNotes.FindAsync(id);
 
             if (chordNote == null)
             {
@@ -53,8 +54,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.ChordNotes.Update(chordNote);
-            await _uow.SaveChangesAsync();
+            _bll.ChordNotes.Update(chordNote);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -63,8 +64,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<ChordNote>> PostChordNote(ChordNote chordNote)
         {
-            await _uow.ChordNotes.AddAsync(chordNote);
-            await _uow.SaveChangesAsync();
+            await _bll.ChordNotes.AddAsync(chordNote);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetChordNote", new { id = chordNote.Id }, chordNote);
         }
@@ -73,14 +74,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<ChordNote>> DeleteChordNote(int id)
         {
-            var chordNote = await _uow.ChordNotes.FindAsync(id);
+            var chordNote = await _bll.ChordNotes.FindAsync(id);
             if (chordNote == null)
             {
                 return NotFound();
             }
 
-            _uow.ChordNotes.Remove(chordNote);
-            await _uow.SaveChangesAsync();
+            _bll.ChordNotes.Remove(chordNote);
+            await _bll.SaveChangesAsync();
 
             return chordNote;
         }

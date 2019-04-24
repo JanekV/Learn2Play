@@ -4757,6 +4757,59 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "BLL.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BLL.Base": "1.0.0",
+          "Contracts.BLL.App": "1.0.0",
+          "Contracts.DAL.App": "1.0.0",
+          "Contrtacts.BLL.Base": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.App.dll": {}
+        }
+      },
+      "BLL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Contrtacts.BLL.Base": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.Base.dll": {}
+        }
+      },
+      "Contracts.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Contracts.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.Base.dll": {}
+        }
+      },
+      "Contracts.BLL.App/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Contracts.DAL.App": "1.0.0",
+          "Contrtacts.BLL.Base": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Contracts.BLL.App.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.BLL.App.dll": {}
+        }
+      },
       "Contracts.DAL.App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -4782,6 +4835,20 @@
         },
         "runtime": {
           "bin/placeholder/Contracts.DAL.Base.dll": {}
+        }
+      },
+      "Contrtacts.BLL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Contracts.Base": "1.0.0",
+          "Contracts.DAL.Base": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Contrtacts.BLL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contrtacts.BLL.Base.dll": {}
         }
       },
       "DAL.App.EF/1.0.0": {
@@ -13103,6 +13170,26 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "BLL.App/1.0.0": {
+      "type": "project",
+      "path": "../BLL.App/BLL.App.csproj",
+      "msbuildProject": "../BLL.App/BLL.App.csproj"
+    },
+    "BLL.Base/1.0.0": {
+      "type": "project",
+      "path": "../BLL.Base/BLL.Base.csproj",
+      "msbuildProject": "../BLL.Base/BLL.Base.csproj"
+    },
+    "Contracts.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.Base/Contracts.Base.csproj",
+      "msbuildProject": "../Contracts.Base/Contracts.Base.csproj"
+    },
+    "Contracts.BLL.App/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.BLL.App/Contracts.BLL.App.csproj",
+      "msbuildProject": "../Contracts.BLL.App/Contracts.BLL.App.csproj"
+    },
     "Contracts.DAL.App/1.0.0": {
       "type": "project",
       "path": "../Contracts.DAL.App/Contracts.DAL.App.csproj",
@@ -13112,6 +13199,11 @@
       "type": "project",
       "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
       "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+    },
+    "Contrtacts.BLL.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contrtacts.BLL.Base/Contrtacts.BLL.Base.csproj",
+      "msbuildProject": "../Contrtacts.BLL.Base/Contrtacts.BLL.Base.csproj"
     },
     "DAL.App.EF/1.0.0": {
       "type": "project",
@@ -13136,6 +13228,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "BLL.App >= 1.0.0",
+      "BLL.Base >= 1.0.0",
+      "Contrtacts.BLL.Base >= 1.0.0",
       "DAL.App.EF >= 1.0.0",
       "Identity >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -13173,6 +13268,15 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.App\\BLL.App.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.App\\BLL.App.csproj"
+            },
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.Base\\BLL.Base.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.Base\\BLL.Base.csproj"
+            },
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contrtacts.BLL.Base\\Contrtacts.BLL.Base.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contrtacts.BLL.Base\\Contrtacts.BLL.Base.csproj"
+            },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj"
             },

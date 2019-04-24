@@ -24,6 +24,9 @@
     ".NETCoreApp,Version=v2.2": {
       "WebApp/1.0.0": {
         "dependencies": {
+          "BLL.App": "1.0.0",
+          "BLL.Base": "1.0.0",
+          "Contrtacts.BLL.Base": "1.0.0",
           "DAL.App.EF": "1.0.0",
           "Identity": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -649,6 +652,51 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "BLL.App/1.0.0": {
+        "dependencies": {
+          "BLL.Base": "1.0.0",
+          "Contracts.BLL.App": "1.0.0",
+          "Contracts.DAL.App": "1.0.0",
+          "Contrtacts.BLL.Base": "1.0.0"
+        },
+        "runtime": {
+          "BLL.App.dll": {}
+        },
+        "compile": {
+          "BLL.App.dll": {}
+        }
+      },
+      "BLL.Base/1.0.0": {
+        "dependencies": {
+          "Contrtacts.BLL.Base": "1.0.0"
+        },
+        "runtime": {
+          "BLL.Base.dll": {}
+        },
+        "compile": {
+          "BLL.Base.dll": {}
+        }
+      },
+      "Contracts.Base/1.0.0": {
+        "runtime": {
+          "Contracts.Base.dll": {}
+        },
+        "compile": {
+          "Contracts.Base.dll": {}
+        }
+      },
+      "Contracts.BLL.App/1.0.0": {
+        "dependencies": {
+          "Contracts.DAL.App": "1.0.0",
+          "Contrtacts.BLL.Base": "1.0.0"
+        },
+        "runtime": {
+          "Contracts.BLL.App.dll": {}
+        },
+        "compile": {
+          "Contracts.BLL.App.dll": {}
+        }
+      },
       "Contracts.DAL.App/1.0.0": {
         "dependencies": {
           "Contracts.DAL.Base": "1.0.0",
@@ -670,6 +718,18 @@
         },
         "compile": {
           "Contracts.DAL.Base.dll": {}
+        }
+      },
+      "Contrtacts.BLL.Base/1.0.0": {
+        "dependencies": {
+          "Contracts.Base": "1.0.0",
+          "Contracts.DAL.Base": "1.0.0"
+        },
+        "runtime": {
+          "Contrtacts.BLL.Base.dll": {}
+        },
+        "compile": {
+          "Contrtacts.BLL.Base.dll": {}
         }
       },
       "DAL.App.EF/1.0.0": {
@@ -3975,12 +4035,37 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "BLL.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BLL.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contracts.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contracts.BLL.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Contracts.DAL.App/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Contracts.DAL.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Contrtacts.BLL.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

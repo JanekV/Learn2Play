@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,17 +14,17 @@ namespace WebApp.Controllers
 {
     public class StylesController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public StylesController(IAppUnitOfWork uow)
+        public StylesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Styles
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Styles.AllAsync());
+            return View(await _bll.Styles.AllAsync());
         }
 
         // GET: Styles/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _uow.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
@@ -58,8 +59,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Styles.AddAsync(style);
-                await _uow.SaveChangesAsync();
+                await _bll.Styles.AddAsync(style);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(style);
@@ -73,7 +74,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _uow.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
@@ -95,8 +96,8 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.Styles.Update(style);
-                await _uow.SaveChangesAsync();
+                _bll.Styles.Update(style);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(style);
@@ -110,7 +111,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _uow.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id);
             if (style == null)
             {
                 return NotFound();
@@ -124,8 +125,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Styles.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Styles.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

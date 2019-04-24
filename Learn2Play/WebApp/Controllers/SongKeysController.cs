@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class SongKeysController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongKeysController(IAppUnitOfWork uow)
+        public SongKeysController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: SongKeys
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.SongKeys.AllAsyncWithInclude());
+            return View(await _bll.SongKeys.AllAsyncWithInclude());
         }
 
         // GET: SongKeys/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songKey = await _uow.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
@@ -47,7 +48,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new SongKeyCreateEditViewModel();
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View();
         }
@@ -61,12 +62,12 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.SongKeys.AddAsync(vm.SongKey);
-                await _uow.SaveChangesAsync();
+                await _bll.SongKeys.AddAsync(vm.SongKey);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
 
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View(vm);
         }
@@ -79,14 +80,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songKey = await _uow.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
             }
             var vm = new SongKeyCreateEditViewModel();
             vm.SongKey = songKey;
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View(vm);
         }
@@ -105,11 +106,11 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.SongKeys.Update(vm.SongKey);
-                await _uow.SaveChangesAsync();
+                _bll.SongKeys.Update(vm.SongKey);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
             return View(vm);
         }
@@ -121,7 +122,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songKey = await _uow.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
@@ -135,8 +136,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.SongKeys.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.SongKeys.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

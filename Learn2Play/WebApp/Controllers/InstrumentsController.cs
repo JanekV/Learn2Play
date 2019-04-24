@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -13,17 +14,17 @@ namespace WebApp.Controllers
 {
     public class InstrumentsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public InstrumentsController(IAppUnitOfWork uow)
+        public InstrumentsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Instruments
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Instruments.AllAsync());
+            return View(await _bll.Instruments.AllAsync());
         }
 
         // GET: Instruments/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var instrument = await _uow.Instruments.FindAsync(id);
+            var instrument = await _bll.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
@@ -58,8 +59,8 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Instruments.AddAsync(instrument);
-                await _uow.SaveChangesAsync();
+                await _bll.Instruments.AddAsync(instrument);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(instrument);
@@ -73,7 +74,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var instrument = await _uow.Instruments.FindAsync(id);
+            var instrument = await _bll.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
@@ -96,8 +97,8 @@ namespace WebApp.Controllers
             if (ModelState.IsValid)
             {
 
-                    _uow.Instruments.Update(instrument);
-                    await _uow.SaveChangesAsync();
+                    _bll.Instruments.Update(instrument);
+                    await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(instrument);
@@ -111,7 +112,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var instrument = await _uow.Instruments.FindAsync(id);
+            var instrument = await _bll.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
@@ -125,8 +126,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Instruments.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Instruments.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class UserInstrumentsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public UserInstrumentsController(IAppUnitOfWork uow)
+        public UserInstrumentsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/UserInstruments
         [HttpGet]
         public async Task<ActionResult<IEnumerable<UserInstrument>>> GetUserInstruments()
         {
-            return Ok(await _uow.UserInstruments.AllAsyncWithInclude());
+            return Ok(await _bll.UserInstruments.AllAsyncWithInclude());
         }
 
         // GET: api/UserInstruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<UserInstrument>> GetUserInstrument(int id)
         {
-            var userInstrument = await _uow.UserInstruments.FindAsync(id);
+            var userInstrument = await _bll.UserInstruments.FindAsync(id);
 
             if (userInstrument == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.UserInstruments.Update(userInstrument);
-            await _uow.SaveChangesAsync();
+            _bll.UserInstruments.Update(userInstrument);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<UserInstrument>> PostUserInstrument(UserInstrument userInstrument)
         {
-            await _uow.UserInstruments.AddAsync(userInstrument);
-            await _uow.SaveChangesAsync();
+            await _bll.UserInstruments.AddAsync(userInstrument);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetUserInstrument", new { id = userInstrument.Id }, userInstrument);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<UserInstrument>> DeleteUserInstrument(int id)
         {
-            var userInstrument = await _uow.UserInstruments.FindAsync(id);
+            var userInstrument = await _bll.UserInstruments.FindAsync(id);
             if (userInstrument == null)
             {
                 return NotFound();
             }
 
-            _uow.UserInstruments.Remove(userInstrument);
-            await _uow.SaveChangesAsync();
+            _bll.UserInstruments.Remove(userInstrument);
+            await _bll.SaveChangesAsync();
 
             return userInstrument;
         }

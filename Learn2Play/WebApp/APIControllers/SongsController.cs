@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongsController(IAppUnitOfWork uow)
+        public SongsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Songs
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Song>>> GetSongs()
         {
-            return Ok(await _uow.Songs.AllAsyncWithInclude());
+            return Ok(await _bll.Songs.AllAsyncWithInclude());
         }
 
         // GET: api/Songs/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Song>> GetSong(int id)
         {
-            var song = await _uow.Songs.FindAsync(id);
+            var song = await _bll.Songs.FindAsync(id);
 
             if (song == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Songs.Update(song);
-            await _uow.SaveChangesAsync();
+            _bll.Songs.Update(song);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Song>> PostSong(Song song)
         {
-            await _uow.Songs.AddAsync(song);
-            await _uow.SaveChangesAsync();
+            await _bll.Songs.AddAsync(song);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSong", new { id = song.Id }, song);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Song>> DeleteSong(int id)
         {
-            var song = await _uow.Songs.FindAsync(id);
+            var song = await _bll.Songs.FindAsync(id);
             if (song == null)
             {
                 return NotFound();
             }
 
-            _uow.Songs.Remove(song);
-            await _uow.SaveChangesAsync();
+            _bll.Songs.Remove(song);
+            await _bll.SaveChangesAsync();
 
             return song;
         }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class SongInFoldersController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongInFoldersController(IAppUnitOfWork uow)
+        public SongInFoldersController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: SongInFolders
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.SongInFolders.AllAsyncWithInclude());
+            return View(await _bll.SongInFolders.AllAsyncWithInclude());
         }
 
         // GET: SongInFolders/Details/5
@@ -35,7 +36,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInFolder = await _uow.SongInFolders.FindAsync(id);
+            var songInFolder = await _bll.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
@@ -48,9 +49,9 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new SongInFolderCreateEditViewModel();
-            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+            vm.FolderSelectList = new SelectList(await _bll.Folders.AllAsync(),
                 nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
 
             return View(vm);
@@ -65,14 +66,14 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.SongInFolders.AddAsync(vm.SongInFolder);
-                await _uow.SaveChangesAsync();
+                await _bll.SongInFolders.AddAsync(vm.SongInFolder);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
 
-            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+            vm.FolderSelectList = new SelectList(await _bll.Folders.AllAsync(),
                 nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
 
             return View(vm);
@@ -86,7 +87,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInFolder = await _uow.SongInFolders.FindAsync(id);
+            var songInFolder = await _bll.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
@@ -94,9 +95,9 @@ namespace WebApp.Controllers
 
             var vm = new SongInFolderCreateEditViewModel();
             vm.SongInFolder = songInFolder;
-            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+            vm.FolderSelectList = new SelectList(await _bll.Folders.AllAsync(),
                 nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
 
             return View(vm);
@@ -116,13 +117,13 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.SongInFolders.Update(vm.SongInFolder);
-                await _uow.SaveChangesAsync();
+                _bll.SongInFolders.Update(vm.SongInFolder);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.FolderSelectList = new SelectList(await _uow.Folders.AllAsync(),
+            vm.FolderSelectList = new SelectList(await _bll.Folders.AllAsync(),
                 nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
             
             return View(vm);
@@ -135,7 +136,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songInFolder = await _uow.SongInFolders.FindAsync(id);
+            var songInFolder = await _bll.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
@@ -149,8 +150,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.SongInFolders.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.SongInFolders.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

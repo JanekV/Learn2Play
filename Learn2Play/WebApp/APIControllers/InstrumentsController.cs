@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class InstrumentsController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public InstrumentsController(IAppUnitOfWork uow)
+        public InstrumentsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Instruments
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Instrument>>> GetInstruments()
         {
-            return Ok(await _uow.Instruments.AllAsync());
+            return Ok(await _bll.Instruments.AllAsync());
         }
 
         // GET: api/Instruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Instrument>> GetInstrument(int id)
         {
-            var instrument = await _uow.Instruments.FindAsync(id);
+            var instrument = await _bll.Instruments.FindAsync(id);
 
             if (instrument == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Instruments.Update(instrument);
-            await _uow.SaveChangesAsync();
+            _bll.Instruments.Update(instrument);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Instrument>> PostInstrument(Instrument instrument)
         {
-            await _uow.Instruments.AddAsync(instrument);
-            await _uow.SaveChangesAsync();
+            await _bll.Instruments.AddAsync(instrument);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetInstrument", new { id = instrument.Id }, instrument);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Instrument>> DeleteInstrument(int id)
         {
-            var instrument = await _uow.Instruments.FindAsync(id);
+            var instrument = await _bll.Instruments.FindAsync(id);
             if (instrument == null)
             {
                 return NotFound();
             }
 
-            _uow.Instruments.Remove(instrument);
-            await _uow.SaveChangesAsync();
+            _bll.Instruments.Remove(instrument);
+            await _bll.SaveChangesAsync();
 
             return instrument;
         }

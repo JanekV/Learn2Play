@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class SongInstrumentsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongInstrumentsController(IAppUnitOfWork uow)
+        public SongInstrumentsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: SongInstruments
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.SongInstruments.AllAsyncWithInclude());
+            return View(await _bll.SongInstruments.AllAsyncWithInclude());
         }
 
         // GET: SongInstruments/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songInstrument = await _uow.SongInstruments.FindAsync(id);
+            var songInstrument = await _bll.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
@@ -48,10 +49,10 @@ namespace WebApp.Controllers
         {
             var vm = new SongInstrumentCreateEditViewModel();
             vm.InstrumentSelectList = new SelectList(
-                await _uow.Instruments.AllAsync(),
+                await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
             vm.SongSelectList = new SelectList(
-                await _uow.Songs.AllAsyncWithInclude(),
+                await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
            
             return View(vm);
@@ -66,13 +67,13 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.SongInstruments.AddAsync(vm.SongInstrument);
-                await _uow.SaveChangesAsync();
+                await _bll.SongInstruments.AddAsync(vm.SongInstrument);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
 
             return View(vm);
@@ -86,16 +87,16 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songInstrument = await _uow.SongInstruments.FindAsync(id);
+            var songInstrument = await _bll.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
             }
             var vm = new SongInstrumentCreateEditViewModel();
             vm.SongInstrument = songInstrument;
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
            
             return View(vm);
@@ -115,13 +116,13 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.SongInstruments.Update(vm.SongInstrument);
-                await _uow.SaveChangesAsync();
+                _bll.SongInstruments.Update(vm.SongInstrument);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
 
             return View(vm);
@@ -134,7 +135,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songInstrument = await _uow.SongInstruments.FindAsync(id);
+            var songInstrument = await _bll.SongInstruments.FindAsync(id);
             if (songInstrument == null)
             {
                 return NotFound();
@@ -148,8 +149,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.SongInstruments.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.SongInstruments.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

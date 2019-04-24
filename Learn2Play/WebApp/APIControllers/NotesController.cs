@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -18,25 +19,25 @@ namespace WebApp.APIControllers
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class NotesController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public NotesController(IAppUnitOfWork uow)
+        public NotesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Notes
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Note>>> GetNotes()
         {
-            return Ok(await _uow.Notes.AllAsync());
+            return Ok(await _bll.Notes.AllAsync());
         }
 
         // GET: api/Notes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Note>> GetNote(int id)
         {
-            var note = await _uow.Notes.FindAsync(id);
+            var note = await _bll.Notes.FindAsync(id);
 
             if (note == null)
             {
@@ -55,8 +56,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Notes.Update(note);
-            await _uow.SaveChangesAsync();
+            _bll.Notes.Update(note);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -65,8 +66,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Note>> PostNote(Note note)
         {
-            await _uow.Notes.AddAsync(note);
-            await _uow.SaveChangesAsync();
+            await _bll.Notes.AddAsync(note);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetNote", new { id = note.Id }, note);
         }
@@ -75,14 +76,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Note>> DeleteNote(int id)
         {
-            var note = await _uow.Notes.FindAsync(id);
+            var note = await _bll.Notes.FindAsync(id);
             if (note == null)
             {
                 return NotFound();
             }
 
-            _uow.Notes.Remove(note);
-            await _uow.SaveChangesAsync();
+            _bll.Notes.Remove(note);
+            await _bll.SaveChangesAsync();
 
             return note;
         }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class TuningNotesController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public TuningNotesController(IAppUnitOfWork uow)
+        public TuningNotesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: TuningNotes
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.TuningNotes.AllAsyncWithInclude());
+            return View(await _bll.TuningNotes.AllAsyncWithInclude());
         }
 
         // GET: TuningNotes/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var tuningNote = await _uow.TuningNotes.FindAsync(id);
+            var tuningNote = await _bll.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
@@ -47,9 +48,9 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new TuningNoteCreateEditViewModel();
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
@@ -64,13 +65,13 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.TuningNotes.AddAsync(vm.TuningNote);
-                await _uow.SaveChangesAsync();
+                await _bll.TuningNotes.AddAsync(vm.TuningNote);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
@@ -84,16 +85,16 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tuningNote = await _uow.TuningNotes.FindAsync(id);
+            var tuningNote = await _bll.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
             }
             var vm = new TuningNoteCreateEditViewModel();
             vm.TuningNote = tuningNote;
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
@@ -113,13 +114,13 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.TuningNotes.Update(vm.TuningNote);
-                await _uow.SaveChangesAsync();
+                _bll.TuningNotes.Update(vm.TuningNote);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.InstrumentSelectList = new SelectList(await _uow.Instruments.AllAsync(),
+            vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.TuningNote.InstrumentId);
-            vm.NoteSelectList = new SelectList(await _uow.Notes.AllAsync(),
+            vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.TuningNote.NoteId);
            
             return View(vm);
@@ -132,7 +133,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var tuningNote = await _uow.TuningNotes.FindAsync(id);
+            var tuningNote = await _bll.TuningNotes.FindAsync(id);
             if (tuningNote == null)
             {
                 return NotFound();
@@ -146,8 +147,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.TuningNotes.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.TuningNotes.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

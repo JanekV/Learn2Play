@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongKeysController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongKeysController(IAppUnitOfWork uow)
+        public SongKeysController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/SongKeys
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongKey>>> GetSongKeys()
         {
-            return Ok(await _uow.SongKeys.AllAsyncWithInclude());
+            return Ok(await _bll.SongKeys.AllAsyncWithInclude());
         }
 
         // GET: api/SongKeys/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongKey>> GetSongKey(int id)
         {
-            var songKey = await _uow.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsync(id);
 
             if (songKey == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.SongKeys.Update(songKey);
-            await _uow.SaveChangesAsync();
+            _bll.SongKeys.Update(songKey);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongKey>> PostSongKey(SongKey songKey)
         {
-            await _uow.SongKeys.AddAsync(songKey);
-            await _uow.SaveChangesAsync();
+            await _bll.SongKeys.AddAsync(songKey);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongKey", new { id = songKey.Id }, songKey);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongKey>> DeleteSongKey(int id)
         {
-            var songKey = await _uow.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsync(id);
             if (songKey == null)
             {
                 return NotFound();
             }
 
-            _uow.SongKeys.Remove(songKey);
-            await _uow.SaveChangesAsync();
+            _bll.SongKeys.Remove(songKey);
+            await _bll.SaveChangesAsync();
 
             return songKey;
         }

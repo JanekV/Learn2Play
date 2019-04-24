@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongStylesController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongStylesController(IAppUnitOfWork uow)
+        public SongStylesController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/SongStyles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongStyle>>> GetSongStyles()
         {
-            return Ok(await _uow.SongStyles.AllAsyncWithInclude());
+            return Ok(await _bll.SongStyles.AllAsyncWithInclude());
         }
 
         // GET: api/SongStyles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongStyle>> GetSongStyle(int id)
         {
-            var songStyle = await _uow.SongStyles.FindAsync(id);
+            var songStyle = await _bll.SongStyles.FindAsync(id);
 
             if (songStyle == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.SongStyles.Update(songStyle);
-            await _uow.SaveChangesAsync();
+            _bll.SongStyles.Update(songStyle);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongStyle>> PostSongStyle(SongStyle songStyle)
         {
-            await _uow.SongStyles.AddAsync(songStyle);
-            await _uow.SaveChangesAsync();
+            await _bll.SongStyles.AddAsync(songStyle);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongStyle", new { id = songStyle.Id }, songStyle);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongStyle>> DeleteSongStyle(int id)
         {
-            var songStyle = await _uow.SongStyles.FindAsync(id);
+            var songStyle = await _bll.SongStyles.FindAsync(id);
             if (songStyle == null)
             {
                 return NotFound();
             }
 
-            _uow.SongStyles.Remove(songStyle);
-            await _uow.SaveChangesAsync();
+            _bll.SongStyles.Remove(songStyle);
+            await _bll.SaveChangesAsync();
 
             return songStyle;
         }

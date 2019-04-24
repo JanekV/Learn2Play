@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class VideosController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public VideosController(IAppUnitOfWork uow)
+        public VideosController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Videos
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Videos.AllAsyncWithInclude());
+            return View(await _bll.Videos.AllAsyncWithInclude());
         }
 
         // GET: Videos/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var video = await _uow.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
@@ -47,7 +48,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new VideoCreateEditViewModel();
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);        }
 
@@ -60,11 +61,11 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Videos.AddAsync(vm.Video);
-                await _uow.SaveChangesAsync();
+                await _bll.Videos.AddAsync(vm.Video);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);
         }
@@ -77,14 +78,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var video = await _uow.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
             }
             var vm = new VideoCreateEditViewModel();
             vm.Video = video;
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);
         }
@@ -103,11 +104,11 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.Videos.Update(vm.Video);
-                await _uow.SaveChangesAsync();
+                _bll.Videos.Update(vm.Video);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
             return View(vm);
         }
@@ -119,7 +120,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var video = await _uow.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
@@ -133,8 +134,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Videos.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Videos.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

@@ -8,5 +8,6 @@ namespace Contracts.DAL.App.Repositories
     public interface IChordNoteRepository: IBaseRepository<ChordNote>
     {
         Task<IEnumerable<ChordNote>> AllAsyncWithInclude();
+        Task<ChordNote> FindAsync(params object[] id);
     }
 }

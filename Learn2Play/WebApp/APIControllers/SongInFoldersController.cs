@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class SongInFoldersController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongInFoldersController(IAppUnitOfWork uow)
+        public SongInFoldersController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/SongInFolders
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SongInFolder>>> GetSongInFolders()
         {
-            return Ok(await _uow.SongInFolders.AllAsyncWithInclude());
+            return Ok(await _bll.SongInFolders.AllAsyncWithInclude());
         }
 
         // GET: api/SongInFolders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<SongInFolder>> GetSongInFolder(int id)
         {
-            var songInFolder = await _uow.SongInFolders.FindAsync(id);
+            var songInFolder = await _bll.SongInFolders.FindAsync(id);
 
             if (songInFolder == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.SongInFolders.Update(songInFolder);
-            await _uow.SaveChangesAsync();
+            _bll.SongInFolders.Update(songInFolder);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<SongInFolder>> PostSongInFolder(SongInFolder songInFolder)
         {
-            await _uow.SongInFolders.AddAsync(songInFolder);
-            await _uow.SaveChangesAsync();
+            await _bll.SongInFolders.AddAsync(songInFolder);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongInFolder", new { id = songInFolder.Id }, songInFolder);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<SongInFolder>> DeleteSongInFolder(int id)
         {
-            var songInFolder = await _uow.SongInFolders.FindAsync(id);
+            var songInFolder = await _bll.SongInFolders.FindAsync(id);
             if (songInFolder == null)
             {
                 return NotFound();
             }
 
-            _uow.SongInFolders.Remove(songInFolder);
-            await _uow.SaveChangesAsync();
+            _bll.SongInFolders.Remove(songInFolder);
+            await _bll.SaveChangesAsync();
 
             return songInFolder;
         }

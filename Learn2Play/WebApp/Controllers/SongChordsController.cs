@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class SongChordsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public SongChordsController(IAppUnitOfWork uow)
+        public SongChordsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: SongChords
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.SongChords.AllAsyncWithInclude());
+            return View(await _bll.SongChords.AllAsyncWithInclude());
         }
 
         // GET: SongChords/Details/5
@@ -35,7 +36,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songChord = await _uow.SongChords.FindAsync(id);
+            var songChord = await _bll.SongChords.FindAsync(id);
             if (songChord == null)
             {
                 return NotFound();
@@ -50,10 +51,10 @@ namespace WebApp.Controllers
             var vm = new SongChordCreateEditViewModel();
             
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
             vm.SongSelectList = new SelectList(
-                await _uow.Songs.AllAsyncWithInclude(),
+                await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
@@ -67,14 +68,14 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.SongChords.AddAsync(vm.SongChord);
-                await _uow.SaveChangesAsync();
+                await _bll.SongChords.AddAsync(vm.SongChord);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
@@ -87,7 +88,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songChord = await _uow.SongChords.FindAsync(id);
+            var songChord = await _bll.SongChords.FindAsync(id);
             if (songChord == null)
             {
                 return NotFound();
@@ -95,9 +96,9 @@ namespace WebApp.Controllers
             var vm = new SongChordCreateEditViewModel();
             vm.SongChord = songChord;
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
@@ -116,14 +117,14 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.SongChords.Update(vm.SongChord);
-                await _uow.SaveChangesAsync();
+                _bll.SongChords.Update(vm.SongChord);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             vm.ChordSelectList = new SelectList(
-                await _uow.Chords.AllAsync(),
+                await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
-            vm.SongSelectList = new SelectList(await _uow.Songs.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
             return View(vm);
         }
@@ -135,7 +136,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songChord = await _uow.SongChords.FindAsync(id);
+            var songChord = await _bll.SongChords.FindAsync(id);
             if (songChord == null)
             {
                 return NotFound();
@@ -149,8 +150,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.SongChords.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.SongChords.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }

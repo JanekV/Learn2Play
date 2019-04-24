@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,25 +16,25 @@ namespace WebApp.APIControllers
     [ApiController]
     public class VideosController : ControllerBase
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public VideosController(IAppUnitOfWork uow)
+        public VideosController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: api/Videos
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Video>>> GetVideos()
         {
-            return Ok(await _uow.Videos.AllAsyncWithInclude());
+            return Ok(await _bll.Videos.AllAsyncWithInclude());
         }
 
         // GET: api/Videos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Video>> GetVideo(int id)
         {
-            var video = await _uow.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsync(id);
 
             if (video == null)
             {
@@ -52,8 +53,8 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _uow.Videos.Update(video);
-            await _uow.SaveChangesAsync();
+            _bll.Videos.Update(video);
+            await _bll.SaveChangesAsync();
 
             return NoContent();
         }
@@ -62,8 +63,8 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<Video>> PostVideo(Video video)
         {
-            await _uow.Videos.AddAsync(video);
-            await _uow.SaveChangesAsync();
+            await _bll.Videos.AddAsync(video);
+            await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetVideo", new { id = video.Id }, video);
         }
@@ -72,14 +73,14 @@ namespace WebApp.APIControllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Video>> DeleteVideo(int id)
         {
-            var video = await _uow.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsync(id);
             if (video == null)
             {
                 return NotFound();
             }
 
-            _uow.Videos.Remove(video);
-            await _uow.SaveChangesAsync();
+            _bll.Videos.Remove(video);
+            await _bll.SaveChangesAsync();
 
             return video;
         }

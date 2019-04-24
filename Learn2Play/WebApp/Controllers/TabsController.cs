@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -14,17 +15,17 @@ namespace WebApp.Controllers
 {
     public class TabsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
 
-        public TabsController(IAppUnitOfWork uow)
+        public TabsController(IAppBLL bll)
         {
-            _uow = uow;
+            _bll = bll;
         }
 
         // GET: Tabs
         public async Task<IActionResult> Index()
         {
-            return View(await _uow.Tabs.AllAsyncWithInclude());
+            return View(await _bll.Tabs.AllAsyncWithInclude());
         }
 
         // GET: Tabs/Details/5
@@ -34,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var tab = await _uow.Tabs.FindAsync(id);
+            var tab = await _bll.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
@@ -47,7 +48,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new TabCreateEditViewModel();
-            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+            vm.VideoSelectList = new SelectList(await _bll.Videos.AllAsyncWithInclude(),
                 nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
@@ -61,11 +62,11 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                await _uow.Tabs.AddAsync(vm.Tab);
-                await _uow.SaveChangesAsync();
+                await _bll.Tabs.AddAsync(vm.Tab);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+            vm.VideoSelectList = new SelectList(await _bll.Videos.AllAsyncWithInclude(),
                 nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
@@ -78,14 +79,14 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var tab = await _uow.Tabs.FindAsync(id);
+            var tab = await _bll.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
             }
             var vm = new TabCreateEditViewModel();
             vm.Tab = tab;
-            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+            vm.VideoSelectList = new SelectList(await _bll.Videos.AllAsyncWithInclude(),
                 nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
@@ -104,11 +105,11 @@ namespace WebApp.Controllers
 
             if (ModelState.IsValid)
             {
-                _uow.Tabs.Update(vm.Tab);
-                await _uow.SaveChangesAsync();
+                _bll.Tabs.Update(vm.Tab);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.VideoSelectList = new SelectList(await _uow.Videos.AllAsyncWithInclude(),
+            vm.VideoSelectList = new SelectList(await _bll.Videos.AllAsyncWithInclude(),
                 nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
             return View(vm);
         }
@@ -120,7 +121,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var tab = await _uow.Tabs.FindAsync(id);
+            var tab = await _bll.Tabs.FindAsync(id);
             if (tab == null)
             {
                 return NotFound();
@@ -134,8 +135,8 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            _uow.Tabs.Remove(id);
-            await _uow.SaveChangesAsync();
+            _bll.Tabs.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
     }
