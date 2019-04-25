@@ -1,7 +1,7 @@
 using System;
 using Contracts.DAL.Base;
 
-namespace Contrtacts.BLL.Base.Helpers
+namespace Contracts.BLL.Base.Helpers
 {
     public interface IBaseServiceFactory<TUnitOfWork>
         where TUnitOfWork : IBaseUnitOfWork
@@ -10,9 +10,11 @@ namespace Contrtacts.BLL.Base.Helpers
             where TService : class;
 
         Func<TUnitOfWork, object> GetServiceFactory<TService>();
-
+        /* Too many generics
+        
         Func<TUnitOfWork, object> GetEntityServiceFactory<TEntity>()
             where TEntity : class, IBaseEntity, new();
+        */
     }
 
 }

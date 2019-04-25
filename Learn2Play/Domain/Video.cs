@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Video: BaseEntity
+    public class Video: DomainEntity
     {
 
         [MaxLength(255)]

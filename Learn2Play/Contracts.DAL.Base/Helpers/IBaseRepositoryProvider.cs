@@ -4,20 +4,11 @@ namespace Contracts.DAL.Base.Helpers
 {
     public interface IBaseRepositoryProvider
     {
-        /// <summary>
-        /// Return TRepository from cache, or call factory to create it
-        /// </summary>
-        /// <typeparam name="TRepository">Repository you are looking for</typeparam>
-        /// <returns></returns>
         TRepository GetRepository<TRepository>();
 
-        /// <summary>
-        /// Return IBaseRepositoryAsync from cache, or call factory to create it
-        /// </summary>
-        /// <typeparam name="TEntity">Entity type</typeparam>
-        /// <returns></returns>
-        IBaseRepository<TEntity> GetEntityRepository<TEntity>()
-            where TEntity : class, IBaseEntity, new();
+        IBaseRepository<TDALEntity> GetEntityRepository<TDALEntity, TDomainEntity>()
+            where TDALEntity : class, new()
+            where TDomainEntity : class, IDomainEntity, new();
     }
 
 }

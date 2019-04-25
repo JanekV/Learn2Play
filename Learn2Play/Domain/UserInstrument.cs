@@ -3,7 +3,7 @@ using Domain.Identity;
 
 namespace Domain
 {
-    public class UserInstrument: BaseEntity
+    public class UserInstrument: DomainEntity
     {
 
         public int AppUserId { get; set; }

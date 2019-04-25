@@ -11,7 +11,7 @@ using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Contracts.DAL.Base;
 using Contracts.DAL.Base.Helpers;
-using Contrtacts.BLL.Base.Helpers;
+using Contracts.BLL.Base.Helpers;
 using DAL;
 using DAL.App.EF;
 using DAL.App.EF.Helpers;

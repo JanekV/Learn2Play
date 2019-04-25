@@ -3,7 +3,7 @@ using Domain.Enums;
 
 namespace Domain
 {
-    public class Tab: BaseEntity
+    public class Tab: DomainEntity
     {
 
         [Required]

@@ -7,7 +7,7 @@ using Domain.Identity;
 
 namespace DAL.App.EF.Repositories
 {
-    public class AppUserRepository: BaseRepository<AppUser, AppDbContext>, IAppUserRepository
+    public class AppUserRepository: BaseRepository<DAL.App.DTO.Identity.AppUser, AppDbContext>, IAppUserRepository
     {
         public AppUserRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
         {

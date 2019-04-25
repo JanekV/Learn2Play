@@ -2,14 +2,14 @@ using Contracts.Base;
 using Contracts.DAL.Base;
 using Contracts.DAL.Base.Repositories;
 
-namespace Contrtacts.BLL.Base.Services
+namespace Contracts.BLL.Base.Services
 {
     public interface IBaseService : ITrackableInstance
     {
     }
     
-    public interface IBaseEntityService<TEntity> :IBaseService, IBaseRepository<TEntity> 
-        where TEntity : class, IBaseEntity, new()
+    public interface IBaseEntityService<TBLLEntity> :IBaseService, IBaseRepository<TBLLEntity> 
+        where TBLLEntity : class, new()
     {
         
     }

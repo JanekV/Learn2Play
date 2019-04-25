@@ -1,12 +1,16 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Contracts.DAL.Base.Repositories;
-using Domain;
+using DALAppDTO = DAL.App.DTO;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface ITabRepository: IBaseRepository<Tab>
+    public interface ITabRepository : ITabRepository<DALAppDTO.DomainEntityDTOs.Tab>
     {
-        Task<IEnumerable<Tab>> AllAsyncWithInclude();
+    }
+    public interface ITabRepository<TDALEntity>: IBaseRepository<TDALEntity> 
+        where TDALEntity : class, new()
+    {
+        Task<List<TDALEntity>> AllAsyncWithInclude();
     }
 }

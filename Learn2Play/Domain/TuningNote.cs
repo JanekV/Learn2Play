@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class TuningNote: BaseEntity
+    public class TuningNote: DomainEntity
     {
 
         public int InstrumentId { get; set; }

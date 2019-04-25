@@ -1,12 +1,12 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Contracts.BLL.Base.Services;
 using Contracts.DAL.Base;
 using Contracts.DAL.Base.Repositories;
-using Contrtacts.BLL.Base.Services;
 
 namespace BLL.Base.Services
 {
-    public class BaseEntityService<TEntity, TUnitOfWork> : BaseService, IBaseEntityService<TEntity> where TEntity : class, IBaseEntity, new()
+    public class BaseEntityService<TEntity, TUnitOfWork> : BaseService, IBaseEntityService<TEntity> where TEntity : class, IDomainEntity<>, new()
         where TUnitOfWork: IBaseUnitOfWork
     {
         protected readonly TUnitOfWork Uow;

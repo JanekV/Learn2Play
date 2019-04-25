@@ -5,7 +5,7 @@ using Domain.Enums;
 
 namespace Domain
 {
-    public class Folder: BaseEntity
+    public class Folder: DomainEntity
     {
 
         public FolderType FolderType { get; set; }

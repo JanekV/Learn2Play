@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class SongKey: BaseEntity
+    public class SongKey: DomainEntity
     {
 
         [MaxLength(1000)]

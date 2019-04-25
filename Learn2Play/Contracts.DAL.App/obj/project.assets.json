@@ -1066,6 +1066,20 @@
           "bin/placeholder/Contracts.DAL.Base.dll": {}
         }
       },
+      "DAL.App.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.App.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.App.DTO.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -3656,6 +3670,11 @@
       "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
       "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
     },
+    "DAL.App.DTO/1.0.0": {
+      "type": "project",
+      "path": "../DAL.App.DTO/DAL.App.DTO.csproj",
+      "msbuildProject": "../DAL.App.DTO/DAL.App.DTO.csproj"
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -3665,6 +3684,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Contracts.DAL.Base >= 1.0.0",
+      "DAL.App.DTO >= 1.0.0",
       "Domain >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -3699,6 +3719,9 @@
           "projectReferences": {
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
+            },
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj"
             },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj"

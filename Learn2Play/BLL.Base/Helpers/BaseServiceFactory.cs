@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using BLL.Base.Services;
 using Contracts.DAL.Base;
-using Contrtacts.BLL.Base.Helpers;
 
 namespace BLL.Base.Helpers
 {
@@ -39,7 +38,7 @@ namespace BLL.Base.Helpers
         }
 
         public virtual Func<TUnitOfWork, object> GetEntityServiceFactory<TEntity>()
-            where TEntity : class, IBaseEntity, new()
+            where TEntity : class, IDomainEntity, new()
         {
             return (uow) => new BaseEntityService<TEntity, TUnitOfWork>(uow);
         }

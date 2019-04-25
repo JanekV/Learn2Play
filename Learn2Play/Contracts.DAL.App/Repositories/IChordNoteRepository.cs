@@ -2,12 +2,17 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Contracts.DAL.Base.Repositories;
 using Domain;
+using ChordNote = DAL.App.DTO.DomainEntityDTOs.ChordNote;
+using DALAppDTO = DAL.App.DTO;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface IChordNoteRepository: IBaseRepository<ChordNote>
+    public interface IChordNoteRepository : IChordNoteRepository<DALAppDTO.DomainEntityDTOs.ChordNote>
     {
-        Task<IEnumerable<ChordNote>> AllAsyncWithInclude();
-        Task<ChordNote> FindAsync(params object[] id);
+    }
+    public interface IChordNoteRepository<TDALEntity>: IBaseRepository<TDALEntity> 
+        where TDALEntity : class, new()
+    {
+        Task<List<TDALEntity>> AllAsyncWithInclude();
     }
 }

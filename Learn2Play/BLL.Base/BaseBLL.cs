@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
+using Contracts.BLL.Base.Helpers;
+using Contracts.BLL.Base.Services;
 using Contracts.DAL.Base;
 using Contrtacts.BLL.Base;
-using Contrtacts.BLL.Base.Helpers;
-using Contrtacts.BLL.Base.Services;
 
 namespace BLL.Base
 {
@@ -22,7 +22,7 @@ namespace BLL.Base
             ServiceProvider = serviceProvider;
         }
 
-        public virtual IBaseEntityService<TEntity> BaseEntityService<TEntity>() where TEntity : class, IBaseEntity, new()
+        public virtual IBaseEntityService<TEntity> BaseEntityService<TEntity>() where TEntity : class, IDomainEntity<>, new()
         {
             return ServiceProvider.GetEntityService<TEntity>();
         }

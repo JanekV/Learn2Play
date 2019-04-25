@@ -2,6 +2,19 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
+      "AutoMapper/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "type": "package",
         "dependencies": {
@@ -4763,8 +4776,8 @@
         "dependencies": {
           "BLL.Base": "1.0.0",
           "Contracts.BLL.App": "1.0.0",
-          "Contracts.DAL.App": "1.0.0",
-          "Contrtacts.BLL.Base": "1.0.0"
+          "Contracts.BLL.Base": "1.0.0",
+          "Contracts.DAL.App": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BLL.App.dll": {}
@@ -4777,7 +4790,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Contrtacts.BLL.Base": "1.0.0"
+          "Contracts.BLL.Base": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BLL.Base.dll": {}
@@ -4800,8 +4813,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Contracts.DAL.App": "1.0.0",
-          "Contrtacts.BLL.Base": "1.0.0"
+          "Contracts.BLL.Base": "1.0.0",
+          "Contracts.DAL.App": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Contracts.BLL.App.dll": {}
@@ -4810,11 +4823,26 @@
           "bin/placeholder/Contracts.BLL.App.dll": {}
         }
       },
+      "Contracts.BLL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Contracts.Base": "1.0.0",
+          "Contracts.DAL.Base": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Contracts.BLL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.BLL.Base.dll": {}
+        }
+      },
       "Contracts.DAL.App/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Contracts.DAL.Base": "1.0.0",
+          "DAL.App.DTO": "1.0.0",
           "Domain": "1.0.0"
         },
         "compile": {
@@ -4837,18 +4865,18 @@
           "bin/placeholder/Contracts.DAL.Base.dll": {}
         }
       },
-      "Contrtacts.BLL.Base/1.0.0": {
+      "DAL.App.DTO/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Contracts.Base": "1.0.0",
-          "Contracts.DAL.Base": "1.0.0"
+          "Domain": "1.0.0",
+          "System.ComponentModel.Annotations": "4.5.0"
         },
         "compile": {
-          "bin/placeholder/Contrtacts.BLL.Base.dll": {}
+          "bin/placeholder/DAL.App.DTO.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Contrtacts.BLL.Base.dll": {}
+          "bin/placeholder/DAL.App.DTO.dll": {}
         }
       },
       "DAL.App.EF/1.0.0": {
@@ -4856,6 +4884,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Contracts.DAL.App": "1.0.0",
+          "DAL.App.DTO": "1.0.0",
           "DAL.Base.EF": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -4873,6 +4902,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AutoMapper": "8.0.0",
           "Contracts.DAL.Base": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2"
         },
@@ -4914,6 +4944,23 @@
     }
   },
   "libraries": {
+    "AutoMapper/8.0.0": {
+      "sha512": "kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
+      "type": "package",
+      "path": "automapper/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "automapper.8.0.0.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net461/AutoMapper.dll",
+        "lib/net461/AutoMapper.pdb",
+        "lib/net461/AutoMapper.xml",
+        "lib/netstandard2.0/AutoMapper.dll",
+        "lib/netstandard2.0/AutoMapper.pdb",
+        "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "sha512": "owAlEIUZXWSnkK8Z1c+zR47A0X6ykF4XjbPok4lQKNuciUfHLGPd6QnI+rt/8KlQ17PmF+I4S3f+m+Qe4IvViw==",
       "type": "package",
@@ -13190,6 +13237,11 @@
       "path": "../Contracts.BLL.App/Contracts.BLL.App.csproj",
       "msbuildProject": "../Contracts.BLL.App/Contracts.BLL.App.csproj"
     },
+    "Contracts.BLL.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.BLL.Base/Contracts.BLL.Base.csproj",
+      "msbuildProject": "../Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+    },
     "Contracts.DAL.App/1.0.0": {
       "type": "project",
       "path": "../Contracts.DAL.App/Contracts.DAL.App.csproj",
@@ -13200,10 +13252,10 @@
       "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
       "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
     },
-    "Contrtacts.BLL.Base/1.0.0": {
+    "DAL.App.DTO/1.0.0": {
       "type": "project",
-      "path": "../Contrtacts.BLL.Base/Contrtacts.BLL.Base.csproj",
-      "msbuildProject": "../Contrtacts.BLL.Base/Contrtacts.BLL.Base.csproj"
+      "path": "../DAL.App.DTO/DAL.App.DTO.csproj",
+      "msbuildProject": "../DAL.App.DTO/DAL.App.DTO.csproj"
     },
     "DAL.App.EF/1.0.0": {
       "type": "project",
@@ -13230,7 +13282,7 @@
     ".NETCoreApp,Version=v2.2": [
       "BLL.App >= 1.0.0",
       "BLL.Base >= 1.0.0",
-      "Contrtacts.BLL.Base >= 1.0.0",
+      "Contracts.BLL.Base >= 1.0.0",
       "DAL.App.EF >= 1.0.0",
       "Identity >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -13274,8 +13326,8 @@
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.Base\\BLL.Base.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.Base\\BLL.Base.csproj"
             },
-            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contrtacts.BLL.Base\\Contrtacts.BLL.Base.csproj": {
-              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contrtacts.BLL.Base\\Contrtacts.BLL.Base.csproj"
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj"
             },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj"

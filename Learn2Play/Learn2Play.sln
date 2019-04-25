@@ -22,7 +22,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL.Base", "BLL.Base\BLL.Ba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts.BLL.App", "Contracts.BLL.App\Contracts.BLL.App.csproj", "{4657E6D2-AA05-4FC7-B502-63D51F127195}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contrtacts.BLL.Base", "Contrtacts.BLL.Base\Contrtacts.BLL.Base.csproj", "{8E44AD19-A6C2-4642-8655-D485B034D61E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts.BLL.Base", "Contracts.BLL.Base\Contracts.BLL.Base.csproj", "{8E44AD19-A6C2-4642-8655-D485B034D61E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts.Base", "Contracts.Base\Contracts.Base.csproj", "{B12A3F74-DCEB-4E20-A7AF-F34024755EE8}"
 EndProject

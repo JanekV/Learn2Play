@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
+using Contracts.BLL.Base.Helpers;
+using Contracts.BLL.Base.Services;
 using Contracts.DAL.Base;
-using Contrtacts.BLL.Base.Helpers;
-using Contrtacts.BLL.Base.Services;
 
 namespace BLL.Base.Helpers
 {
@@ -47,7 +47,7 @@ namespace BLL.Base.Helpers
         }
 
         public virtual IBaseEntityService<TEntity> GetEntityService<TEntity>()
-            where TEntity : class, IBaseEntity, new()
+            where TEntity : class, IDomainEntity<>, new()
         {
             if (ServiceCache.ContainsKey(typeof(IBaseEntityService<TEntity>)))
             {

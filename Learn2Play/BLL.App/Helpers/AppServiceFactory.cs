@@ -1,11 +1,12 @@
 using BLL.App.Services;
 using BLL.Base.Helpers;
 using Contracts.BLL.App.Services;
+using Contracts.BLL.Base.Helpers;
 using Contracts.DAL.App;
 
 namespace BLL.App.Helpers
 {
-    public class AppServiceFactory : BaseServiceFactory<IAppUnitOfWork>
+    public class AppServiceFactory : BaseServiceFactory<IAppUnitOfWork>, IBaseServiceFactory<IAppUnitOfWork>
     {
         public AppServiceFactory()
         {

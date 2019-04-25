@@ -1,39 +1,36 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
+using DAL.App.EF.Mappers;
 using DAL.Base.EF.Repositories;
-using Domain;
 using Microsoft.EntityFrameworkCore;
-
 namespace DAL.App.EF.Repositories
 {
-    public class ChordNoteRepository: BaseRepository<ChordNote, AppDbContext>, IChordNoteRepository
+    public class ChordNoteRepository: BaseRepository<DAL.App.DTO.DomainEntityDTOs.ChordNote, Domain.ChordNote, AppDbContext>, IChordNoteRepository
     {
-        public ChordNoteRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
+        public ChordNoteRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext, new ChordNoteMapper())
         {
         }
 
-        public async Task<IEnumerable<ChordNote>> AllAsyncWithInclude()
+        public async Task<List<DAL.App.DTO.DomainEntityDTOs.ChordNote>> AllAsyncWithInclude()
         {
             return await RepositoryDbSet
                 .Include(cn => cn.Chord)
                 .Include(cn => cn.Note)
+                .Select(e => ChordNoteMapper.MapFromDomain(e))
                 .ToListAsync();
         }
         
-        public override async Task<ChordNote> FindAsync(params object[] id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.ChordNote> FindAsync(int id)
         {
-            var chordNote = await base.FindAsync(id);
-            if (chordNote != null)
-            {
-                await RepositoryDbContext.Entry(chordNote)
-                    .Reference(cn => cn.Chord).LoadAsync();
-                await RepositoryDbContext.Entry(chordNote)
-                    .Reference(cn => cn.Chord).LoadAsync();
-            }
+            var chordNote = await RepositoryDbSet
+                .Include(cn => cn.Chord)
+                .Include(cn => cn.Note)
+                .FirstOrDefaultAsync(cn => cn.Id == id);
             
             
-            return chordNote;
+            return ChordNoteMapper.MapFromDomain(chordNote);
         }
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Domain
 {
-    public class Chord: BaseEntity
+    public class Chord: DomainEntity
     {
         
         [MaxLength(10)]

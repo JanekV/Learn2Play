@@ -12,7 +12,7 @@ namespace BLL.App.Services
         public ChordNoteService(IAppUnitOfWork uow) : base(uow)
         {
         }
-        public Task<IEnumerable<ChordNote>> AllAsyncWithInclude()
+        public Task<List<ChordNote>> AllAsyncWithInclude()
         {
             return Uow.ChordNotes.AllAsyncWithInclude();
         }

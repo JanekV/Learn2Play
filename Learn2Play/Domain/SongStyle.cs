@@ -1,6 +1,6 @@
 namespace Domain
 {
-    public class SongStyle: BaseEntity
+    public class SongStyle: DomainEntity
     {
 
         public int SongId { get; set; }

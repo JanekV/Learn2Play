@@ -3,82 +3,89 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.Base;
+using Contracts.DAL.Base.Helpers;
+using Contracts.DAL.Base.Mappers;
 using Contracts.DAL.Base.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Base.EF.Repositories
 {
-    public class BaseRepository<TEntity, TDbContext> : BaseRepository<TEntity, TDbContext, int>,
-        IBaseRepository<TEntity>
-        where TEntity : class, IBaseEntity, new()
+    public class BaseRepository<TDALEntity, TDomainEntity, TDbContext> :
+        BaseRepository<TDALEntity, TDomainEntity, TDbContext, int>
+        where TDALEntity : class, new()
+        where TDomainEntity : class, IDomainEntity, new()
         where TDbContext : DbContext
     {
-        public BaseRepository(TDbContext repositoryDbContext) : base(repositoryDbContext)
+        public BaseRepository(TDbContext repositoryDbContext, IBaseDALMapper mapper) : base(repositoryDbContext, mapper)
         {
         }
     }
 
 
-    public class BaseRepository<TEntity, TDbContext, TKey> : IBaseRepository<TEntity, TKey>
-        where TEntity : class, IBaseEntity<TKey>, new()
-        where TDbContext: DbContext
+    public class BaseRepository<TDALEntity, TDomainEntity, TDbContext, TKey> : IBaseRepository<TDALEntity>
+        where TDALEntity : class, new()
+        where TDomainEntity : class, IDomainEntity<TKey>, new()
+        where TDbContext : DbContext
         where TKey : IComparable
     {
         protected readonly DbContext RepositoryDbContext;
-        protected readonly DbSet<TEntity> RepositoryDbSet;
+        protected readonly DbSet<TDomainEntity> RepositoryDbSet;
 
-        public BaseRepository(TDbContext repositoryDbContext)
+        private readonly IBaseDALMapper _mapper;
+
+        public BaseRepository(TDbContext repositoryDbContext, IBaseDALMapper mapper)
         {
             RepositoryDbContext = repositoryDbContext;
+            _mapper = mapper;
             // get the dbset by type from db context
-            RepositoryDbSet = RepositoryDbContext.Set<TEntity>();
+            RepositoryDbSet = RepositoryDbContext.Set<TDomainEntity>();
         }
 
 
-        public virtual TEntity Update(TEntity entity)
+        public virtual TDALEntity Update(TDALEntity entity)
         {
-            return RepositoryDbSet.Update(entity).Entity;
+            return _mapper.Map<TDALEntity>(RepositoryDbSet.Update(_mapper.Map<TDomainEntity>(entity)).Entity);
         }
 
-        public virtual void Remove(TEntity entity)
+        public virtual void Remove(TDALEntity entity)
         {
-            RepositoryDbSet.Remove(entity);
+            RepositoryDbSet.Remove(_mapper.Map<TDomainEntity>(entity));
         }
 
         public virtual void Remove(params object[] id)
         {
-            RepositoryDbSet.Remove(FindAsync(id).Result);
+            RepositoryDbSet.Remove(RepositoryDbSet.Find(id));
         }
 
-        public virtual async Task<List<TEntity>> AllAsync()
+        public virtual async Task<List<TDALEntity>> AllAsync()
         {
-            return await RepositoryDbSet.ToListAsync();
+            return (await RepositoryDbSet.ToListAsync())
+                .Select(e => _mapper.Map<TDALEntity>(e)).ToList();
         }
 
-        public virtual async Task<TEntity> FindAsync(params object[] id)
+        public virtual async Task<TDALEntity> FindAsync(params object[] id)
         {
-            return await RepositoryDbSet.FindAsync(id);
+            return _mapper.Map<TDALEntity>( (await RepositoryDbSet.FindAsync(id)));
         }
 
-        public virtual async Task AddAsync(TEntity entity)
+        public virtual async Task AddAsync(TDALEntity entity)
         {
-            await RepositoryDbSet.AddAsync(entity);
+            await RepositoryDbSet.AddAsync(_mapper.Map<TDomainEntity>(entity));
         }
 
-        public List<TEntity> All()
+        public List<TDALEntity> All()
         {
-            return RepositoryDbSet.ToList();
+            return RepositoryDbSet.Select(e => _mapper.Map<TDALEntity>(e)).ToList();
         }
 
-        public TEntity Find(params object[] id)
+        public TDALEntity Find(params object[] id)
         {
-            return RepositoryDbSet.Find(id);
+            return _mapper.Map<TDALEntity>(RepositoryDbSet.Find(id));
         }
 
-        public void Add(TEntity entity)
+        public void Add(TDALEntity entity)
         {
-            RepositoryDbSet.Add(entity);
+            RepositoryDbSet.Add(_mapper.Map<TDomainEntity>(entity));
         }
     }
-
 }
