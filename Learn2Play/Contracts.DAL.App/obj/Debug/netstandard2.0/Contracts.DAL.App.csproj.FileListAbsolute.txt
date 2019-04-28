@@ -12,3 +12,5 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netst
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.csproj.CopyComplete
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\DAL.App.DTO.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\DAL.App.DTO.pdb

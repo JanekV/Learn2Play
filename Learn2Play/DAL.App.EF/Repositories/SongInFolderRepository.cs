@@ -1,38 +1,40 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
 using Contracts.DAL.Base;
+using DAL.App.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class SongInFolderRepository: BaseRepository<SongInFolder, AppDbContext>, ISongInFolderRepository
+    public class SongInFolderRepository: BaseRepository<DAL.App.DTO.DomainEntityDTOs.SongInFolder, Domain.SongInFolder, AppDbContext>, ISongInFolderRepository
     {
-        public SongInFolderRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
+        public SongInFolderRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext, new SongInFolderMapper())
         {
         }
 
-        public async Task<IEnumerable<SongInFolder>> AllAsyncWithInclude()
+        public async Task<List<DAL.App.DTO.DomainEntityDTOs.SongInFolder>> AllAsyncWithInclude()
         {
             return await RepositoryDbSet
                 .Include(sf => sf.Song)
                 .Include(sf => sf.Folder)
+                .Select(e => SongInFolderMapper.MapFromDomain(e))
                 .ToListAsync();
         }
         
-        public override async Task<SongInFolder> FindAsync(params object[] id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.SongInFolder> FindAsync(int id)
         {
-            var songInFolder = await base.FindAsync(id);
-            if (songInFolder != null)
-            {
-                await RepositoryDbContext.Entry(songInFolder)
-                    .Reference(sf => sf.Song).LoadAsync();
-                await RepositoryDbContext.Entry(songInFolder)
-                    .Reference(sf => sf.Folder).LoadAsync();
-            }
-            return songInFolder;
+            
+            var songInFolder = await RepositoryDbSet
+                .Include(sf => sf.Song)
+                .Include(sf => sf.Folder)
+                .FirstOrDefaultAsync(sf => sf.Id == id);
+            
+            
+            return SongInFolderMapper.MapFromDomain(songInFolder);
         }
     }
 }

@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Styles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Style>>> GetStyles()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Style>>> GetStyles()
         {
             return Ok(await _bll.Styles.AllAsync());
         }
 
         // GET: api/Styles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Style>> GetStyle(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Style>> GetStyle(int id)
         {
             var style = await _bll.Styles.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Styles/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutStyle(int id, Style style)
+        public async Task<IActionResult> PutStyle(int id, BLL.App.DTO.DomainEntityDTOs.Style style)
         {
             if (id != style.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Styles
         [HttpPost]
-        public async Task<ActionResult<Style>> PostStyle(Style style)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Style>> PostStyle(BLL.App.DTO.DomainEntityDTOs.Style style)
         {
             await _bll.Styles.AddAsync(style);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Styles/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Style>> DeleteStyle(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Style>> DeleteStyle(int id)
         {
             var style = await _bll.Styles.FindAsync(id);
             if (style == null)

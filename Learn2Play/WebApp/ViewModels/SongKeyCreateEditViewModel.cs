@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using SongKey = BLL.App.DTO.DomainEntityDTOs.SongKey;
 
 namespace WebApp.ViewModels
 {

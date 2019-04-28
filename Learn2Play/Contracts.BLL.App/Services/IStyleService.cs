@@ -1,10 +1,10 @@
 using Contracts.BLL.Base.Services;
 using Contracts.DAL.App.Repositories;
-using Domain;
+using BLLAppDTO = BLL.App.DTO.DomainEntityDTOs;
 
 namespace Contracts.BLL.App.Services
 {
-    public interface IStyleService : IBaseEntityService<Style>, IStyleRepository
+    public interface IStyleService : IBaseEntityService<BLLAppDTO.Style>, IStyleRepository<BLLAppDTO.Style>
     {
         
     }

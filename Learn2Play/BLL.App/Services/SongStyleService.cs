@@ -1,21 +1,22 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.Mappers;
 using BLL.Base.Services;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
-using Domain;
 
 namespace BLL.App.Services
 {
-    public class SongStyleService : BaseEntityService<SongStyle, IAppUnitOfWork>, ISongStyleService
+    public class SongStyleService : BaseEntityService<BLL.App.DTO.DomainEntityDTOs.SongStyle, DAL.App.DTO.DomainEntityDTOs.SongStyle, IAppUnitOfWork>, ISongStyleService
     {
-        public SongStyleService(IAppUnitOfWork uow) : base(uow)
+        public SongStyleService(IAppUnitOfWork uow) : base(uow, new SongStyleMapper())
         {
         }
 
-        public async Task<IEnumerable<SongStyle>> AllAsyncWithInclude()
+        public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongStyle>> AllAsyncWithInclude()
         {
-            return await Uow.SongStyles.AllAsyncWithInclude();
+            return (await Uow.SongStyles.AllAsyncWithInclude()).Select(SongStyleMapper.MapFromDAL).ToList();
         }
     }
 }

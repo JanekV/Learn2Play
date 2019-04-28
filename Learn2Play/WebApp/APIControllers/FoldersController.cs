@@ -26,14 +26,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Folders
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Folder>>> GetFolders()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Folder>>> GetFolders()
         {
-            return Ok(await _bll.Folders.AllAsync());
+            return (await _bll.Folders.AllAsync());
         }
 
         // GET: api/Folders/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Folder>> GetFolder(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Folder>> GetFolder(int id)
         {
             var folder = await _bll.Folders.FindAsync(id);
 
@@ -47,7 +47,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Folders/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutFolder(int id, Folder folder)
+        public async Task<IActionResult> PutFolder(int id, BLL.App.DTO.DomainEntityDTOs.Folder folder)
         {
             if (id != folder.Id)
             {
@@ -62,7 +62,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Folders
         [HttpPost]
-        public async Task<ActionResult<Folder>> PostFolder(Folder folder)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Folder>> PostFolder(BLL.App.DTO.DomainEntityDTOs.Folder folder)
         {
             await _bll.Folders.AddAsync(folder);
             await _bll.SaveChangesAsync();
@@ -72,7 +72,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Folders/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Folder>> DeleteFolder(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Folder>> DeleteFolder(int id)
         {
             var folder = await _bll.Folders.FindAsync(id);
             if (folder == null)

@@ -1,21 +1,22 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.Mappers;
 using BLL.Base.Services;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
-using Domain;
 
 namespace BLL.App.Services
 {
-    public class SongInFolderService : BaseEntityService<SongInFolder, IAppUnitOfWork>, ISongInFolderService
+    public class SongInFolderService : BaseEntityService<BLL.App.DTO.DomainEntityDTOs.SongInFolder, DAL.App.DTO.DomainEntityDTOs.SongInFolder, IAppUnitOfWork>, ISongInFolderService
     {
-        public SongInFolderService(IAppUnitOfWork uow) : base(uow)
+        public SongInFolderService(IAppUnitOfWork uow) : base(uow, new SongInFolderMapper())
         {
         }
 
-        public async Task<IEnumerable<SongInFolder>> AllAsyncWithInclude()
+        public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongInFolder>> AllAsyncWithInclude()
         {
-            return await Uow.SongInFolders.AllAsyncWithInclude();
+            return (await Uow.SongInFolders.AllAsyncWithInclude()).Select(SongInFolderMapper.MapFromDAL).ToList();
         }
     }
 }

@@ -282,9 +282,13 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BL
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.Base.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.Base.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.BLL.App.dll
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contrtacts.BLL.Base.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.App.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.Base.pdb
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contrtacts.BLL.Base.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.Base.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.BLL.App.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.App.DTO.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.BLL.Base.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.App.DTO.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Contracts.BLL.Base.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\BLL.App.DTO.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\DAL.App.DTO.pdb

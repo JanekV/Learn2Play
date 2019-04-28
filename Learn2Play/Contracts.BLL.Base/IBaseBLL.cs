@@ -3,14 +3,17 @@ using Contracts.Base;
 using Contracts.BLL.Base.Services;
 using Contracts.DAL.Base;
 
-namespace Contrtacts.BLL.Base
+namespace Contracts.BLL.Base
 {
     public interface IBaseBLL : ITrackableInstance
     {
+        /*
         IBaseEntityService<TEntity> BaseEntityService<TEntity>() 
             where TEntity : class, IDomainEntity, new();
-        
-        Task<int> SaveChangesAsync();   
+        */
+
+        Task<int> SaveChangesAsync(); 
+        int SaveChanges();
     }
 
 }

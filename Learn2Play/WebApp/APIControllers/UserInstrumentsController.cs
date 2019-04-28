@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/UserInstruments
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<UserInstrument>>> GetUserInstruments()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.UserInstrument>>> GetUserInstruments()
         {
             return Ok(await _bll.UserInstruments.AllAsyncWithInclude());
         }
 
         // GET: api/UserInstruments/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<UserInstrument>> GetUserInstrument(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.UserInstrument>> GetUserInstrument(int id)
         {
             var userInstrument = await _bll.UserInstruments.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/UserInstruments/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutUserInstrument(int id, UserInstrument userInstrument)
+        public async Task<IActionResult> PutUserInstrument(int id, BLL.App.DTO.DomainEntityDTOs.UserInstrument userInstrument)
         {
             if (id != userInstrument.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/UserInstruments
         [HttpPost]
-        public async Task<ActionResult<UserInstrument>> PostUserInstrument(UserInstrument userInstrument)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.UserInstrument>> PostUserInstrument(BLL.App.DTO.DomainEntityDTOs.UserInstrument userInstrument)
         {
             await _bll.UserInstruments.AddAsync(userInstrument);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/UserInstruments/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<UserInstrument>> DeleteUserInstrument(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.UserInstrument>> DeleteUserInstrument(int id)
         {
             var userInstrument = await _bll.UserInstruments.FindAsync(id);
             if (userInstrument == null)

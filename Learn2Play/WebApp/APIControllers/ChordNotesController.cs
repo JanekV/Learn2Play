@@ -26,14 +26,14 @@ namespace WebApp.APIControllers
 
         // GET: api/ChordNotes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ChordNote>>> GetChordNotes()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.ChordNote>>> GetChordNotes()
         {
-            return Ok(await _bll.ChordNotes.AllAsyncWithInclude());
+            return (await _bll.ChordNotes.AllAsyncWithInclude());
         }
 
         // GET: api/ChordNotes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ChordNote>> GetChordNote(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.ChordNote>> GetChordNote(int id)
         {
             var chordNote = await _bll.ChordNotes.FindAsync(id);
 
@@ -47,7 +47,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/ChordNotes/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutChordNote(int id, ChordNote chordNote)
+        public async Task<IActionResult> PutChordNote(int id, BLL.App.DTO.DomainEntityDTOs.ChordNote chordNote)
         {
             if (id != chordNote.Id)
             {
@@ -62,7 +62,7 @@ namespace WebApp.APIControllers
 
         // POST: api/ChordNotes
         [HttpPost]
-        public async Task<ActionResult<ChordNote>> PostChordNote(ChordNote chordNote)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.ChordNote>> PostChordNote(BLL.App.DTO.DomainEntityDTOs.ChordNote chordNote)
         {
             await _bll.ChordNotes.AddAsync(chordNote);
             await _bll.SaveChangesAsync();
@@ -72,7 +72,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/ChordNotes/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<ChordNote>> DeleteChordNote(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.ChordNote>> DeleteChordNote(int id)
         {
             var chordNote = await _bll.ChordNotes.FindAsync(id);
             if (chordNote == null)

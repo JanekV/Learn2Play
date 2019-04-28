@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Songs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Song>>> GetSongs()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Song>>> GetSongs()
         {
             return Ok(await _bll.Songs.AllAsyncWithInclude());
         }
 
         // GET: api/Songs/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Song>> GetSong(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Song>> GetSong(int id)
         {
             var song = await _bll.Songs.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Songs/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSong(int id, Song song)
+        public async Task<IActionResult> PutSong(int id, BLL.App.DTO.DomainEntityDTOs.Song song)
         {
             if (id != song.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Songs
         [HttpPost]
-        public async Task<ActionResult<Song>> PostSong(Song song)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Song>> PostSong(BLL.App.DTO.DomainEntityDTOs.Song song)
         {
             await _bll.Songs.AddAsync(song);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Songs/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Song>> DeleteSong(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Song>> DeleteSong(int id)
         {
             var song = await _bll.Songs.FindAsync(id);
             if (song == null)

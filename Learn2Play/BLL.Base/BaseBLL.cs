@@ -1,9 +1,9 @@
 using System;
 using System.Threading.Tasks;
+using Contracts.BLL.Base;
 using Contracts.BLL.Base.Helpers;
 using Contracts.BLL.Base.Services;
 using Contracts.DAL.Base;
-using Contrtacts.BLL.Base;
 
 namespace BLL.Base
 {
@@ -22,14 +22,20 @@ namespace BLL.Base
             ServiceProvider = serviceProvider;
         }
 
+        /*
         public virtual IBaseEntityService<TEntity> BaseEntityService<TEntity>() where TEntity : class, IDomainEntity<>, new()
         {
             return ServiceProvider.GetEntityService<TEntity>();
         }
+        */
 
         public virtual async Task<int> SaveChangesAsync()
         {
             return await UnitOfWork.SaveChangesAsync();   
+        }
+        public int SaveChanges()
+        {
+            return UnitOfWork.SaveChanges();
         }
         
     }

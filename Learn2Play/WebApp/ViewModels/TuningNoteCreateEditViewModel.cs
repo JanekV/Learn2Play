@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using TuningNote = BLL.App.DTO.DomainEntityDTOs.TuningNote;
 
 namespace WebApp.ViewModels
 {

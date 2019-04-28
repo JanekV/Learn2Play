@@ -1,30 +1,33 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
 using Contracts.DAL.Base;
+using DAL.App.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class UserFolderRepository: BaseRepository<UserFolder, AppDbContext>, IUserFolderRepository
+    public class UserFolderRepository: BaseRepository<DAL.App.DTO.DomainEntityDTOs.UserFolder, Domain.UserFolder, AppDbContext>, IUserFolderRepository
     {
-        public UserFolderRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
+        public UserFolderRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext, new UserFolderMapper())
         {
         }
 
-        public async Task<IEnumerable<UserFolder>> AllAsyncWithInclude()
+        public async Task<List<DAL.App.DTO.DomainEntityDTOs.UserFolder>> AllAsyncWithInclude()
         {
             return await RepositoryDbSet
                 .Include(uf => uf.AppUser)
                 .Include(uf => uf.Folder)
+                .Select(e => UserFolderMapper.MapFromDomain(e))
                 .ToListAsync();
         }
         
-        public override async Task<UserFolder> FindAsync(params object[] id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.UserFolder> FindAsync(int id)
         {
-            var userFolder = await base.FindAsync(id);
+            /*var userFolder = await base.FindAsync(id);
             if (userFolder != null)
             {
                 await RepositoryDbContext.Entry(userFolder)
@@ -33,6 +36,15 @@ namespace DAL.App.EF.Repositories
                     .Reference(uf => uf.Folder).LoadAsync();
             }
             return userFolder;
+            */
+
+            var userFolder = await RepositoryDbSet
+                .Include(uf => uf.AppUser)
+                .Include(uf => uf.Folder)
+                .FirstOrDefaultAsync(uf => uf.Id == id);
+            
+            
+            return UserFolderMapper.MapFromDomain(userFolder);
         }
     }
 }

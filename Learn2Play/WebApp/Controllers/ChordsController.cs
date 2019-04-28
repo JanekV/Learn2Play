@@ -56,7 +56,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Name,ShapePicturePath,Id")] Chord chord)
+        public async Task<IActionResult> Create([Bind("Name,ShapePicturePath,Id")] BLL.App.DTO.DomainEntityDTOs.Chord chord)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Name,ShapePicturePath,Id")] Chord chord)
+        public async Task<IActionResult> Edit(int id, [Bind("Name,ShapePicturePath,Id")] BLL.App.DTO.DomainEntityDTOs.Chord chord)
         {
             if (id != chord.Id)
             {

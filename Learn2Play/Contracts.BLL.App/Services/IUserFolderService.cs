@@ -1,10 +1,10 @@
 using Contracts.BLL.Base.Services;
 using Contracts.DAL.App.Repositories;
-using Domain;
+using BLLAppDTO = BLL.App.DTO.DomainEntityDTOs;
 
 namespace Contracts.BLL.App.Services
 {
-    public interface IUserFolderService : IBaseEntityService<UserFolder>, IUserFolderRepository
+    public interface IUserFolderService : IBaseEntityService<BLLAppDTO.UserFolder>, IUserFolderRepository<BLLAppDTO.UserFolder>
     {
         
     }

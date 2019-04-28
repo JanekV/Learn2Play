@@ -55,7 +55,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name")] Note note)
+        public async Task<IActionResult> Create([Bind("Id,Name")] BLL.App.DTO.DomainEntityDTOs.Note note)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +87,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Note note)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] BLL.App.DTO.DomainEntityDTOs.Note note)
         {
             if (id != note.Id)
             {

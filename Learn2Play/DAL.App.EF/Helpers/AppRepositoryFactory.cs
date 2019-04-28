@@ -14,7 +14,7 @@ namespace DAL.App.EF.Helpers
         
         private void RegisterRepositories()
         {
-            AddToCreationMethods<IAppUserRepository>(dataContext => new AppUserRepository(dataContext));
+            //AddToCreationMethods<IAppUserRepository>(dataContext => new AppUserRepository(dataContext));
             AddToCreationMethods<IChordNoteRepository>(dataContext => new ChordNoteRepository(dataContext));
             AddToCreationMethods<IChordRepository>(dataContext => new ChordRepository(dataContext));            
             AddToCreationMethods<IFolderRepository>(dataContext => new FolderRepository(dataContext));

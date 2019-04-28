@@ -1,21 +1,22 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.Mappers;
 using BLL.Base.Services;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
-using Domain;
 
 namespace BLL.App.Services
 {
-    public class TuningNoteService : BaseEntityService<TuningNote, IAppUnitOfWork>, ITuningNoteService
+    public class TuningNoteService : BaseEntityService<BLL.App.DTO.DomainEntityDTOs.TuningNote, DAL.App.DTO.DomainEntityDTOs.TuningNote, IAppUnitOfWork>, ITuningNoteService
     {
-        public TuningNoteService(IAppUnitOfWork uow) : base(uow)
+        public TuningNoteService(IAppUnitOfWork uow) : base(uow, new TuningNoteMapper())
         {
         }
 
-        public async Task<IEnumerable<TuningNote>> AllAsyncWithInclude()
+        public async Task<List<BLL.App.DTO.DomainEntityDTOs.TuningNote>> AllAsyncWithInclude()
         {
-            return await Uow.TuningNotes.AllAsyncWithInclude();
+            return (await Uow.TuningNotes.AllAsyncWithInclude()).Select(TuningNoteMapper.MapFromDAL).ToList();
         }
     }
 }

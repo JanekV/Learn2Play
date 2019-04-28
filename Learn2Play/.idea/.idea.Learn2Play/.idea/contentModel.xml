@@ -12,6 +12,25 @@
         <e p="Helpers" t="Include">
           <e p="AppServiceFactory.cs" t="Include" />
         </e>
+        <e p="Mappers" t="Include">
+          <e p="ChordMapper.cs" t="Include" />
+          <e p="ChordNoteMapper.cs" t="Include" />
+          <e p="FolderMapper.cs" t="Include" />
+          <e p="InstrumentMapper.cs" t="Include" />
+          <e p="NoteMapper.cs" t="Include" />
+          <e p="SongChordMapper.cs" t="Include" />
+          <e p="SongInFolderMapper.cs" t="Include" />
+          <e p="SongInstrumentMapper.cs" t="Include" />
+          <e p="SongKeyMapper.cs" t="Include" />
+          <e p="SongMapper.cs" t="Include" />
+          <e p="SongStyleMapper.cs" t="Include" />
+          <e p="StyleMapper.cs" t="Include" />
+          <e p="TabMapper.cs" t="Include" />
+          <e p="TuningNoteMapper.cs" t="Include" />
+          <e p="UserFolderMapper.cs" t="Include" />
+          <e p="UserInstrumentMapper.cs" t="Include" />
+          <e p="VideoMapper.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -43,6 +62,29 @@
       <e p="BLL.App.DTO" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BLL.App.DTO.csproj" t="IncludeRecursive" />
+        <e p="DomainEntityDTOs" t="Include">
+          <e p="Chord.cs" t="Include" />
+          <e p="ChordNote.cs" t="Include" />
+          <e p="Folder.cs" t="Include" />
+          <e p="Instrument.cs" t="Include" />
+          <e p="Note.cs" t="Include" />
+          <e p="Song.cs" t="Include" />
+          <e p="SongChord.cs" t="Include" />
+          <e p="SongInFolder.cs" t="Include" />
+          <e p="SongInstrument.cs" t="Include" />
+          <e p="SongKey.cs" t="Include" />
+          <e p="SongStyle.cs" t="Include" />
+          <e p="Style.cs" t="Include" />
+          <e p="Tab.cs" t="Include" />
+          <e p="TuningNote.cs" t="Include" />
+          <e p="UserFolder.cs" t="Include" />
+          <e p="UserInstrument.cs" t="Include" />
+          <e p="Video.cs" t="Include" />
+        </e>
+        <e p="Identity" t="Include">
+          <e p="AppRole.cs" t="Include" />
+          <e p="AppUser.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.0" t="Include">
@@ -58,6 +100,9 @@
         <e p="Helpers" t="Include">
           <e p="BaseServiceFactory.cs" t="Include" />
           <e p="BaseServiceProvider.cs" t="Include" />
+        </e>
+        <e p="Mappers" t="Include">
+          <e p="BaseBLLMapper.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -238,7 +283,21 @@
         <e p="Mappers" t="Include">
           <e p="ChordMapper.cs" t="Include" />
           <e p="ChordNoteMapper.cs" t="Include" />
+          <e p="FolderMapper.cs" t="Include" />
+          <e p="InstrumentMapper.cs" t="Include" />
           <e p="NoteMapper.cs" t="Include" />
+          <e p="SongChordMapper.cs" t="Include" />
+          <e p="SongInFolderMapper.cs" t="Include" />
+          <e p="SongInstrumentMapper.cs" t="Include" />
+          <e p="SongKeyMapper.cs" t="Include" />
+          <e p="SongMapper.cs" t="Include" />
+          <e p="SongStyleMapper.cs" t="Include" />
+          <e p="StyleMapper.cs" t="Include" />
+          <e p="TabMapper.cs" t="Include" />
+          <e p="TuningNoteMapper.cs" t="Include" />
+          <e p="UserFolderMapper.cs" t="Include" />
+          <e p="UserInstrumentMapper.cs" t="Include" />
+          <e p="VideoMapper.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20190407134956_InitialDbCreation.cs" t="Include" />

@@ -16,7 +16,7 @@ namespace BLL.App.Helpers
         private void RegisterServices()
         {
             // Register all your custom services here!
-            AddToCreationMethods<IAppUserService>(uow => new AppUserService(uow));
+            //AddToCreationMethods<IAppUserService>(uow => new AppUserService(uow));
             AddToCreationMethods<IChordNoteService>(uow => new ChordNoteService(uow));
             AddToCreationMethods<IChordService>(uow => new ChordService(uow));            
             AddToCreationMethods<IFolderService>(uow => new FolderService(uow));

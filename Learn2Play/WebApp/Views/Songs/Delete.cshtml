@@ -1,4 +1,4 @@
-@model Domain.Song
+@model BLL.App.DTO.DomainEntityDTOs.Song
 
 @{
     ViewData["Title"] = "Delete";
@@ -36,10 +36,10 @@
             @Html.DisplayFor(model => model.Description)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Key)
+            @Html.DisplayNameFor(model => model.SongKey)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Key.Description)
+            @Html.DisplayFor(model => model.SongKey.Description)
         </dd>
     </dl>
     

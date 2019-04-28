@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using UserInstrument = BLL.App.DTO.DomainEntityDTOs.UserInstrument;
 
 namespace WebApp.ViewModels
 {

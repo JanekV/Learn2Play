@@ -1,30 +1,33 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
 using Contracts.DAL.Base;
+using DAL.App.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class UserInstrumentRepository: BaseRepository<UserInstrument, AppDbContext>, IUserInstrumentRepository
+    public class UserInstrumentRepository: BaseRepository<DAL.App.DTO.DomainEntityDTOs.UserInstrument, Domain.UserInstrument, AppDbContext>, IUserInstrumentRepository
     {
-        public UserInstrumentRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
+        public UserInstrumentRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext, new UserInstrumentMapper())
         {
         }
 
-        public async Task<IEnumerable<UserInstrument>> AllAsyncWithInclude()
+        public async Task<List<DAL.App.DTO.DomainEntityDTOs.UserInstrument>> AllAsyncWithInclude()
         {
             return await RepositoryDbSet
                 .Include(uf => uf.AppUser)
                 .Include(uf => uf.Instrument)
+                .Select(e => UserInstrumentMapper.MapFromDomain(e))
                 .ToListAsync();
         }
         
-        public override async Task<UserInstrument> FindAsync(params object[] id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.UserInstrument> FindAsync(int id)
         {
-            var userInstrument = await base.FindAsync(id);
+            /*var userInstrument = await base.FindAsync(id);
             if (userInstrument != null)
             {
                 await RepositoryDbContext.Entry(userInstrument)
@@ -34,7 +37,15 @@ namespace DAL.App.EF.Repositories
             }
             
             
-            return userInstrument;
+            return userInstrument;*/
+            
+            var userInstrument = await RepositoryDbSet
+                .Include(ui => ui.AppUser)
+                .Include(ui => ui.Instrument)
+                .FirstOrDefaultAsync(ui => ui.Id == id);
+            
+            
+            return UserInstrumentMapper.MapFromDomain(userInstrument);
         }
     }
 }

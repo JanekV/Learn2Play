@@ -1,10 +1,10 @@
 using Contracts.BLL.Base.Services;
 using Contracts.DAL.App.Repositories;
-using Domain;
+using BLLAppDTO = BLL.App.DTO.DomainEntityDTOs;
 
 namespace Contracts.BLL.App.Services
 {
-    public interface IVideoService : IBaseEntityService<Video>, IVideoRepository
+    public interface IVideoService : IBaseEntityService<BLLAppDTO.Video>, IVideoRepository<BLLAppDTO.Video>
     {
         
     }

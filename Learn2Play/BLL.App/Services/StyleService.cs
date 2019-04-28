@@ -1,15 +1,17 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using BLL.App.Mappers;
 using BLL.Base.Services;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
-using Domain;
 
 namespace BLL.App.Services
 {
-    public class StyleService : BaseEntityService<Style, IAppUnitOfWork>, IStyleService
+    public class StyleService : BaseEntityService<BLL.App.DTO.DomainEntityDTOs.Style, DAL.App.DTO.DomainEntityDTOs.Style, IAppUnitOfWork>, IStyleService
     {
-        public StyleService(IAppUnitOfWork uow) : base(uow)
+        public StyleService(IAppUnitOfWork uow) : base(uow, new StyleMapper())
         {
         }
-
     }
 }

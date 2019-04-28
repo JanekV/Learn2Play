@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using DAL.App.EF;
 using Domain;
 using Domain.Identity;
+using Folder = BLL.App.DTO.DomainEntityDTOs.Folder;
 
 namespace WebApp.Controllers
 {
@@ -57,7 +58,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,FolderType,Name,Comment")] Folder folder)
+        public async Task<IActionResult> Create([Bind("Id,FolderType,Name,Comment")] BLL.App.DTO.DomainEntityDTOs.Folder folder)
         {
             if (ModelState.IsValid)
             {

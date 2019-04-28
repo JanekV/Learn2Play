@@ -16,3 +16,5 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\DAL.App.EF\obj\Debug\netstandard2
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\DAL.App.EF\obj\Debug\netstandard2.0\DAL.App.EF.csproj.CopyComplete
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\DAL.App.EF\obj\Debug\netstandard2.0\DAL.App.EF.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\DAL.App.EF\obj\Debug\netstandard2.0\DAL.App.EF.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\DAL.App.EF\bin\Debug\netstandard2.0\DAL.App.DTO.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\DAL.App.EF\bin\Debug\netstandard2.0\DAL.App.DTO.pdb

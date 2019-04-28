@@ -1,21 +1,22 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.Mappers;
 using BLL.Base.Services;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
-using Domain;
 
 namespace BLL.App.Services
 {
-    public class UserFolderService : BaseEntityService<UserFolder, IAppUnitOfWork>, IUserFolderService
+    public class UserFolderService : BaseEntityService<BLL.App.DTO.DomainEntityDTOs.UserFolder, DAL.App.DTO.DomainEntityDTOs.UserFolder, IAppUnitOfWork>, IUserFolderService
     {
-        public UserFolderService(IAppUnitOfWork uow) : base(uow)
+        public UserFolderService(IAppUnitOfWork uow) : base(uow, new UserFolderMapper())
         {
         }
 
-        public async Task<IEnumerable<UserFolder>> AllAsyncWithInclude()
+        public async Task<List<BLL.App.DTO.DomainEntityDTOs.UserFolder>> AllAsyncWithInclude()
         {
-            return await Uow.UserFolders.AllAsyncWithInclude();
+            return (await Uow.UserFolders.AllAsyncWithInclude()).Select(UserFolderMapper.MapFromDAL).ToList();
         }
     }
 }

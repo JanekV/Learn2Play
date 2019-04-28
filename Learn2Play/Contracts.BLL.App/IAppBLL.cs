@@ -1,5 +1,5 @@
 using Contracts.BLL.App.Services;
-using Contrtacts.BLL.Base;
+using Contracts.BLL.Base;
 
 namespace Contracts.BLL.App
 {

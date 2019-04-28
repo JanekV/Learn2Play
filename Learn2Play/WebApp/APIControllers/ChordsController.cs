@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Chords
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Chord>>> GetChords()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Chord>>> GetChords()
         {
-            return Ok(await _bll.Chords.AllAsync());
+            return (await _bll.Chords.AllAsync());
         }
 
         // GET: api/Chords/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Chord>> GetChord(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Chord>> GetChord(int id)
         {
             var chord = await _bll.Chords.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Chords/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutChord(int id, Chord chord)
+        public async Task<IActionResult> PutChord(int id, BLL.App.DTO.DomainEntityDTOs.Chord chord)
         {
             if (id != chord.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Chords
         [HttpPost]
-        public async Task<ActionResult<Chord>> PostChord(Chord chord)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Chord>> PostChord(BLL.App.DTO.DomainEntityDTOs.Chord chord)
         {
             await _bll.Chords.AddAsync(chord);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Chords/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Chord>> DeleteChord(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Chord>> DeleteChord(int id)
         {
             var chord = await _bll.Chords.FindAsync(id);
             if (chord == null)

@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using SongInFolder = BLL.App.DTO.DomainEntityDTOs.SongInFolder;
 
 namespace WebApp.ViewModels
 {

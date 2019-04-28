@@ -5,10 +5,10 @@ using Domain.Identity;
 
 namespace BLL.App.Services
 {
-    public class AppUserService : BaseEntityService<AppUser, IAppUnitOfWork>, IAppUserService
+    public class AppUserService //: BaseEntityService<AppUser, IAppUnitOfWork>, IAppUserService
     {
-        public AppUserService(IAppUnitOfWork uow) : base(uow)
+        /*public AppUserService(IAppUnitOfWork uow) : base(uow)
         {
-        }
+        }*/
     }
 }

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "3936025aef6ab2a3f63d5b96e6a1083bbded0008"
+    "signature": "9ae419c196f2f38172011b4981b802dec2cfe2dc"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,7 @@
         "dependencies": {
           "BLL.App": "1.0.0",
           "BLL.Base": "1.0.0",
-          "Contrtacts.BLL.Base": "1.0.0",
+          "Contracts.BLL.Base": "1.0.0",
           "DAL.App.EF": "1.0.0",
           "Identity": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -40,6 +40,21 @@
         },
         "compile": {
           "WebApp.dll": {}
+        }
+      },
+      "AutoMapper/8.1.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "8.1.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -654,10 +669,12 @@
       },
       "BLL.App/1.0.0": {
         "dependencies": {
+          "BLL.App.DTO": "1.0.0",
           "BLL.Base": "1.0.0",
           "Contracts.BLL.App": "1.0.0",
+          "Contracts.BLL.Base": "1.0.0",
           "Contracts.DAL.App": "1.0.0",
-          "Contrtacts.BLL.Base": "1.0.0"
+          "DAL.App.EF": "1.0.0"
         },
         "runtime": {
           "BLL.App.dll": {}
@@ -666,9 +683,22 @@
           "BLL.App.dll": {}
         }
       },
+      "BLL.App.DTO/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "runtime": {
+          "BLL.App.DTO.dll": {}
+        },
+        "compile": {
+          "BLL.App.DTO.dll": {}
+        }
+      },
       "BLL.Base/1.0.0": {
         "dependencies": {
-          "Contrtacts.BLL.Base": "1.0.0"
+          "AutoMapper": "8.1.0",
+          "Contracts.BLL.Base": "1.0.0"
         },
         "runtime": {
           "BLL.Base.dll": {}
@@ -687,8 +717,9 @@
       },
       "Contracts.BLL.App/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.App": "1.0.0",
-          "Contrtacts.BLL.Base": "1.0.0"
+          "BLL.App.DTO": "1.0.0",
+          "Contracts.BLL.Base": "1.0.0",
+          "Contracts.DAL.App": "1.0.0"
         },
         "runtime": {
           "Contracts.BLL.App.dll": {}
@@ -697,9 +728,22 @@
           "Contracts.BLL.App.dll": {}
         }
       },
+      "Contracts.BLL.Base/1.0.0": {
+        "dependencies": {
+          "Contracts.Base": "1.0.0",
+          "Contracts.DAL.Base": "1.0.0"
+        },
+        "runtime": {
+          "Contracts.BLL.Base.dll": {}
+        },
+        "compile": {
+          "Contracts.BLL.Base.dll": {}
+        }
+      },
       "Contracts.DAL.App/1.0.0": {
         "dependencies": {
           "Contracts.DAL.Base": "1.0.0",
+          "DAL.App.DTO": "1.0.0",
           "Domain": "1.0.0"
         },
         "runtime": {
@@ -720,21 +764,22 @@
           "Contracts.DAL.Base.dll": {}
         }
       },
-      "Contrtacts.BLL.Base/1.0.0": {
+      "DAL.App.DTO/1.0.0": {
         "dependencies": {
-          "Contracts.Base": "1.0.0",
-          "Contracts.DAL.Base": "1.0.0"
+          "Domain": "1.0.0",
+          "System.ComponentModel.Annotations": "4.5.0"
         },
         "runtime": {
-          "Contrtacts.BLL.Base.dll": {}
+          "DAL.App.DTO.dll": {}
         },
         "compile": {
-          "Contrtacts.BLL.Base.dll": {}
+          "DAL.App.DTO.dll": {}
         }
       },
       "DAL.App.EF/1.0.0": {
         "dependencies": {
           "Contracts.DAL.App": "1.0.0",
+          "DAL.App.DTO": "1.0.0",
           "DAL.Base.EF": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
@@ -750,6 +795,7 @@
       },
       "DAL.Base.EF/1.0.0": {
         "dependencies": {
+          "AutoMapper": "8.1.0",
           "Contracts.DAL.Base": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.2"
         },
@@ -3762,6 +3808,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "AutoMapper/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YyGENUyP7CdOJcw2TCEMtkuRgj9iRFLHeACrfBEDPY5xIiTB/iDxNFdOy5br4abWR8KnSdQeK/x+GQLE7uiFtQ==",
+      "path": "automapper/8.1.0",
+      "hashPath": "automapper.8.1.0.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -4040,6 +4093,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "BLL.App.DTO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "BLL.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4055,6 +4113,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Contracts.BLL.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Contracts.DAL.App/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -4065,7 +4128,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Contrtacts.BLL.Base/1.0.0": {
+    "DAL.App.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

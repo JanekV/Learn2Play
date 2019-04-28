@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
+using DAL.App.DTO.DomainEntityDTOs;
 using DAL.App.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Microsoft.EntityFrameworkCore;

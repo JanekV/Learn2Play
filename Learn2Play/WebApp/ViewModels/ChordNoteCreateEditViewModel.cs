@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using ChordNote = BLL.App.DTO.DomainEntityDTOs.ChordNote;
 
 namespace WebApp.ViewModels
 {

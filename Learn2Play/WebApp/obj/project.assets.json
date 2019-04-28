@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.2": {
-      "AutoMapper/8.0.0": {
+      "AutoMapper/8.1.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.CSharp": "4.5.0",
@@ -4774,10 +4774,12 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BLL.App.DTO": "1.0.0",
           "BLL.Base": "1.0.0",
           "Contracts.BLL.App": "1.0.0",
           "Contracts.BLL.Base": "1.0.0",
-          "Contracts.DAL.App": "1.0.0"
+          "Contracts.DAL.App": "1.0.0",
+          "DAL.App.EF": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BLL.App.dll": {}
@@ -4786,10 +4788,25 @@
           "bin/placeholder/BLL.App.dll": {}
         }
       },
+      "BLL.App.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/BLL.App.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BLL.App.DTO.dll": {}
+        }
+      },
       "BLL.Base/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "AutoMapper": "8.1.0",
           "Contracts.BLL.Base": "1.0.0"
         },
         "compile": {
@@ -4813,6 +4830,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "BLL.App.DTO": "1.0.0",
           "Contracts.BLL.Base": "1.0.0",
           "Contracts.DAL.App": "1.0.0"
         },
@@ -4944,14 +4962,14 @@
     }
   },
   "libraries": {
-    "AutoMapper/8.0.0": {
-      "sha512": "kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
+    "AutoMapper/8.1.0": {
+      "sha512": "YyGENUyP7CdOJcw2TCEMtkuRgj9iRFLHeACrfBEDPY5xIiTB/iDxNFdOy5br4abWR8KnSdQeK/x+GQLE7uiFtQ==",
       "type": "package",
-      "path": "automapper/8.0.0",
+      "path": "automapper/8.1.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "automapper.8.0.0.nupkg.sha512",
+        "automapper.8.1.0.nupkg.sha512",
         "automapper.nuspec",
         "lib/net461/AutoMapper.dll",
         "lib/net461/AutoMapper.pdb",
@@ -13221,6 +13239,11 @@
       "type": "project",
       "path": "../BLL.App/BLL.App.csproj",
       "msbuildProject": "../BLL.App/BLL.App.csproj"
+    },
+    "BLL.App.DTO/1.0.0": {
+      "type": "project",
+      "path": "../BLL.App.DTO/BLL.App.DTO.csproj",
+      "msbuildProject": "../BLL.App.DTO/BLL.App.DTO.csproj"
     },
     "BLL.Base/1.0.0": {
       "type": "project",

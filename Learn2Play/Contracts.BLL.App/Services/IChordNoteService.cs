@@ -1,10 +1,10 @@
 using Contracts.BLL.Base.Services;
 using Contracts.DAL.App.Repositories;
-using Domain;
+using BLLAppDTO = BLL.App.DTO.DomainEntityDTOs;
 
 namespace Contracts.BLL.App.Services
 {
-    public interface IChordNoteService : IBaseEntityService<ChordNote>, IChordNoteRepository
+    public interface IChordNoteService : IBaseEntityService<BLLAppDTO.ChordNote>, IChordNoteRepository<BLLAppDTO.ChordNote>
     {
         
     }

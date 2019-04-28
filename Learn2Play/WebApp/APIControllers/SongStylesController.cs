@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/SongStyles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SongStyle>>> GetSongStyles()
+        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.SongStyle>>> GetSongStyles()
         {
             return Ok(await _bll.SongStyles.AllAsyncWithInclude());
         }
 
         // GET: api/SongStyles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SongStyle>> GetSongStyle(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongStyle>> GetSongStyle(int id)
         {
             var songStyle = await _bll.SongStyles.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/SongStyles/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSongStyle(int id, SongStyle songStyle)
+        public async Task<IActionResult> PutSongStyle(int id, BLL.App.DTO.DomainEntityDTOs.SongStyle songStyle)
         {
             if (id != songStyle.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/SongStyles
         [HttpPost]
-        public async Task<ActionResult<SongStyle>> PostSongStyle(SongStyle songStyle)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongStyle>> PostSongStyle(BLL.App.DTO.DomainEntityDTOs.SongStyle songStyle)
         {
             await _bll.SongStyles.AddAsync(songStyle);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/SongStyles/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<SongStyle>> DeleteSongStyle(int id)
+        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongStyle>> DeleteSongStyle(int id)
         {
             var songStyle = await _bll.SongStyles.FindAsync(id);
             if (songStyle == null)

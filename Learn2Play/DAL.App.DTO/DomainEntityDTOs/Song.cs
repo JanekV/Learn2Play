@@ -26,7 +26,7 @@ namespace DAL.App.DTO.DomainEntityDTOs
         public string Description { get; set; }
 
         public int SongKeyId { get; set; }
-        public SongKey Key { get; set; }
+        public SongKey SongKey { get; set; }
 
         public ICollection<SongInFolder> SongInFolders { get; set; }
         public ICollection<SongInstrument> SongInstruments { get; set; }

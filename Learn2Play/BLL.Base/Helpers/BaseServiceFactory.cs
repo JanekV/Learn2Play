@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using BLL.Base.Services;
+using Contracts.BLL.Base.Helpers;
 using Contracts.DAL.Base;
 
 namespace BLL.Base.Helpers
@@ -37,11 +38,13 @@ namespace BLL.Base.Helpers
             throw new NullReferenceException("No service creation method found for " + typeof(TService).FullName);
         }
 
-        public virtual Func<TUnitOfWork, object> GetEntityServiceFactory<TEntity>()
+        /*
+         public virtual Func<TUnitOfWork, object> GetEntityServiceFactory<TEntity>()
             where TEntity : class, IDomainEntity, new()
         {
             return (uow) => new BaseEntityService<TEntity, TUnitOfWork>(uow);
         }
+        */
     }
 
 }

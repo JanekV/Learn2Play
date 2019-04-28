@@ -1,5 +1,6 @@
 using Domain;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Tab = BLL.App.DTO.DomainEntityDTOs.Tab;
 
 namespace WebApp.ViewModels
 {

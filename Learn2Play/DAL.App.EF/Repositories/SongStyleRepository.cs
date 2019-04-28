@@ -1,30 +1,33 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
 using Contracts.DAL.Base;
+using DAL.App.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF.Repositories
 {
-    public class SongStyleRepository: BaseRepository<SongStyle, AppDbContext>, ISongStyleRepository
+    public class SongStyleRepository: BaseRepository<DAL.App.DTO.DomainEntityDTOs.SongStyle, Domain.SongStyle, AppDbContext>, ISongStyleRepository
     {
-        public SongStyleRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext)
+        public SongStyleRepository(AppDbContext repositoryDbContext) : base(repositoryDbContext, new SongStyleMapper())
         {
         }
 
-        public async Task<IEnumerable<SongStyle>> AllAsyncWithInclude()
+        public async Task<List<DAL.App.DTO.DomainEntityDTOs.SongStyle>> AllAsyncWithInclude()
         {
             return await RepositoryDbSet
                 .Include(ss => ss.Song)
-                .Include(ss => ss.Style)
+                .Include(ss => ss.Style) 
+                .Select(e => SongStyleMapper.MapFromDomain(e))
                 .ToListAsync();
         }
         
-        public override async Task<SongStyle> FindAsync(params object[] id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.SongStyle> FindAsync(int id)
         {
-            var songStyle = await base.FindAsync(id);
+            /*var songStyle = await base.FindAsync(id);
             if (songStyle != null)
             {
                 await RepositoryDbContext.Entry(songStyle)
@@ -33,6 +36,15 @@ namespace DAL.App.EF.Repositories
                     .Reference(ss => ss.Style).LoadAsync();
             }
             return songStyle;
+            */
+
+            var songStyle = await RepositoryDbSet
+                .Include(ss => ss.Song)
+                .Include(ss => ss.Style)
+                .FirstOrDefaultAsync(ss => ss.Id == id);
+            
+            
+            return SongStyleMapper.MapFromDomain(songStyle);
         }
     }
 }
