@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\X\.Rider2018.3\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\X\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\X\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_Learn2Play.616467547.00" t="ExcludeRecursive" />
+    <e p="C:\Users\X\.Rider2019.1\config\scratches" t="IncludeRecursive" />
+    <e p="C:\Users\X\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\X\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_Learn2Play.616467547.00" t="ExcludeRecursive" />
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2Play" t="IncludeFlat">
       <e p="BLL.App" t="IncludeRecursive">
         <e p="AppBLL.cs" t="Include" />
@@ -7294,55 +7294,53 @@
         </e>
       </e>
     </e>
-    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules" t="ExcludeRecursive">
-      <e p="@types" t="IncludeRecursive">
-        <e p="anymatch" t="IncludeRecursive" />
-        <e p="bootstrap" t="IncludeRecursive" />
-        <e p="jquery" t="IncludeRecursive" />
-        <e p="lodash" t="IncludeRecursive" />
-        <e p="node" t="IncludeRecursive" />
-        <e p="sizzle" t="IncludeRecursive" />
-        <e p="tapable" t="IncludeRecursive" />
-        <e p="uglify-js" t="IncludeRecursive" />
-        <e p="webpack" t="IncludeRecursive" />
-      </e>
-      <e p="aurelia-animator-css" t="IncludeRecursive" />
-      <e p="aurelia-bootstrapper" t="IncludeRecursive" />
-      <e p="aurelia-cli" t="IncludeRecursive" />
-      <e p="aurelia-fetch-client" t="IncludeRecursive" />
-      <e p="aurelia-testing" t="IncludeRecursive" />
-      <e p="aurelia-tools" t="IncludeRecursive" />
-      <e p="aurelia-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\@types" t="IncludeRecursive">
+      <e p="anymatch" t="IncludeRecursive" />
       <e p="bootstrap" t="IncludeRecursive" />
-      <e p="copy-webpack-plugin" t="IncludeRecursive" />
-      <e p="core-js" t="IncludeRecursive" />
-      <e p="css-loader" t="IncludeRecursive" />
-      <e p="del" t="IncludeRecursive" />
-      <e p="duplicate-package-checker-webpack-plugin" t="IncludeRecursive" />
-      <e p="expose-loader" t="IncludeRecursive" />
-      <e p="file-loader" t="IncludeRecursive" />
-      <e p="gulp" t="IncludeRecursive" />
-      <e p="gulp-rename" t="IncludeRecursive" />
-      <e p="html-loader" t="IncludeRecursive" />
-      <e p="html-webpack-plugin" t="IncludeRecursive" />
-      <e p="istanbul-instrumenter-loader" t="IncludeRecursive" />
       <e p="jquery" t="IncludeRecursive" />
-      <e p="json-loader" t="IncludeRecursive" />
-      <e p="mini-css-extract-plugin" t="IncludeRecursive" />
-      <e p="minimatch" t="IncludeRecursive" />
-      <e p="opn" t="IncludeRecursive" />
-      <e p="popper.js" t="IncludeRecursive" />
-      <e p="source-map" t="IncludeRecursive" />
-      <e p="style-loader" t="IncludeRecursive" />
-      <e p="through2" t="IncludeRecursive" />
-      <e p="ts-loader" t="IncludeRecursive" />
-      <e p="ts-node" t="IncludeRecursive" />
-      <e p="url-loader" t="IncludeRecursive" />
-      <e p="vinyl-fs" t="IncludeRecursive" />
+      <e p="lodash" t="IncludeRecursive" />
+      <e p="node" t="IncludeRecursive" />
+      <e p="sizzle" t="IncludeRecursive" />
+      <e p="tapable" t="IncludeRecursive" />
+      <e p="uglify-js" t="IncludeRecursive" />
       <e p="webpack" t="IncludeRecursive" />
-      <e p="webpack-bundle-analyzer" t="IncludeRecursive" />
-      <e p="webpack-cli" t="IncludeRecursive" />
-      <e p="webpack-dev-server" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-animator-css" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-bootstrapper" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-cli" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-fetch-client" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-testing" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-tools" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\bootstrap" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\copy-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\core-js" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\css-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\del" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\duplicate-package-checker-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\expose-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\file-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\gulp" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\gulp-rename" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\html-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\html-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\istanbul-instrumenter-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\jquery" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\json-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\mini-css-extract-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\minimatch" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\opn" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\popper.js" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\source-map" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\style-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\through2" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\ts-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\ts-node" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\url-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\vinyl-fs" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack-bundle-analyzer" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack-cli" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack-dev-server" t="IncludeRecursive" />
   </component>
 </project>

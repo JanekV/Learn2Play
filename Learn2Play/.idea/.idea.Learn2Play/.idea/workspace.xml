@@ -4,6 +4,27 @@
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contracts.DAL.Base/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.Base/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAL.Base.EF/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.Base.EF/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongKeys/PartialCreateEdit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongKeys/PartialCreateEdit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/ChordNotes/PartialDeleteDetails.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/ChordNotes/PartialDeleteDetails.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/SongKeys/PartialCreateEdit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/SongKeys/PartialCreateEdit.g.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/project.packagespec.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +47,38 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="36" selection-start-column="36" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BLL.App/Mappers/ChordNoteMapper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+              <folding>
+                <marker date="1556358361246" expanded="false" signature="6:47" ph="..." />
+                <marker date="1556358361246" expanded="true" signature="74:1894" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="126:1892" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="228:808" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="324:452" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="539:667" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="931:1347" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="1046:1310" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="1470:1885" ph="{...}" />
+                <marker date="1556358361246" expanded="true" signature="1585:1849" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -84,216 +136,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/UserInstrumentCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/StylesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/TuningNoteCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/VideosController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/TabCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/FoldersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongStyleCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongKeysController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongKeyCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongChordsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongInstrumentCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongStylesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/InstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongInFolderCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/TuningNotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongInFoldersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongChordCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/UserInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Helpers/EmailSender.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/ChordNoteCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/Identity/AppRole.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/Identity/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Style.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/TuningNote.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Song.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongInFolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongStyle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Instrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Note.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongInstrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Folder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/IBaseBLL.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Tab.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Helpers/IBaseServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/UserInstrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Helpers/IBaseServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongKey.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Services/IBaseService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Chord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/IAppBLL.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongChord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Video.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IAppUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/UserFolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IChordNoteService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/ChordNote.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IChordService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IFolderService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.Base/Mappers/BaseBLLMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/INoteService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongChordService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInFolderService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongKeyService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongStyleService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IStyleService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ITabService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ITuningNoteService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IUserFolderService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IUserInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IVideoService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.Base/BaseBLL.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.Base/Services/BaseService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/ChordNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/ChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/NoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/AppBLL.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Helpers/AppServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/AppUserService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/ChordService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/FolderService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/InstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/NoteService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongChordService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongKeyService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongStyleService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/StyleService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/TabService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/TuningNoteService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Services/VideoService.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Note.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongStyle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Tab.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/ChordNote.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongInstrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Song.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/UserFolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Folder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongInFolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/TuningNote.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongKey.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/UserInstrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Chord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Video.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/Identity/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/Identity/AppRole.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Enums/FolderType.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Enums/SongPart.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Mappers/IBaseBLLMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Mappers/IBaseDALMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Style.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/TuningNote.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Mappers/BaseDALMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Song.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/SongInFolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/SongStyle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Instrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Note.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/SongInstrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Folder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Tab.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/UserInstrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/SongKey.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Chord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/SongChord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Video.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/UserFolder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/ChordNote.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Startup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/NoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/ChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/ChordNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Identity/AppRole.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Identity/IdentityExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/Identity/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Repositories/IBaseRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/IdentityHostingStartup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IChordNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/Manage/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/INoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongKeyRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongStyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IStyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ITabRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ITuningNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IUserFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IUserInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IVideoRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/Manage/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongKeysController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Helpers/BaseRepositoryFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/ChordNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Helpers/BaseRepositoryProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Mappers/BaseDALMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Repositories/BaseRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/BaseUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/ChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/ChordNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/InstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/NoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Identity/JwtHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongInFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongKeyRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongStyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/StyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/TabRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/TuningNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/UserInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/VideoRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.Base/ITrackableInstance.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/_ViewStart.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Tabs/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Tabs/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Tabs/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Tabs/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Tabs/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
@@ -301,56 +157,61 @@
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Notes/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Notes/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Notes/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/IAppBLL.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Notes/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Notes/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Shared/_LoginPartial.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Shared/_LoginPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Styles/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Styles/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Styles/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Styles/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Styles/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/FolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/InstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongInFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Folders/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Folders/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Videos/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Folders/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/AppUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Folders/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IAppUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Folders/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Tabs/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Delete.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Songs/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongChords/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
@@ -361,88 +222,276 @@
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Instruments/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/Instruments/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/TuningNoteCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongChordCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/UserInstrumentCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongInstrumentCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/VideoCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/ChordNoteCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongStyleCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/TabCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongKeyCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/SongInFolderCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongKeyMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongInFoldersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/VideosController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongStylesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongStyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/StylesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/StyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/FoldersController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/TabMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongChordsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/TuningNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/InstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/PartialCreateEdit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/UserInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/UserFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/UserInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/NotesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/VideoMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/TabsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/TuningNotesController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Helpers/EmailSender.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/Identity/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/FolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongChord.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/InstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongInFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IUserInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/AppBLL.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IFolderService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IUserFolderService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IStyleService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ITabService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IVideoService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInFolderService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongKeyService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongStyleService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/INoteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/DomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IAppUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Style.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ISongChordService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/TuningNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IChordNoteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/ITuningNoteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Song.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.App/Services/IChordService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/SongInFolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/SongStyle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Instrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Note.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/IAppUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/SongInstrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Folder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Tab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/UserInstrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/SongKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Chord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/SongChord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Video.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/UserFolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/ChordNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Helpers/AppServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongKeyMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongStyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongInFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/FolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/UserInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/TuningNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/InstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/UserFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/VideoMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/ChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Enums/SongPart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/NoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Enums/FolderType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Identity/AppRole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/StyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Domain/Identity/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/TabMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Mappers/SongMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/AppUserService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/FolderService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/InstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/TabService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongChordService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IVideoRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongStyleService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ITabRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/ChordService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IChordNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongInstrumentService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IStyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/SongKeyService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ITuningNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/TuningNoteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/StyleService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/NoteService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App/Services/VideoService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IAppUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IUserInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.Base/BaseBLL.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IUserFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/INoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/IInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongStyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongKeyRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/IBaseBLL.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.Base/Mappers/BaseBLLMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.Base/Services/BaseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Identity/JwtHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Identity/IdentityExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Helpers/IBaseServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Helpers/IBaseServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Mappers/IBaseBLLMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.BLL.Base/Services/IBaseService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/IBaseUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/IDomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/AppUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/IDataContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/AppDbContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Helpers/IBaseRepositoryProvider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Helpers/IBaseRepositoryFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Mappers/IBaseDALMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Repositories/IBaseRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Helpers/AppRepositoryFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongKeyMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongStyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongInFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/FolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/UserInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/TuningNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/ChordNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/InstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/UserFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/VideoMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/ChordMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/NoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/StyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/TabMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/TuningNoteMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/UserFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/UserInstrumentMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/VideoMapper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/IBaseUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Migrations/20190430104340_InitialDbCreation.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongKeyRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/ChordNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/AppUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/ChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongStyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/UserInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/InstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/TabRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/TuningNoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/StyleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/NoteRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/VideoRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongChordRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongInFolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongInstrumentRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/Identity/AppRole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/Identity/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Style.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/TuningNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Song.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongInFolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongStyle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Instrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Note.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongInstrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Folder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Tab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/UserInstrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Chord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongChord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Video.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/UserFolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/ChordNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/IdentityHostingStartup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Instrument.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/Chords/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.App/IAppUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/Identity/AppRole.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/Identity/AppUser.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Style.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/IDataContext.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/IDomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Domain/DomainEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Helpers/IBaseRepositoryFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.DAL.Base/Helpers/IBaseRepositoryProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Helpers/BaseRepositoryFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/Helpers/BaseRepositoryProvider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Edit.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DAL.App.EF/Helpers/AppRepositoryFactory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Contracts.Base/ITrackableInstance.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Details.cshtml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/TabsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/Controllers/NotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/ViewModels/VideoCreateEditViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/TuningNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Song.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongInFolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongStyle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Instrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Note.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongInstrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Folder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Tab.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/UserInstrument.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongKey.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Chord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/Areas/Identity/Pages/Account/Login.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/SongChord.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Video.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/UserFolder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/ChordNote.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DAL.Base.EF/BaseUnitOfWork.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" />
-        <option value="$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" />
-        <option value="$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" />
-        <option value="$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" />
         <option value="$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" />
         <option value="$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" />
         <option value="$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" />
@@ -490,6 +539,10 @@
         <option value="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" />
         <option value="$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" />
         <option value="$PROJECT_DIR$/BLL.App/Services/VideoService.cs" />
+        <option value="$PROJECT_DIR$/WebApp/Startup.cs" />
+        <option value="$PROJECT_DIR$/WebApp/Views/SongKeys/PartialCreateEdit.cshtml" />
+        <option value="$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml" />
+        <option value="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" />
       </list>
     </option>
   </component>
@@ -510,8 +563,31 @@
         <subPane>
           <expand>
             <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="DAL.App.EF" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="ChordNotes" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
@@ -525,6 +601,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="TEXT" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
@@ -553,6 +630,10 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="0" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="0" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
       <method v="2">
         <option name="Build" enabled="true" />
       </method>
@@ -599,7 +680,9 @@
       <workItem from="1556352613361" duration="9397000" />
       <workItem from="1556469752203" duration="8955000" />
       <workItem from="1556619926343" duration="139000" />
-      <workItem from="1556620681884" duration="1327000" />
+      <workItem from="1556620681884" duration="1534000" />
+      <workItem from="1556639453826" duration="887000" />
+      <workItem from="1556644623782" duration="838000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -769,11 +852,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556621968506</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="2 layers of dtos, dal and bll wucking forking finally ughhh, in api and mvc, with mapping for every domain entity">
+      <created>1556622023152</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1556622023152</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="144035000" />
+    <option name="totallyTimeSpent" value="145967000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -787,15 +877,15 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18962723" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1961102" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" visible="true" weight="0.23522976" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2428884" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" weight="0.23504274" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.24252136" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -806,9 +896,9 @@
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="REST Client" order="13" />
-      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32713348" />
-      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.501002" side_tool="true" weight="0.23522976" />
-      <window_info anchor="bottom" id="Build" order="16" weight="0.32713348" />
+      <window_info anchor="bottom" id="Terminal" order="14" weight="0.32692307" />
+      <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.501002" side_tool="true" weight="0.23504274" />
+      <window_info anchor="bottom" id="Build" order="16" weight="0.32692307" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32932165" />
       <window_info anchor="bottom" id="TypeScript" order="18" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -899,618 +989,38 @@
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml</url>
+          <line>3</line>
+          <properties documentPath="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" initialLine="3" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml</url>
+          <line>17</line>
+          <properties documentPath="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml" initialLine="17" isMultiMethodBreakpoint="true">
+            <option name="multiMethodBreakpoint" value="true" />
+            <startOffsets>
+              <option value="-1" />
+            </startOffsets>
+            <endOffsets>
+              <option value="-1" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/FoldersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
-          <folding>
-            <marker date="1556477154296" expanded="false" signature="6:364" ph="..." />
-            <marker date="1556477154296" expanded="true" signature="394:3790" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="444:3788" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="536:580" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="654:730" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="823:1140" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="861:924" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="1033:1096" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="1210:1257" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="1267:1477" ph="/* POST: Folders/Create ... */" />
-            <marker date="1556477154296" expanded="true" signature="1660:1933" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="1706:1890" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="2020:2319" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="2058:2121" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="2213:2276" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="2329:2539" ph="/* POST: Folders/Edit/5 ... */" />
-            <marker date="1556477154296" expanded="true" signature="2699:3063" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="2742:2805" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="2842:3020" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="3154:3454" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="3192:3255" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="3347:3410" ph="{...}" />
-            <marker date="1556477154296" expanded="true" signature="3630:3782" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/InstrumentsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="120" column="29" selection-start-line="120" selection-start-column="29" selection-end-line="120" selection-end-column="29" />
-          <folding>
-            <marker date="1556477373213" expanded="false" signature="6:289" ph="..." />
-            <marker date="1556477373213" expanded="true" signature="319:3860" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="373:3858" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="469:513" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="591:671" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="768:1084" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="806:869" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="973:1036" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="1158:1205" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="1215:1429" ph="/* POST: Instruments/Create ... */" />
-            <marker date="1556477373213" expanded="true" signature="1613:1898" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="1659:1851" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="1989:2304" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="2027:2090" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="2194:2257" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="2314:2528" ph="/* POST: Instruments/Edit/5 ... */" />
-            <marker date="1556477373213" expanded="true" signature="2718:3105" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="2765:2828" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="2865:3058" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="3200:3516" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="3238:3301" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="3405:3468" ph="{...}" />
-            <marker date="1556477373213" expanded="true" signature="3696:3852" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/NotesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
-          <folding>
-            <marker date="1556477373227" expanded="false" signature="6:289" ph="..." />
-            <marker date="1556477373227" expanded="true" signature="319:3626" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="367:3624" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="457:501" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="573:647" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="738:1030" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="776:839" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="925:988" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="1098:1145" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="1155:1363" ph="/* POST: Notes/Create ... */" />
-            <marker date="1556477373227" expanded="true" signature="1523:1790" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="1569:1749" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="1875:2166" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="1913:1976" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="2062:2125" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="2176:2384" ph="/* POST: Notes/Edit/5 ... */" />
-            <marker date="1556477373227" expanded="true" signature="2550:2913" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="2591:2654" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="2691:2872" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="3002:3294" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="3040:3103" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="3189:3252" ph="{...}" />
-            <marker date="1556477373227" expanded="true" signature="3468:3618" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="162" column="28" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
-          <folding>
-            <marker date="1556219543689" expanded="false" signature="6:363" ph="..." />
-            <marker date="1556219543689" expanded="true" signature="393:5393" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="446:5391" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="541:585" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="662:752" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="848:1159" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="886:949" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="1049:1112" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="1244:1691" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="1321:1649" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="1701:1914" ph="/* POST: ChordNotes/Create ... */" />
-            <marker date="1556219543689" expanded="true" signature="2049:2697" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="2095:2305" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="2787:3540" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="2825:2888" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="2989:3052" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="3550:3763" ph="/* POST: ChordNotes/Edit/5 ... */" />
-            <marker date="1556219543689" expanded="true" signature="3904:4644" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="3953:4016" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="4053:4239" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="4738:5050" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="4776:4839" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="4940:5003" ph="{...}" />
-            <marker date="1556219543689" expanded="true" signature="5229:5384" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongChordsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="144" column="28" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
-          <folding>
-            <marker date="1556122249692" expanded="true" signature="6:314" ph="..." />
-            <marker date="1556122249692" expanded="true" signature="344:5281" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="397:5279" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="492:536" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="613:703" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="799:1111" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="837:900" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="1001:1064" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="1196:1667" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="1677:1890" ph="/* POST: SongChords/Create ... */" />
-            <marker date="1556122249692" expanded="true" signature="2025:2638" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="2071:2264" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="2728:3462" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="2766:2829" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="2930:2993" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="3472:3685" ph="/* POST: SongChords/Edit/5 ... */" />
-            <marker date="1556122249692" expanded="true" signature="3826:4534" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="3875:3938" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="3975:4160" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="4628:4939" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="4666:4729" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="4829:4892" ph="{...}" />
-            <marker date="1556122249692" expanded="true" signature="5118:5273" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongInFoldersController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="144" column="28" lean-forward="true" selection-start-line="144" selection-start-column="28" selection-end-line="144" selection-end-column="28" />
-          <folding>
-            <marker date="1556122269088" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122269088" expanded="true" signature="344:5347" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="400:5345" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="498:542" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="622:715" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="814:1138" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="852:915" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="1025:1088" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="1226:1665" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="1675:1891" ph="/* POST: SongInFolders/Create ... */" />
-            <marker date="1556122269088" expanded="true" signature="2029:2644" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="2075:2274" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="2737:3485" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="2775:2838" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="2948:3011" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="3495:3711" ph="/* POST: SongInFolders/Edit/5 ... */" />
-            <marker date="1556122269088" expanded="true" signature="3855:4579" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="3907:3970" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="4007:4198" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="4676:4999" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="4714:4777" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="4886:4949" ph="{...}" />
-            <marker date="1556122269088" expanded="true" signature="5181:5339" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/ViewModels/SongChordCreateEditViewModel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="6" lean-forward="true" selection-start-column="6" selection-end-column="6" />
-          <folding>
-            <marker date="1556477388774" expanded="true" signature="6:113" ph="..." />
-            <marker date="1556477388774" expanded="true" signature="142:364" ph="{...}" />
-            <marker date="1556477388774" expanded="true" signature="190:362" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongInstrumentsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="143" column="30" selection-start-line="143" selection-start-column="30" selection-end-line="143" selection-end-column="30" />
-          <folding>
-            <marker date="1556122283249" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122283249" expanded="true" signature="344:5544" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="402:5542" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="502:546" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="628:723" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="824:1155" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="862:925" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="1040:1103" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="1245:1753" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="1763:1981" ph="/* POST: SongInstruments/Create ... */" />
-            <marker date="1556122283249" expanded="true" signature="2121:2761" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="2167:2370" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="2856:3648" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="2894:2957" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="3073:3136" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="3658:3876" ph="/* POST: SongInstruments/Edit/5 ... */" />
-            <marker date="1556122283249" expanded="true" signature="4022:4762" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="4076:4139" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="4176:4371" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="4861:5192" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="4899:4962" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="5077:5140" ph="{...}" />
-            <marker date="1556122283249" expanded="true" signature="5376:5536" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongKeysController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="130" column="27" selection-start-line="130" selection-start-column="27" selection-end-line="130" selection-end-column="27" />
-          <folding>
-            <marker date="1556122300097" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122300097" expanded="true" signature="344:4433" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="395:4431" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="488:532" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="607:695" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="789:1092" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="827:890" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="984:1047" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="1175:1425" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="1435:1646" ph="/* POST: SongKeys/Create ... */" />
-            <marker date="1556122300097" expanded="true" signature="1779:2202" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="1825:2014" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="2290:2825" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="2328:2391" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="2486:2549" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="2835:3046" ph="/* POST: SongKeys/Edit/5 ... */" />
-            <marker date="1556122300097" expanded="true" signature="3185:3700" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="3232:3295" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="3332:3513" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="3792:4095" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="3830:3893" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="3987:4050" ph="{...}" />
-            <marker date="1556122300097" expanded="true" signature="4272:4425" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="129" column="26" selection-start-line="129" selection-start-column="26" selection-end-line="129" selection-end-column="26" />
-          <folding>
-            <marker date="1556122319008" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122319008" expanded="true" signature="344:4452" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="392:4450" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="482:526" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="598:683" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="774:1065" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="812:875" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="960:1023" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="1145:1424" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="1434:1642" ph="/* POST: Songs/Create ... */" />
-            <marker date="1556122319008" expanded="true" signature="1772:2218" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="1818:2001" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="2303:2850" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="2341:2404" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="2490:2553" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="2860:3068" ph="/* POST: Songs/Edit/5 ... */" />
-            <marker date="1556122319008" expanded="true" signature="3204:3740" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="3248:3311" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="3348:3523" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="3829:4120" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="3867:3930" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="4015:4078" ph="{...}" />
-            <marker date="1556122319008" expanded="true" signature="4294:4444" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongStylesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="142" column="27" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="27" />
-          <folding>
-            <marker date="1556122336217" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122336217" expanded="true" signature="344:5255" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="397:5253" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="492:536" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="613:703" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="799:1110" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="837:900" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="1000:1063" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="1195:1637" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="1647:1860" ph="/* POST: SongStyles/Create ... */" />
-            <marker date="1556122336217" expanded="true" signature="1995:2609" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="2041:2234" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="2699:3435" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="2737:2800" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="2901:2964" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="3445:3658" ph="/* POST: SongStyles/Edit/5 ... */" />
-            <marker date="1556122336217" expanded="true" signature="3799:4508" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="3848:3911" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="3948:4133" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="4602:4913" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="4640:4703" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="4803:4866" ph="{...}" />
-            <marker date="1556122336217" expanded="true" signature="5092:5247" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/StylesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="119" column="27" selection-start-line="119" selection-start-column="27" selection-end-line="119" selection-end-column="27" />
-          <folding>
-            <marker date="1556477989047" expanded="false" signature="6:289" ph="..." />
-            <marker date="1556477989047" expanded="true" signature="319:3676" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="368:3674" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="459:503" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="576:651" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="743:1039" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="781:844" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="933:996" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="1108:1155" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="1165:1374" ph="/* POST: Styles/Create ... */" />
-            <marker date="1556477989047" expanded="true" signature="1548:1818" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="1594:1776" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="1904:2199" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="1942:2005" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="2094:2157" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="2209:2418" ph="/* POST: Styles/Edit/5 ... */" />
-            <marker date="1556477989047" expanded="true" signature="2598:2956" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="2640:2703" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="2740:2914" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="3046:3342" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="3084:3147" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="3236:3299" ph="{...}" />
-            <marker date="1556477989047" expanded="true" signature="3517:3668" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/TabsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="129" column="25" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
-          <folding>
-            <marker date="1556122363217" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122363217" expanded="true" signature="344:4398" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="391:4396" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="480:524" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="595:679" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="769:1056" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="807:870" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="952:1015" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="1135:1408" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="1418:1625" ph="/* POST: Tabs/Create ... */" />
-            <marker date="1556122363217" expanded="true" signature="1754:2193" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="1800:1981" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="2277:2813" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="2315:2378" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="2461:2524" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="2823:3030" ph="/* POST: Tabs/Edit/5 ... */" />
-            <marker date="1556122363217" expanded="true" signature="3165:3693" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="3208:3271" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="3308:3481" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="3781:4068" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="3819:3882" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="3964:4027" ph="{...}" />
-            <marker date="1556122363217" expanded="true" signature="4241:4390" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/TuningNotesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="133" column="34" lean-forward="true" selection-start-line="133" selection-start-column="34" selection-end-line="133" selection-end-column="34" />
-          <folding>
-            <marker date="1556122380448" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122380448" expanded="true" signature="344:5320" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="398:5318" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="494:538" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="616:707" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="804:1119" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="842:905" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="1008:1071" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="1205:1656" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="1666:1880" ph="/* POST: TuningNotes/Create ... */" />
-            <marker date="1556122380448" expanded="true" signature="2016:2640" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="2062:2257" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="2731:3480" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="2769:2832" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="2936:2999" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="3490:3704" ph="/* POST: TuningNotes/Edit/5 ... */" />
-            <marker date="1556122380448" expanded="true" signature="3846:4566" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="3896:3959" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="3996:4183" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="4661:4976" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="4699:4762" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="4865:4928" ph="{...}" />
-            <marker date="1556122380448" expanded="true" signature="5156:5312" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/UserInstrumentsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="140" column="29" lean-forward="true" selection-start-line="140" selection-start-column="29" selection-end-line="140" selection-end-column="29" />
-          <folding>
-            <marker date="1556122397134" expanded="false" signature="6:379" ph="..." />
-            <marker date="1556122397134" expanded="true" signature="409:5584" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="483:5582" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="583:627" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="709:804" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="905:1236" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="943:1006" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="1121:1184" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="1326:1793" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="1803:2021" ph="/* POST: UserInstruments/Create ... */" />
-            <marker date="1556122397134" expanded="true" signature="2161:2804" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="2207:2409" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="2899:3684" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="2937:3000" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="3116:3179" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="3694:3912" ph="/* POST: UserInstruments/Edit/5 ... */" />
-            <marker date="1556122397134" expanded="true" signature="4058:4802" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="4112:4175" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="4212:4407" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="4901:5232" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="4939:5002" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="5117:5180" ph="{...}" />
-            <marker date="1556122397134" expanded="true" signature="5416:5576" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/VideosController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="128" column="27" selection-start-line="128" selection-start-column="27" selection-end-line="128" selection-end-column="27" />
-          <folding>
-            <marker date="1556122425956" expanded="false" signature="6:314" ph="..." />
-            <marker date="1556122425956" expanded="true" signature="344:4409" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="393:4407" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="484:528" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="601:687" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="779:1074" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="817:880" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="968:1031" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="1155:1415" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="1425:1634" ph="/* POST: Videos/Create ... */" />
-            <marker date="1556122425956" expanded="true" signature="1765:2194" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="1811:1996" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="2280:2814" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="2318:2381" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="2470:2533" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="2824:3033" ph="/* POST: Videos/Edit/5 ... */" />
-            <marker date="1556122425956" expanded="true" signature="3170:3690" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="3215:3278" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="3315:3492" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="3780:4075" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="3818:3881" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="3969:4032" ph="{...}" />
-            <marker date="1556122425956" expanded="true" signature="4250:4401" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Chords/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="18" />
-          <folding>
-            <marker date="1556478231532" expanded="true" signature="56:93" ph="@..." />
-            <marker date="1556478231532" expanded="true" signature="111:161" ph="&lt;p.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="162:1004" ph="&lt;table.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="188:455" ph="&lt;thead.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="204:442" ph="&lt;tr.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="221:301" ph="&lt;th.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="314:406" ph="&lt;th.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="460:995" ph="&lt;tbody.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="468:982" ph="@..." />
-            <marker date="1556478231532" expanded="true" signature="497:982" ph="{...}" />
-            <marker date="1556478231532" expanded="true" signature="507:980" ph="&lt;tr.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="524:603" ph="&lt;td.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="616:707" ph="&lt;td.../&gt;" />
-            <marker date="1556478231532" expanded="true" signature="720:966" ph="&lt;td.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Folders/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <marker date="1556478236843" expanded="true" signature="57:94" ph="@..." />
-            <marker date="1556478236843" expanded="true" signature="112:162" ph="&lt;p.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="163:1184" ph="&lt;table.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="189:546" ph="&lt;thead.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="205:533" ph="&lt;tr.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="222:308" ph="&lt;th.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="321:401" ph="&lt;th.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="414:497" ph="&lt;th.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="551:1175" ph="&lt;tbody.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="559:1162" ph="@..." />
-            <marker date="1556478236843" expanded="true" signature="588:1162" ph="{...}" />
-            <marker date="1556478236843" expanded="true" signature="598:1160" ph="&lt;tr.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="615:700" ph="&lt;td.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="713:792" ph="&lt;td.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="805:887" ph="&lt;td.../&gt;" />
-            <marker date="1556478236843" expanded="true" signature="900:1146" ph="&lt;td.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Instruments/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <marker date="1556478300983" expanded="true" signature="61:98" ph="@..." />
-            <marker date="1556478300983" expanded="true" signature="116:166" ph="&lt;p.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="167:999" ph="&lt;table.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="193:455" ph="&lt;thead.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="209:442" ph="&lt;tr.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="226:306" ph="&lt;th.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="319:406" ph="&lt;th.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="460:990" ph="&lt;tbody.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="468:977" ph="@..." />
-            <marker date="1556478300983" expanded="true" signature="497:977" ph="{...}" />
-            <marker date="1556478300983" expanded="true" signature="507:975" ph="&lt;tr.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="524:603" ph="&lt;td.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="616:702" ph="&lt;td.../&gt;" />
-            <marker date="1556478300983" expanded="true" signature="715:961" ph="&lt;td.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Notes/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <marker date="1556478307163" expanded="true" signature="55:92" ph="@..." />
-            <marker date="1556478307163" expanded="true" signature="110:160" ph="&lt;p.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="161:794" ph="&lt;table.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="187:349" ph="&lt;thead.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="203:336" ph="&lt;tr.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="220:300" ph="&lt;th.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="354:785" ph="&lt;tbody.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="362:772" ph="@..." />
-            <marker date="1556478307163" expanded="true" signature="391:772" ph="{...}" />
-            <marker date="1556478307163" expanded="true" signature="401:770" ph="&lt;tr.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="418:497" ph="&lt;td.../&gt;" />
-            <marker date="1556478307163" expanded="true" signature="510:756" ph="&lt;td.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/SongChords/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-          <folding>
-            <marker date="1556478312785" expanded="true" signature="60:97" ph="@..." />
-            <marker date="1556478312785" expanded="true" signature="115:165" ph="&lt;p.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="166:998" ph="&lt;table.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="192:448" ph="&lt;thead.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="208:435" ph="&lt;tr.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="225:305" ph="&lt;th.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="318:399" ph="&lt;th.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="453:989" ph="&lt;tbody.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="461:976" ph="@..." />
-            <marker date="1556478312785" expanded="true" signature="490:976" ph="{...}" />
-            <marker date="1556478312785" expanded="true" signature="500:974" ph="&lt;tr.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="517:603" ph="&lt;td.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="616:701" ph="&lt;td.../&gt;" />
-            <marker date="1556478312785" expanded="true" signature="714:960" ph="&lt;td.../&gt;" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1763,28 +1273,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
-          <folding>
-            <marker date="1556353731815" expanded="false" signature="6:230" ph="..." />
-            <marker date="1556353731815" expanded="true" signature="259:2405" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="621:2403" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="860:989" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1050:1173" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1228:1319" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1375:1437" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1501:1627" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1704:1807" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1870:1969" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="2008:2121" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="2173:2265" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="2309:2397" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BLL.App/Services/AppUserService.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1794,20 +1282,6 @@
             <marker date="1556362341199" expanded="true" signature="134:332" ph="{...}" />
             <marker date="1556362341199" expanded="true" signature="232:330" ph="{...}" />
             <marker date="1556362341199" expanded="true" signature="247:324" ph="/* public AppUserService(IAppUnitOfWork uow) : base(uow) ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="31" />
-          <folding>
-            <marker date="1556621430785" expanded="false" signature="6:261" ph="..." />
-            <marker date="1556621430785" expanded="true" signature="289:951" ph="{...}" />
-            <marker date="1556621430785" expanded="true" signature="460:949" ph="{...}" />
-            <marker date="1556621430785" expanded="true" signature="553:720" ph="{...}" />
-            <marker date="1556621430785" expanded="true" signature="814:943" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -2040,6 +1514,308 @@
             <marker date="1556212390442" expanded="true" signature="200:2432" ph="{...}" />
             <marker date="1556212390442" expanded="true" signature="261:2429" ph="{...}" />
             <marker date="1556212390442" expanded="true" signature="462:525" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <marker date="1556621430785" expanded="false" signature="6:261" ph="..." />
+            <marker date="1556621430785" expanded="true" signature="289:951" ph="{...}" />
+            <marker date="1556621430785" expanded="true" signature="460:949" ph="{...}" />
+            <marker date="1556621430785" expanded="true" signature="553:720" ph="{...}" />
+            <marker date="1556621430785" expanded="true" signature="814:943" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/ViewModels/SongCreateEditViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1556477768912" expanded="false" signature="6:103" ph="..." />
+            <marker date="1556477768912" expanded="true" signature="132:286" ph="{...}" />
+            <marker date="1556477768912" expanded="true" signature="175:284" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="61" column="96" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
+          <folding>
+            <marker date="1556639864479" expanded="false" signature="6:978" ph="..." />
+            <marker date="1556639864479" expanded="true" signature="996:6812" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="1023:6810" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="1082:1145" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="1368:5754" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="1454:1718" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="1918:2014" ph="/* Unit of work and repositories ... */" />
+            <marker date="1556639864479" expanded="true" signature="2674:2762" ph="/* .AddDefaultIdentity&lt;AppUser&gt;() ... */" />
+            <marker date="1556639864479" expanded="true" signature="2981:3346" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="3414:3723" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="3517:3690" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="3926:4174" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="4218:4432" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="4519:4742" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="5158:5742" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="5358:5723" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="5942:6804" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="5989:6110" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="6127:6386" ph="{...}" />
+            <marker date="1556639864479" expanded="true" signature="6634:6792" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/PartialCreateEdit.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="82" selection-start-line="10" selection-start-column="82" selection-end-line="10" selection-end-column="82" />
+          <folding>
+            <marker date="1556640019864" expanded="true" signature="368:645" ph="@*...*@" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Domain/SongKey.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+          <folding>
+            <marker date="1556213154131" expanded="false" signature="6:92" ph="..." />
+            <marker date="1556213154131" expanded="true" signature="110:416" ph="{...}" />
+            <marker date="1556213154131" expanded="true" signature="151:414" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/ViewModels/SongKeyCreateEditViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding>
+            <marker date="1556477752282" expanded="false" signature="6:109" ph="..." />
+            <marker date="1556477752282" expanded="true" signature="138:298" ph="{...}" />
+            <marker date="1556477752282" expanded="true" signature="184:296" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/ViewModels/SongChordCreateEditViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+          <folding>
+            <marker date="1556477388774" expanded="true" signature="6:113" ph="..." />
+            <marker date="1556477388774" expanded="true" signature="190:362" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1551804701699" expanded="false" signature="6:255" ph="..." />
+            <marker date="1551804701699" expanded="true" signature="273:600" ph="{...}" />
+            <marker date="1551804701699" expanded="true" signature="300:598" ph="{...}" />
+            <marker date="1551804701699" expanded="true" signature="353:427" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongKeysController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
+          <folding>
+            <marker date="1556122300097" expanded="false" signature="6:314" ph="..." />
+            <marker date="1556122300097" expanded="true" signature="344:4433" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="395:4431" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="488:532" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="607:695" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="789:1092" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="827:890" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="984:1047" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="1175:1425" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="1435:1646" ph="/* POST: SongKeys/Create ... */" />
+            <marker date="1556122300097" expanded="true" signature="1779:2202" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="1825:2014" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="2290:2825" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="2328:2391" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="2486:2549" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="2835:3046" ph="/* POST: SongKeys/Edit/5 ... */" />
+            <marker date="1556122300097" expanded="true" signature="3185:3700" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="3232:3295" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="3332:3513" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="3792:4095" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="3830:3893" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="3987:4050" ph="{...}" />
+            <marker date="1556122300097" expanded="true" signature="4272:4425" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="43" column="52" selection-start-line="43" selection-start-column="52" selection-end-line="43" selection-end-column="52" />
+          <folding>
+            <marker date="1556353731815" expanded="false" signature="6:230" ph="..." />
+            <marker date="1556353731815" expanded="true" signature="259:2405" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="621:2403" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="860:989" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="1050:1173" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="1228:1319" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="1375:1437" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="1501:1627" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="1704:1807" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="1870:1969" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="2008:2121" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="2173:2265" ph="{...}" />
+            <marker date="1556353731815" expanded="true" signature="2309:2397" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/ChordNoteRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1556473545837" expanded="false" signature="6:251" ph="..." />
+            <marker date="1556473545837" expanded="true" signature="285:1308" ph="{...}" />
+            <marker date="1556473545837" expanded="true" signature="434:1306" ph="{...}" />
+            <marker date="1556473545837" expanded="true" signature="560:580" ph="{...}" />
+            <marker date="1556473545837" expanded="true" signature="675:912" ph="{...}" />
+            <marker date="1556473545837" expanded="true" signature="1005:1300" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/SongKeyRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1556472284580" expanded="false" signature="6:255" ph="..." />
+            <marker date="1556472284580" expanded="true" signature="290:1483" ph="{...}" />
+            <marker date="1556472284580" expanded="true" signature="431:1481" ph="{...}" />
+            <marker date="1556472284580" expanded="true" signature="553:573" ph="{...}" />
+            <marker date="1556472284580" expanded="true" signature="666:860" ph="{...}" />
+            <marker date="1556472284580" expanded="true" signature="951:1475" ph="{...}" />
+            <marker date="1556472284580" expanded="true" signature="962:1236" ph="/* var songKey = await base.FindAsync(id); ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Mappers/SongKeyMapper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <marker date="1556363382694" expanded="false" signature="6:78" ph="..." />
+            <marker date="1556363382694" expanded="true" signature="109:1664" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="159:1662" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="261:788" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="353:460" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="523:647" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="884:1235" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="993:1198" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="1328:1655" ph="{...}" />
+            <marker date="1556363382694" expanded="true" signature="1417:1619" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/Home/Index.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1551804701706" expanded="true" signature="0:41" ph="@..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_LoginPartial.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1551804701714" expanded="false" signature="7:59" ph="..." />
+            <marker date="1551804701714" expanded="true" signature="171:956" ph="@..." />
+            <marker date="1551804701714" expanded="true" signature="207:681" ph="{...}" />
+            <marker date="1551804701714" expanded="true" signature="686:956" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="6" selection-start-column="6" selection-end-column="6" />
+          <folding>
+            <marker date="1556645140353" expanded="true" signature="1876:2043" ph="@*...*@" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Details.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1556476876220" expanded="true" signature="47:86" ph="@..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialCreateEdit.cshtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/Delete.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="7" selection-start-column="7" selection-end-column="36" />
+          <folding>
+            <marker date="1556476940796" expanded="true" signature="47:85" ph="@..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/SongChords/PartialCreateEdit.cshtml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialDeleteDetails.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="36" selection-start-column="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BLL.App/Mappers/ChordNoteMapper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+          <folding>
+            <marker date="1556358361246" expanded="false" signature="6:47" ph="..." />
+            <marker date="1556358361246" expanded="true" signature="74:1894" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="126:1892" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="228:808" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="324:452" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="539:667" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="931:1347" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="1046:1310" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="1470:1885" ph="{...}" />
+            <marker date="1556358361246" expanded="true" signature="1585:1849" ph="{...}" />
           </folding>
         </state>
       </provider>

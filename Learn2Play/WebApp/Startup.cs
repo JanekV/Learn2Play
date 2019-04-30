@@ -59,8 +59,8 @@ namespace WebApp
             
             // Unit of work and repositories
             //services.AddScoped<IDataContext, AppDbContext>();
-            services.AddSingleton<IBaseRepositoryFactory<AppDbContext>, AppRepositoryFactory>();
             services.AddScoped<IBaseRepositoryProvider, BaseRepositoryProvider<AppDbContext>>();
+            services.AddSingleton<IBaseRepositoryFactory<AppDbContext>, AppRepositoryFactory>();
             services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
 
             // Business logic layer and services
