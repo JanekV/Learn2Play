@@ -50,7 +50,7 @@ namespace WebApp.Controllers
             var vm = new SongKeyCreateEditViewModel();
             vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
                 nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
-            return View();
+            return View(vm);
         }
 
         // POST: SongKeys/Create

@@ -16,8 +16,8 @@ namespace BLL.App
             AppUnitOfWork = appUnitOfWork;
         }
 
-        public IAppUserService AppUsers =>
-            ServiceProvider.GetService<IAppUserService>();
+        /*public IAppUserService AppUsers =>
+            ServiceProvider.GetService<IAppUserService>();*/
         public IChordService Chords =>
             ServiceProvider.GetService<IChordService>();
         public IChordNoteService ChordNotes =>

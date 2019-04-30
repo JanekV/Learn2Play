@@ -11,6 +11,7 @@ using DAL.App.EF;
 using Domain;
 using Domain.Identity;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using WebApp.ViewModels;
 
 namespace WebApp.Controllers
@@ -19,10 +20,12 @@ namespace WebApp.Controllers
     public class UserInstrumentsController : Controller
     {
         private readonly IAppBLL _bll;
+        private readonly UserManager<AppUser> _userManager;
 
-        public UserInstrumentsController(IAppBLL bll)
+        public UserInstrumentsController(IAppBLL bll, UserManager<AppUser> userManager)
         {
             _bll = bll;
+            _userManager = userManager;
         }
 
         // GET: UserInstruments
@@ -51,7 +54,8 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Create()
         {
             var vm = new UserInstrumentCreateEditViewModel();
-            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
+            
+            vm.AppUserSelectList = new SelectList(_userManager.Users,
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
@@ -71,7 +75,7 @@ namespace WebApp.Controllers
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(_userManager.Users,
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
@@ -93,7 +97,7 @@ namespace WebApp.Controllers
             }
             var vm = new UserInstrumentCreateEditViewModel();
             vm.UserInstrument = userInstrument;
-            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(_userManager.Users,
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
@@ -118,7 +122,7 @@ namespace WebApp.Controllers
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.AppUserSelectList = new SelectList(await _bll.AppUsers.AllAsync(),
+            vm.AppUserSelectList = new SelectList(_userManager.Users,
                 nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
             vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
                 nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);

@@ -22,6 +22,6 @@ namespace Contracts.BLL.App
         ITuningNoteService TuningNotes { get; }
         IVideoService Videos { get; }
         IStyleService Styles { get; }
-        IAppUserService AppUsers { get; }
+        //IAppUserService AppUsers { get; }
     }
 }

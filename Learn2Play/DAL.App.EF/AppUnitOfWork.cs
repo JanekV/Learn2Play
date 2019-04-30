@@ -17,8 +17,8 @@ namespace DAL.App.EF
         {
         }
 
-        public IAppUserRepository AppUsers =>
-            _repositoryProvider.GetRepository<IAppUserRepository>();
+        /*public IAppUserRepository AppUsers =>
+            _repositoryProvider.GetRepository<IAppUserRepository>();*/
         public IChordRepository Chords =>
             _repositoryProvider.GetRepository<IChordRepository>();
         public IChordNoteRepository ChordNotes =>
