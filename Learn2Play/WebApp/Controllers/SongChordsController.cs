@@ -52,10 +52,10 @@ namespace WebApp.Controllers
             
             vm.ChordSelectList = new SelectList(
                 await _bll.Chords.AllAsync(),
-                nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
+                nameof(Chord.Id), nameof(Chord.Name));
             vm.SongSelectList = new SelectList(
                 await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
+                nameof(Song.Id), nameof(Song.Author));
             return View(vm);
         }
 
@@ -74,9 +74,9 @@ namespace WebApp.Controllers
             }
             vm.ChordSelectList = new SelectList(
                 await _bll.Chords.AllAsync(),
-                nameof(Chord.Id), nameof(Chord.Name), vm.SongChord.ChordId);
+                nameof(Chord.Id), nameof(Chord.Name));
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.SongChord.SongId);
+                nameof(Song.Id), nameof(Song.Author));
             return View(vm);
         }
 

@@ -343,4 +343,22 @@ healthchecksdb
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 MigrationBackup/
 
-node_modules/
+# Aurelia .gitignore addons
+
+.idea
+.DS_STORE
+.rpt2_cache
+TESTS-*.xml
+
+**/node_modules
+**/coverage
+**/dist
+**/*.tgz
+/test/**/coverage
+/build
+
+**/debug.log
+**/npm-debug.log
+**/lerna-debug.log
+
+test/cypress/integration/examples

@@ -50,9 +50,9 @@ namespace WebApp.Controllers
         {
             var vm = new SongInFolderCreateEditViewModel();
             vm.FolderSelectList = new SelectList(await _bll.Folders.AllAsync(),
-                nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
+                nameof(Folder.Id), nameof(Folder.Name));
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
+                nameof(Song.Id), nameof(Song.Author));
 
             return View(vm);
         }
@@ -72,9 +72,9 @@ namespace WebApp.Controllers
             }
 
             vm.FolderSelectList = new SelectList(await _bll.Folders.AllAsync(),
-                nameof(Folder.Id), nameof(Folder.Name), vm.SongInFolder.FolderId);
+                nameof(Folder.Id), nameof(Folder.Name));
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.SongInFolder.SongId);
+                nameof(Song.Id), nameof(Song.Author));
 
             return View(vm);
         }

@@ -49,7 +49,7 @@ namespace WebApp.Controllers
         {
             var vm = new VideoCreateEditViewModel();
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
+                nameof(Song.Id), nameof(Song.Author));
             return View(vm);        }
 
         // POST: Videos/Create
@@ -66,7 +66,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
+                nameof(Song.Id), nameof(Song.Author));
             return View(vm);
         }
 

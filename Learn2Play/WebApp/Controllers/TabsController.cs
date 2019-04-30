@@ -49,7 +49,7 @@ namespace WebApp.Controllers
         {
             var vm = new TabCreateEditViewModel();
             vm.VideoSelectList = new SelectList(await _bll.Videos.AllAsyncWithInclude(),
-                nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
+                nameof(Video.Id), nameof(Video.AuthorChannelLink));
             return View(vm);
         }
 
@@ -67,7 +67,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.VideoSelectList = new SelectList(await _bll.Videos.AllAsyncWithInclude(),
-                nameof(Video.Id), nameof(Video.AuthorChannelLink), vm.Tab.VideoId);
+                nameof(Video.Id), nameof(Video.AuthorChannelLink));
             return View(vm);
         }
 

@@ -98,9 +98,9 @@ namespace WebApp.Controllers
             var vm = new UserInstrumentCreateEditViewModel();
             vm.UserInstrument = userInstrument;
             vm.AppUserSelectList = new SelectList(_userManager.Users,
-                nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
+                nameof(AppUser.Id), nameof(AppUser.Email));
             vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
-                nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name));
             return View(vm);
         }
 
@@ -123,9 +123,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.AppUserSelectList = new SelectList(_userManager.Users,
-                nameof(AppUser.Id), nameof(AppUser.Email), vm.UserInstrument.AppUserId);
+                nameof(AppUser.Id), nameof(AppUser.Email));
             vm.InstrumentSelectList = new SelectList(await _bll.Instruments.AllAsync(),
-                nameof(Instrument.Id), nameof(Instrument.Name), vm.UserInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name));
             return View(vm);
         }
 

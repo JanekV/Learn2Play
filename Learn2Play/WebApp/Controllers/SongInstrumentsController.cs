@@ -50,10 +50,10 @@ namespace WebApp.Controllers
             var vm = new SongInstrumentCreateEditViewModel();
             vm.InstrumentSelectList = new SelectList(
                 await _bll.Instruments.AllAsync(),
-                nameof(Instrument.Id), nameof(Instrument.Name), vm.SongInstrument.InstrumentId);
+                nameof(Instrument.Id), nameof(Instrument.Name));
             vm.SongSelectList = new SelectList(
                 await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Name), vm.SongInstrument.SongId);
+                nameof(Song.Id), nameof(Song.Name));
            
             return View(vm);
         }

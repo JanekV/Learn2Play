@@ -49,7 +49,7 @@ namespace WebApp.Controllers
         {
             var vm = new SongCreateEditViewModel();
             vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
-                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
+                nameof(SongKey.Id), nameof(SongKey.Description));
             return View(vm);
         }
 
@@ -67,7 +67,7 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
-                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
+                nameof(SongKey.Id), nameof(SongKey.Description));
             return View(vm);
         }
 

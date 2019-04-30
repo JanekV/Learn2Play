@@ -49,9 +49,9 @@ namespace WebApp.Controllers
         {
             var vm = new SongStyleCreateEditViewModel();
             vm.SongSelectList = new SelectList(await _bll.SongStyles.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
+                nameof(Song.Id), nameof(Song.Author));
             vm.StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
-                nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
+                nameof(Style.Id), nameof(Style.Name));
             
             return View(vm);
         }
@@ -70,9 +70,9 @@ namespace WebApp.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _bll.SongStyles.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
+                nameof(Song.Id), nameof(Song.Author));
             vm.StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
-                nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
+                nameof(Style.Id), nameof(Style.Name));
             
             return View(vm);
         }
