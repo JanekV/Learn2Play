@@ -4,38 +4,6 @@
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/ChordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/ChordService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/InstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/InstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/NoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/NoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongChordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongChordService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongKeyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongKeyService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongStyleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongStyleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/StyleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/StyleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/TabService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/TabService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/TuningNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/TuningNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/VideoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/VideoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Migrations/20190407134956_InitialDbCreation.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Migrations/20190407134956_InitialDbCreation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.Base.EF/obj/Debug/netstandard2.0/DAL.Base.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.Base.EF/obj/Debug/netstandard2.0/DAL.Base.EF.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/obj/Debug/netstandard2.0/Domain.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -545,27 +513,6 @@
               <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
             </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BLL.App" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BLL.Base" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BLL.Base" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="DAL.App.EF" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -652,7 +599,7 @@
       <workItem from="1556352613361" duration="9397000" />
       <workItem from="1556469752203" duration="8955000" />
       <workItem from="1556619926343" duration="139000" />
-      <workItem from="1556620681884" duration="1068000" />
+      <workItem from="1556620681884" duration="1327000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -815,11 +762,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556620915921</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="2 layers of dtos, dal and bll wurking forking finally ughhh, in api and mvc, with mapping for every domain entity">
+      <created>1556621968506</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1556621968506</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143776000" />
+    <option name="totallyTimeSpent" value="144035000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -840,7 +794,7 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" weight="0.23522976" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" visible="true" weight="0.23522976" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.2428884" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -895,7 +849,9 @@
     <MESSAGE value="added some dal dtos, broke all" />
     <MESSAGE value="added 2 layers of dtos, mapping to every.thing. now it all broke...." />
     <MESSAGE value="forgot to add 3 mappers" />
-    <option name="LAST_COMMIT_MESSAGE" value="forgot to add 3 mappers" />
+    <MESSAGE value="2 layers of dtos, dal and bll wurking forking finally ughhh, in api and mvc, with mapping for every domain entity" />
+    <MESSAGE value="2 layers of dtos, dal and bll wucking forking finally ughhh, in api and mvc, with mapping for every domain entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 layers of dtos, dal and bll wucking forking finally ughhh, in api and mvc, with mapping for every domain entity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
