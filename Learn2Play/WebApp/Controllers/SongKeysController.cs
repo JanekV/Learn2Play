@@ -49,7 +49,7 @@ namespace WebApp.Controllers
         {
             var vm = new SongKeyCreateEditViewModel();
             vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
-                nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
+                nameof(Note.Id), nameof(Note.Name));
             return View(vm);
         }
 
@@ -68,7 +68,7 @@ namespace WebApp.Controllers
             }
 
             vm.NoteSelectList = new SelectList(await _bll.Notes.AllAsync(),
-                nameof(Note.Id), nameof(Note.Name), vm.SongKey.NoteId);
+                nameof(Note.Id), nameof(Note.Name));
             return View(vm);
         }
 
