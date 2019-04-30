@@ -2,218 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Chord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/ChordNote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Folder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Instrument.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Note.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Song.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongChord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongInFolder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongInstrument.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongKey.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/SongStyle.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Style.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Tab.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/TuningNote.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/UserFolder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/UserInstrument.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Video.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/Identity/AppRole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App.DTO/Identity/AppUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/FolderMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/InstrumentMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/SongChordMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/SongInFolderMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/SongInstrumentMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/SongKeyMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/SongMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/SongStyleMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/StyleMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/TabMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/TuningNoteMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/UserFolderMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/UserInstrumentMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.App/Mappers/VideoMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BLL.Base/Mappers/BaseBLLMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/FolderMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/InstrumentMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/SongChordMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/SongInFolderMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/SongInstrumentMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/SongKeyMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/SongMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/SongStyleMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/StyleMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/TabMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/TuningNoteMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/UserFolderMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/UserInstrumentMapper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DAL.App.EF/Mappers/VideoMapper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App.DTO/BLL.App.DTO.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App.DTO/BLL.App.DTO.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/BLL.App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/BLL.App.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Helpers/AppServiceFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Helpers/AppServiceFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/AppUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/AppUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/ChordNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/ChordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/ChordService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/InstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/InstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/NoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/NoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongChordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongChordService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongKeyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongKeyService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongStyleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongStyleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/StyleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/StyleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/TabService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/TabService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/TuningNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/TuningNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/UserInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/VideoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/VideoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.Base/BLL.Base.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.Base/BLL.Base.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.Base/BaseBLL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.Base/BaseBLL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceProvider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceProvider.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Contracts.BLL.App.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Contracts.BLL.App.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/IAppBLL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/IAppBLL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IChordNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IChordNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IChordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IChordService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/INoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/INoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongChordService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongChordService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongKeyService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongKeyService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongStyleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongStyleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IStyleService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IStyleService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ITabService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ITabService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ITuningNoteService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ITuningNoteService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IUserFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IUserFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IUserInstrumentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IUserInstrumentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IVideoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IVideoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.Base/IBaseBLL.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.Base/IBaseBLL.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.DTO/DomainEntityDTOs/Song.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Helpers/AppRepositoryFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Helpers/AppRepositoryFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/AppUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/AppUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/ChordNoteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/ChordNoteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/InstrumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/InstrumentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongChordRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongChordRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInstrumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInstrumentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongKeyRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongKeyRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongStyleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongStyleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/StyleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/StyleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/TabRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/TabRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/TuningNoteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/TuningNoteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/UserInstrumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/UserInstrumentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/VideoRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/VideoRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Domain/Song.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Domain/Song.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/FoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/FoldersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/InstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/InstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/NotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/NotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Controllers/StylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Controllers/StylesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/ChordNoteCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/ChordNoteCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/SongChordCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/SongChordCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/SongCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/SongCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/SongInFolderCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/SongInFolderCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/SongInstrumentCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/SongInstrumentCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/SongKeyCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/SongKeyCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/SongStyleCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/SongStyleCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/TabCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/TabCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/TuningNoteCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/TuningNoteCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/UserInstrumentCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/UserInstrumentCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ViewModels/VideoCreateEditViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ViewModels/VideoCreateEditViewModel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/ChordNotes/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/ChordNotes/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/ChordNotes/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/ChordNotes/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/ChordNotes/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/ChordNotes/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Chords/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Chords/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Chords/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Chords/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Chords/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Chords/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Chords/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Chords/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Chords/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Chords/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Folders/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Folders/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Folders/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Folders/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Folders/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Folders/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Folders/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Folders/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Folders/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Folders/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Instruments/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Instruments/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Instruments/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Instruments/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Instruments/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Instruments/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Instruments/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Instruments/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Instruments/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Instruments/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Notes/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Notes/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Notes/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Notes/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Notes/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Notes/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Notes/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Notes/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Notes/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Notes/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongChords/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongChords/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongChords/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongChords/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongChords/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongChords/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongInFolders/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongInFolders/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongInFolders/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongInFolders/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongInFolders/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongInFolders/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongInstruments/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongInstruments/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongInstruments/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongInstruments/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongInstruments/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongInstruments/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongKeys/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongKeys/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongKeys/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongKeys/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongKeys/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongKeys/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongStyles/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongStyles/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongStyles/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongStyles/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/SongStyles/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/SongStyles/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Songs/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Songs/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Songs/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Songs/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Songs/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Songs/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Styles/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Styles/Create.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Styles/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Styles/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Styles/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Styles/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Styles/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Styles/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Styles/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Styles/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Tabs/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Tabs/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Tabs/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Tabs/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Tabs/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Tabs/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/TuningNotes/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/TuningNotes/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/TuningNotes/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/TuningNotes/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/TuningNotes/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/TuningNotes/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/UserInstruments/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/UserInstruments/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/UserInstruments/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/UserInstruments/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/UserInstruments/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/UserInstruments/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Videos/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Videos/Delete.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Videos/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Videos/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Views/Videos/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Views/Videos/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/project.assets.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -236,280 +25,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/SongInFolders/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333103" expanded="true" signature="63:100" ph="@..." />
-                <marker date="1556478333103" expanded="true" signature="118:168" ph="&lt;p.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="169:1003" ph="&lt;table.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="195:452" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="211:439" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="228:310" ph="&lt;th.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="323:403" ph="&lt;th.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="457:994" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="465:981" ph="@..." />
-                <marker date="1556478333103" expanded="true" signature="494:981" ph="{...}" />
-                <marker date="1556478333103" expanded="true" signature="504:979" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="521:607" ph="&lt;td.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="620:706" ph="&lt;td.../&gt;" />
-                <marker date="1556478333103" expanded="true" signature="719:965" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/SongInstruments/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333179" expanded="true" signature="65:102" ph="@..." />
-                <marker date="1556478333179" expanded="true" signature="120:170" ph="&lt;p.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="171:1013" ph="&lt;table.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="197:458" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="213:445" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="230:310" ph="&lt;th.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="323:409" ph="&lt;th.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="463:1004" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="471:991" ph="@..." />
-                <marker date="1556478333179" expanded="true" signature="500:991" ph="{...}" />
-                <marker date="1556478333179" expanded="true" signature="510:989" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="527:613" ph="&lt;td.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="626:716" ph="&lt;td.../&gt;" />
-                <marker date="1556478333179" expanded="true" signature="729:975" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/SongKeys/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333168" expanded="true" signature="58:95" ph="@..." />
-                <marker date="1556478333168" expanded="true" signature="113:163" ph="&lt;p.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="164:1001" ph="&lt;table.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="190:452" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="206:439" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="223:310" ph="&lt;th.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="323:403" ph="&lt;th.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="457:992" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="465:979" ph="@..." />
-                <marker date="1556478333168" expanded="true" signature="494:979" ph="{...}" />
-                <marker date="1556478333168" expanded="true" signature="504:977" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="521:607" ph="&lt;td.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="620:704" ph="&lt;td.../&gt;" />
-                <marker date="1556478333168" expanded="true" signature="717:963" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/Songs/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333128" expanded="true" signature="55:92" ph="@..." />
-                <marker date="1556478333128" expanded="true" signature="110:160" ph="&lt;p.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="161:1584" ph="&lt;table.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="187:740" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="203:727" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="220:300" ph="&lt;th.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="313:395" ph="&lt;th.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="408:495" ph="&lt;th.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="508:595" ph="&lt;th.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="608:691" ph="&lt;th.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="745:1575" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="753:1562" ph="@..." />
-                <marker date="1556478333128" expanded="true" signature="782:1562" ph="{...}" />
-                <marker date="1556478333128" expanded="true" signature="792:1560" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="809:888" ph="&lt;td.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="901:982" ph="&lt;td.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="995:1081" ph="&lt;td.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="1094:1180" ph="&lt;td.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="1193:1287" ph="&lt;td.../&gt;" />
-                <marker date="1556478333128" expanded="true" signature="1300:1546" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/SongStyles/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333156" expanded="true" signature="60:97" ph="@..." />
-                <marker date="1556478333156" expanded="true" signature="115:165" ph="&lt;p.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="166:998" ph="&lt;table.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="192:448" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="208:435" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="225:305" ph="&lt;th.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="318:399" ph="&lt;th.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="453:989" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="461:976" ph="@..." />
-                <marker date="1556478333156" expanded="true" signature="490:976" ph="{...}" />
-                <marker date="1556478333156" expanded="true" signature="500:974" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="517:603" ph="&lt;td.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="616:701" ph="&lt;td.../&gt;" />
-                <marker date="1556478333156" expanded="true" signature="714:960" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/Styles/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333114" expanded="true" signature="56:93" ph="@..." />
-                <marker date="1556478333114" expanded="true" signature="111:161" ph="&lt;p.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="162:994" ph="&lt;table.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="188:450" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="204:437" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="221:301" ph="&lt;th.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="314:401" ph="&lt;th.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="455:985" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="463:972" ph="@..." />
-                <marker date="1556478333114" expanded="true" signature="492:972" ph="{...}" />
-                <marker date="1556478333114" expanded="true" signature="502:970" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="519:598" ph="&lt;td.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="611:697" ph="&lt;td.../&gt;" />
-                <marker date="1556478333114" expanded="true" signature="710:956" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/Tabs/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333212" expanded="true" signature="54:91" ph="@..." />
-                <marker date="1556478333212" expanded="true" signature="109:159" ph="&lt;p.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="160:1788" ph="&lt;table.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="186:839" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="202:826" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="219:303" ph="&lt;th.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="316:408" ph="&lt;th.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="421:508" ph="&lt;th.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="521:601" ph="&lt;th.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="614:696" ph="&lt;th.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="709:790" ph="&lt;th.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="844:1779" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="852:1766" ph="@..." />
-                <marker date="1556478333212" expanded="true" signature="881:1766" ph="{...}" />
-                <marker date="1556478333212" expanded="true" signature="891:1764" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="908:991" ph="&lt;td.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="1004:1095" ph="&lt;td.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="1108:1194" ph="&lt;td.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="1207:1286" ph="&lt;td.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="1299:1380" ph="&lt;td.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="1393:1491" ph="&lt;td.../&gt;" />
-                <marker date="1556478333212" expanded="true" signature="1504:1750" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/TuningNotes/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333200" expanded="true" signature="61:98" ph="@..." />
-                <marker date="1556478333200" expanded="true" signature="116:166" ph="&lt;p.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="167:1192" ph="&lt;table.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="193:547" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="209:534" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="226:312" ph="&lt;th.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="325:405" ph="&lt;th.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="418:498" ph="&lt;th.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="552:1183" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="560:1170" ph="@..." />
-                <marker date="1556478333200" expanded="true" signature="589:1170" ph="{...}" />
-                <marker date="1556478333200" expanded="true" signature="599:1168" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="616:706" ph="&lt;td.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="719:803" ph="&lt;td.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="816:895" ph="&lt;td.../&gt;" />
-                <marker date="1556478333200" expanded="true" signature="908:1154" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/UserInstruments/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333188" expanded="true" signature="65:102" ph="@..." />
-                <marker date="1556478333188" expanded="true" signature="120:170" ph="&lt;p.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="171:1206" ph="&lt;table.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="197:557" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="213:544" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="230:313" ph="&lt;th.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="326:412" ph="&lt;th.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="425:508" ph="&lt;th.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="562:1197" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="570:1184" ph="@..." />
-                <marker date="1556478333188" expanded="true" signature="599:1184" ph="{...}" />
-                <marker date="1556478333188" expanded="true" signature="609:1182" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="626:711" ph="&lt;td.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="724:814" ph="&lt;td.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="827:909" ph="&lt;td.../&gt;" />
-                <marker date="1556478333188" expanded="true" signature="922:1168" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebApp/Views/Videos/Index.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="18" selection-start-column="18" selection-end-column="18" />
-              <folding>
-                <marker date="1556478333140" expanded="true" signature="56:93" ph="@..." />
-                <marker date="1556478333140" expanded="true" signature="111:161" ph="&lt;p.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="162:1405" ph="&lt;table.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="188:653" ph="&lt;thead.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="204:640" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="221:307" ph="&lt;th.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="320:413" ph="&lt;th.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="426:511" ph="&lt;th.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="524:604" ph="&lt;th.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="658:1396" ph="&lt;tbody.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="666:1383" ph="@..." />
-                <marker date="1556478333140" expanded="true" signature="695:1383" ph="{...}" />
-                <marker date="1556478333140" expanded="true" signature="705:1381" ph="&lt;tr.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="722:807" ph="&lt;td.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="820:912" ph="&lt;td.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="925:1009" ph="&lt;td.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="1022:1108" ph="&lt;td.../&gt;" />
-                <marker date="1556478333140" expanded="true" signature="1121:1367" ph="&lt;td.../&gt;" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -988,25 +504,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1018,7 +520,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -1084,7 +586,8 @@
       <workItem from="1556121540455" duration="1305000" />
       <workItem from="1556209944623" duration="9883000" />
       <workItem from="1556352613361" duration="9397000" />
-      <workItem from="1556469752203" duration="8442000" />
+      <workItem from="1556469752203" duration="8955000" />
+      <workItem from="1556619926343" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -1233,11 +736,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556219812796</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added 2 layers of dtos, mapping to every.thing. now it all broke....">
+      <created>1556478602236</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1556478602236</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142056000" />
+    <option name="totallyTimeSpent" value="142708000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1251,12 +761,11 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18314424" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18638574" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" weight="0.23522976" />
@@ -1275,6 +784,7 @@
       <window_info anchor="bottom" id="Event Log" order="15" sideWeight="0.501002" side_tool="true" weight="0.23522976" />
       <window_info anchor="bottom" id="Build" order="16" weight="0.32713348" />
       <window_info anchor="bottom" id="Inspection Results" order="17" weight="0.32932165" />
+      <window_info anchor="bottom" id="TypeScript" order="18" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1311,7 +821,8 @@
     <MESSAGE value="Changed the base and repo/uow stuff for better" />
     <MESSAGE value="Replaced uow with bll in all controllers" />
     <MESSAGE value="added some dal dtos, broke all" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some dal dtos, broke all" />
+    <MESSAGE value="added 2 layers of dtos, mapping to every.thing. now it all broke...." />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2 layers of dtos, mapping to every.thing. now it all broke...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2625,8 +2136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Views/Videos/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
+        <state relative-caret-position="405">
+          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
             <marker date="1556478333140" expanded="true" signature="56:93" ph="@..." />
             <marker date="1556478333140" expanded="true" signature="111:161" ph="&lt;p.../&gt;" />
