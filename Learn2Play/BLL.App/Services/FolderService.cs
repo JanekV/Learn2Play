@@ -9,6 +9,7 @@ namespace BLL.App.Services
     {
         public FolderService(IAppUnitOfWork uow) : base(uow, new FolderMapper())
         {
+            ServiceRepository = Uow.Folders;
         }
     }
 }

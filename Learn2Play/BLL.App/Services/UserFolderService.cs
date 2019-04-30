@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public UserFolderService(IAppUnitOfWork uow) : base(uow, new UserFolderMapper())
         {
+            ServiceRepository = Uow.UserFolders;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.UserFolder>> AllAsyncWithInclude()

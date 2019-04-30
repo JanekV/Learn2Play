@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public UserInstrumentService(IAppUnitOfWork uow) : base(uow, new UserInstrumentMapper())
         {
+            ServiceRepository = Uow.UserInstruments;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.UserInstrument>> AllAsyncWithInclude()

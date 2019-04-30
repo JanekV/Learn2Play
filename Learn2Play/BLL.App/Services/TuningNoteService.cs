@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public TuningNoteService(IAppUnitOfWork uow) : base(uow, new TuningNoteMapper())
         {
+            ServiceRepository = Uow.TuningNotes;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.TuningNote>> AllAsyncWithInclude()

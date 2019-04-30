@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public SongStyleService(IAppUnitOfWork uow) : base(uow, new SongStyleMapper())
         {
+            ServiceRepository = Uow.SongStyles;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongStyle>> AllAsyncWithInclude()

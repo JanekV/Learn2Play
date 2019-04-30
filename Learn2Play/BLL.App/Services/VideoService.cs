@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public VideoService(IAppUnitOfWork uow) : base(uow, new VideoMapper())
         {
+            ServiceRepository = Uow.Videos;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.Video>> AllAsyncWithInclude()

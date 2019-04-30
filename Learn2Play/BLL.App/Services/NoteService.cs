@@ -9,6 +9,7 @@ namespace BLL.App.Services
     {
         public NoteService(IAppUnitOfWork uow) : base(uow, new NoteMapper())
         {
+            ServiceRepository = Uow.Notes;
         }
     }
 }

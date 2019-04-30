@@ -13,6 +13,7 @@ namespace BLL.App.Services
     {
         public SongChordService(IAppUnitOfWork uow) : base(uow, new SongChordMapper())
         {
+            ServiceRepository = Uow.SongChords;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongChord>> AllAsyncWithInclude()

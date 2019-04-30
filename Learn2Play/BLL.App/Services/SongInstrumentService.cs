@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public SongInstrumentService(IAppUnitOfWork uow) : base(uow, new SongInstrumentMapper())
         {
+            ServiceRepository = Uow.SongInstruments;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongInstrument>> AllAsyncWithInclude()

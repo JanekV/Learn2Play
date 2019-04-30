@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public StyleService(IAppUnitOfWork uow) : base(uow, new StyleMapper())
         {
+            ServiceRepository = Uow.Styles;
         }
     }
 }

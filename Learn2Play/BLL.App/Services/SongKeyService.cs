@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public SongKeyService(IAppUnitOfWork uow) : base(uow, new SongKeyMapper())
         {
+            ServiceRepository = Uow.SongKeys;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongKey>> AllAsyncWithInclude()

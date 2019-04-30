@@ -8,6 +8,7 @@ namespace BLL.App.Services
     {
         public ChordService(IAppUnitOfWork uow) : base(uow, new ChordMapper())
         {
+            ServiceRepository = Uow.Chords;
         }
     }
 }

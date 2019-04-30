@@ -14,7 +14,8 @@ namespace BLL.App.Services
     {
         public ChordNoteService(IAppUnitOfWork uow) : base(uow, new ChordNoteMapper())
         {
-            ServiceRepository = Uow.BaseRepository<DAL.App.DTO.DomainEntityDTOs.ChordNote, Domain.ChordNote>();
+            ServiceRepository =
+                Uow.ChordNotes;  //Uow.BaseRepository<DAL.App.DTO.DomainEntityDTOs.ChordNote, Domain.ChordNote>();
         }
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.ChordNote>> AllAsyncWithInclude()
         {

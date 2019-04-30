@@ -10,6 +10,7 @@ namespace BLL.App.Services
     {
         public InstrumentService(IAppUnitOfWork uow) : base(uow, new InstrumentMapper())
         {
+            ServiceRepository = Uow.Instruments;
         }
     }
 }

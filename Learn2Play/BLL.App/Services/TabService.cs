@@ -12,6 +12,7 @@ namespace BLL.App.Services
     {
         public TabService(IAppUnitOfWork uow) : base(uow, new TabMapper())
         {
+            ServiceRepository = Uow.Tabs;
         }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.Tab>> AllAsyncWithInclude()
