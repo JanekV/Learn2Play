@@ -13,6 +13,7 @@
       "netcoreapp2.2"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
@@ -32,6 +33,9 @@
           },
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj"
+          },
+          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Resources\\Resources.csproj": {
+            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Resources\\Resources.csproj"
           }
         }
       }

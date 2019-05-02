@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts.Base", "Contracts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.App.DTO", "DAL.App.DTO\DAL.App.DTO.csproj", "{48C33D25-9368-42E2-B08A-6E9AA8EFF64E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{8C893673-A31E-424E-A8F9-D5FAF830915F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +92,9 @@ Global
 		{48C33D25-9368-42E2-B08A-6E9AA8EFF64E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48C33D25-9368-42E2-B08A-6E9AA8EFF64E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48C33D25-9368-42E2-B08A-6E9AA8EFF64E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C893673-A31E-424E-A8F9-D5FAF830915F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C893673-A31E-424E-A8F9-D5FAF830915F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C893673-A31E-424E-A8F9-D5FAF830915F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C893673-A31E-424E-A8F9-D5FAF830915F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

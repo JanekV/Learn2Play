@@ -406,6 +406,62 @@
       </e>
       <e p="Learn2Play.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Resources" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="Chord.Designer.cs" t="Include" />
+          <e p="Chord.et.resx" t="Include" />
+          <e p="Chord.resx" t="Include" />
+          <e p="ChordNote.Designer.cs" t="Include" />
+          <e p="ChordNote.et.resx" t="Include" />
+          <e p="ChordNote.resx" t="Include" />
+          <e p="Common.Designer.cs" t="Include" />
+          <e p="Common.et.resx" t="Include" />
+          <e p="Common.resx" t="Include" />
+          <e p="Folder.Designer.cs" t="Include" />
+          <e p="Folder.et.resx" t="Include" />
+          <e p="Folder.resx" t="Include" />
+          <e p="Instrument.Designer.cs" t="Include" />
+          <e p="Instrument.et.resx" t="Include" />
+          <e p="Instrument.resx" t="Include" />
+          <e p="Note.Designer.cs" t="Include" />
+          <e p="Note.et.resx" t="Include" />
+          <e p="Note.resx" t="Include" />
+          <e p="Song.Designer.cs" t="Include" />
+          <e p="Song.et.resx" t="Include" />
+          <e p="Song.resx" t="Include" />
+          <e p="SongChord.Designer.cs" t="Include" />
+          <e p="SongChord.et.resx" t="Include" />
+          <e p="SongChord.resx" t="Include" />
+          <e p="SongInFolder.Designer.cs" t="Include" />
+          <e p="SongInFolder.et.resx" t="Include" />
+          <e p="SongInFolder.resx" t="Include" />
+          <e p="SongInstrument.Designer.cs" t="Include" />
+          <e p="SongInstrument.et.resx" t="Include" />
+          <e p="SongInstrument.resx" t="Include" />
+          <e p="SongKey.Designer.cs" t="Include" />
+          <e p="SongKey.et.resx" t="Include" />
+          <e p="SongKey.resx" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.0" t="Include">
+              <e p="Resources.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Resources.csproj" t="IncludeRecursive" />
+        <e p="Views" t="Include">
+          <e p="Common.Designer.cs" t="Include" />
+          <e p="Common.et.resx" t="Include" />
+          <e p="Common.resx" t="Include" />
+          <e p="Shared" t="Include">
+            <e p="_Layout.Designer.cs" t="Include" />
+            <e p="_Layout.resx" t="Include" />
+            <e p="Layout.et.resx" t="Include" />
+          </e>
+        </e>
+      </e>
       <e p="WebApp" t="IncludeRecursive">
         <e p="APIControllers" t="Include">
           <e p="ChordNotesController.cs" t="Include" />
@@ -598,6 +654,7 @@
           </e>
           <e p="Shared" t="Include">
             <e p="_CookieConsentPartial.cshtml" t="Include" />
+            <e p="_LanguageSelectionPartial.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
             <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />

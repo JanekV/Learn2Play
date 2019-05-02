@@ -1,0 +1,181 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    
+
+  <ItemGroup>
+        <EmbeddedResource Update="Domain\ChordNote.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Common.et.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Common.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Common.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Chord.et.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Folder.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Folder.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>Folder.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Instrument.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Instrument.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>Instrument.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Note.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Note.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>Note.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Song.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Song.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>Song.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongChord.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongChord.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>SongChord.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongInFolder.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongInFolder.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>SongInFolder.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongInstrument.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongInstrument.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>SongInstrument.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongKey.et.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\SongKey.resx">
+          <Generator>PublicResXFileCodeGenerator</Generator>
+          <LastGenOutput>SongKey.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Views\Common.et.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Views\Common.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Common.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Chord.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Chord.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\ChordNote.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>ChordNote.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Domain\Chord.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Chord.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Views\Shared\_Layout.et.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Views\Shared\_Layout.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>_Layout.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Domain\Common.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Common.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\Chord.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Chord.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\ChordNote.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>ChordNote.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\Chord.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Chord.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\Folder.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>Folder.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\Instrument.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>Instrument.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\Note.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>Note.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\Song.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>Song.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\SongChord.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>SongChord.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\SongInFolder.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>SongInFolder.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\SongInstrument.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>SongInstrument.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Domain\SongKey.Designer.cs">
+          <DesignTime>True</DesignTime>
+          <AutoGen>True</AutoGen>
+          <DependentUpon>SongKey.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Views\Common.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Common.resx</DependentUpon>
+        </Compile>
+        <Compile Update="Views\Shared\_Layout.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>_Layout.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+
+
+</Project>

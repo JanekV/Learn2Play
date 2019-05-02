@@ -1,4 +1,5 @@
-﻿﻿<!DOCTYPE html>
+﻿@using System.Globalization
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -37,30 +38,27 @@
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     </li>*@
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                    </li>
-                    <li class="nav-item">
                         <div class="dropdown">
                             <button class="btn btn-flat dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Content
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" asp-area="" asp-controller="Folders" asp-action="Index">Folders</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Index">Videos</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Folders" asp-action="Index"></a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Index">@Resources.Views.Shared._Layout.NavVideos</a>
                                 
-                                <a class="dropdown-item" asp-area="" asp-controller="Notes" asp-action="Index">Notes</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Chords" asp-action="Index">Chords</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="ChordNotes" asp-action="Index">ChordNotes</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Notes" asp-action="Index">@Resources.Views.Shared._Layout.NavNotes</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Chords" asp-action="Index">@Resources.Views.Shared._Layout.NavChords</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="ChordNotes" asp-action="Index">@Resources.Views.Shared._Layout.NavChordNotes</a>
                                 
-                                <a class="dropdown-item" asp-area="" asp-controller="Instruments" asp-action="Index">Instruments</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="Styles" asp-action="Index">Styles</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Instruments" asp-action="Index">@Resources.Views.Shared._Layout.NavInstruments</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Styles" asp-action="Index">@Resources.Views.Shared._Layout.NavStyles</a>
                                 
-                                <a class="dropdown-item" asp-area="" asp-controller="Songs" asp-action="Index">Songs</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="SongKeys" asp-action="Index">SongKeys</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="SongChords" asp-action="Index">SongChords</a>
-                                <a class="dropdown-item" asp-area="" asp-controller="SongInstruments" asp-action="Index">SongInstruments</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Songs" asp-action="Index">@Resources.Views.Shared._Layout.NavSongs</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="SongKeys" asp-action="Index">@Resources.Views.Shared._Layout.NavSongKeys</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="SongChords" asp-action="Index">@Resources.Views.Shared._Layout.NavSongChords</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="SongInstruments" asp-action="Index">@Resources.Views.Shared._Layout.NavSongInstruments</a>
                                 
-                                <a class="dropdown-item" asp-area="" asp-controller="Tabs" asp-action="Index">Tabs</a>
+                                <a class="dropdown-item" asp-area="" asp-controller="Tabs" asp-action="Index">@Resources.Views.Shared._Layout.NavTabs</a>
                             </div>
                         </div>
                     </li>
@@ -78,7 +76,9 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2019 - Learn2Play - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="col-md-4">&copy; 2019 - Learn2Play - <a asp-area="" asp-controller="Home" asp-action="Privacy">@Resources.Views.Shared._Layout.Privacy</a></div>
+            <div class="col-md-4">UICulture: @CultureInfo.CurrentUICulture.Name Culture: @CultureInfo.CurrentUICulture.Name</div>
+            <div class="col-md-4"><partial name="_LanguageSelectionPartial"/></div>
         </div>
     </footer>
 
