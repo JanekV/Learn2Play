@@ -1,18 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class SongInstrumentsController : ControllerBase
     {
@@ -28,14 +23,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>>> GetSongInstruments()
         {
-            return Ok(await _bll.SongInstruments.AllAsyncWithInclude());
+            return (await _bll.SongInstruments.AllAsyncWithInclude())
+                .Select(PublicApi.v1.Mappers.SongInstrumentMapper.MapFromBLL).ToList();
         }
 
         // GET: api/SongInstruments/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>> GetSongInstrument(int id)
         {
-            var songInstrument = await _bll.SongInstruments.FindAsync(id);
+            var songInstrument = PublicApi.v1.Mappers.SongInstrumentMapper.MapFromBLL(await _bll.SongInstruments.FindAsync(id));
 
             if (songInstrument == null)
             {
@@ -54,7 +50,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.SongInstruments.Update(songInstrument);
+            _bll.SongInstruments.Update(PublicApi.v1.Mappers.SongInstrumentMapper.MapFromExternal(songInstrument));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -64,7 +60,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>> PostSongInstrument(PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument songInstrument)
         {
-            await _bll.SongInstruments.AddAsync(songInstrument);
+            await _bll.SongInstruments.AddAsync(PublicApi.v1.Mappers.SongInstrumentMapper.MapFromExternal(songInstrument));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongInstrument", new { id = songInstrument.Id }, songInstrument);
@@ -80,10 +76,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.SongInstruments.Remove(songInstrument);
+            _bll.SongInstruments.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return songInstrument;
+            return NoContent();
         }
     }
 }

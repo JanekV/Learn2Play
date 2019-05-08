@@ -1,18 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class TuningNotesController : ControllerBase
     {
@@ -27,14 +22,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>>> GetTuningNotes()
         {
-            return Ok(await _bll.TuningNotes.AllAsyncWithInclude());
+            return (await _bll.TuningNotes.AllAsyncWithInclude())
+                .Select(PublicApi.v1.Mappers.TuningNoteMapper.MapFromBLL).ToList();
         }
 
         // GET: api/TuningNotes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>> GetTuningNote(int id)
         {
-            var tuningNote = await _bll.TuningNotes.FindAsync(id);
+            var tuningNote = PublicApi.v1.Mappers.TuningNoteMapper.MapFromBLL(await _bll.TuningNotes.FindAsync(id));
 
             if (tuningNote == null)
             {
@@ -53,7 +49,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.TuningNotes.Update(tuningNote);
+            _bll.TuningNotes.Update(PublicApi.v1.Mappers.TuningNoteMapper.MapFromExternal(tuningNote));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -63,7 +59,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>> PostTuningNote(PublicApi.v1.DTO.DomainEntityDTOs.TuningNote tuningNote)
         {
-            await _bll.TuningNotes.AddAsync(tuningNote);
+            await _bll.TuningNotes.AddAsync(PublicApi.v1.Mappers.TuningNoteMapper.MapFromExternal(tuningNote));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetTuningNote", new { id = tuningNote.Id }, tuningNote);
@@ -79,10 +75,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.TuningNotes.Remove(tuningNote);
+            _bll.TuningNotes.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return tuningNote;
+            return NoContent();
         }
     }
 }

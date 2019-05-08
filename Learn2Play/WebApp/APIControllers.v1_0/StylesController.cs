@@ -1,18 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class StylesController : ControllerBase
     {
@@ -27,14 +22,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Style>>> GetStyles()
         {
-            return Ok(await _bll.Styles.AllAsync());
+            return (await _bll.Styles.AllAsync())
+                .Select(PublicApi.v1.Mappers.StyleMapper.MapFromBLL).ToList();
         }
 
         // GET: api/Styles/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Style>> GetStyle(int id)
         {
-            var style = await _bll.Styles.FindAsync(id);
+            var style = PublicApi.v1.Mappers.StyleMapper.MapFromBLL(await _bll.Styles.FindAsync(id));
 
             if (style == null)
             {
@@ -53,7 +49,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.Styles.Update(style);
+            _bll.Styles.Update(PublicApi.v1.Mappers.StyleMapper.MapFromExternal(style));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -63,7 +59,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Style>> PostStyle(PublicApi.v1.DTO.DomainEntityDTOs.Style style)
         {
-            await _bll.Styles.AddAsync(style);
+            await _bll.Styles.AddAsync(PublicApi.v1.Mappers.StyleMapper.MapFromExternal(style));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetStyle", new { id = style.Id }, style);
@@ -79,10 +75,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.Styles.Remove(style);
+            _bll.Styles.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return style;
+            return NoContent();
         }
     }
 }

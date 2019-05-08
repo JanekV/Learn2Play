@@ -1,19 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
-using Microsoft.AspNetCore.Authorization;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class ChordNotesController : ControllerBase
     {
@@ -29,7 +23,7 @@ namespace WebApp.APIControllers
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.ChordNote>>> GetChordNotes()
         {
             return (await _bll.ChordNotes.AllAsyncWithInclude())
-                .Select(e => PublicApi.v1.Mappers.ChordNoteMapper.MapFromBLL(e)).ToList();
+                .Select(PublicApi.v1.Mappers.ChordNoteMapper.MapFromBLL).ToList();
         }
 
         // GET: api/ChordNotes/5

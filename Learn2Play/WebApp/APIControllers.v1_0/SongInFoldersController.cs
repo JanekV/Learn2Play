@@ -1,18 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")][ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class SongInFoldersController : ControllerBase
     {
@@ -27,14 +22,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>>> GetSongInFolders()
         {
-            return Ok(await _bll.SongInFolders.AllAsyncWithInclude());
+            return (await _bll.SongInFolders.AllAsyncWithInclude())
+                .Select(PublicApi.v1.Mappers.SongInFolderMapper.MapFromBLL).ToList();
         }
 
         // GET: api/SongInFolders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>> GetSongInFolder(int id)
         {
-            var songInFolder = await _bll.SongInFolders.FindAsync(id);
+            var songInFolder = PublicApi.v1.Mappers.SongInFolderMapper.MapFromBLL(await _bll.SongInFolders.FindAsync(id));
 
             if (songInFolder == null)
             {
@@ -53,7 +49,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.SongInFolders.Update(songInFolder);
+            _bll.SongInFolders.Update(PublicApi.v1.Mappers.SongInFolderMapper.MapFromExternal(songInFolder));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -63,7 +59,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>> PostSongInFolder(PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder songInFolder)
         {
-            await _bll.SongInFolders.AddAsync(songInFolder);
+            await _bll.SongInFolders.AddAsync(PublicApi.v1.Mappers.SongInFolderMapper.MapFromExternal(songInFolder));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetSongInFolder", new { id = songInFolder.Id }, songInFolder);
@@ -79,10 +75,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.SongInFolders.Remove(songInFolder);
+            _bll.SongInFolders.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return songInFolder;
+            return NoContent();
         }
     }
 }

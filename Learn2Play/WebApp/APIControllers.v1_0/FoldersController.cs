@@ -1,19 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
-using Microsoft.AspNetCore.Authorization;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class FoldersController : ControllerBase
     {
@@ -28,14 +22,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Folder>>> GetFolders()
         {
-            return (await _bll.Folders.AllAsync());
+            return (await _bll.Folders.AllAsync())
+                .Select(PublicApi.v1.Mappers.FolderMapper.MapFromBLL).ToList();
         }
 
         // GET: api/Folders/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Folder>> GetFolder(int id)
         {
-            var folder = await _bll.Folders.FindAsync(id);
+            var folder = PublicApi.v1.Mappers.FolderMapper.MapFromBLL(await _bll.Folders.FindAsync(id));
 
             if (folder == null)
             {
@@ -54,7 +49,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.Folders.Update(folder);
+            _bll.Folders.Update(PublicApi.v1.Mappers.FolderMapper.MapFromExternal(folder));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -64,7 +59,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Folder>> PostFolder(PublicApi.v1.DTO.DomainEntityDTOs.Folder folder)
         {
-            await _bll.Folders.AddAsync(folder);
+            await _bll.Folders.AddAsync(PublicApi.v1.Mappers.FolderMapper.MapFromExternal(folder));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetFolder", new { id = folder.Id }, folder);
@@ -80,10 +75,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.Folders.Remove(folder);
+            _bll.Folders.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return folder;
+            return NoContent();
         }
     }
 }

@@ -2,28 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WebApp/ConfigureSwaggerOptions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.Base.EF/obj/Debug/netstandard2.0/DAL.Base.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.Base.EF/obj/Debug/netstandard2.0/DAL.Base.EF.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learn2Play.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Learn2Play.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordNotesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/FoldersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/Identity/AccountController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/Identity/AccountController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/InstrumentsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/NotesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongChordsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInFoldersController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInstrumentsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongKeysController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongStylesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/StylesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/TabsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/TuningNotesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/UserInstrumentsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/APIControllers.v1_0/VideosController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/WebApp.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/project.packagespec.json" afterDir="false" />
     </list>
@@ -50,23 +62,75 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs">
+        <entry file="file://$PROJECT_DIR$/WebApp/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="619">
-              <caret line="87" column="31" lean-forward="true" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+            <state relative-caret-position="-132">
+              <caret line="177" column="76" selection-start-line="177" selection-start-column="70" selection-end-line="177" selection-end-column="76" />
               <folding>
-                <marker date="1557330528916" expanded="false" signature="6:322" ph="..." />
-                <marker date="1557330528916" expanded="true" signature="355:2839" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="464:2837" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="559:603" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="767:943" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="1109:1373" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="1269:1332" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="1550:1849" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="1596:1661" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="2055:2356" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="2531:2831" ph="{...}" />
-                <marker date="1557330528916" expanded="true" signature="2641:2704" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="6:1168" ph="..." />
+                <marker date="1557332879347" expanded="true" signature="1186:8880" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="1213:8878" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="1272:1335" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="1558:7066" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="1644:1908" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="2108:2204" ph="/* Unit of work and repositories ... */" />
+                <marker date="1557332879347" expanded="true" signature="2864:2952" ph="/* .AddDefaultIdentity&lt;AppUser&gt;() ... */" />
+                <marker date="1557332879347" expanded="true" signature="3171:3536" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="3604:3913" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="3707:3880" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="4116:4364" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="4408:4622" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="4709:4932" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="5348:5932" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="5548:5913" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="6091:6760" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="6155:6271" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="7295:8872" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="7342:7463" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="7480:7739" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="8306:8651" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="8390:8633" ph="{...}" />
+                <marker date="1557332879347" expanded="true" signature="8702:8860" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordNotesController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+              <folding>
+                <marker date="1557339234244" expanded="true" signature="6:139" ph="..." />
+                <marker date="1557339234244" expanded="true" signature="177:2699" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="332:2697" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="427:471" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="635:803" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="969:1233" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="1129:1192" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="1410:1709" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="1456:1521" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="1915:2216" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="2391:2691" ph="{...}" />
+                <marker date="1557339234244" expanded="true" signature="2501:2564" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/ConfigureSwaggerOptions.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+              <folding>
+                <marker date="1557333054767" expanded="true" signature="6:262" ph="..." />
+                <marker date="1557333054767" expanded="true" signature="280:1301" ph="{...}" />
+                <marker date="1557333054767" expanded="true" signature="362:1298" ph="{...}" />
+                <marker date="1557333054767" expanded="true" signature="604:1292" ph="{...}" />
+                <marker date="1557333054767" expanded="true" signature="682:1282" ph="{...}" />
+                <marker date="1557333054767" expanded="true" signature="793:957" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -79,7 +143,6 @@
       <find>sidebar-mini</find>
       <find>dropdown</find>
       <find>expanda</find>
-      <find>www</find>
       <find>dataContext</find>
       <find>Repository</find>
       <find>DAL.App.DTO.Note</find>
@@ -99,9 +162,12 @@
       <find>MapFromBLL</find>
       <find>MapFromDAL</find>
       <find>BLL.App.DTO.DomainEntityDTOs.</find>
+      <find>www</find>
+      <find>api/[</find>
+      <find>[Route(&quot;api/v{version:apiVersion}/[controller]&quot;)]</find>
+      <find>config</find>
     </findStrings>
     <replaceStrings>
-      <replace>SongChord</replace>
       <replace>SongInFolder</replace>
       <replace>Video</replace>
       <replace>sc</replace>
@@ -127,14 +193,16 @@
       <replace>Chord</replace>
       <replace>internalDTO.ChordNote</replace>
       <replace>externalDTO.</replace>
-      <replace>internalDTO.</replace>
       <replace>MapFromExternal</replace>
       <replace>MapFromBLL</replace>
       <replace>PublicApi.v1.DTO.DomainEntityDTOs.</replace>
+      <replace>internalDTO.</replace>
+      <replace>api/v{version:apiVersion}/[</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\X\RiderProjects\Learn2Play\Learn2Play\PublicApi.v1\Mappers</dir>
       <dir>C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\APIControllers</dir>
+      <dir>C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\APIControllers.v1_0</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -355,23 +423,23 @@
     <setting file="file://$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Controllers/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongInFoldersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/VideosController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongStylesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongKeysController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/StylesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/FoldersController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongChordsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/InstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/UserInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/NotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/TabsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/TuningNotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/SongInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers/Identity/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInFoldersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/VideosController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongStylesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongKeysController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/StylesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/FoldersController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongChordsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/InstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/UserInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/NotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/TabsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/TuningNotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordNotesController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInstrumentsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/Identity/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BLL.App/AppBLL.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Resources/Domain/SongKey.et.resx" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Resources/Domain/SongKey.Designer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -486,6 +554,7 @@
     <setting file="file://$PROJECT_DIR$/PublicApi.v1/Mappers/SongInFolderMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicApi.v1/Mappers/SongStyleMapper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PublicApi.v1/Mappers/SongKeyMapper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WebApp/ConfigureSwaggerOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BLL.Base/Helpers/BaseServiceProvider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/BLL.Base/Mappers/BaseBLLMapper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -574,27 +643,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Resources/Domain/Chord.Designer.cs" />
-        <option value="$PROJECT_DIR$/Resources/Domain/ChordNote.Designer.cs" />
-        <option value="$PROJECT_DIR$/Resources/Views/Shared/_Layout.resx" />
-        <option value="$PROJECT_DIR$/Resources/Views/Shared/_Layout.Designer.cs" />
-        <option value="$PROJECT_DIR$/WebApp/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/WebApp/Views/Chords/Create.cshtml" />
-        <option value="$PROJECT_DIR$/WebApp/Views/Chords/Delete.cshtml" />
-        <option value="$PROJECT_DIR$/WebApp/Views/Chords/Details.cshtml" />
-        <option value="$PROJECT_DIR$/WebApp/Views/Chords/Edit.cshtml" />
-        <option value="$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Chord.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1/Class1.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1DTO/Class1.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/Class1.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1/PublicApi.v1.csproj" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Folder.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Instrument.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Chord.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Note.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Song.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongChord.cs" />
-        <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongInFolder.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongInstrument.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/ChordNote.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongKey.cs" />
@@ -624,7 +672,28 @@
         <option value="$PROJECT_DIR$/PublicApi.v1/Mappers/VideoMapper.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1.DTO/Identity/AppUser.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1/Mappers/ChordNoteMapper.cs" />
+        <option value="$PROJECT_DIR$/../.gitignore" />
+        <option value="$PROJECT_DIR$/WebApp/Startup.cs" />
+        <option value="$PROJECT_DIR$/WebApp/WebApp.csproj" />
+        <option value="$PROJECT_DIR$/WebApp/ConfigureSwaggerOptions.cs" />
         <option value="$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/FoldersController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/InstrumentsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/NotesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongChordsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInFoldersController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInstrumentsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongKeysController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordNotesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongStylesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/StylesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/TabsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/TuningNotesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/UserInstrumentsController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/VideosController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/APIControllers.v1_0/Identity/AccountController.cs" />
       </list>
     </option>
   </component>
@@ -642,7 +711,6 @@
     </navigator>
     <panes>
       <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -653,35 +721,20 @@
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BLL.Base" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BLL.Base" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Services" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="PublicApi.v1" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
             </path>
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="APIControllers" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="APIControllers.v1_0" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -783,7 +836,8 @@
       <workItem from="1556819598663" duration="564000" />
       <workItem from="1556820250462" duration="150000" />
       <workItem from="1556820798725" duration="1021000" />
-      <workItem from="1557327220435" duration="3308000" />
+      <workItem from="1557327220435" duration="5873000" />
+      <workItem from="1557338576564" duration="3252000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -1002,11 +1056,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556821801922</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Added 3rd layer dtos for public api and mappers. Not finished/working yet!!">
+      <created>1557330613088</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1557330613088</updated>
+    </task>
+    <task id="LOCAL-00033" summary="gitignore change">
+      <created>1557331386174</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1557331386174</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162167000" />
+    <option name="totallyTimeSpent" value="167984000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1021,14 +1089,14 @@
     <frame x="-7" y="0" width="1269" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.254756" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25889164" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" weight="0.23504274" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" visible="true" weight="0.23504274" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.69551283" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1093,8 +1161,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="replaced context with uow in aspnet controllers" />
-    <MESSAGE value="Replaced context with uow in all MVC controllers" />
     <MESSAGE value="Replaced context with uow in all API controllers" />
     <MESSAGE value="Replaced all viewbag/data stuff. Problem with UserInstrument ones and AppUserRepo" />
     <MESSAGE value="nm" />
@@ -1118,7 +1184,9 @@
     <MESSAGE value="gitignore update, fixes to SongKeys" />
     <MESSAGE value="Fixed nullpointers in create methods of some mvc controllers" />
     <MESSAGE value="Added i18n localization and resx files with translations, need to finish translating when last layer of dtos is done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added i18n localization and resx files with translations, need to finish translating when last layer of dtos is done" />
+    <MESSAGE value="Added 3rd layer dtos for public api and mappers. Not finished/working yet!!" />
+    <MESSAGE value="gitignore change" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1131,352 +1199,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Chords/Create.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <marker date="1556820395493" expanded="true" signature="43:81" ph="@..." />
-            <marker date="1556820395493" expanded="true" signature="1251:1338" ph="@{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Chords/Delete.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
-          <folding>
-            <marker date="1556820395507" expanded="true" signature="43:81" ph="@..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Chords/Edit.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="45" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <marker date="1556820395519" expanded="true" signature="43:79" ph="@..." />
-            <marker date="1556820395519" expanded="true" signature="1292:1379" ph="@{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Chords/Index.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <marker date="1556812304448" expanded="true" signature="56:93" ph="@..." />
-            <marker date="1556812304448" expanded="true" signature="492:1081" ph="@..." />
-            <marker date="1556812304448" expanded="true" signature="521:1081" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Domain/Chord.et.resx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1785">
-          <caret line="119" column="16" selection-start-line="119" selection-start-column="16" selection-end-line="119" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Domain/Chord.Designer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="915">
-          <caret line="61" column="8" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
-          <folding>
-            <marker date="1556821264035" expanded="true" signature="0:395" ph="/* ------------------------------------------------------------------------------ ... */" />
-            <marker date="1556821264035" expanded="true" signature="424:3329" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="458:572" ph="///   A strongly-typed resource class, for looking up localized strings, etc. ... " />
-            <marker date="1556821264035" expanded="true" signature="577:829" ph="/* This class was auto-generated by the StronglyTypedResourceBuilder ... */" />
-            <marker date="1556821264035" expanded="true" signature="1119:3327" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="1466:1477" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="1495:1609" ph="///   Returns the cached ResourceManager instance used by this class. ... " />
-            <marker date="1556821264035" expanded="true" signature="1815:2181" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="1833:2171" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="1898:2121" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="2199:2387" ph="///   Overrides the current thread's CurrentUICulture property for all ... " />
-            <marker date="1556821264035" expanded="true" signature="2585:2741" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="2603:2658" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="2675:2731" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="2759:2854" ph="///   Looks up a localized string similar to Name. ... " />
-            <marker date="1556821264035" expanded="true" signature="2889:3007" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="2907:2997" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="3025:3144" ph="///   Looks up a localized string similar to Chord shape picture filepath. ... " />
-            <marker date="1556821264035" expanded="true" signature="3191:3321" ph="{...}" />
-            <marker date="1556821264035" expanded="true" signature="3209:3311" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Views/Chords/Details.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="45" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="45" />
-          <folding>
-            <marker date="1556820395476" expanded="true" signature="43:82" ph="@..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BLL.App.DTO/DomainEntityDTOs/Chord.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-            <marker date="1556821587626" expanded="true" signature="138:735" ph="{...}" />
-            <marker date="1556821587626" expanded="true" signature="608:729" ph="/* public ICollection&lt;SongChord&gt; SongChords { get; set; } ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1DTO/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BLL.Base/Services/BaseEntityService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding>
-            <marker date="1556353731815" expanded="false" signature="6:230" ph="..." />
-            <marker date="1556353731815" expanded="true" signature="259:2405" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="621:2403" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="860:989" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1050:1173" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1228:1319" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1375:1437" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1501:1627" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1704:1807" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="1870:1969" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="2008:2121" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="2173:2265" ph="{...}" />
-            <marker date="1556353731815" expanded="true" signature="2309:2397" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/Class1.cs">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/PublicApi.v1.DTO.csproj">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1/PublicApi.v1.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="70" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Folder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-          <folding>
-            <marker date="1557328300921" expanded="true" signature="6:64" ph="..." />
-            <marker date="1557328300921" expanded="true" signature="109:595" ph="{...}" />
-            <marker date="1557328300921" expanded="true" signature="135:592" ph="{...}" />
-            <marker date="1557328300921" expanded="true" signature="457:586" ph="/* public ICollection&lt;UserFolder&gt; UserFolders { get; set; } ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Instrument.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-          <folding>
-            <marker date="1557328305053" expanded="true" signature="89:608" ph="{...}" />
-            <marker date="1557328305053" expanded="true" signature="119:606" ph="{...}" />
-            <marker date="1557328305053" expanded="true" signature="392:600" ph="/* public ICollection&lt;UserInstrument&gt; UserInstruments { get; set; } ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Note.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding>
-            <marker date="1557328309420" expanded="true" signature="89:479" ph="{...}" />
-            <marker date="1557328309420" expanded="true" signature="113:477" ph="{...}" />
-            <marker date="1557328309420" expanded="true" signature="280:471" ph="/* public ICollection&lt;TuningNote&gt; TuningNotes { get; set; } ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Song.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="31" lean-forward="true" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-          <folding>
-            <marker date="1557328329589" expanded="true" signature="6:44" ph="..." />
-            <marker date="1557328329589" expanded="true" signature="89:1024" ph="{...}" />
-            <marker date="1557328329589" expanded="true" signature="113:1022" ph="{...}" />
-            <marker date="1557328329589" expanded="true" signature="692:1016" ph="/* public ICollection&lt;SongInFolder&gt; SongInFolders { get; set; } ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/ChordNote.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1557328322811" expanded="true" signature="44:286" ph="{...}" />
-            <marker date="1557328322811" expanded="true" signature="73:284" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongChord.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <marker date="1557328327397" expanded="true" signature="44:295" ph="{...}" />
-            <marker date="1557328327397" expanded="true" signature="73:293" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongInFolder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <marker date="1557328333682" expanded="true" signature="43:291" ph="{...}" />
-            <marker date="1557328333682" expanded="true" signature="75:289" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongInstrument.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <marker date="1557328337601" expanded="true" signature="43:305" ph="{...}" />
-            <marker date="1557328337601" expanded="true" signature="77:303" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongKey.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <marker date="1557328360189" expanded="true" signature="89:419" ph="{...}" />
-            <marker date="1557328360189" expanded="true" signature="116:417" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/SongStyle.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="30" selection-start-line="1" selection-start-column="30" selection-end-line="1" selection-end-column="30" />
-          <folding>
-            <marker date="1557328360210" expanded="true" signature="44:286" ph="{...}" />
-            <marker date="1557328360210" expanded="true" signature="73:284" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Style.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <marker date="1557328360224" expanded="true" signature="89:444" ph="{...}" />
-            <marker date="1557328360224" expanded="true" signature="114:442" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Tab.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-          <folding>
-            <marker date="1557328360239" expanded="false" signature="6:64" ph="..." />
-            <marker date="1557328360239" expanded="true" signature="109:773" ph="{...}" />
-            <marker date="1557328360239" expanded="true" signature="132:770" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/TuningNote.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <marker date="1557328360251" expanded="true" signature="89:455" ph="{...}" />
-            <marker date="1557328360251" expanded="true" signature="119:453" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/UserFolder.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1557328360267" expanded="true" signature="6:77" ph="..." />
-            <marker date="1557328360267" expanded="true" signature="122:471" ph="{...}" />
-            <marker date="1557328360267" expanded="true" signature="152:469" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/UserInstrument.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <marker date="1557328360282" expanded="true" signature="6:77" ph="..." />
-            <marker date="1557328360282" expanded="true" signature="122:495" ph="{...}" />
-            <marker date="1557328360282" expanded="true" signature="156:493" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Video.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-          <folding>
-            <marker date="1557328360296" expanded="true" signature="89:637" ph="{...}" />
-            <marker date="1557328360296" expanded="true" signature="114:635" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1/Mappers/ChordMapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="2" selection-end-column="49" />
-          <folding>
-            <marker date="1557330063300" expanded="true" signature="6:118" ph="..." />
-            <marker date="1557330063300" expanded="true" signature="152:1485" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="183:1483" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="285:786" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="360:467" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="533:645" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="863:1129" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="953:1092" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="1211:1476" ph="{...}" />
-            <marker date="1557330063300" expanded="true" signature="1301:1440" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PublicApi.v1/Mappers/FolderMapper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -1816,23 +1538,472 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers/ChordNotesController.cs">
+    <entry file="file://$PROJECT_DIR$/WebApp/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+          <folding>
+            <marker date="1556812304467" expanded="true" signature="1904:2071" ph="@*...*@" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="27" selection-start-line="36" selection-start-column="27" selection-end-line="36" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/config">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/description">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/FETCH_HEAD">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/HEAD">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/ORIG_HEAD">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/info/exclude">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/info/refs">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.git/hooks/update.sample">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/WebApp.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/FoldersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557340084552" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340084552" expanded="true" signature="177:2527" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="329:2525" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="421:465" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="620:771" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="928:1177" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="1076:1139" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="1342:1629" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="1385:1450" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="1820:2065" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="2231:2519" ph="{...}" />
+            <marker date="1557340084552" expanded="true" signature="2332:2395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557340084537" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340084537" expanded="true" signature="177:2486" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="328:2484" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="419:463" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="615:764" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="918:1162" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="1062:1125" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="1323:1606" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="1365:1430" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="1792:2031" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="2194:2478" ph="{...}" />
+            <marker date="1557340084537" expanded="true" signature="2292:2355" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/InstrumentsController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="619">
-          <caret line="87" column="31" lean-forward="true" selection-start-line="87" selection-start-column="31" selection-end-line="87" selection-end-column="31" />
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
           <folding>
-            <marker date="1557330528916" expanded="false" signature="6:322" ph="..." />
-            <marker date="1557330528916" expanded="true" signature="355:2839" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="464:2837" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="559:603" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="767:943" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="1109:1373" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="1269:1332" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="1550:1849" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="1596:1661" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="2055:2356" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="2531:2831" ph="{...}" />
-            <marker date="1557330528916" expanded="true" signature="2641:2704" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340084506" expanded="true" signature="177:2691" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="333:2689" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="429:473" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="640:799" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="968:1237" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="1132:1195" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="1418:1721" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="1465:1530" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="1932:2201" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="2379:2683" ph="{...}" />
+            <marker date="1557340084506" expanded="true" signature="2492:2555" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/NotesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <marker date="1557340084521" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340084521" expanded="true" signature="177:2527" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="409:2525" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="499:543" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="692:839" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="990:1229" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="1130:1193" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="1386:1665" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="1427:1492" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="1846:2079" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="2239:2519" ph="{...}" />
+            <marker date="1557340084521" expanded="true" signature="2334:2397" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongChordsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557340084563" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340084563" expanded="true" signature="177:2661" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="332:2659" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="427:471" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="635:803" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="969:1233" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="1129:1192" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="1410:1709" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="1456:1521" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="1915:2178" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="2353:2653" ph="{...}" />
+            <marker date="1557340084563" expanded="true" signature="2463:2526" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInFoldersController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557340398682" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340398682" expanded="true" signature="177:2803" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="354:2801" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="452:496" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="669:843" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="1018:1297" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="1190:1253" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="1486:1797" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="1535:1600" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="2018:2299" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="2483:2795" ph="{...}" />
+            <marker date="1557340398682" expanded="true" signature="2602:2665" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongInstrumentsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="81" column="30" selection-start-line="81" selection-start-column="30" selection-end-line="81" selection-end-column="30" />
+          <folding>
+            <marker date="1557340398692" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557340398692" expanded="true" signature="177:2867" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="337:2865" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="437:481" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="661:839" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="1020:1309" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="1200:1263" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="1506:1825" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="1557:1622" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="2056:2349" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="2539:2859" ph="{...}" />
+            <marker date="1557340398692" expanded="true" signature="2664:2727" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongKeysController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154050" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154050" expanded="true" signature="177:2579" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="330:2577" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="423:467" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="625:789" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="949:1203" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="1101:1164" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="1372:1663" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="1416:1481" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="1859:2110" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="2279:2571" ph="{...}" />
+            <marker date="1557341154050" expanded="true" signature="2383:2446" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154040" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154040" expanded="true" signature="177:2456" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="327:2454" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="417:461" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="610:768" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="919:1158" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="1059:1122" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="1315:1594" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="1356:1421" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="1775:2008" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="2168:2448" ph="{...}" />
+            <marker date="1557341154040" expanded="true" signature="2263:2326" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/SongStylesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154006" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154006" expanded="true" signature="177:2661" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="332:2659" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="427:471" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="635:803" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="969:1233" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="1129:1192" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="1410:1709" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="1456:1521" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="1915:2178" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="2353:2653" ph="{...}" />
+            <marker date="1557341154006" expanded="true" signature="2463:2526" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/StylesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154060" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154060" expanded="true" signature="177:2486" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="328:2484" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="419:463" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="615:764" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="918:1162" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="1062:1125" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="1323:1606" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="1365:1430" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="1792:2031" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="2194:2478" ph="{...}" />
+            <marker date="1557341154060" expanded="true" signature="2292:2355" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/TabsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154072" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154072" expanded="true" signature="177:2415" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="326:2413" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="415:459" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="605:761" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="909:1143" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="1045:1108" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="1296:1571" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="1336:1401" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="1747:1974" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="2131:2407" ph="{...}" />
+            <marker date="1557341154072" expanded="true" signature="2223:2286" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/TuningNotesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154026" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154026" expanded="true" signature="177:2702" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="333:2700" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="429:473" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="640:810" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="979:1248" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="1143:1206" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="1429:1732" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="1476:1541" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="1943:2212" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="2390:2694" ph="{...}" />
+            <marker date="1557341154026" expanded="true" signature="2503:2566" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/UserInstrumentsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154016" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154016" expanded="true" signature="177:2866" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="337:2864" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="437:481" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="660:838" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="1019:1308" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="1199:1262" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="1505:1824" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="1556:1621" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="2055:2348" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="2538:2858" ph="{...}" />
+            <marker date="1557341154016" expanded="true" signature="2663:2726" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/VideosController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+          <folding>
+            <marker date="1557341154084" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557341154084" expanded="true" signature="177:2497" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="328:2495" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="419:463" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="615:775" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="929:1173" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="1073:1136" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="1334:1617" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="1376:1441" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="1803:2042" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="2205:2489" ph="{...}" />
+            <marker date="1557341154084" expanded="true" signature="2303:2366" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/Identity/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+          <folding>
+            <marker date="1557341222791" expanded="true" signature="6:352" ph="..." />
+            <marker date="1557341222791" expanded="true" signature="399:4849" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="562:4847" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="1050:1268" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="1369:2552" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="1514:1690" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="1912:2505" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="2667:4491" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="2713:4414" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="2942:4339" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="3046:3674" ph="/* var code = await _userManager.GenerateEmailConfirmationTokenAsync(appUser); ... */" />
+            <marker date="1557341222791" expanded="true" signature="4523:4638" ph="{...}" />
+            <marker date="1557341222791" expanded="true" signature="4672:4838" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1551804701699" expanded="false" signature="6:255" ph="..." />
+            <marker date="1551804701699" expanded="true" signature="273:600" ph="{...}" />
+            <marker date="1551804701699" expanded="true" signature="300:598" ph="{...}" />
+            <marker date="1551804701699" expanded="true" signature="353:427" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/ConfigureSwaggerOptions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <marker date="1557333054767" expanded="true" signature="6:262" ph="..." />
+            <marker date="1557333054767" expanded="true" signature="280:1301" ph="{...}" />
+            <marker date="1557333054767" expanded="true" signature="362:1298" ph="{...}" />
+            <marker date="1557333054767" expanded="true" signature="604:1292" ph="{...}" />
+            <marker date="1557333054767" expanded="true" signature="682:1282" ph="{...}" />
+            <marker date="1557333054767" expanded="true" signature="793:957" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/APIControllers.v1_0/ChordNotesController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+          <folding>
+            <marker date="1557339234244" expanded="true" signature="6:139" ph="..." />
+            <marker date="1557339234244" expanded="true" signature="177:2699" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="332:2697" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="427:471" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="635:803" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="969:1233" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="1129:1192" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="1410:1709" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="1456:1521" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="1915:2216" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="2391:2691" ph="{...}" />
+            <marker date="1557339234244" expanded="true" signature="2501:2564" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="177" column="76" selection-start-line="177" selection-start-column="70" selection-end-line="177" selection-end-column="76" />
+          <folding>
+            <marker date="1557332879347" expanded="true" signature="6:1168" ph="..." />
+            <marker date="1557332879347" expanded="true" signature="1186:8880" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="1213:8878" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="1272:1335" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="1558:7066" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="1644:1908" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="2108:2204" ph="/* Unit of work and repositories ... */" />
+            <marker date="1557332879347" expanded="true" signature="2864:2952" ph="/* .AddDefaultIdentity&lt;AppUser&gt;() ... */" />
+            <marker date="1557332879347" expanded="true" signature="3171:3536" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="3604:3913" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="3707:3880" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="4116:4364" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="4408:4622" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="4709:4932" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="5348:5932" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="5548:5913" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="6091:6760" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="6155:6271" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="7295:8872" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="7342:7463" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="7480:7739" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="8306:8651" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="8390:8633" ph="{...}" />
+            <marker date="1557332879347" expanded="true" signature="8702:8860" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -527,7 +527,7 @@
         </e>
       </e>
       <e p="WebApp" t="IncludeRecursive">
-        <e p="APIControllers" t="Include">
+        <e p="APIControllers.v1_0" t="Include">
           <e p="ChordNotesController.cs" t="Include" />
           <e p="ChordsController.cs" t="Include" />
           <e p="FoldersController.cs" t="Include" />
@@ -623,6 +623,7 @@
           </e>
         </e>
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ConfigureSwaggerOptions.cs" t="Include" />
         <e p="Controllers" t="Include">
           <e p="ChordNotesController.cs" t="Include" />
           <e p="ChordsController.cs" t="Include" />

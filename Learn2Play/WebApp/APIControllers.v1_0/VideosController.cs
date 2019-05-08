@@ -1,18 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class VideosController : ControllerBase
     {
@@ -27,14 +22,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Video>>> GetVideos()
         {
-            return Ok(await _bll.Videos.AllAsyncWithInclude());
+            return (await _bll.Videos.AllAsyncWithInclude())
+                .Select(PublicApi.v1.Mappers.VideoMapper.MapFromBLL).ToList();
         }
 
         // GET: api/Videos/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Video>> GetVideo(int id)
         {
-            var video = await _bll.Videos.FindAsync(id);
+            var video = PublicApi.v1.Mappers.VideoMapper.MapFromBLL(await _bll.Videos.FindAsync(id));
 
             if (video == null)
             {
@@ -53,7 +49,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.Videos.Update(video);
+            _bll.Videos.Update(PublicApi.v1.Mappers.VideoMapper.MapFromExternal(video));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -63,7 +59,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Video>> PostVideo(PublicApi.v1.DTO.DomainEntityDTOs.Video video)
         {
-            await _bll.Videos.AddAsync(video);
+            await _bll.Videos.AddAsync(PublicApi.v1.Mappers.VideoMapper.MapFromExternal(video));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetVideo", new { id = video.Id }, video);
@@ -79,10 +75,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.Videos.Remove(video);
+            _bll.Videos.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return video;
+            return NoContent();
         }
     }
 }

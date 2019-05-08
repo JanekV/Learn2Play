@@ -1,20 +1,13 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
-using Contracts.DAL.App;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using DAL.App.EF;
-using Domain;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 
-namespace WebApp.APIControllers
+namespace WebApp.APIControllers.v1_0
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class NotesController : ControllerBase
@@ -30,14 +23,15 @@ namespace WebApp.APIControllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Note>>> GetNotes()
         {
-            return Ok(await _bll.Notes.AllAsync());
+            return (await _bll.Notes.AllAsync())
+                .Select(PublicApi.v1.Mappers.NoteMapper.MapFromBLL).ToList();
         }
 
         // GET: api/Notes/5
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Note>> GetNote(int id)
         {
-            var note = await _bll.Notes.FindAsync(id);
+            var note = PublicApi.v1.Mappers.NoteMapper.MapFromBLL(await _bll.Notes.FindAsync(id));
 
             if (note == null)
             {
@@ -56,7 +50,7 @@ namespace WebApp.APIControllers
                 return BadRequest();
             }
 
-            _bll.Notes.Update(note);
+            _bll.Notes.Update(PublicApi.v1.Mappers.NoteMapper.MapFromExternal(note));
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -66,7 +60,7 @@ namespace WebApp.APIControllers
         [HttpPost]
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Note>> PostNote(PublicApi.v1.DTO.DomainEntityDTOs.Note note)
         {
-            await _bll.Notes.AddAsync(note);
+            await _bll.Notes.AddAsync(PublicApi.v1.Mappers.NoteMapper.MapFromExternal(note));
             await _bll.SaveChangesAsync();
 
             return CreatedAtAction("GetNote", new { id = note.Id }, note);
@@ -82,10 +76,10 @@ namespace WebApp.APIControllers
                 return NotFound();
             }
 
-            _bll.Notes.Remove(note);
+            _bll.Notes.Remove(id);
             await _bll.SaveChangesAsync();
 
-            return note;
+            return NoContent();
         }
     }
 }

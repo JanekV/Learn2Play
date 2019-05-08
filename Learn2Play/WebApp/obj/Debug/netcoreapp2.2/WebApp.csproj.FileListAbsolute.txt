@@ -296,3 +296,8 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\Do
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\et\Resources.resources.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.Views.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\WebApp.csproj.CopyComplete
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\WebApp.xml
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\PublicApi.v1.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\PublicApi.v1.DTO.dll
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\PublicApi.v1.DTO.pdb
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\bin\Debug\netcoreapp2.2\PublicApi.v1.pdb
