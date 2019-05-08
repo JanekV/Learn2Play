@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/TuningNotes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.TuningNote>>> GetTuningNotes()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>>> GetTuningNotes()
         {
             return Ok(await _bll.TuningNotes.AllAsyncWithInclude());
         }
 
         // GET: api/TuningNotes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.TuningNote>> GetTuningNote(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>> GetTuningNote(int id)
         {
             var tuningNote = await _bll.TuningNotes.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/TuningNotes/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTuningNote(int id, BLL.App.DTO.DomainEntityDTOs.TuningNote tuningNote)
+        public async Task<IActionResult> PutTuningNote(int id, PublicApi.v1.DTO.DomainEntityDTOs.TuningNote tuningNote)
         {
             if (id != tuningNote.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/TuningNotes
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.TuningNote>> PostTuningNote(BLL.App.DTO.DomainEntityDTOs.TuningNote tuningNote)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>> PostTuningNote(PublicApi.v1.DTO.DomainEntityDTOs.TuningNote tuningNote)
         {
             await _bll.TuningNotes.AddAsync(tuningNote);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/TuningNotes/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.TuningNote>> DeleteTuningNote(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.TuningNote>> DeleteTuningNote(int id)
         {
             var tuningNote = await _bll.TuningNotes.FindAsync(id);
             if (tuningNote == null)

@@ -4960,6 +4960,35 @@
           "bin/placeholder/Identity.dll": {}
         }
       },
+      "PublicApi.v1/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "BLL.App.DTO": "1.0.0",
+          "PublicApi.v1.DTO": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PublicApi.v1.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicApi.v1.dll": {}
+        }
+      },
+      "PublicApi.v1.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Resources": "1.0.0",
+          "System.ComponentModel.Annotations": "4.5.0"
+        },
+        "compile": {
+          "bin/placeholder/PublicApi.v1.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PublicApi.v1.DTO.dll": {}
+        }
+      },
       "Resources/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -13311,6 +13340,16 @@
       "path": "../Identity/Identity.csproj",
       "msbuildProject": "../Identity/Identity.csproj"
     },
+    "PublicApi.v1/1.0.0": {
+      "type": "project",
+      "path": "../PublicApi.v1/PublicApi.v1.csproj",
+      "msbuildProject": "../PublicApi.v1/PublicApi.v1.csproj"
+    },
+    "PublicApi.v1.DTO/1.0.0": {
+      "type": "project",
+      "path": "../PublicApi.v1.DTO/PublicApi.v1.DTO.csproj",
+      "msbuildProject": "../PublicApi.v1.DTO/PublicApi.v1.DTO.csproj"
+    },
     "Resources/1.0.0": {
       "type": "project",
       "path": "../Resources/Resources.csproj",
@@ -13329,6 +13368,8 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.2.2",
       "Pomelo.EntityFrameworkCore.MySql >= 2.2.0",
+      "PublicApi.v1 >= 1.0.0",
+      "PublicApi.v1.DTO >= 1.0.0",
       "Resources >= 1.0.0"
     ]
   },
@@ -13376,6 +13417,12 @@
             },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj"
+            },
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\PublicApi.v1.DTO\\PublicApi.v1.DTO.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\PublicApi.v1.DTO\\PublicApi.v1.DTO.csproj"
+            },
+            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\PublicApi.v1\\PublicApi.v1.csproj": {
+              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\PublicApi.v1\\PublicApi.v1.csproj"
             },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Resources\\Resources.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Resources\\Resources.csproj"

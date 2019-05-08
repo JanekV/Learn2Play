@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Tabs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Tab>>> GetTabs()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Tab>>> GetTabs()
         {
             return Ok(await _bll.Tabs.AllAsyncWithInclude());
         }
 
         // GET: api/Tabs/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Tab>> GetTab(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Tab>> GetTab(int id)
         {
             var tab = await _bll.Tabs.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Tabs/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTab(int id, BLL.App.DTO.DomainEntityDTOs.Tab tab)
+        public async Task<IActionResult> PutTab(int id, PublicApi.v1.DTO.DomainEntityDTOs.Tab tab)
         {
             if (id != tab.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Tabs
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Tab>> PostTab(BLL.App.DTO.DomainEntityDTOs.Tab tab)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Tab>> PostTab(PublicApi.v1.DTO.DomainEntityDTOs.Tab tab)
         {
             await _bll.Tabs.AddAsync(tab);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Tabs/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Tab>> DeleteTab(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Tab>> DeleteTab(int id)
         {
             var tab = await _bll.Tabs.FindAsync(id);
             if (tab == null)

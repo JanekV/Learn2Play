@@ -28,14 +28,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Notes
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Note>>> GetNotes()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Note>>> GetNotes()
         {
             return Ok(await _bll.Notes.AllAsync());
         }
 
         // GET: api/Notes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Note>> GetNote(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Note>> GetNote(int id)
         {
             var note = await _bll.Notes.FindAsync(id);
 
@@ -49,7 +49,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Notes/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutNote(int id, BLL.App.DTO.DomainEntityDTOs.Note note)
+        public async Task<IActionResult> PutNote(int id, PublicApi.v1.DTO.DomainEntityDTOs.Note note)
         {
             if (id != note.Id)
             {
@@ -64,7 +64,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Notes
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Note>> PostNote(BLL.App.DTO.DomainEntityDTOs.Note note)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Note>> PostNote(PublicApi.v1.DTO.DomainEntityDTOs.Note note)
         {
             await _bll.Notes.AddAsync(note);
             await _bll.SaveChangesAsync();
@@ -74,7 +74,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Notes/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Note>> DeleteNote(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Note>> DeleteNote(int id)
         {
             var note = await _bll.Notes.FindAsync(id);
             if (note == null)

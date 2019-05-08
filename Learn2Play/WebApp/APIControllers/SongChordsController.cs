@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/SongChords
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.SongChord>>> GetSongChords()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.SongChord>>> GetSongChords()
         {
             return Ok(await _bll.SongChords.AllAsyncWithInclude());
         }
 
         // GET: api/SongChords/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongChord>> GetSongChord(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongChord>> GetSongChord(int id)
         {
             var songChord = await _bll.SongChords.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/SongChords/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSongChord(int id, BLL.App.DTO.DomainEntityDTOs.SongChord songChord)
+        public async Task<IActionResult> PutSongChord(int id, PublicApi.v1.DTO.DomainEntityDTOs.SongChord songChord)
         {
             if (id != songChord.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/SongChords
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongChord>> PostSongChord(BLL.App.DTO.DomainEntityDTOs.SongChord songChord)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongChord>> PostSongChord(PublicApi.v1.DTO.DomainEntityDTOs.SongChord songChord)
         {
             await _bll.SongChords.AddAsync(songChord);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/SongChords/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongChord>> DeleteSongChord(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongChord>> DeleteSongChord(int id)
         {
             var songChord = await _bll.SongChords.FindAsync(id);
             if (songChord == null)

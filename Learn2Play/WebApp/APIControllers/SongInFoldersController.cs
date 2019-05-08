@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/SongInFolders
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.SongInFolder>>> GetSongInFolders()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>>> GetSongInFolders()
         {
             return Ok(await _bll.SongInFolders.AllAsyncWithInclude());
         }
 
         // GET: api/SongInFolders/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongInFolder>> GetSongInFolder(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>> GetSongInFolder(int id)
         {
             var songInFolder = await _bll.SongInFolders.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/SongInFolders/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSongInFolder(int id, BLL.App.DTO.DomainEntityDTOs.SongInFolder songInFolder)
+        public async Task<IActionResult> PutSongInFolder(int id, PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder songInFolder)
         {
             if (id != songInFolder.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/SongInFolders
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongInFolder>> PostSongInFolder(BLL.App.DTO.DomainEntityDTOs.SongInFolder songInFolder)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>> PostSongInFolder(PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder songInFolder)
         {
             await _bll.SongInFolders.AddAsync(songInFolder);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/SongInFolders/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongInFolder>> DeleteSongInFolder(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInFolder>> DeleteSongInFolder(int id)
         {
             var songInFolder = await _bll.SongInFolders.FindAsync(id);
             if (songInFolder == null)

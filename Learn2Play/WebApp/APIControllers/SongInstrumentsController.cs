@@ -26,14 +26,14 @@ namespace WebApp.APIControllers
 
         // GET: api/SongInstruments
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.SongInstrument>>> GetSongInstruments()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>>> GetSongInstruments()
         {
             return Ok(await _bll.SongInstruments.AllAsyncWithInclude());
         }
 
         // GET: api/SongInstruments/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongInstrument>> GetSongInstrument(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>> GetSongInstrument(int id)
         {
             var songInstrument = await _bll.SongInstruments.FindAsync(id);
 
@@ -47,7 +47,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/SongInstruments/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSongInstrument(int id, BLL.App.DTO.DomainEntityDTOs.SongInstrument songInstrument)
+        public async Task<IActionResult> PutSongInstrument(int id, PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument songInstrument)
         {
             if (id != songInstrument.Id)
             {
@@ -62,7 +62,7 @@ namespace WebApp.APIControllers
 
         // POST: api/SongInstruments
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongInstrument>> PostSongInstrument(BLL.App.DTO.DomainEntityDTOs.SongInstrument songInstrument)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>> PostSongInstrument(PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument songInstrument)
         {
             await _bll.SongInstruments.AddAsync(songInstrument);
             await _bll.SaveChangesAsync();
@@ -72,7 +72,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/SongInstruments/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongInstrument>> DeleteSongInstrument(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongInstrument>> DeleteSongInstrument(int id)
         {
             var songInstrument = await _bll.SongInstruments.FindAsync(id);
             if (songInstrument == null)

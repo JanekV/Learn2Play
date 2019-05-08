@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/SongKeys
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.SongKey>>> GetSongKeys()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.SongKey>>> GetSongKeys()
         {
             return Ok(await _bll.SongKeys.AllAsyncWithInclude());
         }
 
         // GET: api/SongKeys/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongKey>> GetSongKey(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongKey>> GetSongKey(int id)
         {
             var songKey = await _bll.SongKeys.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/SongKeys/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSongKey(int id, BLL.App.DTO.DomainEntityDTOs.SongKey songKey)
+        public async Task<IActionResult> PutSongKey(int id, PublicApi.v1.DTO.DomainEntityDTOs.SongKey songKey)
         {
             if (id != songKey.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/SongKeys
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongKey>> PostSongKey(BLL.App.DTO.DomainEntityDTOs.SongKey songKey)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongKey>> PostSongKey(PublicApi.v1.DTO.DomainEntityDTOs.SongKey songKey)
         {
             await _bll.SongKeys.AddAsync(songKey);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/SongKeys/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.SongKey>> DeleteSongKey(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.SongKey>> DeleteSongKey(int id)
         {
             var songKey = await _bll.SongKeys.FindAsync(id);
             if (songKey == null)

@@ -25,14 +25,14 @@ namespace WebApp.APIControllers
 
         // GET: api/Videos
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<BLL.App.DTO.DomainEntityDTOs.Video>>> GetVideos()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Video>>> GetVideos()
         {
             return Ok(await _bll.Videos.AllAsyncWithInclude());
         }
 
         // GET: api/Videos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Video>> GetVideo(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Video>> GetVideo(int id)
         {
             var video = await _bll.Videos.FindAsync(id);
 
@@ -46,7 +46,7 @@ namespace WebApp.APIControllers
 
         // PUT: api/Videos/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutVideo(int id, BLL.App.DTO.DomainEntityDTOs.Video video)
+        public async Task<IActionResult> PutVideo(int id, PublicApi.v1.DTO.DomainEntityDTOs.Video video)
         {
             if (id != video.Id)
             {
@@ -61,7 +61,7 @@ namespace WebApp.APIControllers
 
         // POST: api/Videos
         [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Video>> PostVideo(BLL.App.DTO.DomainEntityDTOs.Video video)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Video>> PostVideo(PublicApi.v1.DTO.DomainEntityDTOs.Video video)
         {
             await _bll.Videos.AddAsync(video);
             await _bll.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace WebApp.APIControllers
 
         // DELETE: api/Videos/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.DomainEntityDTOs.Video>> DeleteVideo(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Video>> DeleteVideo(int id)
         {
             var video = await _bll.Videos.FindAsync(id);
             if (video == null)
