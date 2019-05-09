@@ -2,6 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Threading.Tasks;
 using Domain.Identity;
 using Identity;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -9,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using WebApp.Areas.Identity.Pages.Account;
 
-namespace WebApp.APIControllers.v1_0.Identity
+namespace WebApp.ApiControllers.v1_0.Identity
 {
     [ApiVersion( "1.0" )]
     [Route("api/v{version:apiVersion}/[controller]/[action]")]
@@ -31,6 +32,15 @@ namespace WebApp.APIControllers.v1_0.Identity
             _emailSender = emailSender;
         }
 
+        /// <summary>
+        /// Login method from API using JWT.
+        /// </summary>
+        /// <param name="model">DTO which contains the email and password.</param>
+        /// <returns>JWT</returns>
+        /// <response code="200">JWT was successfully retrieved.</response>
+        /// <response code="403">Couldn't log in.</response>
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden)]
         [HttpPost]
         public async Task<ActionResult<string>> Login([FromBody] LoginDTO model)
         {
@@ -65,6 +75,17 @@ namespace WebApp.APIControllers.v1_0.Identity
             return StatusCode(403);
         }
         
+        /// <summary>
+        /// Register method from API using JWT.
+        /// </summary>
+        /// <param name="model">DTO which contains the email and password. Password must be at least 6 characters long</param>
+        /// <returns>JWT</returns>
+        /// <response code="200">JWT was successfully retrieved.</response>
+        /// <response code="406">Couldn't register.</response>
+        /// <response code="400">ModelState was invalid.</response>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status406NotAcceptable)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpPost]
         public async Task<ActionResult<string>> Register([FromBody] RegisterDTO model)
         {

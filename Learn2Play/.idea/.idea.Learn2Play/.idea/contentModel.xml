@@ -527,26 +527,28 @@
         </e>
       </e>
       <e p="WebApp" t="IncludeRecursive">
-        <e p="APIControllers.v1_0" t="Include">
-          <e p="ChordNotesController.cs" t="Include" />
-          <e p="ChordsController.cs" t="Include" />
-          <e p="FoldersController.cs" t="Include" />
-          <e p="Identity" t="Include">
-            <e p="AccountController.cs" t="Include" />
+        <e p="ApiControllers" t="Include">
+          <e p="v1_0" t="Include">
+            <e p="ChordNotesController.cs" t="Include" />
+            <e p="ChordsController.cs" t="Include" />
+            <e p="FoldersController.cs" t="Include" />
+            <e p="Identity" t="Include">
+              <e p="AccountController.cs" t="Include" />
+            </e>
+            <e p="InstrumentsController.cs" t="Include" />
+            <e p="NotesController.cs" t="Include" />
+            <e p="SongChordsController.cs" t="Include" />
+            <e p="SongInFoldersController.cs" t="Include" />
+            <e p="SongInstrumentsController.cs" t="Include" />
+            <e p="SongKeysController.cs" t="Include" />
+            <e p="SongsController.cs" t="Include" />
+            <e p="SongStylesController.cs" t="Include" />
+            <e p="StylesController.cs" t="Include" />
+            <e p="TabsController.cs" t="Include" />
+            <e p="TuningNotesController.cs" t="Include" />
+            <e p="UserInstrumentsController.cs" t="Include" />
+            <e p="VideosController.cs" t="Include" />
           </e>
-          <e p="InstrumentsController.cs" t="Include" />
-          <e p="NotesController.cs" t="Include" />
-          <e p="SongChordsController.cs" t="Include" />
-          <e p="SongInFoldersController.cs" t="Include" />
-          <e p="SongInstrumentsController.cs" t="Include" />
-          <e p="SongKeysController.cs" t="Include" />
-          <e p="SongsController.cs" t="Include" />
-          <e p="SongStylesController.cs" t="Include" />
-          <e p="StylesController.cs" t="Include" />
-          <e p="TabsController.cs" t="Include" />
-          <e p="TuningNotesController.cs" t="Include" />
-          <e p="UserInstrumentsController.cs" t="Include" />
-          <e p="VideosController.cs" t="Include" />
         </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
