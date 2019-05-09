@@ -108,7 +108,7 @@ namespace WebApp
             });
             
             services
-                .AddMvc()
+                .AddMvc(options => options.EnableEndpointRouting = true)
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2)
                 .AddRazorPagesOptions(options =>
                 {
@@ -120,6 +120,11 @@ namespace WebApp
                     //options.SerializerSettings.PreserveReferencesHandling = PreserveReferencesHandling.Objects;
                     options.SerializerSettings.Formatting = Formatting.Indented;
                 });
+
+            services.AddApiVersioning(options =>
+            {
+                options.ReportApiVersions = true;
+            });
             
             services.ConfigureApplicationCookie(options =>
             {

@@ -7,8 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace WebApp.APIControllers.v1_0
 {
     [ApiVersion("1.0")]
-    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ChordNotesController : ControllerBase
     {
         private readonly IAppBLL _bll;

@@ -19,7 +19,7 @@ namespace WebApp
                 options.SwaggerDoc(
                     description.GroupName,
                     new Info(){
-                        Title = $"Contact API {description.ApiVersion}",
+                        Title = $"Learn2Play API {description.ApiVersion}",
                         Version = description.ApiVersion.ToString()
                     });
                 // include xml comments (enable creation in csproj file)
