@@ -1,5 +1,6 @@
 using System;
 using Contracts.DAL.Base.Mappers;
+using Domain;
 using DALAppDTO = DAL.App.DTO;
 
 
@@ -28,7 +29,7 @@ namespace DAL.App.EF.Mappers
             var res = style == null ? null : new DALAppDTO.DomainEntityDTOs.Style
             {
                 Id = style.Id,
-                Name = style.Name,
+                Name = style.Name.Translate(),
                 Description = style.Description   
             };
 
@@ -41,7 +42,7 @@ namespace DAL.App.EF.Mappers
             var res = style == null ? null : new Domain.Style
             {
                 Id = style.Id,
-                Name = style.Name,
+                Name = new Domain.MultiLangString(style.Name),
                 Description = style.Description   
             };
 

@@ -6,10 +6,8 @@ namespace Domain
     public class Style: DomainEntity
     {
 
-        [MaxLength(64)]
-        [MinLength(1)]
-        [Required]
-        public string Name { get; set; }
+        public int NameId { get; set; }
+        public MultiLangString Name { get; set; }
         
         [MaxLength(1000)]
         [MinLength(1)]

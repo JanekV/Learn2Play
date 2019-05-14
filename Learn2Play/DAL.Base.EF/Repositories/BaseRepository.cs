@@ -32,6 +32,8 @@ namespace DAL.Base.EF.Repositories
         protected readonly DbSet<TDomainEntity> RepositoryDbSet;
 
         private readonly IBaseDALMapper _mapper;
+        
+        protected readonly IDictionary<TKey, TDomainEntity> EntityCreationCache = new Dictionary<TKey, TDomainEntity>();
 
         public BaseRepository(TDbContext repositoryDbContext, IBaseDALMapper mapper)
         {
@@ -56,6 +58,15 @@ namespace DAL.Base.EF.Repositories
         {
             RepositoryDbSet.Remove(RepositoryDbSet.Find(id));
         }
+        
+        public TDALEntity GetUpdatesAfterUOWSaveChanges(TDALEntity entity)
+        {
+            var domainEntity = _mapper.Map<TDomainEntity>(entity);
+            return EntityCreationCache.ContainsKey(domainEntity.Id)
+                ? _mapper.Map<TDALEntity>(EntityCreationCache[domainEntity.Id])
+                : entity;
+        }
+
 
         public virtual async Task<List<TDALEntity>> AllAsync()
         {
@@ -68,9 +79,13 @@ namespace DAL.Base.EF.Repositories
             return _mapper.Map<TDALEntity>( (await RepositoryDbSet.FindAsync(id)));
         }
 
-        public virtual async Task AddAsync(TDALEntity entity)
+        public virtual async Task<TDALEntity> AddAsync(TDALEntity entity)
         {
-            await RepositoryDbSet.AddAsync(_mapper.Map<TDomainEntity>(entity));
+            //EntityCreationCache
+            var res = (await RepositoryDbSet.AddAsync(_mapper.Map<TDomainEntity>(entity))).Entity;
+            EntityCreationCache.Add(res.Id, res);
+            return _mapper.Map<TDALEntity>(res);
+
         }
 
         public List<TDALEntity> All()

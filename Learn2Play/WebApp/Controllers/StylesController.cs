@@ -35,7 +35,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _bll.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id.Value);
             if (style == null)
             {
                 return NotFound();
@@ -74,7 +74,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _bll.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id.Value);
             if (style == null)
             {
                 return NotFound();
@@ -111,7 +111,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var style = await _bll.Styles.FindAsync(id);
+            var style = await _bll.Styles.FindAsync(id.Value);
             if (style == null)
             {
                 return NotFound();
