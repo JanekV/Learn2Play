@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using BLL.App.Mappers;
-using BLL.Base.Services;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
 using Domain;
+using ee.itcollege.javalg.BLL.Base.Services;
 using ChordNote = BLL.App.DTO.DomainEntityDTOs.ChordNote;
 
 namespace BLL.App.Services

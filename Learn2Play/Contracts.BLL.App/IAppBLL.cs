@@ -1,5 +1,5 @@
 using Contracts.BLL.App.Services;
-using Contracts.BLL.Base;
+using ee.itcollege.javalg.Contracts.BLL.Base;
 
 namespace Contracts.BLL.App
 {

@@ -1,5 +1,5 @@
 using System;
-using Contracts.BLL.Base.Mappers;
+using ee.itcollege.javalg.Contracts.BLL.Base.Mappers;
 
 namespace BLL.App.Mappers
 {

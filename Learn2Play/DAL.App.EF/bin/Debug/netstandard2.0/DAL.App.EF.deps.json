@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "c88bae29ab58113f584b23c65d31d94ee7ed34cd"
+    "signature": "a5df2ab31c89f50870bff4115e44f15d1f1a7880"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,12 +11,13 @@
         "dependencies": {
           "Contracts.DAL.App": "1.0.0",
           "DAL.App.DTO": "1.0.0",
-          "DAL.Base.EF": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
           "NETStandard.Library": "2.0.3",
-          "Pomelo.EntityFrameworkCore.MySql": "2.2.0"
+          "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0",
+          "ee.itcollege.javalg.DAL.Base.EF": "1.0.0"
         },
         "runtime": {
           "DAL.App.EF.dll": {}
@@ -31,6 +32,30 @@
           "lib/netstandard2.0/AutoMapper.dll": {
             "assemblyVersion": "8.0.0.0",
             "fileVersion": "8.0.0.0"
+          }
+        }
+      },
+      "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ee.itcollege.javalg.DAL.Base.EF/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.2",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.DAL.Base.EF.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -980,20 +1005,12 @@
       },
       "Contracts.DAL.App/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "DAL.App.DTO": "1.0.0",
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "runtime": {
           "Contracts.DAL.App.dll": {}
-        }
-      },
-      "Contracts.DAL.Base/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "runtime": {
-          "Contracts.DAL.Base.dll": {}
         }
       },
       "DAL.App.DTO/1.0.0": {
@@ -1005,21 +1022,11 @@
           "DAL.App.DTO.dll": {}
         }
       },
-      "DAL.Base.EF/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "8.0.0",
-          "Contracts.DAL.Base": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "runtime": {
-          "DAL.Base.EF.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.Extensions.Identity.Stores": "2.2.0"
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "runtime": {
           "Domain.dll": {}
@@ -1039,6 +1046,20 @@
       "sha512": "sha512-kcbje0Y71XkvzPn8k6OROZGOn2SKaWimon3Bu1WUTVoV5GTJVym+k+zQuKApyyFVRfk7bisumj/qUX4xIIXS+Q==",
       "path": "automapper/8.0.0",
       "hashPath": "automapper.8.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ya6V1DQMzN0YXnurbECN5XDky+Oaav1GfZvVZPOVIOs/7eE/o8EI9v8D6nhLFmLVDKmtk2WnOplADBihi48+XA==",
+      "path": "ee.itcollege.javalg.contracts.dal.base/1.0.0",
+      "hashPath": "ee.itcollege.javalg.contracts.dal.base.1.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.DAL.Base.EF/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-20qX+BXbaKjm5PW2dC61/akRSffts0icumRvOrkdDPj6pGXUf/wibf3VS+56p4JhrLb3PDMzIefl3BGls/4Img==",
+      "path": "ee.itcollege.javalg.dal.base.ef/1.0.0",
+      "hashPath": "ee.itcollege.javalg.dal.base.ef.1.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
@@ -1647,17 +1668,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Contracts.DAL.Base/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "DAL.App.DTO/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DAL.Base.EF/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

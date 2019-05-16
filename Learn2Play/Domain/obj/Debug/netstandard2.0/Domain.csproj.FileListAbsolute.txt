@@ -10,12 +10,9 @@ C:\Users\Janek\RiderProjects\DistSySGit\Learn2Play\Domain\obj\Debug\netstandard2
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\bin\Debug\netstandard2.0\Domain.deps.json
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\bin\Debug\netstandard2.0\Domain.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\bin\Debug\netstandard2.0\Domain.pdb
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\bin\Debug\netstandard2.0\Contracts.DAL.Base.dll
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\bin\Debug\netstandard2.0\Contracts.DAL.Base.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.csprojAssemblyReference.cache
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.csproj.CoreCompileInputs.cache
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfoInputs.cache
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.AssemblyInfo.cs
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.csproj.CopyComplete
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Domain\obj\Debug\netstandard2.0\Domain.pdb

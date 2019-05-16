@@ -1,6 +1,6 @@
-using Contracts.BLL.Base.Services;
 using Contracts.DAL.App.Repositories;
 using Domain.Identity;
+using ee.itcollege.javalg.Contracts.BLL.Base.Services;
 
 namespace Contracts.BLL.App.Services
 {

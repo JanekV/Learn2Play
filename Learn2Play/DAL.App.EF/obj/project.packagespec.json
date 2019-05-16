@@ -25,9 +25,6 @@
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj"
           },
-          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj": {
-            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj"
-          },
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj"
           }
@@ -60,6 +57,14 @@
         "Pomelo.EntityFrameworkCore.MySql": {
           "target": "Package",
           "version": "[2.2.0, )"
+        },
+        "ee.itcollege.javalg.Contracts.DAL.Base": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "ee.itcollege.javalg.DAL.Base.EF": {
+          "target": "Package",
+          "version": "[1.0.0, )"
         }
       },
       "imports": [

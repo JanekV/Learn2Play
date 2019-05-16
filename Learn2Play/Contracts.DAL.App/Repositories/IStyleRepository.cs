@@ -1,4 +1,4 @@
-using Contracts.DAL.Base.Repositories;
+using ee.itcollege.javalg.Contracts.DAL.Base.Repositories;
 using DALAppDTO = DAL.App.DTO;
 
 namespace Contracts.DAL.App.Repositories

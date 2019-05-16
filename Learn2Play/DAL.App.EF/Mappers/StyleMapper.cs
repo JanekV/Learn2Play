@@ -1,5 +1,5 @@
 using System;
-using Contracts.DAL.Base.Mappers;
+using ee.itcollege.javalg.Contracts.DAL.Base.Mappers;
 using Domain;
 using DALAppDTO = DAL.App.DTO;
 

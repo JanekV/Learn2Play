@@ -1,5 +1,5 @@
-using Contracts.DAL.Base.Repositories;
 using Domain.Identity;
+using ee.itcollege.javalg.Contracts.DAL.Base.Repositories;
 
 namespace Contracts.DAL.App.Repositories
 {

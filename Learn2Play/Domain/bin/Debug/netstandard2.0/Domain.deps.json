@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "0d463c53e67328981b9f56c115139293778fbc5c"
+    "signature": "b0cef84961aafea6a20238a5359f93f5f62b3e79"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,13 +9,24 @@
     ".NETStandard,Version=v2.0/": {
       "Domain/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.Extensions.Identity.Stores": "2.2.0",
-          "NETStandard.Library": "2.0.3"
+          "NETStandard.Library": "2.0.3",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -894,14 +905,6 @@
           "Microsoft.NETCore.Targets": "1.0.1",
           "System.Runtime": "4.1.0"
         }
-      },
-      "Contracts.DAL.Base/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "runtime": {
-          "Contracts.DAL.Base.dll": {}
-        }
       }
     }
   },
@@ -910,6 +913,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ya6V1DQMzN0YXnurbECN5XDky+Oaav1GfZvVZPOVIOs/7eE/o8EI9v8D6nhLFmLVDKmtk2WnOplADBihi48+XA==",
+      "path": "ee.itcollege.javalg.contracts.dal.base/1.0.0",
+      "hashPath": "ee.itcollege.javalg.contracts.dal.base.1.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "type": "package",
@@ -1470,11 +1480,6 @@
       "sha512": "sha512-k1S4Gc6IGwtHGT8188RSeGaX86Qw/wnrgNLshJvsdNUOPP9etMmo8S07c+UlOAx4K/xLuN9ivA1bD0LVurtIxQ==",
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
-    },
-    "Contracts.DAL.Base/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

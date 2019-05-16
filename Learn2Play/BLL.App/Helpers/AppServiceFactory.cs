@@ -1,8 +1,8 @@
 using BLL.App.Services;
-using BLL.Base.Helpers;
 using Contracts.BLL.App.Services;
-using Contracts.BLL.Base.Helpers;
 using Contracts.DAL.App;
+using ee.itcollege.javalg.BLL.Base.Helpers;
+using ee.itcollege.javalg.Contracts.BLL.Base.Helpers;
 
 namespace BLL.App.Helpers
 {

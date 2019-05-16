@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "b571c2ff09f1234fc7743b513704c2e32ffe7c6b"
+    "signature": "1ed2ee5026c9e9884bcdb67ce2e6fe56c8f2dcf2"
   },
   "compilationOptions": {
     "defines": [
@@ -25,10 +25,7 @@
       "WebApp/1.0.0": {
         "dependencies": {
           "BLL.App": "1.0.0",
-          "BLL.Base": "1.0.0",
-          "Contracts.BLL.Base": "1.0.0",
           "DAL.App.EF": "1.0.0",
-          "Identity": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Mvc.Versioning": "3.1.2",
           "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": "3.2.0",
@@ -39,7 +36,12 @@
           "PublicApi.v1": "1.0.0",
           "PublicApi.v1.DTO": "1.0.0",
           "Resources": "1.0.0",
-          "Swashbuckle.AspNetCore": "4.0.1"
+          "Swashbuckle.AspNetCore": "4.0.1",
+          "ee.itcollege.javalg.BLL.Base": "1.0.0",
+          "ee.itcollege.javalg.Contracts.BLL.Base": "1.0.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0",
+          "ee.itcollege.javalg.DAL.Base.EF": "1.0.0",
+          "ee.itcollege.javalg.Identity": "1.0.0"
         },
         "runtime": {
           "WebApp.dll": {}
@@ -61,6 +63,91 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.BLL.Base/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.1.0",
+          "ee.itcollege.javalg.Contracts.BLL.Base": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.BLL.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.BLL.Base.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.Contracts.Base/1.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.Base.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.Contracts.BLL.Base/1.0.0": {
+        "dependencies": {
+          "ee.itcollege.javalg.Contracts.Base": "1.0.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.BLL.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.BLL.Base.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.DAL.Base.EF/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "8.1.0",
+          "Microsoft.EntityFrameworkCore": "2.2.2",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.DAL.Base.EF.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.DAL.Base.EF.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.Identity/1.0.0": {
+        "dependencies": {
+          "System.IdentityModel.Tokens.Jwt": "5.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Identity.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Identity.dll": {}
         }
       },
       "Microsoft.AspNetCore.Mvc.Versioning/3.1.2": {
@@ -770,11 +857,11 @@
       "BLL.App/1.0.0": {
         "dependencies": {
           "BLL.App.DTO": "1.0.0",
-          "BLL.Base": "1.0.0",
           "Contracts.BLL.App": "1.0.0",
-          "Contracts.BLL.Base": "1.0.0",
           "Contracts.DAL.App": "1.0.0",
-          "DAL.App.EF": "1.0.0"
+          "DAL.App.EF": "1.0.0",
+          "ee.itcollege.javalg.BLL.Base": "1.0.0",
+          "ee.itcollege.javalg.Contracts.BLL.Base": "1.0.0"
         },
         "runtime": {
           "BLL.App.dll": {}
@@ -796,73 +883,30 @@
           "BLL.App.DTO.dll": {}
         }
       },
-      "BLL.Base/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "8.1.0",
-          "Contracts.BLL.Base": "1.0.0"
-        },
-        "runtime": {
-          "BLL.Base.dll": {}
-        },
-        "compile": {
-          "BLL.Base.dll": {}
-        }
-      },
-      "Contracts.Base/1.0.0": {
-        "runtime": {
-          "Contracts.Base.dll": {}
-        },
-        "compile": {
-          "Contracts.Base.dll": {}
-        }
-      },
       "Contracts.BLL.App/1.0.0": {
         "dependencies": {
           "BLL.App.DTO": "1.0.0",
-          "Contracts.BLL.Base": "1.0.0",
-          "Contracts.DAL.App": "1.0.0"
+          "Contracts.DAL.App": "1.0.0",
+          "ee.itcollege.javalg.Contracts.BLL.Base": "1.0.0"
         },
         "runtime": {
           "Contracts.BLL.App.dll": {}
         },
         "compile": {
           "Contracts.BLL.App.dll": {}
-        }
-      },
-      "Contracts.BLL.Base/1.0.0": {
-        "dependencies": {
-          "Contracts.Base": "1.0.0",
-          "Contracts.DAL.Base": "1.0.0"
-        },
-        "runtime": {
-          "Contracts.BLL.Base.dll": {}
-        },
-        "compile": {
-          "Contracts.BLL.Base.dll": {}
         }
       },
       "Contracts.DAL.App/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "DAL.App.DTO": "1.0.0",
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "runtime": {
           "Contracts.DAL.App.dll": {}
         },
         "compile": {
           "Contracts.DAL.App.dll": {}
-        }
-      },
-      "Contracts.DAL.Base/1.0.0": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "runtime": {
-          "Contracts.DAL.Base.dll": {}
-        },
-        "compile": {
-          "Contracts.DAL.Base.dll": {}
         }
       },
       "DAL.App.DTO/1.0.0": {
@@ -881,54 +925,31 @@
         "dependencies": {
           "Contracts.DAL.App": "1.0.0",
           "DAL.App.DTO": "1.0.0",
-          "DAL.Base.EF": "1.0.0",
           "Domain": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.2",
-          "Pomelo.EntityFrameworkCore.MySql": "2.2.0"
+          "Pomelo.EntityFrameworkCore.MySql": "2.2.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0",
+          "ee.itcollege.javalg.DAL.Base.EF": "1.0.0"
         },
         "runtime": {
           "DAL.App.EF.dll": {}
         },
         "compile": {
           "DAL.App.EF.dll": {}
-        }
-      },
-      "DAL.Base.EF/1.0.0": {
-        "dependencies": {
-          "AutoMapper": "8.1.0",
-          "Contracts.DAL.Base": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "runtime": {
-          "DAL.Base.EF.dll": {}
-        },
-        "compile": {
-          "DAL.Base.EF.dll": {}
         }
       },
       "Domain/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.Extensions.Identity.Stores": "2.2.0"
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "runtime": {
           "Domain.dll": {}
         },
         "compile": {
           "Domain.dll": {}
-        }
-      },
-      "Identity/1.0.0": {
-        "dependencies": {
-          "System.IdentityModel.Tokens.Jwt": "5.4.0"
-        },
-        "runtime": {
-          "Identity.dll": {}
-        },
-        "compile": {
-          "Identity.dll": {}
         }
       },
       "PublicApi.v1/1.0.0": {
@@ -3954,6 +3975,48 @@
       "path": "automapper/8.1.0",
       "hashPath": "automapper.8.1.0.nupkg.sha512"
     },
+    "ee.itcollege.javalg.BLL.Base/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ImlLBKxKI7iycJwv9XwQVfsnK0yvq9c4nv5JHF0uQcj0lyvzvxrRZZRFTDYZLT2c7i5D9HS0eRG6KgnG0XKRVQ==",
+      "path": "ee.itcollege.javalg.bll.base/1.0.0",
+      "hashPath": "ee.itcollege.javalg.bll.base.1.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.Contracts.Base/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yUJzmfJGvIplVn5SP2RH2o0r3vJN67ch0+dYmwZCjalSm856rxmsLtWYNzajfiZSL/BC20x7fsQYfzQhHnv6nA==",
+      "path": "ee.itcollege.javalg.contracts.base/1.0.0",
+      "hashPath": "ee.itcollege.javalg.contracts.base.1.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.Contracts.BLL.Base/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-M4Col1olzxtmhxA9riQ8sDSjrUlhWElfbyZomyiXMXfCSbRS6K4uSrwMBeeGk6eSv39fUSNyu5NI90jy4Wo5Wg==",
+      "path": "ee.itcollege.javalg.contracts.bll.base/1.0.0",
+      "hashPath": "ee.itcollege.javalg.contracts.bll.base.1.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ya6V1DQMzN0YXnurbECN5XDky+Oaav1GfZvVZPOVIOs/7eE/o8EI9v8D6nhLFmLVDKmtk2WnOplADBihi48+XA==",
+      "path": "ee.itcollege.javalg.contracts.dal.base/1.0.0",
+      "hashPath": "ee.itcollege.javalg.contracts.dal.base.1.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.DAL.Base.EF/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-20qX+BXbaKjm5PW2dC61/akRSffts0icumRvOrkdDPj6pGXUf/wibf3VS+56p4JhrLb3PDMzIefl3BGls/4Img==",
+      "path": "ee.itcollege.javalg.dal.base.ef/1.0.0",
+      "hashPath": "ee.itcollege.javalg.dal.base.ef.1.0.0.nupkg.sha512"
+    },
+    "ee.itcollege.javalg.Identity/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QwK0rReRdPghq5qXQ9EFBkXpRWzhckxZ4OsPUqxzsmb6JzRRcXxw3FieCIZCeDfUIZA0PMECCLJzSBZ4N1jqYw==",
+      "path": "ee.itcollege.javalg.identity/1.0.0",
+      "hashPath": "ee.itcollege.javalg.identity.1.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Versioning/3.1.2": {
       "type": "package",
       "serviceable": true,
@@ -4279,32 +4342,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "BLL.Base/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Contracts.Base/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Contracts.BLL.App/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Contracts.BLL.Base/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Contracts.DAL.App/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Contracts.DAL.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -4319,17 +4362,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "DAL.Base.EF/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Identity/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

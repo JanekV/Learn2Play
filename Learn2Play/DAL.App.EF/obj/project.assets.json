@@ -15,6 +15,32 @@
           "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
+      "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {}
+        }
+      },
+      "ee.itcollege.javalg.DAL.Base.EF/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "AutoMapper": "8.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.2",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.DAL.Base.EF.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.DAL.Base.EF.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1143,28 +1169,15 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "DAL.App.DTO": "1.0.0",
-          "Domain": "1.0.0"
+          "Domain": "1.0.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Contracts.DAL.App.dll": {}
         },
         "runtime": {
           "bin/placeholder/Contracts.DAL.App.dll": {}
-        }
-      },
-      "Contracts.DAL.Base/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "compile": {
-          "bin/placeholder/Contracts.DAL.Base.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Contracts.DAL.Base.dll": {}
         }
       },
       "DAL.App.DTO/1.0.0": {
@@ -1181,28 +1194,13 @@
           "bin/placeholder/DAL.App.DTO.dll": {}
         }
       },
-      "DAL.Base.EF/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "AutoMapper": "8.0.0",
-          "Contracts.DAL.Base": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "compile": {
-          "bin/placeholder/DAL.Base.EF.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DAL.Base.EF.dll": {}
-        }
-      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.Extensions.Identity.Stores": "2.2.0"
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1229,6 +1227,30 @@
         "lib/netstandard2.0/AutoMapper.dll",
         "lib/netstandard2.0/AutoMapper.pdb",
         "lib/netstandard2.0/AutoMapper.xml"
+      ]
+    },
+    "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+      "sha512": "Ya6V1DQMzN0YXnurbECN5XDky+Oaav1GfZvVZPOVIOs/7eE/o8EI9v8D6nhLFmLVDKmtk2WnOplADBihi48+XA==",
+      "type": "package",
+      "path": "ee.itcollege.javalg.contracts.dal.base/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ee.itcollege.javalg.contracts.dal.base.1.0.0.nupkg.sha512",
+        "ee.itcollege.javalg.contracts.dal.base.nuspec",
+        "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll"
+      ]
+    },
+    "ee.itcollege.javalg.DAL.Base.EF/1.0.0": {
+      "sha512": "20qX+BXbaKjm5PW2dC61/akRSffts0icumRvOrkdDPj6pGXUf/wibf3VS+56p4JhrLb3PDMzIefl3BGls/4Img==",
+      "type": "package",
+      "path": "ee.itcollege.javalg.dal.base.ef/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ee.itcollege.javalg.dal.base.ef.1.0.0.nupkg.sha512",
+        "ee.itcollege.javalg.dal.base.ef.nuspec",
+        "lib/netstandard2.0/ee.itcollege.javalg.DAL.Base.EF.dll"
       ]
     },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
@@ -3975,20 +3997,10 @@
       "path": "../Contracts.DAL.App/Contracts.DAL.App.csproj",
       "msbuildProject": "../Contracts.DAL.App/Contracts.DAL.App.csproj"
     },
-    "Contracts.DAL.Base/1.0.0": {
-      "type": "project",
-      "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
-      "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
-    },
     "DAL.App.DTO/1.0.0": {
       "type": "project",
       "path": "../DAL.App.DTO/DAL.App.DTO.csproj",
       "msbuildProject": "../DAL.App.DTO/DAL.App.DTO.csproj"
-    },
-    "DAL.Base.EF/1.0.0": {
-      "type": "project",
-      "path": "../DAL.Base.EF/DAL.Base.EF.csproj",
-      "msbuildProject": "../DAL.Base.EF/DAL.Base.EF.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",
@@ -4000,12 +4012,13 @@
     ".NETStandard,Version=v2.0": [
       "Contracts.DAL.App >= 1.0.0",
       "DAL.App.DTO >= 1.0.0",
-      "DAL.Base.EF >= 1.0.0",
       "Domain >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 2.2.2",
       "NETStandard.Library >= 2.0.3",
-      "Pomelo.EntityFrameworkCore.MySql >= 2.2.0"
+      "Pomelo.EntityFrameworkCore.MySql >= 2.2.0",
+      "ee.itcollege.javalg.Contracts.DAL.Base >= 1.0.0",
+      "ee.itcollege.javalg.DAL.Base.EF >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4044,9 +4057,6 @@
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj"
             },
-            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj": {
-              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.Base.EF\\DAL.Base.EF.csproj"
-            },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Domain\\Domain.csproj"
             }
@@ -4079,6 +4089,14 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "ee.itcollege.javalg.Contracts.DAL.Base": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
+          "ee.itcollege.javalg.DAL.Base.EF": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

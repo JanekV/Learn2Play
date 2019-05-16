@@ -1,4 +1,4 @@
-using Contracts.BLL.Base.Services;
+using ee.itcollege.javalg.Contracts.BLL.Base.Services;
 using Contracts.DAL.App.Repositories;
 using BLLAppDTO = BLL.App.DTO.DomainEntityDTOs;
 

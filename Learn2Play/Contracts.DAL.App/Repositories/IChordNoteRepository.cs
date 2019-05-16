@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Contracts.DAL.Base.Repositories;
+using ee.itcollege.javalg.Contracts.DAL.Base.Repositories;
 using Domain;
 using ChordNote = DAL.App.DTO.DomainEntityDTOs.ChordNote;
 using DALAppDTO = DAL.App.DTO;

@@ -1,8 +1,8 @@
-using BLL.Base;
 using Contracts.BLL.App;
 using Contracts.BLL.App.Services;
-using Contracts.BLL.Base.Helpers;
 using Contracts.DAL.App;
+using ee.itcollege.javalg.BLL.Base;
+using ee.itcollege.javalg.Contracts.BLL.Base.Helpers;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BLL.App

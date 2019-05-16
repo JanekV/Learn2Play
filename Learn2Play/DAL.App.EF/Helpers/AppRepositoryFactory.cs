@@ -1,6 +1,6 @@
 using Contracts.DAL.App.Repositories;
 using DAL.App.EF.Repositories;
-using DAL.Base.EF.Helpers;
+using ee.itcollege.javalg.DAL.Base.EF.Helpers;
 
 namespace DAL.App.EF.Helpers
 {

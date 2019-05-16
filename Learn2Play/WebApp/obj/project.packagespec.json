@@ -22,17 +22,8 @@
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.App\\BLL.App.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.App\\BLL.App.csproj"
           },
-          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.Base\\BLL.Base.csproj": {
-            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\BLL.Base\\BLL.Base.csproj"
-          },
-          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj": {
-            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.BLL.Base\\Contracts.BLL.Base.csproj"
-          },
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.EF\\DAL.App.EF.csproj"
-          },
-          "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj": {
-            "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Identity\\Identity.csproj"
           },
           "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\PublicApi.v1.DTO\\PublicApi.v1.DTO.csproj": {
             "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\PublicApi.v1.DTO\\PublicApi.v1.DTO.csproj"
@@ -91,6 +82,26 @@
         "Swashbuckle.AspNetCore": {
           "target": "Package",
           "version": "[4.0.1, )"
+        },
+        "ee.itcollege.javalg.BLL.Base": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "ee.itcollege.javalg.Contracts.BLL.Base": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "ee.itcollege.javalg.Contracts.DAL.Base": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "ee.itcollege.javalg.DAL.Base.EF": {
+          "target": "Package",
+          "version": "[1.0.0, )"
+        },
+        "ee.itcollege.javalg.Identity": {
+          "target": "Package",
+          "version": "[1.0.0, )"
         }
       },
       "imports": [

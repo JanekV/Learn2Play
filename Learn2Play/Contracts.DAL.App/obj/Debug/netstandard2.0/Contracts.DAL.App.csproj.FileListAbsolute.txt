@@ -1,10 +1,8 @@
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.App.deps.json
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.App.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.App.pdb
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.Base.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\DAL.App.DTO.dll
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Domain.dll
-C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Contracts.DAL.Base.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\DAL.App.DTO.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\bin\Debug\netstandard2.0\Domain.pdb
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\Contracts.DAL.App\obj\Debug\netstandard2.0\Contracts.DAL.App.csprojAssemblyReference.cache

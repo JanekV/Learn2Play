@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
+      "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authentication/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -1053,19 +1065,6 @@
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
       },
-      "Contracts.DAL.Base/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "2.2.2"
-        },
-        "compile": {
-          "bin/placeholder/Contracts.DAL.Base.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Contracts.DAL.Base.dll": {}
-        }
-      },
       "DAL.App.DTO/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1084,9 +1083,9 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.2.0",
-          "Microsoft.Extensions.Identity.Stores": "2.2.0"
+          "Microsoft.Extensions.Identity.Stores": "2.2.0",
+          "ee.itcollege.javalg.Contracts.DAL.Base": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -1098,6 +1097,18 @@
     }
   },
   "libraries": {
+    "ee.itcollege.javalg.Contracts.DAL.Base/1.0.0": {
+      "sha512": "Ya6V1DQMzN0YXnurbECN5XDky+Oaav1GfZvVZPOVIOs/7eE/o8EI9v8D6nhLFmLVDKmtk2WnOplADBihi48+XA==",
+      "type": "package",
+      "path": "ee.itcollege.javalg.contracts.dal.base/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ee.itcollege.javalg.contracts.dal.base.1.0.0.nupkg.sha512",
+        "ee.itcollege.javalg.contracts.dal.base.nuspec",
+        "lib/netstandard2.0/ee.itcollege.javalg.Contracts.DAL.Base.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authentication/2.2.0": {
       "sha512": "b0R9X7L6zMqNsssKDvhYHuNi5x0s4DyHTeXybIAyGaitKiW1Q5aAGKdV2codHPiePv9yHfC9hAMyScXQ/xXhPw==",
       "type": "package",
@@ -3665,11 +3676,6 @@
         "system.threading.tasks.nuspec"
       ]
     },
-    "Contracts.DAL.Base/1.0.0": {
-      "type": "project",
-      "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
-      "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
-    },
     "DAL.App.DTO/1.0.0": {
       "type": "project",
       "path": "../DAL.App.DTO/DAL.App.DTO.csproj",
@@ -3683,10 +3689,10 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Contracts.DAL.Base >= 1.0.0",
       "DAL.App.DTO >= 1.0.0",
       "Domain >= 1.0.0",
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "ee.itcollege.javalg.Contracts.DAL.Base >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3719,9 +3725,6 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj": {
-              "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\Contracts.DAL.Base\\Contracts.DAL.Base.csproj"
-            },
             "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj": {
               "projectPath": "C:\\Users\\X\\RiderProjects\\Learn2Play\\Learn2Play\\DAL.App.DTO\\DAL.App.DTO.csproj"
             },
@@ -3745,6 +3748,10 @@
             "target": "Package",
             "version": "[2.0.3, )",
             "autoReferenced": true
+          },
+          "ee.itcollege.javalg.Contracts.DAL.Base": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
