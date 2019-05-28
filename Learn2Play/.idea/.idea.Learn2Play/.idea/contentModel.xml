@@ -800,7 +800,7 @@
               </e>
             </e>
             <e p="gulpfile.js" t="Include" />
-            <e p="LICENSE.txt" t="Include" />
+            <e p="License.txt" t="Include" />
             <e p="package-lock.json" t="Include" />
             <e p="package.json" t="Include" />
             <e p="production" t="Include">
@@ -1534,7 +1534,7 @@
                   <e p="jquery.dataTables.js" t="Include" />
                   <e p="jquery.dataTables.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-bs" t="Include">
@@ -1548,7 +1548,7 @@
                   <e p="dataTables.bootstrap4.js" t="Include" />
                   <e p="dataTables.bootstrap4.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-buttons" t="Include">
@@ -1566,7 +1566,7 @@
                   <e p="dataTables.buttons.js" t="Include" />
                   <e p="dataTables.buttons.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-buttons-bs" t="Include">
@@ -1580,7 +1580,7 @@
                   <e p="buttons.bootstrap4.js" t="Include" />
                   <e p="buttons.bootstrap4.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-fixedheader" t="Include">
@@ -1590,7 +1590,7 @@
                   <e p="dataTables.fixedHeader.js" t="Include" />
                   <e p="dataTables.fixedHeader.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-fixedheader-bs" t="Include">
@@ -1600,7 +1600,7 @@
                   <e p="fixedHeader.bootstrap4.css" t="Include" />
                   <e p="fixedHeader.bootstrap4.min.css" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-keytable" t="Include">
@@ -1610,7 +1610,7 @@
                   <e p="dataTables.keyTable.js" t="Include" />
                   <e p="dataTables.keyTable.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-responsive" t="Include">
@@ -1620,7 +1620,7 @@
                   <e p="dataTables.responsive.js" t="Include" />
                   <e p="dataTables.responsive.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-responsive-bs" t="Include">
@@ -1633,7 +1633,7 @@
                 <e p="js" t="Include">
                   <e p="responsive.bootstrap4.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-scroller" t="Include">
@@ -1643,7 +1643,7 @@
                   <e p="dataTables.scroller.js" t="Include" />
                   <e p="dataTables.scroller.min.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="datatables.net-scroller-bs" t="Include">
@@ -1653,7 +1653,7 @@
                   <e p="scroller.bootstrap4.css" t="Include" />
                   <e p="scroller.bootstrap4.min.css" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="DateJS" t="Include">
@@ -2507,11 +2507,11 @@
                 <e p="dist" t="Include">
                   <e p="jquery.autocomplete.js" t="Include" />
                   <e p="jquery.autocomplete.min.js" t="Include" />
-                  <e p="LICENSE.txt" t="Include" />
+                  <e p="License.txt" t="Include" />
                 </e>
                 <e p="Gruntfile.js" t="Include" />
                 <e p="index.htm" t="Include" />
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="package.json" t="Include" />
                 <e p="readme.md" t="Include" />
                 <e p="src" t="Include">
@@ -3488,7 +3488,7 @@
                 <e p="jquery.flot.threshold.js" t="Include" />
                 <e p="jquery.flot.time.js" t="Include" />
                 <e p="jquery.js" t="Include" />
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="Makefile" t="Include" />
                 <e p="NEWS.md" t="Include" />
                 <e p="package.json" t="Include" />
@@ -3649,7 +3649,7 @@
                   </e>
                   <e p="lang-all.js" t="Include" />
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="gauge.js" t="Include">
@@ -3929,10 +3929,10 @@
                       <e p="sizzle.min.js" t="Include" />
                       <e p="sizzle.min.map" t="Include" />
                     </e>
-                    <e p="LICENSE.txt" t="Include" />
+                    <e p="License.txt" t="Include" />
                   </e>
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
                 <e p="src" t="Include">
                   <e p=".jshintrc" t="Include" />
@@ -4094,7 +4094,7 @@
                 <e p="changelog.md" t="Include" />
                 <e p="jquery.mousewheel.js" t="Include" />
                 <e p="jquery.mousewheel.min.js" t="Include" />
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="readme.md" t="Include" />
               </e>
               <e p="jQuery-Smart-Wizard" t="Include">
@@ -5256,7 +5256,7 @@
                     </e>
                   </e>
                 </e>
-                <e p="LICENSE.txt" t="Include" />
+                <e p="License.txt" t="Include" />
                 <e p="raphael.js" t="Include" />
                 <e p="raphael.min.js" t="Include" />
                 <e p="raphael.no-deps.js" t="Include" />
@@ -5925,7 +5925,7 @@
             <e p="build" t="Include">
               <e p="js" t="Include">
                 <e p=".jscsrc" t="Include" />
-                <e p="adminlte.js" t="Include" />
+                <e p="AdminLTE.js" t="Include" />
                 <e p="ControlSidebar.js" t="Include" />
                 <e p="layout.js" t="Include" />
                 <e p="PushMenu.js" t="Include" />
@@ -6023,7 +6023,7 @@
                 <e p="user8-128x128.jpg" t="Include" />
               </e>
               <e p="js" t="Include">
-                <e p="adminlte.js" t="Include" />
+                <e p="AdminLTE.js" t="Include" />
                 <e p="adminlte.js.map" t="Include" />
                 <e p="adminlte.min.js" t="Include" />
                 <e p="adminlte.min.js.map" t="Include" />
@@ -6592,7 +6592,7 @@
                       <e p="dataTables.colReorder.js" t="Include" />
                       <e p="dataTables.colReorder.min.js" t="Include" />
                     </e>
-                    <e p="LICENSE.txt" t="Include" />
+                    <e p="License.txt" t="Include" />
                     <e p="readme.md" t="Include" />
                   </e>
                   <e p="ColVis" t="Include">
@@ -6620,7 +6620,7 @@
                       <e p="dataTables.colVis.js" t="Include" />
                       <e p="dataTables.colVis.min.js" t="Include" />
                     </e>
-                    <e p="LICENSE.txt" t="Include" />
+                    <e p="License.txt" t="Include" />
                     <e p="readme.md" t="Include" />
                   </e>
                   <e p="FixedColumns" t="Include">
@@ -6648,7 +6648,7 @@
                       <e p="dataTables.fixedColumns.js" t="Include" />
                       <e p="dataTables.fixedColumns.min.js" t="Include" />
                     </e>
-                    <e p="LICENSE.txt" t="Include" />
+                    <e p="License.txt" t="Include" />
                     <e p="readme.md" t="Include" />
                   </e>
                   <e p="FixedHeader" t="Include">
@@ -6731,7 +6731,7 @@
                       <e p="dataTables.responsive.js" t="Include" />
                       <e p="dataTables.responsive.min.js" t="Include" />
                     </e>
-                    <e p="LICENSE.txt" t="Include" />
+                    <e p="License.txt" t="Include" />
                     <e p="readme.md" t="Include" />
                   </e>
                   <e p="Scroller" t="Include">
@@ -7283,7 +7283,7 @@
                 <e p="jquery.min.js" t="Include" />
                 <e p="jquery.min.map" t="Include" />
               </e>
-              <e p="LICENSE.txt" t="Include" />
+              <e p="License.txt" t="Include" />
             </e>
             <e p="jquery-validation" t="Include">
               <e p="dist" t="Include">
@@ -7297,7 +7297,7 @@
             <e p="jquery-validation-unobtrusive" t="Include">
               <e p="jquery.validate.unobtrusive.js" t="Include" />
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
-              <e p="LICENSE.txt" t="Include" />
+              <e p="License.txt" t="Include" />
             </e>
           </e>
           <e p="Pictures" t="Include" />
