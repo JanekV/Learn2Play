@@ -40,5 +40,17 @@ namespace DAL.App.EF.Repositories
             }
             return StyleMapper.MapFromDomain(style);
         }
+
+        public override DAL.App.DTO.DomainEntityDTOs.Style Update(Style entity)
+        {
+            var entityInDb = RepositoryDbSet
+                .Include(s => s.Name)
+                .ThenInclude(m => m.Translations)
+                .FirstOrDefault(x => x.Id == entity.Id);
+
+            entityInDb?.Name.SetTranslation(entity.Name);
+            
+            return entity;
+        }
     }
 }

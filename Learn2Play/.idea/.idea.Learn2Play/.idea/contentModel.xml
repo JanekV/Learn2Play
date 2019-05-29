@@ -442,16 +442,39 @@
           <e p="Admin" t="Include">
             <e p="_ViewImports.cshtml" t="Include" />
             <e p="Controllers" t="Include">
+              <e p="ChordsController.cs" t="Include" />
               <e p="HomeController.cs" t="Include" />
+              <e p="InstrumentsController.cs" t="Include" />
+              <e p="SongsController.cs" t="Include" />
+              <e p="StylesController.cs" t="Include" />
             </e>
-            <e p="ViewModels" t="Include" />
+            <e p="ViewModels" t="Include">
+              <e p="SongCreateEditViewModel.cs" t="Include" />
+            </e>
             <e p="Views" t="Include">
               <e p="_ViewStart.cshtml" t="Include" />
               <e p="_ViewStart.cshtml.cs" t="Include" />
+              <e p="Chords" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
               <e p="Home" t="Include">
                 <e p="Index.cshtml" t="Include" />
                 <e p="Index.cshtml.cs" t="Include" />
+                <e p="Privacy.cshtml" t="Include" />
               </e>
+              <e p="Instruments" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="ManageUsers" t="Include" />
+              <e p="Settings" t="Include" />
               <e p="Shared" t="Include">
                 <e p="_CookieConsentPartial.cshtml" t="Include" />
                 <e p="_LanguageSelectionPartial.cshtml" t="Include" />
@@ -459,6 +482,21 @@
                 <e p="_LoginPartial.cshtml" t="Include" />
                 <e p="_ValidationScriptsPartial.cshtml" t="Include" />
                 <e p="Error.cshtml" t="Include" />
+              </e>
+              <e p="Songs" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+                <e p="PartialCreateEdit.cshtml" t="Include" />
+              </e>
+              <e p="Styles" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
               </e>
             </e>
           </e>

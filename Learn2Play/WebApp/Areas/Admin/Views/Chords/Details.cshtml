@@ -1,0 +1,30 @@
+@model BLL.App.DTO.DomainEntityDTOs.Chord
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Resources.Domain.Common.Details</h1>
+
+<div>
+    <h4>@Resources.Views.Shared._Layout.Chord</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ShapePicturePath)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ShapePicturePath)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">@Resources.Domain.Common.Edit</a> |
+    <a asp-action="Index">@Resources.Domain.Common.BackToList</a>
+</div>
