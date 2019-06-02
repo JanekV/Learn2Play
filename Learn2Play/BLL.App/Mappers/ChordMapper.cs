@@ -47,5 +47,18 @@ namespace BLL.App.Mappers
             return res;
         }
 
+        public static BLL.App.DTO.ChordWithNotes MapFromDAL(DAL.App.DTO.ChordWithNotes chordWithNotes)
+        {
+            var res = chordWithNotes == null ? null : new BLL.App.DTO.ChordWithNotes()
+            {
+                Id = chordWithNotes.Id,
+                ChordName = chordWithNotes.ChordName,
+                ShapePicturePath = chordWithNotes.ShapePicturePath,
+                Notes = chordWithNotes.Notes.ConvertAll(NoteMapper.MapFromDAL)
+            };
+            
+            return res;
+        }
+
     }
 }

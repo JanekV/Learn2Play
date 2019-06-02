@@ -1,7 +1,7 @@
-@model IEnumerable<BLL.App.DTO.DomainEntityDTOs.Chord>
+@model IEnumerable<BLL.App.DTO.ChordWithNotes>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Chords";
 }
 
 <h1>Index</h1>
@@ -13,10 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.ChordName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.ShapePicturePath)
+            </th>
+            <th>
+                Notes
             </th>
             <th></th>
         </tr>
@@ -25,15 +28,23 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
+                @Html.DisplayFor(modelItem => item.ChordName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ShapePicturePath)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">@Resources.Domain.Common.Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">@Resources.Domain.Common.Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">@Resources.Domain.Common.Delete</a>
+                <ul>
+                    @foreach (var note in item.Notes)
+                    {
+                        <li>@note.Name</li>
+                    }
+                </ul>
+            </td>
+            <td>
+                <a asp-area="Admin" asp-action="Edit" asp-route-id="@item.Id">@Resources.Domain.Common.Edit</a> |
+                <a asp-area="Admin" asp-action="Details" asp-route-id="@item.Id">@Resources.Domain.Common.Details</a> |
+                <a asp-area="Admin" asp-action="Delete" asp-route-id="@item.Id">@Resources.Domain.Common.Delete</a>
             </td>
         </tr>
 }

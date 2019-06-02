@@ -62,6 +62,7 @@
       <e p="BLL.App.DTO" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="BLL.App.DTO.csproj" t="IncludeRecursive" />
+        <e p="ChordWithNotes.cs" t="Include" />
         <e p="DomainEntityDTOs" t="Include">
           <e p="Chord.cs" t="Include" />
           <e p="ChordNote.cs" t="Include" />
@@ -159,6 +160,7 @@
       </e>
       <e p="DAL.App.DTO" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="ChordWithNotes.cs" t="Include" />
         <e p="DAL.App.DTO.csproj" t="IncludeRecursive" />
         <e p="DomainEntityDTOs" t="Include">
           <e p="Chord.cs" t="Include" />
@@ -445,10 +447,13 @@
               <e p="ChordsController.cs" t="Include" />
               <e p="HomeController.cs" t="Include" />
               <e p="InstrumentsController.cs" t="Include" />
+              <e p="NotesController.cs" t="Include" />
               <e p="SongsController.cs" t="Include" />
               <e p="StylesController.cs" t="Include" />
             </e>
             <e p="ViewModels" t="Include">
+              <e p="ChordCreateEditViewModel.cs" t="Include" />
+              <e p="ChordWithNoteViewModel.cs" t="Include" />
               <e p="SongCreateEditViewModel.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
@@ -460,6 +465,8 @@
                 <e p="Details.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
+                <e p="PartialCreateNote.cshtml" t="Include" />
+                <e p="PartialViewNotes.cshtml" t="Include" />
               </e>
               <e p="Home" t="Include">
                 <e p="Index.cshtml" t="Include" />
@@ -474,6 +481,14 @@
                 <e p="Index.cshtml" t="Include" />
               </e>
               <e p="ManageUsers" t="Include" />
+              <e p="Notes" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="CreateNoteForChord.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="Index.cshtml" t="Include" />
+              </e>
               <e p="Settings" t="Include" />
               <e p="Shared" t="Include">
                 <e p="_CookieConsentPartial.cshtml" t="Include" />

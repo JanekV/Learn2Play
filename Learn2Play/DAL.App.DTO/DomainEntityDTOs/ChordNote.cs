@@ -2,6 +2,7 @@ namespace DAL.App.DTO.DomainEntityDTOs
 {
     public class ChordNote
     {
+
         public int Id { get; set; }
 
         public int ChordId { get; set; }

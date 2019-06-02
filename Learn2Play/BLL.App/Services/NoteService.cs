@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using BLL.App.DTO.DomainEntityDTOs;
 using BLL.App.Mappers;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
@@ -11,5 +14,11 @@ namespace BLL.App.Services
         {
             ServiceRepository = Uow.Notes;
         }
+
+        public async Task AddMultipleAsync(List<Note> notes)
+        {
+            await Uow.Notes.AddMultipleAsync(notes.ConvertAll(NoteMapper.MapFromBLL));
+        }
+        
     }
 }
