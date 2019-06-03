@@ -192,6 +192,7 @@
             </e>
           </e>
         </e>
+        <e p="SongWithEverything.cs" t="Include" />
       </e>
       <e p="DAL.App.EF" t="IncludeRecursive">
         <e p="AppDbContext.cs" t="Include" />

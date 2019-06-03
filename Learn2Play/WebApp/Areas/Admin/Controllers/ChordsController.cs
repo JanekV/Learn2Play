@@ -134,6 +134,7 @@ namespace WebApp.Areas.Admin.Controllers
             return View(chord);
         }
 
+        //:TODO also delete ChordNotes before Chord!
         // POST: Chords/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

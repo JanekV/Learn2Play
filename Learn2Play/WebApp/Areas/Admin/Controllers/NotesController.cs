@@ -144,9 +144,11 @@ namespace WebApp.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
+            _bll.ChordNotes.RemoveByNote(id);
+            _bll.SaveChanges();
             _bll.Notes.Remove(id);
             await _bll.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction(controllerName: "Chords", actionName: "Index");
         }
     }
 }

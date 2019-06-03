@@ -21,5 +21,10 @@ namespace BLL.App.Services
         {
             return (await Uow.ChordNotes.AllAsyncWithInclude()).Select(ChordNoteMapper.MapFromDAL).ToList();
         }
+
+        public void RemoveByNote(int noteId)
+        {
+            Uow.ChordNotes.RemoveByNote(noteId);
+        }
     }
 }

@@ -33,5 +33,17 @@ namespace DAL.App.EF.Repositories
             
             return ChordNoteMapper.MapFromDomain(chordNote);
         }
+
+        public void RemoveByNote(int noteId)
+        {
+            var res = RepositoryDbSet
+                .Select(cn => cn)
+                .Where(cn => cn.NoteId == noteId)
+                .ToList();
+            foreach (var chordNote in res)
+            {
+                RepositoryDbContext.ChordNotes.Remove(chordNote);
+            }
+        }
     }
 }

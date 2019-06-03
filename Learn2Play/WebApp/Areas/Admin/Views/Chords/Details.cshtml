@@ -29,7 +29,8 @@
             <ul>
                 @foreach (var note in Model.Notes)
                 {
-                    <li>@note.Name</li>
+                    <li>@note.Name <a asp-action="Edit" asp-controller="Notes" asp-route-id="@note.Id">Edit</a> / 
+                        <a asp-action="Delete" asp-controller="Notes" asp-route-id="@note.Id">Delete</a></li>
                 }
             </ul>
         </dd>
