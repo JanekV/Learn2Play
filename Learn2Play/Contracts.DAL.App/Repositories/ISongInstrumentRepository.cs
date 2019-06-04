@@ -7,6 +7,8 @@ namespace Contracts.DAL.App.Repositories
 {  
     public interface ISongInstrumentRepository : ISongInstrumentRepository<DALAppDTO.DomainEntityDTOs.SongInstrument>
     {
+        Task<DALAppDTO.DomainEntityDTOs.SongInstrument> FindByInstrumentAndSongIdAsync(int instrumentId, int songId);
+
     }
     public interface ISongInstrumentRepository<TDALEntity>: IBaseRepository<TDALEntity> 
         where TDALEntity : class, new()

@@ -12,5 +12,6 @@ namespace Contracts.BLL.App.Services
         Task<SongWithEverything> GetSongWithEverythingAsync(int songId);
         Task<List<SongWithEverything>> GetAllSongsWithEverythingAsync();
         Task<List<BLLAppDTO.Song>> SearchSongs(string search);
+        Task<SongWithEverything> UpdateSongWithEverything(SongWithEverything swe);
     }
 }

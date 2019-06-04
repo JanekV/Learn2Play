@@ -10,7 +10,7 @@ using WebApp.Areas.Admin.ViewModels;
 
 namespace WebApp.Areas.Admin.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Area("Admin")]
     public class SongsController : Controller
     {
@@ -99,22 +99,20 @@ namespace WebApp.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, SongCreateEditViewModel vm)
+        public async Task<IActionResult> Edit(int id, BLL.App.DTO.SongWithEverything swe)
         {
-            if (id != vm.Song.Id)
+            if (id != swe.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                _bll.Songs.Update(vm.Song);
+                await _bll.Songs.UpdateSongWithEverything(swe);
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
-                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
-            return View(null);
+            return View(swe);
         }
 
         // GET: Songs/Delete/5

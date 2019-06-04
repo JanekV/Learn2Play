@@ -17,11 +17,12 @@ namespace DAL.App.EF.Repositories
 
         public override async Task<Note> AddAsync(Note note)
         {
-            if (!(await RepositoryDbSet.AnyAsync(n => n.Name.Equals(note.Name))))
+            var res = await RepositoryDbSet.AnyAsync(n => n.Name.Equals(note.Name));
+            if (res == false)
             {
                  return await base.AddAsync(note);
             }
-            return null;
+            return NoteMapper.MapFromDomain(await RepositoryDbSet.FindAsync(NoteMapper.MapFromDAL(note)));
         }
 
         public async Task AddMultipleAsync(List<Note> notes)

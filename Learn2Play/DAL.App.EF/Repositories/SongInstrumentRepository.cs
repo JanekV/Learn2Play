@@ -26,23 +26,20 @@ namespace DAL.App.EF.Repositories
         
         public async Task<DAL.App.DTO.DomainEntityDTOs.SongInstrument> FindAsync(int id)
         {
-            /*var songInstrument = await base.FindAsync(id);
-            if (songInstrument != null)
-            {
-                await RepositoryDbContext.Entry(songInstrument)
-                    .Reference(si => si.Song).LoadAsync();
-                await RepositoryDbContext.Entry(songInstrument)
-                    .Reference(si => si.Instrument).LoadAsync();
-            }
-            return songInstrument;
-            */
-
             var songInstrument = await RepositoryDbSet
                 .Include(si => si.Song)
                 .Include(si => si.Instrument)
                 .FirstOrDefaultAsync(si => si.Id == id);
             
             
+            return SongInstrumentMapper.MapFromDomain(songInstrument);
+        }
+
+        public async Task<DAL.App.DTO.DomainEntityDTOs.SongInstrument> FindByInstrumentAndSongIdAsync(int instrumentId, int songId)
+        {
+            var songInstrument = await RepositoryDbSet
+                .Where(si => si.InstrumentId == instrumentId && si.SongId == songId)
+                .FirstOrDefaultAsync();
             return SongInstrumentMapper.MapFromDomain(songInstrument);
         }
     }
