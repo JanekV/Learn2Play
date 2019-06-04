@@ -23,41 +23,41 @@
 </div>
 <div class="form-group">
     <input type="hidden" asp-for="@Model.SongKeyId" />
-    <label asp-for="@Model.SongKeyNoteName" class="control-label"></label>
+    <label asp-for="@Model.SongKeyNoteName" class="control-label">SongKey</label>
     <input asp-for="@Model.SongKeyNoteName" class="form-control" />
     <span asp-validation-for="@Model.SongKeyNoteName" class="text-danger"></span>
 </div>
 @foreach (var instrument in @Model.Instruments)
 {
     <div class="form-group">
-        <label asp-for="@instrument.Name" class="control-label"></label>
+        <label asp-for="@instrument.Name" class="control-label">Instrument</label>
         <select asp-for="@instrument.Name" class="form-control" asp-items="new SelectList(Model.Instruments.Select(i => i.Name))"></select>
     </div>
 }
 @foreach (var style in @Model.Styles)
 {
     <div class="form-group">
-        <label asp-for="@style.Name" class="control-label"></label>
+        <label asp-for="@style.Name" class="control-label">Style</label>
         <select asp-for="@style.Name" class="form-control" asp-items="new SelectList(Model.Styles.Select(s => s.Name))"></select>
     </div>
 }
 @foreach (var chord in @Model.Chords)
 {
     <div class="form-group">
-        <label asp-for="@chord.Name" class="control-label"></label>
+        <label asp-for="@chord.Name" class="control-label">ChordName</label>
         <select asp-for="@chord.Name" class="form-control" asp-items="new SelectList(Model.Chords.Select(c => c.Name))"></select>
     </div>
 }
 @foreach (var video in @Model.Videos)
 {
     <div class="form-group">
-        <label asp-for="@video.YouTubeUrl" class="control-label"></label>
+        <label asp-for="@video.YouTubeUrl" class="control-label">Video</label>
         <select asp-for="@video.YouTubeUrl" class="form-control" asp-items="new SelectList(Model.Videos.Select(v => v.YouTubeUrl))"></select>
     </div>
     foreach (var tab in video.Tabs)
     {
         <div class="form-group">
-            <label asp-for="@tab.SongPart" class="control-label"></label>
+            <label asp-for="@tab.SongPart" class="control-label">Tab</label>
             <select asp-for="@tab.SongPart" class="form-control" asp-items="new SelectList(video.Tabs.Select(t => t.SongPart))"></select>
         </div>
     }

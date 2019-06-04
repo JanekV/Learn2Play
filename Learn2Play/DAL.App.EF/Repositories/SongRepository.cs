@@ -28,14 +28,12 @@ namespace DAL.App.EF.Repositories
         public async Task<SongWithEverything> GetSongWithEverythingAsync(int songId)
         {
             var res = await RepositoryDbSet
-                .Where(s => s.Id == songId)
-                .Include(s => s.SongKey)
+                .Where(s => s.Id == songId) 
+                /*.Include(s => s.SongKey)
                 .Include(s => s.SongInFolders)
                 .Include(s => s.SongInstruments)
                 .Include(s => s.SongStyles)
-                .ThenInclude(ss => ss.Style)
-                .ThenInclude(sty => sty.Name)
-                .Include(s => s.SongChords)
+                .Include(s => s.SongChords)*/
                 .Select(s => new
                 {
                     Id = s.Id,
@@ -82,13 +80,11 @@ namespace DAL.App.EF.Repositories
         public async Task<List<SongWithEverything>> GetAllSongsWithEverythingAsync()
         {
             var res = await RepositoryDbSet
-                .Include(s => s.SongKey)
+                /*.Include(s => s.SongKey)
                 .Include(s => s.SongInFolders)
                 .Include(s => s.SongInstruments)
                 .Include(s => s.SongStyles)
-                .Include(s => s.SongChords)
-                /*.Include(s => s.Videos)
-                .ThenInclude(v => v.Tabs)*/
+                .Include(s => s.SongChords)*/
                 .Select(s => new
                 {
                     Id = s.Id,

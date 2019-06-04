@@ -26,6 +26,11 @@ namespace BLL.App.Services
         {
             var song = SongMapper.MapFromDAL(await Uow.Songs.GetSongWithEverythingAsync(songId));
             song.Styles = Uow.Styles.GetStylesForIds(song.StyleIds).Result.ConvertAll(StyleMapper.MapFromDAL);
+            foreach (var video in song.Videos)
+            {
+                video.Tabs = (Uow.Tabs.AllAsync().Result.Where(t => t.VideoId == video.Id).ToList()
+                    .ConvertAll(TabMapper.MapFromDAL));
+            }
             return song;
         }
 
@@ -43,5 +48,6 @@ namespace BLL.App.Services
         {
             return (await Uow.Songs.SearchSongs(search)).Select(SongMapper.MapFromDAL).ToList();
         }
+        
     }
 }
