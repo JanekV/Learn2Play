@@ -2,41 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongChordRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongChordRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInstrumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInstrumentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongStyleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongStyleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/NoteRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/NoteRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongChordRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongChordRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInstrumentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInstrumentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongStyleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongStyleRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/Areas/Admin/Controllers/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/Areas/Admin/Controllers/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +34,7 @@
               <entry file="file://$PROJECT_DIR$/BLL.App.DTO/SongWithEverything.cs">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="375">
-                    <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+                    <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
                     <folding>
                       <marker date="1559646930506" expanded="false" signature="6:69" ph="..." />
                       <marker date="1559646930506" expanded="true" signature="92:1025" ph="{...}" />
@@ -84,7 +51,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BLL.App/Services/SongService.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="248">
@@ -122,11 +89,31 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WebApp/Areas/Admin/Views/Shared/_Layout.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <marker date="1559585951561" expanded="true" signature="3128:3212" ph="@*...*@" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApp/Areas/Admin/Controllers/SongsController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="540">
-              <caret line="108" column="35" lean-forward="true" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
               <folding>
                 <marker date="1559677613703" expanded="true" signature="6:264" ph="..." />
                 <marker date="1559677613703" expanded="true" signature="306:4354" ph="{...}" />
@@ -750,7 +737,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/WebApp/Areas/Admin/Controllers/ChordsController.cs" />
         <option value="$PROJECT_DIR$/DAL.App.DTO/ChordWithNotes.cs" />
         <option value="$PROJECT_DIR$/DAL.App.EF/Mappers/TabMapper.cs" />
         <option value="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongRepository.cs" />
@@ -801,6 +787,7 @@
         <option value="$PROJECT_DIR$/WebApp/Views/ChordNotes/PartialCreateEdit.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Areas/Admin/Controllers/SongsController.cs" />
         <option value="$PROJECT_DIR$/BLL.App/Services/SongService.cs" />
+        <option value="$PROJECT_DIR$/../.gitignore" />
       </list>
     </option>
   </component>
@@ -858,7 +845,41 @@
               <item name="Areas" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Admin" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Shared" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Areas" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Admin" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Views" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Songs" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AdminLTE" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="wwwroot" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AdminLTE" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="AdminLTE-2.4.10" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="9a108dff:SolutionExplorerFileNode" />
             </path>
           </expand>
           <select />
@@ -993,7 +1014,7 @@
       <workItem from="1559571420801" duration="17275000" />
       <workItem from="1559642127205" duration="7271000" />
       <workItem from="1559655465288" duration="8280000" />
-      <workItem from="1559669387208" duration="8233000" />
+      <workItem from="1559669387208" duration="9654000" />
     </task>
     <task id="LOCAL-00001" summary="init generate">
       <created>1550945672532</created>
@@ -1310,11 +1331,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559670906972</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="tracking issue">
+      <created>1559677732321</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1559677732321</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="284888000" />
+    <option name="totallyTimeSpent" value="286309000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1327,9 +1355,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24554294" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24554294" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1402,7 +1429,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added some dal dtos, broke all" />
     <MESSAGE value="added 2 layers of dtos, mapping to every.thing. now it all broke...." />
     <MESSAGE value="forgot to add 3 mappers" />
     <MESSAGE value="2 layers of dtos, dal and bll wurking forking finally ughhh, in api and mvc, with mapping for every domain entity" />
@@ -1427,7 +1453,8 @@
     <MESSAGE value="Fixed delete bug caused by lifecycle stuff." />
     <MESSAGE value="More improvements, tabs still null" />
     <MESSAGE value="Edit view working, tabs fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edit view working, tabs fixed" />
+    <MESSAGE value="tracking issue" />
+    <option name="LAST_COMMIT_MESSAGE" value="tracking issue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1505,58 +1532,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/VideosController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-          <folding>
-            <marker date="1559657823314" expanded="false" signature="6:314" ph="..." />
-            <marker date="1559657823314" expanded="true" signature="344:4447" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="393:4445" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="484:528" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="601:687" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="779:1096" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="817:880" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="990:1053" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="1177:1448" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="1250:1409" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="1458:1667" ph="/* POST: Videos/Create ... */" />
-            <marker date="1559657823314" expanded="true" signature="1798:2210" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="1844:2029" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="2296:2852" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="2334:2397" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="2508:2571" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="2862:3071" ph="/* POST: Videos/Edit/5 ... */" />
-            <marker date="1559657823314" expanded="true" signature="3208:3728" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="3253:3316" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="3353:3530" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="3818:4113" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="3856:3919" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="4007:4070" ph="{...}" />
-            <marker date="1559657823314" expanded="true" signature="4288:4439" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BLL.App/Mappers/SongKeyMapper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="31" column="58" lean-forward="true" selection-start-line="31" selection-start-column="58" selection-end-line="31" selection-end-column="58" />
-          <folding>
-            <marker date="1558033105955" expanded="false" signature="6:67" ph="..." />
-            <marker date="1558033105955" expanded="true" signature="95:1772" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="145:1770" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="247:819" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="341:467" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="552:678" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="936:1299" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="1047:1262" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="1416:1763" ph="{...}" />
-            <marker date="1558033105955" expanded="true" signature="1527:1727" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BLL.App/Mappers/SongStyleMapper.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
@@ -2140,7 +2115,7 @@
     <entry file="file://$PROJECT_DIR$/BLL.App.DTO/SongWithEverything.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
           <folding>
             <marker date="1559646930506" expanded="false" signature="6:69" ph="..." />
             <marker date="1559646930506" expanded="true" signature="92:1025" ph="{...}" />
@@ -2358,7 +2333,7 @@
     <entry file="file://$PROJECT_DIR$/WebApp/Areas/Admin/Controllers/SongsController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
-          <caret line="108" column="35" lean-forward="true" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
           <folding>
             <marker date="1559677613703" expanded="true" signature="6:264" ph="..." />
             <marker date="1559677613703" expanded="true" signature="306:4354" ph="{...}" />
@@ -2421,6 +2396,22 @@
             <marker date="1559677718948" expanded="true" signature="5733:6130" ph="{...}" />
             <marker date="1559677718948" expanded="true" signature="5877:6110" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Areas/Admin/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1559585951561" expanded="true" signature="3128:3212" ph="@*...*@" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
