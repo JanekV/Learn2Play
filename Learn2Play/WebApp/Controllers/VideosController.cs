@@ -35,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var video = await _bll.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsyncWithIncludeAsync(id.Value);
             if (video == null)
             {
                 return NotFound();
@@ -47,9 +47,11 @@ namespace WebApp.Controllers
         // GET: Videos/Create
         public async Task<IActionResult> Create()
         {
-            var vm = new VideoCreateEditViewModel();
-            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author));
+            var vm = new VideoCreateEditViewModel
+            {
+                SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
+                    nameof(Song.Id), nameof(Song.Name))
+            };
             return View(vm);        }
 
         // POST: Videos/Create
@@ -78,7 +80,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var video = await _bll.Videos.FindAsync(id);
+            var video = await _bll.Videos.FindAsyncWithIncludeAsync(id.Value);
             if (video == null)
             {
                 return NotFound();

@@ -1,4 +1,6 @@
 using System;
+using DAL.App.DTO.DomainEntityDTOs;
+using DAL.App.EF.Repositories;
 using ee.itcollege.javalg.Contracts.BLL.Base.Mappers;
 
 
@@ -53,6 +55,31 @@ namespace BLL.App.Mappers
                 SongKey = SongKeyMapper.MapFromBLL(song.SongKey)
             };
 
+            return res;
+        }
+
+        public static BLL.App.DTO.SongWithEverything MapFromDAL(DAL.App.DTO.SongWithEverything songWithEverything)
+        {
+            var res = songWithEverything == null
+                ? null
+                : new BLL.App.DTO.SongWithEverything()
+                {
+                    Id = songWithEverything.Id,
+                    SongName = songWithEverything.SongName,
+                    SongAuthor = songWithEverything.SongAuthor,
+                    SpotifyLink = songWithEverything.SpotifyLink,
+                    SongDescription = songWithEverything.SongDescription,
+
+                    SongKeyId = songWithEverything.SongKeyId,
+                    SongKeyNoteName = songWithEverything.SongKeyNoteName,
+                    SongKeyDescription = songWithEverything.SongKeyDescription,
+
+                    FoldersCount = songWithEverything.FoldersCount,
+                    Instruments = songWithEverything.Instruments.ConvertAll(InstrumentMapper.MapFromDAL),
+                    StyleIds = songWithEverything.StyleIds,
+                    Chords = songWithEverything.Chords.ConvertAll(ChordMapper.MapFromDAL),
+                    Videos = songWithEverything.Videos.ConvertAll(VideoMapper.MapFromDAL)
+                };
             return res;
         }
 

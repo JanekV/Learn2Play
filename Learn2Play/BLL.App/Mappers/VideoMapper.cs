@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using ee.itcollege.javalg.Contracts.BLL.Base.Mappers;
 
 
@@ -31,7 +32,7 @@ namespace BLL.App.Mappers
                 AuthorChannelLink = video.AuthorChannelLink,
                 LocalPath = video.LocalPath,
                 SongId = video.SongId,
-                Song = SongMapper.MapFromDAL(video.Song)              
+                Song = SongMapper.MapFromDAL(video.Song),
             };
 
 
@@ -47,7 +48,7 @@ namespace BLL.App.Mappers
                 AuthorChannelLink = video.AuthorChannelLink,
                 LocalPath = video.LocalPath,
                 SongId = video.SongId,
-                Song = SongMapper.MapFromBLL(video.Song) 
+                Song = SongMapper.MapFromBLL(video.Song),
             };
 
             return res;

@@ -328,3 +328,4 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Ra
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Notes\Details.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Notes\Edit.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Notes\Index.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Songs\Search.g.cshtml.cs

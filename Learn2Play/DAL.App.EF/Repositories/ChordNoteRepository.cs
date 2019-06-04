@@ -23,7 +23,7 @@ namespace DAL.App.EF.Repositories
                 .ToListAsync();
         }
         
-        public async Task<DAL.App.DTO.DomainEntityDTOs.ChordNote> FindAsync(int id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.ChordNote> FindAsyncWithIncludeAsync(int id)
         {
             var chordNote = await RepositoryDbSet
                 .Include(cn => cn.Chord)

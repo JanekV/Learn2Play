@@ -23,6 +23,6 @@ namespace DAL.App.DTO.DomainEntityDTOs
         public int SongId { get; set; }
         public Song Song { get; set; }
 
-        public ICollection<Tab> Tabs { get; set; }
+        public List<Tab> Tabs { get; set; }
     }
 }

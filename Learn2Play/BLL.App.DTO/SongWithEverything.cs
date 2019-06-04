@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using DAL.App.DTO.DomainEntityDTOs;
+using BLL.App.DTO.DomainEntityDTOs;
 
-namespace DAL.App.DTO
+namespace BLL.App.DTO
 {
     public class SongWithEverything
     {
@@ -18,9 +18,10 @@ namespace DAL.App.DTO
         // public List<Folder> Folders { get; set; }
         public int FoldersCount { get; set; }
         public List<Instrument> Instruments { get; set; }
+        public List<Style> Styles { get; set; }
         public List<int> StyleIds { get; set; }
         public List<Chord> Chords { get; set; } // Get notes also?
         public List<Video> Videos { get; set; }
-        public List<Tab> Tabs { get; set; }
+        //public List<Tab> Tabs { get; set; }
     }
 }

@@ -47,12 +47,14 @@ namespace WebApp.Controllers
         // GET: SongStyles/Create
         public async Task<IActionResult> Create()
         {
-            var vm = new SongStyleCreateEditViewModel();
-            vm.SongSelectList = new SelectList(await _bll.SongStyles.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author));
-            vm.StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
-                nameof(Style.Id), nameof(Style.Name));
-            
+            var vm = new SongStyleCreateEditViewModel
+            {
+                SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
+                    nameof(Song.Id), nameof(Song.Author)),
+                StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
+                    nameof(Style.Id), nameof(Style.Name))
+            };
+
             return View(vm);
         }
 
@@ -69,7 +71,7 @@ namespace WebApp.Controllers
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.SongSelectList = new SelectList(await _bll.SongStyles.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author));
             vm.StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
                 nameof(Style.Id), nameof(Style.Name));
@@ -93,7 +95,7 @@ namespace WebApp.Controllers
 
             var vm = new SongStyleCreateEditViewModel();
             vm.SongStyle = songStyle;
-            vm.SongSelectList = new SelectList(await _bll.SongStyles.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
             vm.StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
                 nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);
@@ -119,7 +121,7 @@ namespace WebApp.Controllers
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            vm.SongSelectList = new SelectList(await _bll.SongStyles.AllAsyncWithInclude(),
+            vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(Song.Author), vm.SongStyle.SongId);
             vm.StyleSelectList = new SelectList(await _bll.Styles.AllAsync(),
                 nameof(Style.Id), nameof(Style.Name), vm.SongStyle.StyleId);

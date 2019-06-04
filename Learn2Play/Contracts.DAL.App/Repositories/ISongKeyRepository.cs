@@ -7,6 +7,7 @@ namespace Contracts.DAL.App.Repositories
 {
     public interface ISongKeyRepository : ISongKeyRepository<DALAppDTO.DomainEntityDTOs.SongKey>
     {
+        Task<DALAppDTO.DomainEntityDTOs.SongKey> FindAsyncWithIncludeAsync(int id);
     }
     public interface ISongKeyRepository<TDALEntity>: IBaseRepository<TDALEntity> 
         where TDALEntity : class, new()

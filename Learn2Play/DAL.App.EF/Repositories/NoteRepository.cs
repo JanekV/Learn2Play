@@ -17,7 +17,7 @@ namespace DAL.App.EF.Repositories
 
         public override async Task<Note> AddAsync(Note note)
         {
-            if (!(await RepositoryDbSet.AnyAsync(n => n.Id == note.Id)))
+            if (!(await RepositoryDbSet.AnyAsync(n => n.Name.Equals(note.Name))))
             {
                  return await base.AddAsync(note);
             }
@@ -28,10 +28,7 @@ namespace DAL.App.EF.Repositories
         {
             foreach (var note in notes)
             {
-                if (!(await RepositoryDbSet.AnyAsync(n => n.Id == note.Id)))
-                {
-                    await base.AddAsync(note);
-                }
+                await AddAsync(note);
             }
         }
     }

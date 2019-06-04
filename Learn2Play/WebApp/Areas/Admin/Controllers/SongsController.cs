@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
 using Domain;
@@ -23,6 +25,13 @@ namespace WebApp.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             return View(await _bll.Songs.AllAsyncWithInclude());
+        }
+        
+        public async Task<IActionResult> Search([Bind("search")] string search)
+        {
+            var res = await _bll.Songs.SearchSongs(search);
+            
+            return View(res);
         }
 
         // GET: Songs/Details/5
@@ -76,16 +85,13 @@ namespace WebApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var song = await _bll.Songs.FindAsync(id);
+            var song = await _bll.Songs.GetSongWithEverythingAsync((int) id);
             if (song == null)
             {
                 return NotFound();
             }
-            var vm = new SongCreateEditViewModel();
-            vm.Song = song;
-            vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
-                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
-            return View(vm);
+            /*song.Instruments = song.Instruments.Select(i => new SelectListItem {Text = i.Name, Value = i.Id})*/
+            return View(song);
         }
 
         // POST: Songs/Edit/5
@@ -108,7 +114,7 @@ namespace WebApp.Areas.Admin.Controllers
             }
             vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
                 nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
-            return View(vm);
+            return View(null);
         }
 
         // GET: Songs/Delete/5

@@ -35,7 +35,7 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            var songKey = await _bll.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsyncWithIncludeAsync(id.Value);
             if (songKey == null)
             {
                 return NotFound();
@@ -80,7 +80,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var songKey = await _bll.SongKeys.FindAsync(id);
+            var songKey = await _bll.SongKeys.FindAsyncWithIncludeAsync(id.Value);
             if (songKey == null)
             {
                 return NotFound();

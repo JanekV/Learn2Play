@@ -57,6 +57,5 @@ namespace DAL.App.EF.Mappers
 
             return res;
         }
-
     }
 }

@@ -44,15 +44,13 @@ namespace DAL.App.EF.Repositories
         {
             var res = await RepositoryDbSet
                 .Include(c => c.ChordNotes)
-                .ThenInclude(cn => cn.Note)
                 .Select(c => new
                 {
                     Id = c.Id,
                     ChordName = c.Name,
                     ShapePicturePath = c.ShapePicturePath,
                     Notes = c.ChordNotes
-                        .Select(cn => cn.Note)
-                        .Where(n => c.ChordNotes.Any(cn => cn.NoteId == n.Id)).ToList()
+                        .Select(cn => cn.Note).ToList()
                 })
                 .ToListAsync();
 
@@ -72,15 +70,13 @@ namespace DAL.App.EF.Repositories
             var res = await RepositoryDbSet
                 .Where(c => c.Id == chordId)
                 .Include(c => c.ChordNotes)
-                .ThenInclude(cn => cn.Note)
                 .Select(c => new
                 {
                     Id = c.Id,
                     ChordName = c.Name,
                     ShapePicturePath = c.ShapePicturePath,
                     Notes = c.ChordNotes
-                        .Select(cn => cn.Note)
-                        .Where(n => c.ChordNotes.Any(cn => cn.NoteId == n.Id)).ToList()
+                        .Select(cn => cn.Note).ToList()
                 }).FirstOrDefaultAsync();
             var cwn = new DAL.App.DTO.ChordWithNotes()
             {

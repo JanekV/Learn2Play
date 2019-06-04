@@ -51,9 +51,11 @@
       </ul>
 
       <!-- SEARCH FORM -->
-      <form class="form-inline ml-3">
+      <form asp-area="Admin" asp-controller="Songs" asp-action="Search" class="form-inline ml-3">
         <div class="input-group input-group-sm">
-          <input class="form-control form-control-navbar" type="search" placeholder="Search songs" aria-label="Search">
+          <label>
+            <input class="form-control form-control-navbar" placeholder="Search songs" type="text" name="search"/>
+          </label>
           <div class="input-group-append">
             <button class="btn btn-navbar" type="submit">
               <i class="fa fa-search"></i>

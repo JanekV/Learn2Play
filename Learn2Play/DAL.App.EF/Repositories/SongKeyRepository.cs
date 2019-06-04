@@ -6,6 +6,7 @@ using DAL.App.EF.Mappers;
 using ee.itcollege.javalg.DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using SongKey = DAL.App.DTO.DomainEntityDTOs.SongKey;
 
 namespace DAL.App.EF.Repositories
 {
@@ -23,18 +24,8 @@ namespace DAL.App.EF.Repositories
                 .ToListAsync();
         }
         
-        public async Task<DAL.App.DTO.DomainEntityDTOs.SongKey> FindAsync(int id)
+        public async Task<SongKey> FindAsyncWithIncludeAsync(int id)
         {
-/*
-            var songKey = await base.FindAsync(id);
-            if (songKey != null)
-            {
-                await RepositoryDbContext.Entry(songKey)
-                    .Reference(sk => sk.Note).LoadAsync();
-            }
-            return songKey;
-            */
-
             var songKey = await RepositoryDbSet
                 .Include(sk => sk.Note)
                 .FirstOrDefaultAsync(sk => sk.Id == id);

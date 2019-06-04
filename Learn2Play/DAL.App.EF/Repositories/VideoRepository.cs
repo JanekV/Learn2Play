@@ -6,6 +6,7 @@ using DAL.App.EF.Mappers;
 using ee.itcollege.javalg.DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Video = DAL.App.DTO.DomainEntityDTOs.Video;
 
 namespace DAL.App.EF.Repositories
 {
@@ -19,27 +20,19 @@ namespace DAL.App.EF.Repositories
         {
             return await RepositoryDbSet
                 .Include(v => v.Song)
+                .Include(v => v.Tabs.Select(TabMapper.MapFromDomain).ToList())
                 .Select(e => VideoMapper.MapFromDomain(e))
                 .ToListAsync();
         }
-        
-        public async Task<DAL.App.DTO.DomainEntityDTOs.Video> FindAsync(int id)
-        {
-            /*var video = await base.FindAsync(id);
-            if (video != null)
-            {
-                await RepositoryDbContext.Entry(video)
-                    .Reference(v => v.Song).LoadAsync();
-            }
-            return video;
-            */
 
+        public async Task<Video> FindAsyncWithIncludeAsync(int id)
+        {
             var video = await RepositoryDbSet
                 .Include(v => v.Song)
+                .Include(v => v.Tabs.Select(TabMapper.MapFromDomain).ToList())
                 .FirstOrDefaultAsync(v => v.Id == id);
-            
-            
             return VideoMapper.MapFromDomain(video);
         }
+        
     }
 }

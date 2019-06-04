@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using ee.itcollege.javalg.Contracts.DAL.Base.Mappers;
 using DALAppDTO = DAL.App.DTO;
 
@@ -32,7 +33,7 @@ namespace DAL.App.EF.Mappers
                 AuthorChannelLink = video.AuthorChannelLink,
                 LocalPath = video.LocalPath,
                 SongId = video.SongId,
-                Song = SongMapper.MapFromDomain(video.Song)   
+                Song = SongMapper.MapFromDomain(video.Song),
             };
 
 
@@ -48,7 +49,7 @@ namespace DAL.App.EF.Mappers
                 AuthorChannelLink = video.AuthorChannelLink,
                 LocalPath = video.LocalPath,
                 SongId = video.SongId,
-                Song = SongMapper.MapFromDAL(video.Song)   
+                Song = SongMapper.MapFromDAL(video.Song)
             };
 
             return res;

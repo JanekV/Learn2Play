@@ -19,27 +19,18 @@ namespace DAL.App.EF.Repositories
         {
             return await RepositoryDbSet
                 .Include(ss => ss.Song)
-                .Include(ss => ss.Style) 
+                .Include(ss => ss.Style)
+                .ThenInclude(s => s.Name)
                 .Select(e => SongStyleMapper.MapFromDomain(e))
                 .ToListAsync();
         }
         
-        public async Task<DAL.App.DTO.DomainEntityDTOs.SongStyle> FindAsync(int id)
+        public async Task<DAL.App.DTO.DomainEntityDTOs.SongStyle> FindAsyncWithIncludeAsync(int id)
         {
-            /*var songStyle = await base.FindAsync(id);
-            if (songStyle != null)
-            {
-                await RepositoryDbContext.Entry(songStyle)
-                    .Reference(ss => ss.Song).LoadAsync();
-                await RepositoryDbContext.Entry(songStyle)
-                    .Reference(ss => ss.Style).LoadAsync();
-            }
-            return songStyle;
-            */
-
             var songStyle = await RepositoryDbSet
                 .Include(ss => ss.Song)
                 .Include(ss => ss.Style)
+                .ThenInclude(s => s.Name)
                 .FirstOrDefaultAsync(ss => ss.Id == id);
             
             

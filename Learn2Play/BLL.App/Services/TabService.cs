@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.DTO.DomainEntityDTOs;
 using BLL.App.Mappers;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
@@ -18,6 +19,11 @@ namespace BLL.App.Services
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.Tab>> AllAsyncWithInclude()
         {
             return (await Uow.Tabs.AllAsyncWithInclude()).Select(TabMapper.MapFromDAL).ToList();
+        }
+
+        public async Task<Tab> FindAsyncWithIncludeAsync(int id)
+        {
+            return TabMapper.MapFromDAL(await Uow.Tabs.FindAsyncWithIncludeAsync(id));
         }
     }
 }
