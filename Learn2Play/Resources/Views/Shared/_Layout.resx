@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddSong" xml:space="preserve">
+    <value>Add new song</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Back to list</value>
+  </data>
+  <data name="BasicCRUD" xml:space="preserve">
+    <value>Basic CRUD</value>
+  </data>
   <data name="Chord" xml:space="preserve">
     <value>Chord</value>
   </data>
@@ -140,6 +149,9 @@
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Logout</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Manage users</value>
   </data>
   <data name="NavChordNotes" xml:space="preserve">
     <value>Chord notes</value>
@@ -188,6 +200,12 @@
   </data>
   <data name="Register" xml:space="preserve">
     <value>Register</value>
+  </data>
+  <data name="SearchSongs" xml:space="preserve">
+    <value>Search songs</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="Song" xml:space="preserve">
     <value>Song</value>

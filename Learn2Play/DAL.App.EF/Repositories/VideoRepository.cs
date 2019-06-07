@@ -33,6 +33,15 @@ namespace DAL.App.EF.Repositories
                 .FirstOrDefaultAsync(v => v.Id == id);
             return VideoMapper.MapFromDomain(video);
         }
-        
+
+        public void RemoveTabsVorVideo(int id)
+        {
+            var tabs = RepositoryDbContext.Tabs
+                .Where(t => t.VideoId == id).ToList();
+            foreach (var tab in tabs)
+            {
+                RepositoryDbContext.Tabs.Remove(tab);
+            }
+        }
     }
 }

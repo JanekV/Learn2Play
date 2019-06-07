@@ -119,6 +119,13 @@ namespace BLL.App.Services
             await Uow.SongChords.AddAsync(songChord);
         }
 
+        public async Task AddVideoToSongAsync(Song song, Video video)
+        {
+            video.Song = song;
+            video.SongId = song.Id;
+            await Uow.Videos.AddAsync(VideoMapper.MapFromBLL(video));
+        }
+
         public async Task AddStyleToSongAsync(
             BLL.App.DTO.DomainEntityDTOs.Song song, BLL.App.DTO.DomainEntityDTOs.Style style)
         {

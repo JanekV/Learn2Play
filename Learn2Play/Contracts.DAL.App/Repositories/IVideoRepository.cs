@@ -8,6 +8,7 @@ namespace Contracts.DAL.App.Repositories
     public interface IVideoRepository : IVideoRepository<DALAppDTO.DomainEntityDTOs.Video>
     {
         Task<DALAppDTO.DomainEntityDTOs.Video> FindAsyncWithIncludeAsync(int id);
+        void RemoveTabsVorVideo(int id);
     }
     public interface IVideoRepository<TDALEntity>: IBaseRepository<TDALEntity> 
         where TDALEntity : class, new()

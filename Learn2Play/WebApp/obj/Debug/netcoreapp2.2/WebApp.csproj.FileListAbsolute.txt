@@ -332,3 +332,9 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Ra
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Instruments\AddInstrumentToSong.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Styles\AddStyleToSong.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Chords\AddChordToSong.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Videos\Create.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Videos\CreateVideoForSong.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Videos\Delete.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Videos\Details.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Videos\Edit.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Videos\PartialCreateEdit.g.cshtml.cs

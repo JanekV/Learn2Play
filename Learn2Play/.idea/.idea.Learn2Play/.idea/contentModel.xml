@@ -452,6 +452,7 @@
               <e p="NotesController.cs" t="Include" />
               <e p="SongsController.cs" t="Include" />
               <e p="StylesController.cs" t="Include" />
+              <e p="VideosController.cs" t="Include" />
             </e>
             <e p="ViewModels" t="Include">
               <e p="ChordCreateEditViewModel.cs" t="Include" />
@@ -460,6 +461,8 @@
               <e p="SongWithChordViewModel.cs" t="Include" />
               <e p="SongWithInstrumentViewModel.cs" t="Include" />
               <e p="SongWithStyleViewModel.cs" t="Include" />
+              <e p="SongWithVideoViewModel.cs" t="Include" />
+              <e p="VideoCreateEditViewModel.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
               <e p="_ViewStart.cshtml" t="Include" />
@@ -521,6 +524,14 @@
                 <e p="Details.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
+              </e>
+              <e p="Videos" t="Include">
+                <e p="Create.cshtml" t="Include" />
+                <e p="CreateVideoForSong.cshtml" t="Include" />
+                <e p="Delete.cshtml" t="Include" />
+                <e p="Details.cshtml" t="Include" />
+                <e p="Edit.cshtml" t="Include" />
+                <e p="PartialCreateEdit.cshtml" t="Include" />
               </e>
             </e>
           </e>
@@ -860,7 +871,9 @@
             <e p="dist" t="Include">
               <e p="css" t="Include">
                 <e p="adminlte.css" t="Include" />
+                <e p="adminlte.css.map" t="Include" />
                 <e p="adminlte.min.css" t="Include" />
+                <e p="adminlte.min.css.map" t="Include" />
               </e>
               <e p="img" t="Include">
                 <e p="AdminLTELogo.png" t="Include" />

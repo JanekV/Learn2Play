@@ -1,0 +1,40 @@
+@model WebApp.Areas.Admin.ViewModels.SongWithVideoViewModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+<h1>Add</h1>
+
+<h4>Song: @Model.SongName</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-area="Admin" asp-action="CreateForSong">
+            <div class="form-group">
+                <div class="form-group">
+                    <label asp-for="Video.YouTubeUrl" class="control-label"></label>
+                    <input asp-for="Video.YouTubeUrl" class="form-control" />
+                    <span asp-validation-for="Video.YouTubeUrl" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Video.AuthorChannelLink" class="control-label"></label>
+                    <input asp-for="Video.AuthorChannelLink" class="form-control" />
+                    <span asp-validation-for="Video.AuthorChannelLink" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Video.LocalPath" class="control-label"></label>
+                    <input asp-for="Video.LocalPath" class="form-control" />
+                    <span asp-validation-for="Video.LocalPath" class="text-danger"></span>
+                </div>
+            </div>
+            <input type="hidden" asp-for="SongId" value="@Model.SongId"/>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

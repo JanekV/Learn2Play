@@ -123,6 +123,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Tühista</value>
   </data>
+  <data name="Create" xml:space="preserve">
+    <value>Loo</value>
+  </data>
   <data name="No" xml:space="preserve">
     <value>Ei</value>
   </data>

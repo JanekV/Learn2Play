@@ -3,9 +3,9 @@
 @{
     ViewData["Title"] = "Add";}
 }
-<h1>Add</h1>
+<h1>@Resources.Views.Common.Add</h1>
 
-<h4>Song: @Model.SongName</h4>
+<h4>@Resources.Views.Shared._Layout.Song: @Model.SongName</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -16,7 +16,7 @@
             </div>
             <input type="hidden" asp-for="SongId" value="@Model.SongId"/>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@Resources.Views.Common.Create" class="btn btn-primary" />
             </div>
             
         </form>
@@ -24,7 +24,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@Resources.Views.Shared._Layout.BackToList</a>
 </div>
 
 @section Scripts {

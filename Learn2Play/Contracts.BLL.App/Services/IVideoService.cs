@@ -9,5 +9,6 @@ namespace Contracts.BLL.App.Services
     {
         Task<BLLAppDTO.Video> FindAsyncWithIncludeAsync(int id);
 
+        void RemoveTabsForVideo(int id);
     }
 }

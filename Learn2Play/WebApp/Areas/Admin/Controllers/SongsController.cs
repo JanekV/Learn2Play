@@ -15,7 +15,7 @@ using Video = BLL.App.DTO.DomainEntityDTOs.Video;
 
 namespace WebApp.Areas.Admin.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Area("Admin")]
     public class SongsController : Controller
     {
@@ -95,23 +95,6 @@ namespace WebApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            /*song.SongKeySelectList = new SelectList(
-                await _bll.SongKeys.AllAsync(),
-                nameof(BLL.App.DTO.DomainEntityDTOs.SongKey.Id), nameof(BLL.App.DTO.DomainEntityDTOs.SongKey.Description),
-                song.SongKeyId);
-            song.InstrumentMultiSelectList = new MultiSelectList(
-                await _bll.Instruments.AllAsync(),
-                nameof(Instrument.Id), nameof(Instrument.Name),
-                song.Instruments);
-            song.StyleMultiSelectList = new MultiSelectList(
-                await _bll.Styles.AllAsync(),
-                nameof(Style.Id), nameof(Style.Name),
-                song.Styles);
-            song.ChordMultiSelectList = new MultiSelectList(
-                await _bll.Chords.AllAsync(),
-                nameof(Chord.Id), nameof(Chord.Name),
-                song.Chords);*/
-            
             return View(song);
         }
 

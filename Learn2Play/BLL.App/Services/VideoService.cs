@@ -25,5 +25,10 @@ namespace BLL.App.Services
         {
             return VideoMapper.MapFromDAL(await Uow.Videos.FindAsyncWithIncludeAsync(id));
         }
+
+        public void RemoveTabsForVideo(int id)
+        {
+           Uow.Videos.RemoveTabsVorVideo(id);
+        }
     }
 }

@@ -16,5 +16,6 @@ namespace Contracts.BLL.App.Services
         Task AddInstrumentToSongAsync(BLLAppDTO.Song song, BLLAppDTO.Instrument instrument);
         Task AddStyleToSongAsync(BLLAppDTO.Song findAsync, BLLAppDTO.Style style);
         Task AddChordToSongAsync(BLLAppDTO.Song findAsync, BLLAppDTO.Chord chord);
+        Task AddVideoToSongAsync(BLLAppDTO.Song findAsync, BLLAppDTO.Video video);
     }
 }
