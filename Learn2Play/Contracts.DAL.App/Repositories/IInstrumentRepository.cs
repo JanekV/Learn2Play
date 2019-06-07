@@ -8,6 +8,7 @@ namespace Contracts.DAL.App.Repositories
     public interface IInstrumentRepository: IInstrumentRepository<DALAppDTO.DomainEntityDTOs.Instrument>
     {
         Task<Instrument> FindDetachedAsync(int id);
+
     }
     
     public interface IInstrumentRepository<TDALEntity>: IBaseRepository<TDALEntity> 

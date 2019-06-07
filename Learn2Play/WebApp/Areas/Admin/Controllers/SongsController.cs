@@ -46,7 +46,7 @@ namespace WebApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            var song = await _bll.Songs.FindAsync(id);
+            var song = await _bll.Songs.GetSongWithEverythingAsync(id.Value);
             if (song == null)
             {
                 return NotFound();
@@ -58,28 +58,10 @@ namespace WebApp.Areas.Admin.Controllers
         // GET: Songs/Create
         public async Task<IActionResult> Create()
         {
-            var swe = _bll.Songs.InitializeSongWithEverything();
-            /*swe.SongKeySelectList = new SelectList(
-                await _bll.SongKeys.AllAsyncWithInclude(),
+            var vm = new SongCreateViewModel();
+            vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
                 nameof(SongKey.Id), nameof(SongKey.Description));
-            
-            swe.InstrumentMultiSelectList = new MultiSelectList(
-                await _bll.Instruments.AllAsync(),
-                nameof(Instrument.Id), nameof(Instrument.Name));
-            
-            swe.StyleMultiSelectList = new MultiSelectList(
-                await _bll.Styles.AllAsync(),
-                nameof(Style.Id), nameof(Style.Name));
-            
-            swe.ChordMultiSelectList = new MultiSelectList(
-                await _bll.Chords.AllAsync(),
-                nameof(Chord.Id), nameof(Chord.Name));
-            
-            swe.VideoMultiSelectList = new MultiSelectList(
-                await _bll.Videos.AllAsync(),
-                nameof(Video.Id), nameof(Video.YouTubeUrl));
-            */
-            return View(swe);
+            return View(vm);
         }
 
         // POST: Songs/Create
@@ -87,16 +69,17 @@ namespace WebApp.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(BLL.App.DTO.SongWithEverything swe)
+        public async Task<IActionResult> Create(SongCreateViewModel vm)
         {
             if (ModelState.IsValid)
             {
-                await _bll.Songs.AddAsync(null);
+                await _bll.Songs.AddAsync(vm.Song);
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            
-            return View();
+            vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
+                nameof(SongKey.Id), nameof(SongKey.Description));
+            return View(vm);
         }
 
         // GET: Songs/Edit/5
@@ -107,12 +90,12 @@ namespace WebApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var song = await _bll.Songs.GetSongWithEverythingAsync((int) id);
+            var song = await _bll.Songs.GetSongWithEverythingAsync(id.Value);
             if (song == null)
             {
                 return NotFound();
             }
-            song.SongKeySelectList = new SelectList(
+            /*song.SongKeySelectList = new SelectList(
                 await _bll.SongKeys.AllAsync(),
                 nameof(BLL.App.DTO.DomainEntityDTOs.SongKey.Id), nameof(BLL.App.DTO.DomainEntityDTOs.SongKey.Description),
                 song.SongKeyId);
@@ -127,11 +110,8 @@ namespace WebApp.Areas.Admin.Controllers
             song.ChordMultiSelectList = new MultiSelectList(
                 await _bll.Chords.AllAsync(),
                 nameof(Chord.Id), nameof(Chord.Name),
-                song.Chords);
-            song.VideoMultiSelectList = new MultiSelectList(
-                await _bll.Videos.AllAsync(),
-                nameof(Video.Id), nameof(Video.YouTubeUrl),
-                song.Videos);
+                song.Chords);*/
+            
             return View(song);
         }
 

@@ -7,10 +7,10 @@ using DALAppDTO = DAL.App.DTO;
 namespace Contracts.DAL.App.Repositories
 {   
     public interface ISongChordRepository : ISongChordRepository<DALAppDTO.DomainEntityDTOs.SongChord>
-    {
-        Task<SongChord> FindByStyleAndSongIdAsync(int chordId, int songId);
+    { 
+        Task<SongChord> FindByChordAndSongIdAsync(int chordId, int songId);
     }
-    public interface ISongChordRepository<TDALEntity>: IBaseRepository<TDALEntity> 
+    public interface ISongChordRepository<TDALEntity>: IBaseRepository<TDALEntity>
         where TDALEntity : class, new()
     {
         Task<List<TDALEntity>> AllAsyncWithInclude();

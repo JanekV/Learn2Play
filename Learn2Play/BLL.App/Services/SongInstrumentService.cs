@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.DTO.DomainEntityDTOs;
 using BLL.App.Mappers;
 using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
@@ -18,6 +19,11 @@ namespace BLL.App.Services
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongInstrument>> AllAsyncWithInclude()
         {
             return (await Uow.SongInstruments.AllAsyncWithInclude()).Select(SongInstrumentMapper.MapFromDAL).ToList();
+        }
+
+        public async Task<SongInstrument> FindByInstrumentAndSongIdAsync(int instrumentId, int songId)
+        {
+            return SongInstrumentMapper.MapFromDAL(await Uow.SongInstruments.FindByInstrumentAndSongIdAsync(instrumentId, songId));
         }
     }
 }

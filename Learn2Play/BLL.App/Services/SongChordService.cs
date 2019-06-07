@@ -6,6 +6,7 @@ using Contracts.BLL.App.Services;
 using Contracts.DAL.App;
 using Domain;
 using ee.itcollege.javalg.BLL.Base.Services;
+using SongChord = BLL.App.DTO.DomainEntityDTOs.SongChord;
 
 namespace BLL.App.Services
 {
@@ -19,6 +20,11 @@ namespace BLL.App.Services
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.SongChord>> AllAsyncWithInclude()
         {
             return (await Uow.SongChords.AllAsyncWithInclude()).Select(SongChordMapper.MapFromDAL).ToList();
+        }
+
+        public async Task<SongChord> FindByChordAndSongIdAsync(int chordId, int songId)
+        {
+            return SongChordMapper.MapFromDAL(await Uow.SongChords.FindByChordAndSongIdAsync(chordId, songId));
         }
     }
 }

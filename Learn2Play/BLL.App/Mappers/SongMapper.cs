@@ -70,7 +70,7 @@ namespace BLL.App.Mappers
                     SpotifyLink = songWithEverything.SpotifyLink,
                     SongDescription = songWithEverything.SongDescription,
 
-                    SongKeyId = songWithEverything.SongKeyId,
+                    SongKey = SongKeyMapper.MapFromDAL(songWithEverything.SongKey),
                     SongKeyNoteName = songWithEverything.SongKeyNoteName,
                     SongKeyDescription = songWithEverything.SongKeyDescription,
 

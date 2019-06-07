@@ -329,3 +329,6 @@ C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Ra
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Notes\Edit.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Notes\Index.g.cshtml.cs
 C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Songs\Search.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Instruments\AddInstrumentToSong.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Styles\AddStyleToSong.g.cshtml.cs
+C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Chords\AddChordToSong.g.cshtml.cs

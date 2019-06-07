@@ -456,12 +456,16 @@
             <e p="ViewModels" t="Include">
               <e p="ChordCreateEditViewModel.cs" t="Include" />
               <e p="ChordWithNoteViewModel.cs" t="Include" />
-              <e p="SongCreateEditViewModel.cs" t="Include" />
+              <e p="SongCreateViewModel.cs" t="Include" />
+              <e p="SongWithChordViewModel.cs" t="Include" />
+              <e p="SongWithInstrumentViewModel.cs" t="Include" />
+              <e p="SongWithStyleViewModel.cs" t="Include" />
             </e>
             <e p="Views" t="Include">
               <e p="_ViewStart.cshtml" t="Include" />
               <e p="_ViewStart.cshtml.cs" t="Include" />
               <e p="Chords" t="Include">
+                <e p="AddChordToSong.cshtml" t="Include" />
                 <e p="Create.cshtml" t="Include" />
                 <e p="Delete.cshtml" t="Include" />
                 <e p="Details.cshtml" t="Include" />
@@ -476,6 +480,7 @@
                 <e p="Privacy.cshtml" t="Include" />
               </e>
               <e p="Instruments" t="Include">
+                <e p="AddInstrumentToSong.cshtml" t="Include" />
                 <e p="Create.cshtml" t="Include" />
                 <e p="Delete.cshtml" t="Include" />
                 <e p="Details.cshtml" t="Include" />
@@ -510,6 +515,7 @@
                 <e p="Search.cshtml" t="Include" />
               </e>
               <e p="Styles" t="Include">
+                <e p="AddStyleToSong.cshtml" t="Include" />
                 <e p="Create.cshtml" t="Include" />
                 <e p="Delete.cshtml" t="Include" />
                 <e p="Details.cshtml" t="Include" />

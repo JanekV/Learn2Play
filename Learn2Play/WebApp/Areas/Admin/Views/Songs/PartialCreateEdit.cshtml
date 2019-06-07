@@ -22,7 +22,7 @@
     <span asp-validation-for="@Model.SongDescription" class="text-danger"></span>
 </div>
 <div class="form-group">
-    <input type="hidden" asp-for="@Model.SongKeyId" />
+    <input type="hidden" asp-for="@Model.SongKey.Id" />
     @*<label asp-for="@Model.SongKeyId" class="control-label">SongKey</label>
     <select asp-for="@Model.SongKeyId" class="form-control" asp-items="@Model.SongKeySelectList"></select>
     <span asp-validation-for="@Model.SongKeyId" class="text-danger"></span>*@
@@ -30,9 +30,9 @@
     <input asp-for="@Model.SongKeyNoteName" class="form-control" />
     <span asp-validation-for="@Model.SongKeyNoteName" class="text-danger"></span>
     
-    <label asp-for="@Model.SongKeyDescription" class="control-label"></label>
-    <input asp-for="@Model.SongKeyDescription" class="form-control" />
-    <span asp-validation-for="@Model.SongKeyDescription" class="text-danger"></span>
+    <label asp-for="@Model.SongKey.Description" class="control-label"></label>
+    <input asp-for="@Model.SongKey.Description" class="form-control" />
+    <span asp-validation-for="@Model.SongKey.Description" class="text-danger"></span>
 </div>
 <div class="form-group">
     @for (var i = 0; i < Model.Instruments.Count; i++){

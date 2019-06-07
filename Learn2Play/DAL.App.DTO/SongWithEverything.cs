@@ -11,7 +11,7 @@ namespace DAL.App.DTO
         public string SpotifyLink { get; set; }
         public string SongDescription { get; set; }
         
-        public int SongKeyId { get; set; }
+        public SongKey SongKey { get; set; }
         public string SongKeyNoteName { get; set; } // Get Note.Name of the SongKey
         public string SongKeyDescription { get; set; }
 

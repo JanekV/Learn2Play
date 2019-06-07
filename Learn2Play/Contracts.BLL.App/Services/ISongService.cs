@@ -9,10 +9,12 @@ namespace Contracts.BLL.App.Services
 {
     public interface ISongService : IBaseEntityService<BLLAppDTO.Song>, ISongRepository<BLLAppDTO.Song>
     {
-        SongWithEverything InitializeSongWithEverything();
         Task<SongWithEverything> GetSongWithEverythingAsync(int songId);
         Task<List<SongWithEverything>> GetAllSongsWithEverythingAsync();
         Task<List<BLLAppDTO.Song>> SearchSongs(string search);
         Task<SongWithEverything> UpdateSongWithEverything(SongWithEverything swe);
+        Task AddInstrumentToSongAsync(BLLAppDTO.Song song, BLLAppDTO.Instrument instrument);
+        Task AddStyleToSongAsync(BLLAppDTO.Song findAsync, BLLAppDTO.Style style);
+        Task AddChordToSongAsync(BLLAppDTO.Song findAsync, BLLAppDTO.Chord chord);
     }
 }

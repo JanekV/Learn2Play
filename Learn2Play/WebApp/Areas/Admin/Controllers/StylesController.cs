@@ -1,7 +1,10 @@
 using System.Threading.Tasks;
+using BLL.App.DTO.DomainEntityDTOs;
 using Contracts.BLL.App;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using WebApp.Areas.Admin.ViewModels;
 
 namespace WebApp.Areas.Admin.Controllers
 {
@@ -123,6 +126,42 @@ namespace WebApp.Areas.Admin.Controllers
             _bll.Styles.Remove(id);
             await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> AddStyleToSong(int songId)
+        {
+            var song = await _bll.Songs.FindAsync(songId);
+            var vm = new SongWithStyleViewModel()
+            {
+                SongId = songId,
+                SongName = song.Name,
+                StyleSelectList = new SelectList(
+                    await _bll.Styles.AllAsync(),
+                    nameof(Style.Id), nameof(Style.Name))
+            };
+            return View(vm);
+        }
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddToSong(SongWithStyleViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                await _bll.Songs.AddStyleToSongAsync(
+                    await _bll.Songs.FindAsync(vm.SongId),
+                    await _bll.Styles.FindAsync(vm.StyleId));
+                await _bll.SaveChangesAsync();
+                return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = vm.SongId});
+            }
+            return RedirectToAction();
+        }
+
+        public async Task<IActionResult> Remove(int songId, int styleId)
+        {
+            var songStyle = await _bll.SongStyles.FindByStyleAndSongIdAsync(styleId, songId);
+            _bll.SongStyles.Remove(songStyle.Id);
+            await _bll.SaveChangesAsync();
+            return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = songId});
         }
     }
 }

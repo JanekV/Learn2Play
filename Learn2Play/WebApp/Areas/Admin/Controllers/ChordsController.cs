@@ -35,7 +35,7 @@ namespace WebApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var chordWithNotes = await _bll.Chords.GetChordWithNotesAsync((int) id);
+            var chordWithNotes = await _bll.Chords.GetChordWithNotesAsync(id.Value);
             if (chordWithNotes == null)
             {
                 return NotFound();
@@ -143,6 +143,42 @@ namespace WebApp.Areas.Admin.Controllers
             _bll.Chords.Remove(id);
             await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
+        }
+        public async Task<IActionResult> AddChordToSong(int songId)
+        {
+            var song = await _bll.Songs.FindAsync(songId);
+            var vm = new SongWithChordViewModel()
+            {
+                SongId = songId,
+                SongName = song.Name,
+                ChordSelectList = new SelectList(
+                    await _bll.Chords.AllAsync(),
+                    nameof(Chord.Id), nameof(Chord.Name))
+            };
+            return View(vm);
+        }
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddToSong(SongWithChordViewModel vm)
+        {
+            if (ModelState.IsValid)
+            {
+                await _bll.Songs.AddChordToSongAsync(
+                    await _bll.Songs.FindAsync(vm.SongId),
+                    await _bll.Chords.FindAsync(vm.ChordId));
+                await _bll.SaveChangesAsync();
+                return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = vm.SongId});
+            }
+            return RedirectToAction();
+        }
+
+        public async Task<IActionResult> Remove(int songId, int chordId)
+        {
+            var songChord = await _bll.SongChords.FindByChordAndSongIdAsync(chordId, songId);
+            _bll.SongChords.Remove(songChord.Id);
+            await _bll.SaveChangesAsync();
+            return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = songId});
         }
     }
 }

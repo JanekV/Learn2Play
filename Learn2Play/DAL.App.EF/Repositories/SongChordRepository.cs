@@ -25,7 +25,7 @@ namespace DAL.App.EF.Repositories
                 .ToListAsync();
         }
 
-        public async Task<SongChord> FindByStyleAndSongIdAsync(int chordId, int songId)
+        public async Task<SongChord> FindByChordAndSongIdAsync(int chordId, int songId)
         {
             var res = await RepositoryDbSet
                 .Where(sc => sc.ChordId == chordId && sc.SongId == songId)

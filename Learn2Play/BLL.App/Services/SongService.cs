@@ -27,39 +27,6 @@ namespace BLL.App.Services
             ServiceRepository = Uow.Songs;
         }
 
-        public SongWithEverything InitializeSongWithEverything()
-        {
-            return new SongWithEverything()
-            {
-                Instruments = new List<Instrument>()
-                {
-                    new Instrument(),
-                    new Instrument()
-                },
-            
-                Styles = new List<BLL.App.DTO.DomainEntityDTOs.Style>()
-                {
-                    new BLL.App.DTO.DomainEntityDTOs.Style(),
-                    new BLL.App.DTO.DomainEntityDTOs.Style(),
-                    new BLL.App.DTO.DomainEntityDTOs.Style(),
-                    new BLL.App.DTO.DomainEntityDTOs.Style()
-                },
-            
-                Chords = new List<Chord>()
-                {
-                    new Chord(),
-                    new Chord(),
-                    new Chord(),
-                    new Chord(),
-                    new Chord()
-                },
-                
-                Videos = new List<Video>()
-                {
-                    new Video()
-                }
-            };
-        }
 
         public async Task<List<BLL.App.DTO.DomainEntityDTOs.Song>> AllAsyncWithInclude()
         {
@@ -106,8 +73,8 @@ namespace BLL.App.Services
             song.Description = swe.SongDescription;
             Uow.Songs.Update(song);
 
-            var songKey = await Uow.SongKeys.FindDetachedAsync(swe.SongKeyId);
-            songKey.Description = swe.SongKeyDescription;
+            var songKey = await Uow.SongKeys.FindDetachedAsync(swe.SongKey.Id);
+            songKey.Description = swe.SongKey.Description;
             Uow.SongKeys.Update(songKey);
 
             var songKeyNote = await Uow.Notes.FindDetachedAsync(songKey.NoteId);
@@ -127,7 +94,45 @@ namespace BLL.App.Services
             return swe;
         }
 
+        public async Task AddInstrumentToSongAsync(Song song, Instrument instrument)
+        {
+            var songInstrument = new SongInstrument()
+            {
+                SongId = song.Id,
+                Song = SongMapper.MapFromBLL(song),
+                InstrumentId = instrument.Id,
+                Instrument = InstrumentMapper.MapFromBLL(instrument)
+            };
+            await Uow.SongInstruments.AddAsync(songInstrument);
+        }
+
+        public async Task AddChordToSongAsync(
+            BLL.App.DTO.DomainEntityDTOs.Song song, Chord chord)
+        {
+            var songChord = new SongChord()
+            {
+                SongId = song.Id,
+                Song = SongMapper.MapFromBLL(song),
+                ChordId = chord.Id,
+                Chord = ChordMapper.MapFromBLL(chord)
+            };
+            await Uow.SongChords.AddAsync(songChord);
+        }
+
+        public async Task AddStyleToSongAsync(
+            BLL.App.DTO.DomainEntityDTOs.Song song, BLL.App.DTO.DomainEntityDTOs.Style style)
+        {
+            var songStyle = new SongStyle()
+            {
+                SongId = song.Id,
+                Song = SongMapper.MapFromBLL(song),
+                StyleId = style.Id,
+                Style = StyleMapper.MapFromBLL(style)
+            };
+            await Uow.SongStyles.AddAsync(songStyle);
+        }
         
+
 
         #region Move theeeseee
         private void UpdateVideosAsync(DAL.App.DTO.DomainEntityDTOs.Song song, IEnumerable<Video> videos)
@@ -146,7 +151,7 @@ namespace BLL.App.Services
         {
             foreach (var chord in chords)
             {
-                var songChord = await Uow.SongChords.FindByStyleAndSongIdAsync(chord.Id, song.Id);
+                var songChord = await Uow.SongChords.FindByChordAndSongIdAsync(chord.Id, song.Id);
                 var chordFromDb = await Uow.Chords.FindDetachedAsync(chord.Id);
                 if (chordFromDb == null)
                 {
