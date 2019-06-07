@@ -39,9 +39,12 @@ namespace DAL.App.EF.Repositories
         
         public async Task<DAL.App.DTO.DomainEntityDTOs.SongStyle> FindByStyleAndSongIdAsync(int styleId, int songId)
         {
-            var songStyle = await RepositoryDbSet
+            var res = await RepositoryDbSet
                 .Where(ss => ss.StyleId == styleId && ss.SongId == songId)
                 .FirstOrDefaultAsync();
+            var songStyleEntry = RepositoryDbContext.Entry(res);
+            songStyleEntry.State = EntityState.Detached;
+            var songStyle = songStyleEntry.Entity;
             return SongStyleMapper.MapFromDomain(songStyle);
         }
     }

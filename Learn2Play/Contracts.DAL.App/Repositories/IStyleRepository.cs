@@ -10,6 +10,7 @@ namespace Contracts.DAL.App.Repositories
     {
         Task<List<Style>> GetStylesForIds(List<int> ids);
 
+        Task<Style> FindDetachedAsync(int id);
     }
     public interface IStyleRepository<TDALEntity>: IBaseRepository<TDALEntity> 
         where TDALEntity : class, new()

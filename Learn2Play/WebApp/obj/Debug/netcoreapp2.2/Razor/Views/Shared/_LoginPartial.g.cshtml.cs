@@ -18,11 +18,6 @@ using WebApp;
 
 #line default
 #line hidden
-#line 2 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Views\_ViewImports.cshtml"
-using WebApp.Models;
-
-#line default
-#line hidden
 #line 1 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Views\Shared\_LoginPartial.cshtml"
 using Domain.Identity;
 
@@ -34,7 +29,7 @@ using Microsoft.AspNetCore.Identity;
 #line default
 #line hidden
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"94c6446e2174f68ce73260a3107e1a708fe6de3b", @"/Views/Shared/_LoginPartial.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fc48f17eb9bac3476d8060730298bf398eb2fa5e", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"acc6ad5436936d69f19a0c25649740de595ab008", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__LoginPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("nav-link text-dark"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -82,7 +77,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("    <li class=\"nav-item\">\r\n        ");
             EndContext();
             BeginContext(253, 160, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b6770", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b6626", async() => {
                 BeginContext(352, 36, false);
 #line 10 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Views\Shared\_LoginPartial.cshtml"
                                                                                                      Write(Resources.Views.Shared._Layout.Hello);
@@ -125,7 +120,7 @@ using Microsoft.AspNetCore.Identity;
             WriteLiteral("\r\n    </li>\r\n    <li class=\"nav-item\">\r\n        ");
             EndContext();
             BeginContext(461, 284, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b9396", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b9252", async() => {
                 BeginContext(605, 76, true);
                 WriteLiteral("\r\n            <button type=\"submit\" class=\"nav-link btn btn-link text-dark\">");
                 EndContext();
@@ -185,7 +180,7 @@ else
             WriteLiteral("    <li class=\"nav-item\">\r\n        ");
             EndContext();
             BeginContext(805, 123, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b13229", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b13085", async() => {
                 BeginContext(885, 39, false);
 #line 21 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Views\Shared\_LoginPartial.cshtml"
                                                                                   Write(Resources.Views.Shared._Layout.Register);
@@ -214,7 +209,7 @@ else
             WriteLiteral("\r\n    </li>\r\n    <li class=\"nav-item\">\r\n        ");
             EndContext();
             BeginContext(976, 117, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b15157", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "94c6446e2174f68ce73260a3107e1a708fe6de3b15013", async() => {
                 BeginContext(1053, 36, false);
 #line 24 "C:\Users\X\RiderProjects\Learn2Play\Learn2Play\WebApp\Views\Shared\_LoginPartial.cshtml"
                                                                                Write(Resources.Views.Shared._Layout.Login);

@@ -9,6 +9,7 @@ namespace Contracts.DAL.App.Repositories
     public interface INoteRepository: INoteRepository<DALAppDTO.DomainEntityDTOs.Note>
     {
         Task AddMultipleAsync(List<Note> notes);
+        Task<Note> FindDetachedAsync(int id);
     }
     
     public interface INoteRepository<TDALEntity>: IBaseRepository<TDALEntity> 

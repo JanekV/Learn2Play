@@ -3,7 +3,7 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using WebApp.Models;
+using WebApp.ViewModels;
 
 namespace WebApp.Areas.Admin.Controllers
 {

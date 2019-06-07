@@ -37,9 +37,12 @@ namespace DAL.App.EF.Repositories
 
         public async Task<DAL.App.DTO.DomainEntityDTOs.SongInstrument> FindByInstrumentAndSongIdAsync(int instrumentId, int songId)
         {
-            var songInstrument = await RepositoryDbSet
+            var res = await RepositoryDbSet
                 .Where(si => si.InstrumentId == instrumentId && si.SongId == songId)
                 .FirstOrDefaultAsync();
+            var songInstrumentEntry = RepositoryDbContext.Entry(res);
+            songInstrumentEntry.State = EntityState.Detached;
+            var songInstrument = songInstrumentEntry.Entity;
             return SongInstrumentMapper.MapFromDomain(songInstrument);
         }
     }

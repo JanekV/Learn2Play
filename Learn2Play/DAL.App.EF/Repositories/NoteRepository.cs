@@ -32,5 +32,13 @@ namespace DAL.App.EF.Repositories
                 await AddAsync(note);
             }
         }
+        public async Task<Note> FindDetachedAsync(int id)
+        {
+            var noteEntry = RepositoryDbContext.Entry(await RepositoryDbSet.FindAsync(id));
+            if (noteEntry == null) return null;
+            noteEntry.State = EntityState.Detached;
+            var note = noteEntry.Entity;
+            return NoteMapper.MapFromDomain(note);
+        }
     }
 }

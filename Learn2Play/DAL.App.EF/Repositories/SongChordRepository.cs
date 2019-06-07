@@ -27,9 +27,12 @@ namespace DAL.App.EF.Repositories
 
         public async Task<SongChord> FindByStyleAndSongIdAsync(int chordId, int songId)
         {
-            var songChord = await RepositoryDbSet
+            var res = await RepositoryDbSet
                 .Where(sc => sc.ChordId == chordId && sc.SongId == songId)
                 .FirstOrDefaultAsync();
+            var songChordEntry = RepositoryDbContext.Entry(res);
+            songChordEntry.State = EntityState.Detached;
+            var songChord = songChordEntry.Entity;
             return SongChordMapper.MapFromDomain(songChord);
         }
 

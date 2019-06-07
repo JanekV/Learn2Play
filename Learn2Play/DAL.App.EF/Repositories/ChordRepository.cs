@@ -87,5 +87,14 @@ namespace DAL.App.EF.Repositories
             };
             return cwn;
         }
+        
+        public async Task<Chord> FindDetachedAsync(int id)
+        {
+            var chordEntry = RepositoryDbContext.Entry(await RepositoryDbSet.FindAsync(id));
+            if (chordEntry == null) return null;
+            chordEntry.State = EntityState.Detached;
+            var chord = chordEntry.Entity;
+            return ChordMapper.MapFromDomain(chord);
+        }
     }
 }

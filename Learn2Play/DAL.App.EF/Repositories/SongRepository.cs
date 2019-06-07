@@ -8,6 +8,7 @@ using ee.itcollege.javalg.DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using Song = DAL.App.DTO.DomainEntityDTOs.Song;
 
 namespace DAL.App.EF.Repositories
 {
@@ -149,6 +150,19 @@ namespace DAL.App.EF.Repositories
             }
 
             return await query.Select(s => SongMapper.MapFromDomain(s)).ToListAsync();
+        }
+
+        public async Task<Song> FindDetachedAsync(int id)
+        {
+            
+            var songEntry = RepositoryDbContext.Entry(await RepositoryDbSet.FindAsync(id));
+            if (songEntry != null)
+            {
+                songEntry.State = EntityState.Detached;
+                var song = songEntry.Entity;
+                return SongMapper.MapFromDomain(song);
+            }
+            return null;
         }
 
         public async Task<DAL.App.DTO.DomainEntityDTOs.Song> FindAsync(int id)

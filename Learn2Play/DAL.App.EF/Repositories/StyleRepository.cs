@@ -73,5 +73,20 @@ namespace DAL.App.EF.Repositories
 
             return styles;
         }
+        
+        public async Task<Style> FindDetachedAsync(int id)
+        {
+            var culture = Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2).ToLower();
+            var styleEntry = RepositoryDbContext.Entry(await RepositoryDbSet.FindAsync(id));
+            if (styleEntry == null) return null;
+            await styleEntry.Reference(s => s.Name).LoadAsync();
+            styleEntry.State = EntityState.Detached;
+            var style = styleEntry.Entity;
+            await RepositoryDbContext.Entry(style.Name).Collection(m => m.Translations)
+                .Query()
+                .Where(t => t.Culture == culture)
+                .LoadAsync();
+            return StyleMapper.MapFromDomain(style);
+        }
     }
 }

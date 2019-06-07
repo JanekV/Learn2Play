@@ -20,7 +20,7 @@ namespace DAL.App.EF.Repositories
         {
             return await RepositoryDbSet
                 .Include(v => v.Song)
-                .Include(v => v.Tabs.Select(TabMapper.MapFromDomain).ToList())
+                //.Include(v => v.Tabs.Select(TabMapper.MapFromDomain))
                 .Select(e => VideoMapper.MapFromDomain(e))
                 .ToListAsync();
         }
@@ -29,7 +29,7 @@ namespace DAL.App.EF.Repositories
         {
             var video = await RepositoryDbSet
                 .Include(v => v.Song)
-                .Include(v => v.Tabs.Select(TabMapper.MapFromDomain).ToList())
+                //.Include(v => v.Tabs.Select(TabMapper.MapFromDomain))
                 .FirstOrDefaultAsync(v => v.Id == id);
             return VideoMapper.MapFromDomain(video);
         }

@@ -1,6 +1,6 @@
 @model BLL.App.DTO.SongWithEverything
 
-<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div asp-validation-summary="All" class="text-danger"></div>
 <div class="form-group">
     <label asp-for="@Model.SongName" class="control-label"></label>
     <input asp-for="@Model.SongName" class="form-control" />
@@ -23,42 +23,97 @@
 </div>
 <div class="form-group">
     <input type="hidden" asp-for="@Model.SongKeyId" />
-    <label asp-for="@Model.SongKeyNoteName" class="control-label">SongKey</label>
+    @*<label asp-for="@Model.SongKeyId" class="control-label">SongKey</label>
+    <select asp-for="@Model.SongKeyId" class="form-control" asp-items="@Model.SongKeySelectList"></select>
+    <span asp-validation-for="@Model.SongKeyId" class="text-danger"></span>*@
+    <label asp-for="@Model.SongKeyNoteName" class="control-label"></label>
     <input asp-for="@Model.SongKeyNoteName" class="form-control" />
     <span asp-validation-for="@Model.SongKeyNoteName" class="text-danger"></span>
+    
+    <label asp-for="@Model.SongKeyDescription" class="control-label"></label>
+    <input asp-for="@Model.SongKeyDescription" class="form-control" />
+    <span asp-validation-for="@Model.SongKeyDescription" class="text-danger"></span>
 </div>
-@foreach (var instrument in @Model.Instruments)
-{
-    <div class="form-group">
-        <label asp-for="@instrument.Name" class="control-label">Instrument</label>
-        <select asp-for="@instrument.Name" class="form-control" asp-items="new SelectList(Model.Instruments.Select(i => i.Name))"></select>
-    </div>
-}
-@foreach (var style in @Model.Styles)
-{
-    <div class="form-group">
-        <label asp-for="@style.Name" class="control-label">Style</label>
-        <select asp-for="@style.Name" class="form-control" asp-items="new SelectList(Model.Styles.Select(s => s.Name))"></select>
-    </div>
-}
-@foreach (var chord in @Model.Chords)
-{
-    <div class="form-group">
-        <label asp-for="@chord.Name" class="control-label">ChordName</label>
-        <select asp-for="@chord.Name" class="form-control" asp-items="new SelectList(Model.Chords.Select(c => c.Name))"></select>
-    </div>
-}
-@foreach (var video in @Model.Videos)
-{
-    <div class="form-group">
-        <label asp-for="@video.YouTubeUrl" class="control-label">Video</label>
-        <select asp-for="@video.YouTubeUrl" class="form-control" asp-items="new SelectList(Model.Videos.Select(v => v.YouTubeUrl))"></select>
-    </div>
-    foreach (var tab in video.Tabs)
-    {
-        <div class="form-group">
-            <label asp-for="@tab.SongPart" class="control-label">Tab</label>
-            <select asp-for="@tab.SongPart" class="form-control" asp-items="new SelectList(video.Tabs.Select(t => t.SongPart))"></select>
-        </div>
+<div class="form-group">
+    @for (var i = 0; i < Model.Instruments.Count; i++){
+        
+        <input type="hidden" asp-for="@Model.Instruments[i].Id"/>
+        @*<label asp-for="@Model.Instruments[i].Id" class="control-label">Instrument</label>
+        <select asp-for="@Model.Instruments[i].Id" class="form-control" asp-items="@Model.InstrumentMultiSelectList"></select>
+        <span asp-validation-for="@Model.Instruments[i].Id" class="text-danger"></span>*@
+
+        <label asp-for="@Model.Instruments[i].Name" class="control-label">Instrument name</label>
+        <input asp-for="@Model.Instruments[i].Name" class="form-control"/>
+        <span asp-validation-for="@Model.Instruments[i].Name" class="text-danger"></span>
+
+        <label asp-for="@Model.Instruments[i].Description" class="control-label">Description</label>
+        <input asp-for="@Model.Instruments[i].Description" class="form-control"/>
+        <span asp-validation-for="@Model.Instruments[i].Description" class="text-danger"></span>
+        
     }
-}
+</div>
+
+<div class="form-group">
+    
+    @for (var i = 0; i < Model.Styles.Count; i++)
+    {
+        
+        <input type="hidden" asp-for="@Model.Styles[i].Id"/>
+        @*<label asp-for="@Model.Styles[i].Id" class="control-label">Style</label>
+        <select asp-for="@Model.Styles[i].Id" class="form-control" asp-items="@Model.StyleMultiSelectList"></select>
+        <span asp-validation-for="@Model.Styles[i].Id" class="text-danger"></span>*@
+        <label asp-for="@Model.Styles[i].Name" class="control-label">Style name</label>
+        <input asp-for="@Model.Styles[i].Name" class="form-control"/>
+        <span asp-validation-for="@Model.Styles[i].Name" class="text-danger"></span>
+
+        <label asp-for="@Model.Styles[i].Description" class="control-label">Description</label>
+        <input asp-for="@Model.Styles[i].Description" class="form-control"/>
+        <span asp-validation-for="@Model.Styles[i].Description" class="text-danger"></span>
+                                                                                        
+    }
+</div>
+
+<div class="form-group">
+    @for (var i = 0; i < Model.Chords.Count; i++)
+    {
+        
+        <input type="hidden" asp-for="@Model.Chords[i].Id"/>
+        @*<label asp-for="@Model.Chords[i].Id" class="control-label">Chord @i</label>
+        <select asp-for="@Model.Chords[i].Id" class="form-control" asp-items="@Model.ChordMultiSelectList"></select>
+        <span asp-validation-for="@Model.Chords[i].Name" class="text-danger"></span>*@
+        <label asp-for="@Model.Chords[i].Name" class="control-label">Chord @i name</label>
+        <input asp-for="@Model.Chords[i].Name" class="form-control"/>
+        <span asp-validation-for="@Model.Chords[i].Name" class="text-danger"></span>
+
+        <label asp-for="@Model.Chords[i].ShapePicturePath" class="control-label">Chordshape pic path</label>
+        <input asp-for="@Model.Chords[i].ShapePicturePath" class="form-control"/>
+        <span asp-validation-for="@Model.Chords[i].ShapePicturePath" class="text-danger"></span>
+        
+    }
+</div>
+
+<div class="form-group">
+    @for (var i = 0; i < Model.Videos.Count; i++)
+    {
+        <input type="hidden" asp-for="@Model.Videos[i].Id"/>
+        @*<label asp-for="@Model.Videos[i].Id" class="control-label">Video</label>
+        <select asp-for="@Model.Videos[i].Id" class="form-control" asp-items="@Model.VideoMultiSelectList"></select>
+        <span asp-validation-for="@Model.Videos[i].YouTubeUrl" class="text-danger"></span>
+        <div class="form-group">
+            @for(var j = 0; j < @Model.Videos[i].Tabs.Count(); j++)
+            {
+                <label asp-for="@Model.Videos[i].Tabs[j].Id" class="control-label">Tab</label>
+                <select asp-for="@Model.Videos[i].Tabs[j].Id" class="form-control" asp-items="new SelectList(@Model.Videos[i].Tabs.Select(t => t.SongPart))"></select>
+                <span asp-validation-for="@Model.Videos[i].Tabs[j].Id" class="text-danger"></span>
+            }
+        </div>*@
+        <label asp-for="@Model.Videos[i].YouTubeUrl" class="control-label">Video @i youtube url</label>
+        <input asp-for="@Model.Videos[i].YouTubeUrl" class="form-control"/>
+        <span asp-validation-for="@Model.Videos[i].YouTubeUrl" class="text-danger"></span>
+
+        <label asp-for="@Model.Videos[i].AuthorChannelLink" class="control-label">Author channel link</label>
+        <input asp-for="@Model.Videos[i].AuthorChannelLink" class="form-control"/>
+        <span asp-validation-for="@Model.Videos[i].AuthorChannelLink" class="text-danger"></span>
+        
+    }
+</div>

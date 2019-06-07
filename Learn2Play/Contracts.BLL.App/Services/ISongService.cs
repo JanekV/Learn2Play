@@ -9,6 +9,7 @@ namespace Contracts.BLL.App.Services
 {
     public interface ISongService : IBaseEntityService<BLLAppDTO.Song>, ISongRepository<BLLAppDTO.Song>
     {
+        SongWithEverything InitializeSongWithEverything();
         Task<SongWithEverything> GetSongWithEverythingAsync(int songId);
         Task<List<SongWithEverything>> GetAllSongsWithEverythingAsync();
         Task<List<BLLAppDTO.Song>> SearchSongs(string search);

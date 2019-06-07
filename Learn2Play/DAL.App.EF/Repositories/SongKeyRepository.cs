@@ -33,5 +33,14 @@ namespace DAL.App.EF.Repositories
             
             return SongKeyMapper.MapFromDomain(songKey);
         }
+        
+        public async Task<SongKey> FindDetachedAsync(int id)
+        {
+            var songEntry = RepositoryDbContext.Entry(await RepositoryDbSet.FindAsync(id));
+            if (songEntry == null) return null;
+            songEntry.State = EntityState.Detached;
+            var songKey = songEntry.Entity;
+            return SongKeyMapper.MapFromDomain(songKey);
+        }
     }
 }

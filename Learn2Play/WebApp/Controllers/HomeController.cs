@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
-using WebApp.Models;
+ using WebApp.ViewModels;
 
-namespace WebApp.Controllers
+ namespace WebApp.Controllers
 {
     public class HomeController : Controller
     {
