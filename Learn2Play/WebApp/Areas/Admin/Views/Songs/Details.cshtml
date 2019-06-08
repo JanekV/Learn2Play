@@ -26,7 +26,9 @@
             @Resources.Domain.Common.SpotifyLink
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.SpotifyLink)
+            <iframe src="https://open.spotify.com/embed/track/@Model.SpotifyLink"
+                    width="280" height="80" frameborder="0" allowtransparency="true"
+                    allow="encrypted-media"></iframe>
         </dd>
     </dl>
     <dl class="row">

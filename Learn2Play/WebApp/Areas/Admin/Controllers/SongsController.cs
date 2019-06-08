@@ -139,6 +139,7 @@ namespace WebApp.Areas.Admin.Controllers
             return View(song);
         }
 
+        //:TODO enable deleting by also removing associated objects
         // POST: Songs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

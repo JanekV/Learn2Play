@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
 using DAL.App.EF.Mappers;
@@ -18,11 +19,11 @@ namespace DAL.App.EF.Repositories
         public override async Task<Note> AddAsync(Note note)
         {
             var res = await RepositoryDbSet.AnyAsync(n => n.Name.Equals(note.Name));
-            if (res == false)
+            if (!res)
             {
                  return await base.AddAsync(note);
             }
-            return NoteMapper.MapFromDomain(await RepositoryDbSet.FindAsync(NoteMapper.MapFromDAL(note)));
+            return NoteMapper.MapFromDomain(await RepositoryDbSet.SingleOrDefaultAsync(n => n.Name.Equals(note.Name)));
         }
 
         public async Task AddMultipleAsync(List<Note> notes)

@@ -106,7 +106,7 @@ namespace WebApp.Areas.Admin.Controllers
             {
                 _bll.Videos.Update(vm.Video);
                 await _bll.SaveChangesAsync();
-                return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = vm.SongId});
+                return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = vm.Video.SongId});
             }
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
                 nameof(Song.Id), nameof(BLL.App.DTO.DomainEntityDTOs.Song.NameAndAuthor), vm.Video.SongId);

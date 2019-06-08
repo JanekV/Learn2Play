@@ -29,7 +29,9 @@
                 @Html.DisplayFor(modelItem => item.NameAndAuthor)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SpotifyLink)
+                <iframe src="https://open.spotify.com/embed/track/@item.SpotifyLink"
+                        width="280" height="80" frameborder="0" allowtransparency="true"
+                        allow="encrypted-media">@Resources.Domain.Common.ListenOnSpotify</iframe>
             </td>
 
             <td>
