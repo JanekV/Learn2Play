@@ -38,12 +38,13 @@ namespace BLL.App.Services
         public async Task<SongWithEverything> GetSongWithEverythingAsync(int songId)
         {
             var song = SongMapper.MapFromDAL(await Uow.Songs.GetSongWithEverythingAsync(songId));
-            song.Styles = Uow.Styles.GetStylesForIds(song.StyleIds).Result.ConvertAll(StyleMapper.MapFromDAL);
+            song.Styles = (await Uow.Styles.GetStylesForIds(song.StyleIds)).ConvertAll(StyleMapper.MapFromDAL);
             foreach (var video in song.Videos)
             {
                 video.Tabs = (Uow.Tabs.AllAsync().Result.Where(t => t.VideoId == video.Id).ToList()
                     .ConvertAll(TabMapper.MapFromDAL));
             }
+            song.Instruments = (await Uow.Instruments.GetInstrumentsForIds(song.InstrumentIds)).ConvertAll(InstrumentMapper.MapFromDAL);
             return song;
         }
 
@@ -67,30 +68,20 @@ namespace BLL.App.Services
         public async Task<SongWithEverything> UpdateSongWithEverything(SongWithEverything swe)
         {
             var song = await Uow.Songs.FindDetachedAsync(swe.Id);
+            var songKey = await Uow.SongKeys.FindDetachedAsync(swe.SongKeyId);
             song.Author = swe.SongAuthor;
             song.Name = swe.SongName;
             song.SpotifyLink = swe.SpotifyLink;
             song.Description = swe.SongDescription;
+            song.SongKeyId = swe.SongKeyId;
+            song.SongKey = songKey;
             Uow.Songs.Update(song);
 
-            var songKey = await Uow.SongKeys.FindDetachedAsync(swe.SongKey.Id);
-            songKey.Description = swe.SongKey.Description;
-            Uow.SongKeys.Update(songKey);
 
             var songKeyNote = await Uow.Notes.FindDetachedAsync(songKey.NoteId);
-            if (songKeyNote != null)
-            {
-                songKeyNote.Name = swe.SongKeyNoteName;
-            }
+
             Uow.Notes.Update(songKeyNote);
             
-            //:TODO move methods to more appropriate repos!
-            await UpdateSongInstrumentsAsync(song, swe.Instruments);
-            await UpdateSongStylesAsync(song, swe.Styles);
-            await UpdateSongChordsAsync(song, swe.Chords);
-
-            UpdateVideosAsync(song, swe.Videos);
-
             return swe;
         }
 
@@ -138,108 +129,5 @@ namespace BLL.App.Services
             };
             await Uow.SongStyles.AddAsync(songStyle);
         }
-        
-
-
-        #region Move theeeseee
-        private void UpdateVideosAsync(DAL.App.DTO.DomainEntityDTOs.Song song, IEnumerable<Video> videos)
-        {
-            foreach (var video in videos)
-            {
-                video.SongId = song.Id;
-                Uow.Videos.Update(VideoMapper.MapFromBLL(video));
-                /*foreach (var tab in video.Tabs)
-                {
-                    Uow.Tabs.Update(TabMapper.MapFromBLL(tab));
-                }*/
-            }
-        }
-        private async Task UpdateSongChordsAsync(DAL.App.DTO.DomainEntityDTOs.Song song, IEnumerable<Chord> chords)
-        {
-            foreach (var chord in chords)
-            {
-                var songChord = await Uow.SongChords.FindByChordAndSongIdAsync(chord.Id, song.Id);
-                var chordFromDb = await Uow.Chords.FindDetachedAsync(chord.Id);
-                if (chordFromDb == null)
-                {
-                    await Uow.Chords.AddAsync(ChordMapper.MapFromBLL(chord));
-                }
-                else
-                {
-                    Uow.Chords.Update(ChordMapper.MapFromBLL(chord));
-                }
-                if (songChord == null)
-                {
-                    await Uow.SongChords.AddAsync(new SongChord()
-                    {
-                        Song = song,
-                        SongId = song.Id,
-                        Chord = ChordMapper.MapFromBLL(chord),
-                        ChordId = chord.Id
-                    });
-                }
-                Uow.SongChords.Update(songChord);
-            }
-        }
-
-        private async Task UpdateSongStylesAsync(
-            DAL.App.DTO.DomainEntityDTOs.Song song, IEnumerable<DTO.DomainEntityDTOs.Style> styles)
-        {
-            foreach (var style in styles)
-            {
-                var songStyle = await Uow.SongStyles.FindByStyleAndSongIdAsync(style.Id, song.Id);
-                var styleFromDb = await Uow.Styles.FindDetachedAsync(style.Id);
-                if (styleFromDb == null)
-                {
-                    await Uow.Styles.AddAsync(StyleMapper.MapFromBLL(style));
-                }
-                else
-                {
-                    Uow.Styles.Update(StyleMapper.MapFromBLL(style));
-                }
-                if (songStyle == null)
-                {
-                    await Uow.SongStyles.AddAsync(new SongStyle()
-                    {
-                        Song = song,
-                        SongId = song.Id,
-                        Style = StyleMapper.MapFromBLL(style),
-                        StyleId = style.Id
-                    });
-                }
-                Uow.SongStyles.Update(songStyle);
-            }
-        }
-
-        private async Task UpdateSongInstrumentsAsync(DAL.App.DTO.DomainEntityDTOs.Song song, IEnumerable<Instrument> instruments)
-        {
-            foreach (var instrument in instruments)
-            {
-                var songInstrument = await Uow.SongInstruments.FindByInstrumentAndSongIdAsync(instrument.Id, song.Id);
-                var instrumentFromDb = await Uow.Instruments.FindDetachedAsync(instrument.Id);
-                if (instrumentFromDb == null)
-                {
-                    await Uow.Instruments.AddAsync(InstrumentMapper.MapFromBLL(instrument));
-                }
-                else
-                {
-                    Uow.Instruments.Update(InstrumentMapper.MapFromBLL(instrument));
-                }
-                if (songInstrument == null)
-                {
-                    
-                    await Uow.SongInstruments.AddAsync(new SongInstrument()
-                    {
-                        Song = song,
-                        SongId = song.Id,
-                        Instrument = InstrumentMapper.MapFromBLL(instrument),
-                        InstrumentId = instrument.Id
-                    });
-                }
-                Uow.SongInstruments.Update(songInstrument);
-            }
-        }
-
-        #endregion
     }
 }

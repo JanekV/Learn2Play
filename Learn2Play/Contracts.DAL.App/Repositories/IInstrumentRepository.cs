@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using DAL.App.DTO.DomainEntityDTOs;
 using ee.itcollege.javalg.Contracts.DAL.Base.Repositories;
@@ -9,6 +10,7 @@ namespace Contracts.DAL.App.Repositories
     {
         Task<Instrument> FindDetachedAsync(int id);
 
+        Task<List<Instrument>> GetInstrumentsForIds(List<int> ids);
     }
     
     public interface IInstrumentRepository<TDALEntity>: IBaseRepository<TDALEntity> 

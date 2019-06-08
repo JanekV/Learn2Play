@@ -16,17 +16,9 @@
                 @Resources.Domain.Common.Name
             </th>
             <th>
-                @Resources.Domain.Common.Author
-            </th>
-            <th>
                 @Resources.Domain.Common.SpotifyLink
             </th>
-            @*<th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SongKey)
-            </th>*@
+
             <th></th>
         </tr>
     </thead>
@@ -34,22 +26,14 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
+                @Html.DisplayFor(modelItem => item.NameAndAuthor)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.SpotifyLink)
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
+
             <td>
-                @Html.DisplayFor(modelItem => item.SongKey.Note.Name)
-            </td>*@
-            <td>
-                @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a>*@
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> / 
                 <a asp-action="Details" asp-route-id="@item.Id">@Resources.Domain.Common.Details</a> / 
                 <a asp-action="Delete" asp-route-id="@item.Id">@Resources.Domain.Common.Delete</a>
             </td>

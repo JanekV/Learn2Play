@@ -95,6 +95,8 @@ namespace WebApp.Areas.Admin.Controllers
             {
                 return NotFound();
             }
+            song.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
+                nameof(SongKey.Id), nameof(SongKey.Description));
             return View(song);
         }
 
@@ -116,6 +118,8 @@ namespace WebApp.Areas.Admin.Controllers
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            swe.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
+                nameof(SongKey.Id), nameof(SongKey.Description));
             return View(swe);
         }
 

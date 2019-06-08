@@ -175,7 +175,7 @@
     <value>Spotify link</value>
   </data>
   <data name="ThisSongIs" xml:space="preserve">
-  <value>See laul on</value>
+    <value>See laul on</value>
   </data>
   <data name="AuthorChannel" xml:space="preserve">
     <value>Link autorile</value>
@@ -326,5 +326,29 @@
   </data>
   <data name="Note" xml:space="preserve">
     <value>Noot</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Kinnita parool</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Loo uus kasutaja</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Unustasid parooli</value>
+  </data>
+  <data name="LogInLocal" xml:space="preserve">
+    <value>Logi sisse kohaliku kasutajaga</value>
+  </data>
+  <data name="LogoutSuccess" xml:space="preserve">
+    <value>Olete edukalt välja loginud</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Parool</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>Registreeri uue kasutajana</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Jäta mind meelde</value>
   </data>
 </root>

@@ -48,7 +48,7 @@ namespace WebApp.Areas.Admin.Controllers
             var vm = new VideoCreateEditViewModel
             {
                 SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                    nameof(Song.Id), nameof(Song.Name))
+                    nameof(Song.Id), nameof(BLL.App.DTO.DomainEntityDTOs.Song.NameAndAuthor))
             };
             return View(vm);        }
 
@@ -66,7 +66,7 @@ namespace WebApp.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author));
+                nameof(Song.Id), nameof(BLL.App.DTO.DomainEntityDTOs.Song.NameAndAuthor));
             return View(vm);
         }
 
@@ -86,7 +86,7 @@ namespace WebApp.Areas.Admin.Controllers
             var vm = new VideoCreateEditViewModel();
             vm.Video = video;
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
+                nameof(Song.Id), nameof(BLL.App.DTO.DomainEntityDTOs.Song.NameAndAuthor), vm.Video.SongId);
             return View(vm);
         }
 
@@ -109,7 +109,7 @@ namespace WebApp.Areas.Admin.Controllers
                 return RedirectToAction(controllerName: "Songs", actionName: "Details", routeValues: new {Id = vm.SongId});
             }
             vm.SongSelectList = new SelectList(await _bll.Songs.AllAsyncWithInclude(),
-                nameof(Song.Id), nameof(Song.Author), vm.Video.SongId);
+                nameof(Song.Id), nameof(BLL.App.DTO.DomainEntityDTOs.Song.NameAndAuthor), vm.Video.SongId);
             return View(vm);
         }
 

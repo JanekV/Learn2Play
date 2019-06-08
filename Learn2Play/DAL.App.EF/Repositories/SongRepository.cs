@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
 using DAL.App.DTO;
@@ -22,19 +23,17 @@ namespace DAL.App.EF.Repositories
         {
             return await RepositoryDbSet
                 .Include(s => s.SongKey)
+                .ThenInclude(sk => sk.Description)
+                .ThenInclude(m => m.Translations)
                 .Select(e => SongMapper.MapFromDomain(e))
                 .ToListAsync();
         }
 
         public async Task<SongWithEverything> GetSongWithEverythingAsync(int songId)
         {
+            var culture = Thread.CurrentThread.CurrentUICulture.Name.Substring(0, 2).ToLower();
             var res = await RepositoryDbSet
-                .Where(s => s.Id == songId) 
-                /*.Include(s => s.SongKey)
-                .Include(s => s.SongInFolders)
-                .Include(s => s.SongInstruments)
-                .Include(s => s.SongStyles)
-                .Include(s => s.SongChords)*/
+                .Where(s => s.Id == songId)
                 .Select(s => new
                 {
                     Id = s.Id,
@@ -43,19 +42,19 @@ namespace DAL.App.EF.Repositories
                     SpotifyLink = s.SpotifyLink,
                     SongDescription = s.Description,
                     SongKey = s.SongKey,
+                    SongKeyId = s.SongKey.Id,
                     SongKeyNoteName = s.SongKey.Note.Name,
                     SongKeyDescription = s.SongKey.Description,
                     FoldersCount = s.SongInFolders.Count,
-                    Instruments = s.SongInstruments
-                        .Select(si => si.Instrument).ToList(),
+                    InstrumentIds = s.SongInstruments
+                        .Select(si => si.Instrument.Id).ToList(),
                     StyleIds = s.SongStyles
                         .Select(ss => ss.Style.Id).ToList(),
                     Chords = s.SongChords
                         .Select(sc => sc.Chord).ToList(),
                     Videos = s.Videos.ToList(),
-                    /*Tabs = s.Videos
-                        .Select(v => v.Tabs).ToList()*/
                 }).FirstOrDefaultAsync();
+
             var swe = new SongWithEverything()
             {
                 Id = res.Id,
@@ -64,28 +63,21 @@ namespace DAL.App.EF.Repositories
                 SpotifyLink = res.SpotifyLink,
                 SongDescription = res.SongDescription,
                 SongKey = SongKeyMapper.MapFromDomain(res.SongKey),
+                SongKeyId = res.SongKeyId,
                 SongKeyNoteName = res.SongKeyNoteName,
-                SongKeyDescription = res.SongKeyDescription,
+                SongKeyDescription = res.SongKeyDescription.Translate(),
                 FoldersCount = res.FoldersCount,
-                Instruments = res.Instruments.ConvertAll(InstrumentMapper.MapFromDomain),
+                InstrumentIds = res.InstrumentIds,
                 StyleIds = res.StyleIds,
                 Chords = res.Chords.ConvertAll(ChordMapper.MapFromDomain),
                 Videos = res.Videos.ConvertAll(VideoMapper.MapFromDomain),
-/*
-                Tabs = res.Tabs.Select(t => t.Select(TabMapper.MapFromDomain).FirstOrDefault()).ToList()
-*/
-            };
+        };
             return swe;
         }
 
         public async Task<List<SongWithEverything>> GetAllSongsWithEverythingAsync()
         {
             var res = await RepositoryDbSet
-                /*.Include(s => s.SongKey)
-                .Include(s => s.SongInFolders)
-                .Include(s => s.SongInstruments)
-                .Include(s => s.SongStyles)
-                .Include(s => s.SongChords)*/
                 .Select(s => new
                 {
                     Id = s.Id,
@@ -93,7 +85,7 @@ namespace DAL.App.EF.Repositories
                     SongAuthor = s.Author,
                     SpotifyLink = s.SpotifyLink,
                     SongDescription = s.Description,
-                    SongKey = s.SongKey,
+                    SongKeyId = s.SongKeyId,
                     SongKeyNoteName = s.SongKey.Note.Name,
                     SongKeyDescription = s.SongKey.Description,
                     FoldersCount = s.SongInFolders.Count,
@@ -104,8 +96,6 @@ namespace DAL.App.EF.Repositories
                     Chords = s.SongChords
                         .Select(sc => sc.Chord).ToList(),
                     Videos = s.Videos.ToList(),
-                    /*Tabs = s.Videos
-                        .Select(v => v.Tabs).ToList()*/
                 }).ToListAsync();
             
             var resultList = res.Select(s => new SongWithEverything()
@@ -115,15 +105,14 @@ namespace DAL.App.EF.Repositories
                 SongAuthor = s.SongAuthor,
                 SpotifyLink = s.SpotifyLink,
                 SongDescription = s.SongDescription,
-                SongKey = SongKeyMapper.MapFromDomain(s.SongKey),
+                SongKeyId = s.SongKeyId,
                 SongKeyNoteName = s.SongKeyNoteName,
-                SongKeyDescription = s.SongKeyDescription,
+                SongKeyDescription = s.SongKeyDescription.Translate(),
                 FoldersCount = s.FoldersCount,
                 Instruments = s.Instruments.ConvertAll(InstrumentMapper.MapFromDomain),
                 StyleIds = s.StyleIds,
                 Chords = s.Chords.ConvertAll(ChordMapper.MapFromDomain),
                 Videos = s.Videos.ConvertAll(VideoMapper.MapFromDomain),
-                //Tabs = s.Tabs.Select(t => t.ToList().ConvertAll(TabMapper.MapFromDomain)).ToList()
             }).ToList();
 
             return resultList;
@@ -143,7 +132,9 @@ namespace DAL.App.EF.Repositories
                         s.Name.ToUpper().Contains(search) ||
                         s.Author.ToUpper().Contains(search) ||
                         s.SongInstruments.Any(si =>
-                            si.Instrument.Name.ToUpper().Contains(search)) ||
+                            si.Instrument.Name
+                                .Translations
+                                .Any(t => t.Value.ToUpper().Contains(search))) ||
                         s.SongStyles.Any(ss =>
                             ss.Style.Name.Translations.Any(t =>
                                 t.Value.ToUpper().Contains(search))));

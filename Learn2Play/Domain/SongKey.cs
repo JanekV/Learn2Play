@@ -7,10 +7,8 @@ namespace Domain
     public class SongKey: DomainEntity
     {
 
-        [MaxLength(1000)]
-        [MinLength(1)]
-        [Required]
-        public string Description { get; set; }
+        public int DescriptionId { get; set; }
+        public MultiLangString Description { get; set; }
 
         public int NoteId { get; set; }
         public Note Note { get; set; }

@@ -1,7 +1,7 @@
 @model WebApp.Areas.Admin.ViewModels.SongWithChordViewModel
 
 @{
-    ViewData["Title"] = "Add";}
+    ViewData["Title"] = "Add";
 }
 <h1>@Resources.Domain.Common.Add</h1>
 
@@ -16,7 +16,7 @@
             </div>
             <input type="hidden" asp-for="SongId" value="@Model.SongId"/>
             <div class="form-group">
-                <input type="submit" value="@Resources.Domain.Common.Create" class="btn btn-primary" />
+                <input type="submit" value="@Resources.Domain.Common.Add" class="btn btn-primary" />
             </div>
             
         </form>
@@ -29,4 +29,4 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}html>
+}

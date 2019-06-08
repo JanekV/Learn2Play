@@ -72,10 +72,11 @@ namespace BLL.App.Mappers
 
                     SongKey = SongKeyMapper.MapFromDAL(songWithEverything.SongKey),
                     SongKeyNoteName = songWithEverything.SongKeyNoteName,
+                    SongKeyId = songWithEverything.SongKeyId,
                     SongKeyDescription = songWithEverything.SongKeyDescription,
 
                     FoldersCount = songWithEverything.FoldersCount,
-                    Instruments = songWithEverything.Instruments.ConvertAll(InstrumentMapper.MapFromDAL),
+                    InstrumentIds = songWithEverything.InstrumentIds,
                     StyleIds = songWithEverything.StyleIds,
                     Chords = songWithEverything.Chords.ConvertAll(ChordMapper.MapFromDAL),
                     Videos = songWithEverything.Videos.ConvertAll(VideoMapper.MapFromDAL)

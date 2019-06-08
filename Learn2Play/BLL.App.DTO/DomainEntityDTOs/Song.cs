@@ -27,10 +27,6 @@ namespace BLL.App.DTO.DomainEntityDTOs
         public int SongKeyId { get; set; }
         public SongKey SongKey { get; set; }
 
-        //public ICollection<SongInFolder> SongInFolders { get; set; }
-        //public ICollection<SongInstrument> SongInstruments { get; set; }
-        //public ICollection<SongStyle> SongStyles { get; set; }
-        //public ICollection<SongChord> SongChords { get; set; }
-        //public ICollection<Video> Videos { get; set; }
+        public string NameAndAuthor => Name + " - " + Author;
     }
 }

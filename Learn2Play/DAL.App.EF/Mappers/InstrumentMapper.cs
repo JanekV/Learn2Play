@@ -1,4 +1,5 @@
 using System;
+using Domain;
 using ee.itcollege.javalg.Contracts.DAL.Base.Mappers;
 using DALAppDTO = DAL.App.DTO;
 
@@ -28,8 +29,8 @@ namespace DAL.App.EF.Mappers
             var res = instrument == null ? null : new DALAppDTO.DomainEntityDTOs.Instrument
             {
                 Id = instrument.Id,
-                Name = instrument.Name,                
-                Description = instrument.Description              
+                Name = instrument.Name.Translate(),                
+                Description = instrument.Description.Translate()              
             };
 
 
@@ -41,8 +42,8 @@ namespace DAL.App.EF.Mappers
             var res = instrument == null ? null : new Domain.Instrument
             {
                 Id = instrument.Id,
-                Name = instrument.Name,
-                Description = instrument.Description
+                Name = new MultiLangString(instrument.Name),
+                Description = new MultiLangString(instrument.Description)
             };
 
             return res;

@@ -1,4 +1,5 @@
 using System;
+using Domain;
 using ee.itcollege.javalg.Contracts.DAL.Base.Mappers;
 using DALAppDTO = DAL.App.DTO;
 
@@ -28,7 +29,7 @@ namespace DAL.App.EF.Mappers
             var res = songKey == null ? null : new DALAppDTO.DomainEntityDTOs.SongKey
             {
                 Id = songKey.Id,
-                Description = songKey.Description,
+                Description = songKey.Description.Translate(),
                 NoteId = songKey.NoteId,
                 Note = NoteMapper.MapFromDomain(songKey.Note)   
             };
@@ -42,7 +43,7 @@ namespace DAL.App.EF.Mappers
             var res = songKey == null ? null : new Domain.SongKey
             {
                 Id = songKey.Id,
-                Description = songKey.Description,
+                Description = new MultiLangString(songKey.Description),
                 NoteId = songKey.NoteId,
                 Note = NoteMapper.MapFromDAL(songKey.Note)   
             };

@@ -13,9 +13,6 @@
                 @Resources.Domain.Common.Name
             </th>
             <th>
-                @Resources.Domain.Common.Author
-            </th>
-            <th>
                 @Resources.Domain.Common.SpotifyLink
             </th>
             @*<th>
@@ -31,20 +28,11 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Author)
+                @Html.DisplayFor(modelItem => item.NameAndAuthor)
             </td>
             <td>
                 <a href="@Html.DisplayFor(modelItem => item.SpotifyLink)">@Resources.Domain.Common.ListenOnSpotify</a>
             </td>
-            @*<td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.SongKey.Note.Name)
-            </td>*@
             <td>
                 <a asp-action="Details" asp-route-id="@item.Id">@Resources.Domain.Common.Details</a>
             </td>

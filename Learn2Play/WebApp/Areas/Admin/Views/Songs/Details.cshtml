@@ -6,7 +6,7 @@
 
 <h1>@Resources.Domain.Common.Details</h1>
 
-<div>
+<div class="container bg-light-gradient">
     <h4>@Resources.Domain.Common.Song</h4>
     <hr />
     <dl class="row">
@@ -28,21 +28,27 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SpotifyLink)
         </dd>
+    </dl>
+    <dl class="row">
         <dt class = "col-sm-2">
             @Resources.Domain.Common.Description
         </dt>
-        <dd class = "col-sm-10">
+        <dd class = "col-lg-7">
             @Html.DisplayFor(model => model.SongDescription)
         </dd>
+    </dl>
+    <dl class="row">
         <dt class = "col-sm-2">
             @Resources.Domain.Common.SongKey
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SongKey.Description)
         </dd>
+    </dl>
+    <dl class="row">
         <dt class="col-sm-2">
             @Resources.Domain.Common.NavInstruments (<a asp-area="Admin" asp-controller="Instruments" asp-action="AddInstrumentToSong"
-                            asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)
+                                                        asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)
         </dt>
         <dd class="col-sm-10">
             <ul>
@@ -55,6 +61,8 @@
                 }
             </ul>
         </dd>
+    </dl>
+    <dl class="row">
         <dt class="col-sm-2">
             @Resources.Domain.Common.NavStyles (<a asp-area="Admin" asp-controller="Styles"
                                                           asp-action="AddStyleToSong"
@@ -71,6 +79,8 @@
                 }
             </ul>
         </dd>
+    </dl>
+    <dl class="row">
         <dt class="col-sm-2">
             @Resources.Domain.Common.NavChords (<a asp-area="Admin" asp-controller="Chords"
                                                           asp-action="AddChordToSong"
@@ -87,6 +97,8 @@
                 }
             </ul>
         </dd>
+    </dl>
+    <dl class="row">
         <dt class="col-sm-2">
             @Resources.Domain.Common.NavVideos (<a asp-area="Admin" asp-controller="Videos" asp-action="CreateVideoForSong"
                        asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)

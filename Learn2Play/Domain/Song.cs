@@ -21,7 +21,7 @@ namespace Domain
         [MinLength(1)]
         public string SpotifyLink { get; set; }
         
-        [MaxLength(1000)]
+        [MaxLength(10240)]
         [MinLength(1)]
         public string Description { get; set; }
 

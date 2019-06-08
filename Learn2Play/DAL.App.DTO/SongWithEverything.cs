@@ -22,5 +22,7 @@ namespace DAL.App.DTO
         public List<Chord> Chords { get; set; } // Get notes also?
         public List<Video> Videos { get; set; }
         public List<Tab> Tabs { get; set; }
+        public List<int> InstrumentIds { get; set; }
+        public int SongKeyId { get; set; }
     }
 }

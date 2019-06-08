@@ -184,7 +184,7 @@
     <value>Local filepath</value>
   </data>
   <data name="YoutubeUrl" xml:space="preserve">
-  <value>YouTube URL</value>
+    <value>YouTube URL</value>
   </data>
   <data name="Add" xml:space="preserve">
     <value>Add</value>
@@ -326,5 +326,29 @@
   </data>
   <data name="Note" xml:space="preserve">
     <value>Note</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Create new account</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot your password</value>
+  </data>
+  <data name="LogInLocal" xml:space="preserve">
+    <value>Use a local account to log in</value>
+  </data>
+  <data name="LogoutSuccess" xml:space="preserve">
+    <value>You have successfully logged out of the application</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RegisterNew" xml:space="preserve">
+    <value>Register as a new user</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me</value>
   </data>
 </root>
