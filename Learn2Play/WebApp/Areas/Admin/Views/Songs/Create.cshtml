@@ -4,47 +4,47 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>@Resources.Domain.Common.Create</h1>
 
-<h4>Song</h4>
+<h4>@Resources.Domain.Common.Song</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">  
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Song.Name" class="control-label"></label>
+                <label asp-for="Song.Name" class="control-label">@Resources.Domain.Common.Name</label>
                 <input asp-for="Song.Name" class="form-control" />
                 <span asp-validation-for="Song.Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Song.Author" class="control-label"></label>
+                <label asp-for="Song.Author" class="control-label">@Resources.Domain.Common.Author</label>
                 <input asp-for="Song.Author" class="form-control" />
                 <span asp-validation-for="Song.Author" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Song.SpotifyLink" class="control-label"></label>
+                <label asp-for="Song.SpotifyLink" class="control-label">@Resources.Domain.Common.SpotifyLink</label>
                 <input asp-for="Song.SpotifyLink" class="form-control" />
                 <span asp-validation-for="Song.SpotifyLink" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Song.Description" class="control-label"></label>
+                <label asp-for="Song.Description" class="control-label">@Resources.Domain.Common.Description</label>
                 <input asp-for="Song.Description" class="form-control" />
                 <span asp-validation-for="Song.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Song.SongKeyId" class="control-label"></label>
+                <label asp-for="Song.SongKeyId" class="control-label">@Resources.Domain.Common.SongKey</label>
                 <select asp-for="Song.SongKeyId" class ="form-control" asp-items="Model.SongKeySelectList"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary"/>
+                <input type="submit" value="@Resources.Domain.Common.Create" class="btn btn-primary"/>
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@Resources.Domain.Common.BackToList</a>
 </div>
 
 @section Scripts {

@@ -26,6 +26,7 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -152,6 +153,7 @@ namespace WebApp
                 });
             
             //  =============== i18n support ===============
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new[]
@@ -169,7 +171,10 @@ namespace WebApp
                 // These are the cultures the app supports for UI strings
                 options.SupportedUICultures = supportedCultures;
             });
-            
+            /*
+
+            services.AddMvc()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);*/
             // Api explorer + OpenAPI/Swagger
             services.AddVersionedApiExplorer( options => options.GroupNameFormat = "'v'VVV" );
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();

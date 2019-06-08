@@ -132,6 +132,9 @@
   <data name="Delete" xml:space="preserve">
     <value>Kustuta</value>
   </data>
+  <data name="Description" xml:space="preserve">
+    <value>Kirjeldus</value>
+  </data>
   <data name="Details" xml:space="preserve">
     <value>Vaata rohkem</value>
   </data>
@@ -150,7 +153,178 @@
   <data name="Name" xml:space="preserve">
     <value>Nimi</value>
   </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Eemalda</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Salvesta</value>
+  </data>
+  <data name="Styles" xml:space="preserve">
+    <value>Stiilid</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Folders" xml:space="preserve">
+    <value>kaustas</value>
+  </data>
+  <data name="SongKey" xml:space="preserve">
+    <value>Laulu võti</value>
+  </data>
+  <data name="SpotifyLink" xml:space="preserve">
+    <value>Spotify link</value>
+  </data>
+  <data name="ThisSongIs" xml:space="preserve">
+  <value>See laul on</value>
+  </data>
+  <data name="AuthorChannel" xml:space="preserve">
+    <value>Link autorile</value>
+  </data>
+  <data name="LocalPath" xml:space="preserve">
+    <value>Faili asukoht</value>
+  </data>
+  <data name="YoutubeUrl" xml:space="preserve">
+    <value>YouTube URL</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Lisa</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Tühista</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Ei</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Esita</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Jah</value>
+  </data>
+  <data name="AddSong" xml:space="preserve">
+    <value>Lisa uus laul</value>
+  </data>
+  <data name="BasicCRUD" xml:space="preserve">
+    <value>Andmebaas</value>
+  </data>
+  <data name="Chord" xml:space="preserve">
+    <value>Akord</value>
+  </data>
+  <data name="ChordNote" xml:space="preserve">
+    <value>Akordi noot</value>
+  </data>
+  <data name="Folder" xml:space="preserve">
+    <value>Kaust</value>
+  </data>
+  <data name="Hello" xml:space="preserve">
+    <value>Tere</value>
+  </data>
+  <data name="Instrument" xml:space="preserve">
+    <value>Pill</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Keel</value>
+  </data>
+  <data name="ListenOnSpotify" xml:space="preserve">
+    <value>Kuula Spotifys</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Logi sisse</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logi välja</value>
+  </data>
+  <data name="ManageUsers" xml:space="preserve">
+    <value>Halda kasutajaid</value>
+  </data>
+  <data name="NavChordNotes" xml:space="preserve">
+    <value>Akordide noodid</value>
+  </data>
+  <data name="NavChords" xml:space="preserve">
+    <value>Akordid</value>
+  </data>
+  <data name="NavFolders" xml:space="preserve">
+    <value>Kaustad</value>
+  </data>
+  <data name="NavHome" xml:space="preserve">
+    <value>Algus</value>
+  </data>
+  <data name="NavInstruments" xml:space="preserve">
+    <value>Pillid</value>
+  </data>
+  <data name="NavNotes" xml:space="preserve">
+    <value>Noodid</value>
+  </data>
+  <data name="NavSongChords" xml:space="preserve">
+    <value>Laulude akordid</value>
+  </data>
+  <data name="NavSongInstruments" xml:space="preserve">
+    <value>Laulude pillid</value>
+  </data>
+  <data name="NavSongKeys" xml:space="preserve">
+    <value>Laulude võtmed</value>
+  </data>
+  <data name="NavSongs" xml:space="preserve">
+    <value>Laulud</value>
+  </data>
+  <data name="NavStyles" xml:space="preserve">
+    <value>Stiilid</value>
+  </data>
+  <data name="NavTabs" xml:space="preserve">
+    <value>Noodilehed</value>
+  </data>
+  <data name="NavVideos" xml:space="preserve">
+    <value>Videod</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privaatsus</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registreeri</value>
+  </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>Otsingu tulemus</value>
+  </data>
+  <data name="SearchSongs" xml:space="preserve">
+    <value>Otsi laule</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Seaded</value>
+  </data>
+  <data name="Song" xml:space="preserve">
+    <value>Laul</value>
+  </data>
+  <data name="SongChord" xml:space="preserve">
+    <value>Laulu akord</value>
+  </data>
+  <data name="SongInFolder" xml:space="preserve">
+    <value>Laul kaustas</value>
+  </data>
+  <data name="SongInstrument" xml:space="preserve">
+    <value>Laulu pill</value>
+  </data>
+  <data name="SongStyle" xml:space="preserve">
+    <value>Laulu stiil</value>
+  </data>
+  <data name="Style" xml:space="preserve">
+    <value>Stiil</value>
+  </data>
+  <data name="Tab" xml:space="preserve">
+    <value>Noodileht</value>
+  </data>
+  <data name="TuningNote" xml:space="preserve">
+    <value>Häälestus</value>
+  </data>
+  <data name="ViewAllSongs" xml:space="preserve">
+    <value>Vaata kõiki laule</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Tere tulemast</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Noot</value>
   </data>
 </root>

@@ -144,6 +144,9 @@
   <data name="Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="ListenOnSpotify" xml:space="preserve">
+    <value>Listen on Spotify</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -201,6 +204,9 @@
   <data name="Register" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>Search result</value>
+  </data>
   <data name="SearchSongs" xml:space="preserve">
     <value>Search songs</value>
   </data>
@@ -233,5 +239,11 @@
   </data>
   <data name="TuningNote" xml:space="preserve">
     <value>TuningNote</value>
+  </data>
+  <data name="ViewAllSongs" xml:space="preserve">
+    <value>View all songs</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
   </data>
 </root>

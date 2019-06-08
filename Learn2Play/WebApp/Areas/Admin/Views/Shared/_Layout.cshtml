@@ -49,7 +49,7 @@
       <form asp-area="Admin" asp-controller="Songs" asp-action="Search" class="form-inline ml-3">
         <div class="input-group input-group-sm">
           <label>
-            <input class="form-control form-control-navbar" placeholder="@Resources.Views.Shared._Layout.SearchSongs" type="text" name="search"/>
+            <input class="form-control form-control-navbar" placeholder="@Resources.Domain.Common.SearchSongs" type="text" name="search"/>
           </label>
           <div class="input-group-append">
             <button class="btn btn-navbar" type="submit">
@@ -87,7 +87,7 @@
             <a asp-area="Admin" asp-controller="Songs" asp-action="Create" class="nav-link">
               <i class="fas fa-music"></i>
               <p>
-                @Resources.Views.Shared._Layout.AddSong
+                @Resources.Domain.Common.AddSong
                 <i class="right fas fa-plus"></i>
               </p>
             </a>
@@ -96,7 +96,7 @@
             <a href="#" class="nav-link active">
               <i class="fas fa-database"></i>
               <p>
-                @Resources.Views.Shared._Layout.BasicCRUD
+                @Resources.Domain.Common.BasicCRUD
                 <i class="right fa fa-angle-left"></i>
               </p>
             </a>
@@ -104,19 +104,19 @@
               <li class="nav-item">
                 <a asp-area="Admin" asp-controller="Styles" asp-action="Index" class="nav-link">
                   <i class="fas fa-caret-right"></i>
-                  <p>@Resources.Views.Shared._Layout.NavStyles</p>
+                  <p>@Resources.Domain.Common.NavStyles</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a asp-area="Admin" asp-controller="Instruments" asp-action="Index" class="nav-link">
                   <i class="fas fa-caret-right"></i>
-                  <p>@Resources.Views.Shared._Layout.NavInstruments</p>
+                  <p>@Resources.Domain.Common.NavInstruments</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a asp-area="Admin" asp-controller="Chords" asp-action="Index" class="nav-link">
                   <i class="fas fa-caret-right"></i>
-                  <p>@Resources.Views.Shared._Layout.NavChords</p>
+                  <p>@Resources.Domain.Common.NavChords</p>
                 </a>
               </li>
             </ul>
@@ -125,7 +125,7 @@
             <a href="#" class="nav-link">
               <i class="fas fa-users-cog"></i>
               <p>
-                @Resources.Views.Shared._Layout.ManageUsers
+                @Resources.Domain.Common.ManageUsers
                 @*<span class="right badge badge-danger"></span>*@
               </p>
             </a>
@@ -134,7 +134,7 @@
             <a href="#" class="nav-link">
               <i class="fas fa-cogs"></i>
               <p>
-                @Resources.Views.Shared._Layout.Settings
+                @Resources.Domain.Common.Settings
                 @*<span class="right badge badge-danger"></span>*@
               </p>
             </a>
@@ -160,7 +160,7 @@
   </div>
   <footer class="border-top main-footer text-muted">
     <div class="container">
-      <div>&copy; 2019 - Learn2Play - <a asp-area="Admin" asp-controller="Home" asp-action="Privacy">@Resources.Views.Shared._Layout.Privacy</a></div>
+      <div>&copy; 2019 - Learn2Play - <a asp-area="Admin" asp-controller="Home" asp-action="Privacy">@Resources.Domain.Common.Privacy</a></div>
       <div>UICulture: @CultureInfo.CurrentUICulture.Name Culture: @CultureInfo.CurrentUICulture.Name</div>
       <div><partial name="_LanguageSelectionPartial"/></div>
     </div>

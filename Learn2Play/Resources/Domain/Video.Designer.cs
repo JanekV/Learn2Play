@@ -22,14 +22,14 @@ namespace Resources.Domain {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class SongChord {
+    public class Video {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal SongChord() {
+        internal Video() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Resources.Domain {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.Domain.SongChord", typeof(SongChord).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Resources.Domain.Video", typeof(Video).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,20 +61,29 @@ namespace Resources.Domain {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Chord.
+        ///   Looks up a localized string similar to Author channel.
         /// </summary>
-        public static string Chord {
+        public static string AuthorChannel {
             get {
-                return ResourceManager.GetString("Chord", resourceCulture);
+                return ResourceManager.GetString("AuthorChannel", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Song.
+        ///   Looks up a localized string similar to Local filepath.
         /// </summary>
-        public static string Song {
+        public static string LocalPath {
             get {
-                return ResourceManager.GetString("Song", resourceCulture);
+                return ResourceManager.GetString("LocalPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to YouTube URL.
+        /// </summary>
+        public static string YoutubeUrl {
+            get {
+                return ResourceManager.GetString("YoutubeUrl", resourceCulture);
             }
         }
     }

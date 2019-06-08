@@ -384,18 +384,9 @@
           <e p="Song.Designer.cs" t="Include" />
           <e p="Song.et.resx" t="Include" />
           <e p="Song.resx" t="Include" />
-          <e p="SongChord.Designer.cs" t="Include" />
-          <e p="SongChord.et.resx" t="Include" />
-          <e p="SongChord.resx" t="Include" />
-          <e p="SongInFolder.Designer.cs" t="Include" />
-          <e p="SongInFolder.et.resx" t="Include" />
-          <e p="SongInFolder.resx" t="Include" />
-          <e p="SongInstrument.Designer.cs" t="Include" />
-          <e p="SongInstrument.et.resx" t="Include" />
-          <e p="SongInstrument.resx" t="Include" />
-          <e p="SongKey.Designer.cs" t="Include" />
-          <e p="SongKey.et.resx" t="Include" />
-          <e p="SongKey.resx" t="Include" />
+          <e p="Video.Designer.cs" t="Include" />
+          <e p="Video.et.resx" t="Include" />
+          <e p="Video.resx" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -474,8 +465,6 @@
                 <e p="Details.cshtml" t="Include" />
                 <e p="Edit.cshtml" t="Include" />
                 <e p="Index.cshtml" t="Include" />
-                <e p="PartialCreateNote.cshtml" t="Include" />
-                <e p="PartialViewNotes.cshtml" t="Include" />
               </e>
               <e p="Home" t="Include">
                 <e p="Index.cshtml" t="Include" />
@@ -2014,7 +2003,9 @@
               <e p="License.txt" t="Include" />
             </e>
           </e>
-          <e p="Pictures" t="Include" />
+          <e p="Pictures" t="Include">
+            <e p="LastMinute.jpg" t="Include" />
+          </e>
         </e>
       </e>
     </e>

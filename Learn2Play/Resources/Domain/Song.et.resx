@@ -123,6 +123,9 @@
   <data name="Description" xml:space="preserve">
     <value>Kirjeldus</value>
   </data>
+  <data name="Folders" xml:space="preserve">
+    <value>kaustas</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Nimi</value>
   </data>
@@ -131,5 +134,8 @@
   </data>
   <data name="SpotifyLink" xml:space="preserve">
     <value>Spotify link</value>
+  </data>
+  <data name="ThisSongIs" xml:space="preserve">
+    <value>See laul on</value>
   </data>
 </root>

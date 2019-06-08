@@ -19,7 +19,7 @@ namespace Resources.Views.Shared {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class _Layout {
@@ -138,6 +138,15 @@ namespace Resources.Views.Shared {
         public static string Language {
             get {
                 return ResourceManager.GetString("Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Listen on Spotify.
+        /// </summary>
+        public static string ListenOnSpotify {
+            get {
+                return ResourceManager.GetString("ListenOnSpotify", resourceCulture);
             }
         }
         
@@ -313,6 +322,15 @@ namespace Resources.Views.Shared {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Search result.
+        /// </summary>
+        public static string SearchResult {
+            get {
+                return ResourceManager.GetString("SearchResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Search songs.
         /// </summary>
         public static string SearchSongs {
@@ -408,6 +426,24 @@ namespace Resources.Views.Shared {
         public static string TuningNote {
             get {
                 return ResourceManager.GetString("TuningNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View all songs.
+        /// </summary>
+        public static string ViewAllSongs {
+            get {
+                return ResourceManager.GetString("ViewAllSongs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome.
+        /// </summary>
+        public static string Welcome {
+            get {
+                return ResourceManager.GetString("Welcome", resourceCulture);
             }
         }
     }

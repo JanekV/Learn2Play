@@ -4,7 +4,7 @@
     ViewData["Title"] = "Chords";
 }
 
-<h1>Index</h1>
+<h1>@Resources.Domain.Common.NavChords</h1>
 
 <p>
     <a asp-action="Create">@Resources.Domain.Common.CreateNew</a>
@@ -13,13 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ChordName)
+                @Resources.Domain.Common.Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ShapePicturePath)
+                @Resources.Domain.Chord.ShapePicturePath
             </th>
             <th>
-                Notes
+                @Resources.Domain.Common.NavNotes
             </th>
             <th></th>
         </tr>

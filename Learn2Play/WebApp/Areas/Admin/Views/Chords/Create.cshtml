@@ -6,14 +6,14 @@
 
     <h1>@Resources.Domain.Common.Create</h1>
 
-    <h4>@Resources.Views.Shared._Layout.Chord</h4>
+    <h4>@Resources.Domain.Common.Chord</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Name" class="control-label">@Resources.Domain.Chord.Name</label>
+                <label asp-for="Name" class="control-label">@Resources.Domain.Common.Name</label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>

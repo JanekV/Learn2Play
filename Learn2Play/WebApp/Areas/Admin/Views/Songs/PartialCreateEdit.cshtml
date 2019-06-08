@@ -2,22 +2,22 @@
 
 <div asp-validation-summary="All" class="text-danger"></div>
 <div class="form-group">
-    <label asp-for="@Model.SongName" class="control-label"></label>
+    <label asp-for="@Model.SongName" class="control-label">@Resources.Domain.Common.Name</label>
     <input asp-for="@Model.SongName" class="form-control" />
     <span asp-validation-for="@Model.SongName" class="text-danger"></span>
 </div>
 <div class="form-group">
-    <label asp-for="@Model.SongAuthor" class="control-label"></label>
+    <label asp-for="@Model.SongAuthor" class="control-label">@Resources.Domain.Common.Author</label>
     <input asp-for="@Model.SongAuthor" class="form-control" />
     <span asp-validation-for="@Model.SongAuthor" class="text-danger"></span>
 </div>
 <div class="form-group">
-    <label asp-for="@Model.SpotifyLink" class="control-label"></label>
+    <label asp-for="@Model.SpotifyLink" class="control-label">@Resources.Domain.Common.SpotifyLink</label>
     <input asp-for="@Model.SpotifyLink" class="form-control" />
     <span asp-validation-for="@Model.SpotifyLink" class="text-danger"></span>
 </div>
 <div class="form-group">
-    <label asp-for="@Model.SongDescription" class="control-label"></label>
+    <label asp-for="@Model.SongDescription" class="control-label">@Resources.Domain.Common.Description</label>
     <input asp-for="@Model.SongDescription" class="form-control" />
     <span asp-validation-for="@Model.SongDescription" class="text-danger"></span>
 </div>
@@ -26,11 +26,11 @@
     @*<label asp-for="@Model.SongKeyId" class="control-label">SongKey</label>
     <select asp-for="@Model.SongKeyId" class="form-control" asp-items="@Model.SongKeySelectList"></select>
     <span asp-validation-for="@Model.SongKeyId" class="text-danger"></span>*@
-    <label asp-for="@Model.SongKeyNoteName" class="control-label"></label>
+    <label asp-for="@Model.SongKeyNoteName" class="control-label">@Resources.Domain.Common.SongKey</label>
     <input asp-for="@Model.SongKeyNoteName" class="form-control" />
     <span asp-validation-for="@Model.SongKeyNoteName" class="text-danger"></span>
     
-    <label asp-for="@Model.SongKey.Description" class="control-label"></label>
+    <label asp-for="@Model.SongKey.Description" class="control-label">@Resources.Domain.Common.Description</label>
     <input asp-for="@Model.SongKey.Description" class="form-control" />
     <span asp-validation-for="@Model.SongKey.Description" class="text-danger"></span>
 </div>
@@ -42,11 +42,11 @@
         <select asp-for="@Model.Instruments[i].Id" class="form-control" asp-items="@Model.InstrumentMultiSelectList"></select>
         <span asp-validation-for="@Model.Instruments[i].Id" class="text-danger"></span>*@
 
-        <label asp-for="@Model.Instruments[i].Name" class="control-label">Instrument name</label>
+        <label asp-for="@Model.Instruments[i].Name" class="control-label">@Resources.Domain.Common.Name</label>
         <input asp-for="@Model.Instruments[i].Name" class="form-control"/>
         <span asp-validation-for="@Model.Instruments[i].Name" class="text-danger"></span>
 
-        <label asp-for="@Model.Instruments[i].Description" class="control-label">Description</label>
+        <label asp-for="@Model.Instruments[i].Description" class="control-label">@Resources.Domain.Common.Description</label>
         <input asp-for="@Model.Instruments[i].Description" class="form-control"/>
         <span asp-validation-for="@Model.Instruments[i].Description" class="text-danger"></span>
         
@@ -62,11 +62,11 @@
         @*<label asp-for="@Model.Styles[i].Id" class="control-label">Style</label>
         <select asp-for="@Model.Styles[i].Id" class="form-control" asp-items="@Model.StyleMultiSelectList"></select>
         <span asp-validation-for="@Model.Styles[i].Id" class="text-danger"></span>*@
-        <label asp-for="@Model.Styles[i].Name" class="control-label">Style name</label>
+        <label asp-for="@Model.Styles[i].Name" class="control-label">@Resources.Domain.Common.Name</label>
         <input asp-for="@Model.Styles[i].Name" class="form-control"/>
         <span asp-validation-for="@Model.Styles[i].Name" class="text-danger"></span>
 
-        <label asp-for="@Model.Styles[i].Description" class="control-label">Description</label>
+        <label asp-for="@Model.Styles[i].Description" class="control-label">@Resources.Domain.Common.Description</label>
         <input asp-for="@Model.Styles[i].Description" class="form-control"/>
         <span asp-validation-for="@Model.Styles[i].Description" class="text-danger"></span>
                                                                                         
@@ -81,11 +81,11 @@
         @*<label asp-for="@Model.Chords[i].Id" class="control-label">Chord @i</label>
         <select asp-for="@Model.Chords[i].Id" class="form-control" asp-items="@Model.ChordMultiSelectList"></select>
         <span asp-validation-for="@Model.Chords[i].Name" class="text-danger"></span>*@
-        <label asp-for="@Model.Chords[i].Name" class="control-label">Chord @i name</label>
+        <label asp-for="@Model.Chords[i].Name" class="control-label">@Resources.Domain.Common.Chord @i @Resources.Domain.Common.Name</label>
         <input asp-for="@Model.Chords[i].Name" class="form-control"/>
         <span asp-validation-for="@Model.Chords[i].Name" class="text-danger"></span>
 
-        <label asp-for="@Model.Chords[i].ShapePicturePath" class="control-label">Chordshape pic path</label>
+        <label asp-for="@Model.Chords[i].ShapePicturePath" class="control-label">@Resources.Domain.Chord.ShapePicturePath</label>
         <input asp-for="@Model.Chords[i].ShapePicturePath" class="form-control"/>
         <span asp-validation-for="@Model.Chords[i].ShapePicturePath" class="text-danger"></span>
         
@@ -107,11 +107,11 @@
                 <span asp-validation-for="@Model.Videos[i].Tabs[j].Id" class="text-danger"></span>
             }
         </div>*@
-        <label asp-for="@Model.Videos[i].YouTubeUrl" class="control-label">Video @i youtube url</label>
+        <label asp-for="@Model.Videos[i].YouTubeUrl" class="control-label">Video @i @Resources.Domain.Common.YoutubeUrl</label>
         <input asp-for="@Model.Videos[i].YouTubeUrl" class="form-control"/>
         <span asp-validation-for="@Model.Videos[i].YouTubeUrl" class="text-danger"></span>
 
-        <label asp-for="@Model.Videos[i].AuthorChannelLink" class="control-label">Author channel link</label>
+        <label asp-for="@Model.Videos[i].AuthorChannelLink" class="control-label">@Resources.Domain.Common.AuthorChannel</label>
         <input asp-for="@Model.Videos[i].AuthorChannelLink" class="form-control"/>
         <span asp-validation-for="@Model.Videos[i].AuthorChannelLink" class="text-danger"></span>
         

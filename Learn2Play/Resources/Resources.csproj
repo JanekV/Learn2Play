@@ -47,34 +47,6 @@
           <Generator>PublicResXFileCodeGenerator</Generator>
           <LastGenOutput>Song.Designer.cs</LastGenOutput>
         </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongChord.et.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongChord.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-          <LastGenOutput>SongChord.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongInFolder.et.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongInFolder.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-          <LastGenOutput>SongInFolder.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongInstrument.et.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongInstrument.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-          <LastGenOutput>SongInstrument.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongKey.et.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-        </EmbeddedResource>
-        <EmbeddedResource Update="Domain\SongKey.resx">
-          <Generator>PublicResXFileCodeGenerator</Generator>
-          <LastGenOutput>SongKey.Designer.cs</LastGenOutput>
-        </EmbeddedResource>
         <EmbeddedResource Update="Views\Common.et.resx">
             <Generator>PublicResXFileCodeGenerator</Generator>
         </EmbeddedResource>
@@ -143,26 +115,6 @@
           <DesignTime>True</DesignTime>
           <AutoGen>True</AutoGen>
           <DependentUpon>Song.resx</DependentUpon>
-        </Compile>
-        <Compile Update="Domain\SongChord.Designer.cs">
-          <DesignTime>True</DesignTime>
-          <AutoGen>True</AutoGen>
-          <DependentUpon>SongChord.resx</DependentUpon>
-        </Compile>
-        <Compile Update="Domain\SongInFolder.Designer.cs">
-          <DesignTime>True</DesignTime>
-          <AutoGen>True</AutoGen>
-          <DependentUpon>SongInFolder.resx</DependentUpon>
-        </Compile>
-        <Compile Update="Domain\SongInstrument.Designer.cs">
-          <DesignTime>True</DesignTime>
-          <AutoGen>True</AutoGen>
-          <DependentUpon>SongInstrument.resx</DependentUpon>
-        </Compile>
-        <Compile Update="Domain\SongKey.Designer.cs">
-          <DesignTime>True</DesignTime>
-          <AutoGen>True</AutoGen>
-          <DependentUpon>SongKey.resx</DependentUpon>
         </Compile>
         <Compile Update="Views\Common.Designer.cs">
             <DesignTime>True</DesignTime>

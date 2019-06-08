@@ -144,6 +144,9 @@
   <data name="Language" xml:space="preserve">
     <value>Keel</value>
   </data>
+  <data name="ListenOnSpotify" xml:space="preserve">
+    <value>Kuula Spotifys</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Logi sisse</value>
   </data>
@@ -198,6 +201,9 @@
   <data name="Register" xml:space="preserve">
     <value>Registreeri</value>
   </data>
+  <data name="SearchResult" xml:space="preserve">
+    <value>Otsingu tulemus</value>
+  </data>
   <data name="SearchSongs" xml:space="preserve">
     <value>Otsi laule</value>
   </data>
@@ -230,5 +236,11 @@
   </data>
   <data name="TuningNote" xml:space="preserve">
     <value>Häälestus</value>
+  </data>
+  <data name="ViewAllSongs" xml:space="preserve">
+    <value>Vaata kõiki laule</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Tere tulemast</value>
   </data>
 </root>

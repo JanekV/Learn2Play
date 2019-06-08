@@ -4,90 +4,92 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>@Resources.Domain.Common.Details</h1>
 
 <div>
-    <h4>Song</h4>
+    <h4>@Resources.Domain.Common.Song</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SongName)
+            @Resources.Domain.Common.Name
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SongName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SongAuthor)
+            @Resources.Domain.Common.Author
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SongAuthor)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SpotifyLink)
+            @Resources.Domain.Common.SpotifyLink
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SpotifyLink)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SongDescription)
+            @Resources.Domain.Common.Description
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SongDescription)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.SongKey)
+            @Resources.Domain.Common.SongKey
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.SongKey.Description)
         </dd>
         <dt class="col-sm-2">
-            Instruments (<a asp-area="Admin" asp-controller="Instruments" asp-action="AddInstrumentToSong"
-                            asp-route-songId="@Model.Id">+Add</a>)
+            @Resources.Domain.Common.NavInstruments (<a asp-area="Admin" asp-controller="Instruments" asp-action="AddInstrumentToSong"
+                            asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)
         </dt>
         <dd class="col-sm-10">
             <ul>
                 @foreach (var instrument in Model.Instruments)
                 {
                     <li>@instrument.Name <a asp-area="Admin" asp-action="Edit" asp-controller="Instruments"
-                                            asp-route-id="@instrument.Id">Edit</a> / 
+                                            asp-route-id="@instrument.Id">@Resources.Domain.Common.Edit</a> / 
                         <a asp-area="Admin" asp-action="Remove" asp-controller="Instruments"
-                           asp-route-songId="@Model.Id" asp-route-instrumentId="@instrument.Id">Remove</a></li>
+                           asp-route-songId="@Model.Id" asp-route-instrumentId="@instrument.Id">@Resources.Domain.Common.Remove</a></li>
                 }
             </ul>
         </dd>
         <dt class="col-sm-2">
-            Styles (<a asp-area="Admin" asp-controller="Styles" asp-action="AddStyleToSong"
-                       asp-route-songId="@Model.Id">+Add</a>)
+            @Resources.Domain.Common.NavStyles (<a asp-area="Admin" asp-controller="Styles"
+                                                          asp-action="AddStyleToSong"
+                       asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)
         </dt>
         <dd class="col-sm-10">
             <ul>
                 @foreach (var style in Model.Styles)
                 {
                     <li>@style.Name <a asp-area="Admin" asp-action="Edit" asp-controller="Styles"
-                                       asp-route-id="@style.Id">Edit</a> / 
+                                       asp-route-id="@style.Id">@Resources.Domain.Common.Edit</a> / 
                         <a asp-area="Admin" asp-action="Remove" asp-controller="Styles"
-                           asp-route-songId="@Model.Id" asp-route-styleId="@style.Id">Remove</a></li>
+                           asp-route-songId="@Model.Id" asp-route-styleId="@style.Id">@Resources.Domain.Common.Remove</a></li>
                 }
             </ul>
         </dd>
         <dt class="col-sm-2">
-            Chords (<a asp-area="Admin" asp-controller="Chords" asp-action="AddChordToSong"
-                       asp-route-songId="@Model.Id">+Add</a>)
+            @Resources.Domain.Common.NavChords (<a asp-area="Admin" asp-controller="Chords"
+                                                          asp-action="AddChordToSong"
+                       asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)
         </dt>
         <dd class="col-sm-10">
             <ul>
                 @foreach (var chord in Model.Chords)
                 {
                     <li>@chord.Name <a asp-area="Admin" asp-action="Edit" asp-controller="Chords"
-                                       asp-route-id="@chord.Id">Edit</a> / 
+                                       asp-route-id="@chord.Id">@Resources.Domain.Common.Edit</a> / 
                         <a asp-area="Admin" asp-action="Remove" asp-controller="Chords"
-                           asp-route-songId="@Model.Id" asp-route-chordId="@chord.Id">Remove</a></li>
+                           asp-route-songId="@Model.Id" asp-route-chordId="@chord.Id">@Resources.Domain.Common.Remove</a></li>
                 }
             </ul>
         </dd>
         <dt class="col-sm-2">
-            Videos (<a asp-area="Admin" asp-controller="Videos" asp-action="CreateVideoForSong"
-                       asp-route-songId="@Model.Id">+Add</a>)
+            @Resources.Domain.Common.NavVideos (<a asp-area="Admin" asp-controller="Videos" asp-action="CreateVideoForSong"
+                       asp-route-songId="@Model.Id">@Resources.Domain.Common.Add</a>)
                 </dt>
                 <dd class="col-sm-10">
                     <ul>
@@ -97,15 +99,15 @@
                                         frameborder="0" allow="accelerometer; encrypted-media;
                                          gyroscope; picture-in-picture" allowfullscreen></iframe>
                                  <a asp-area="Admin" asp-action="Edit" asp-controller="Videos"
-                                                     asp-route-id="@video.Id">Edit</a> / 
+                                                     asp-route-id="@video.Id">@Resources.Domain.Common.Edit</a> / 
                                 <a asp-area="Admin" asp-action="Delete" asp-controller="Videos"
-                                   asp-route-songId="@Model.Id" asp-route-videoId="@video.Id">Delete</a></li>
+                                   asp-route-songId="@Model.Id" asp-route-videoId="@video.Id">@Resources.Domain.Common.Delete</a></li>
                         }
                     </ul>
                 </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id">@Resources.Domain.Common.Edit</a> |
+    <a asp-action="Index">@Resources.Domain.Common.BackToList</a>
 </div>

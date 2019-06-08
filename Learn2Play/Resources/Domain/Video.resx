@@ -117,10 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Chord" xml:space="preserve">
-    <value>Akord</value>
+  <data name="AuthorChannel" xml:space="preserve">
+    <value>Author channel</value>
   </data>
-  <data name="Song" xml:space="preserve">
-    <value>Laul</value>
+  <data name="LocalPath" xml:space="preserve">
+    <value>Local filepath</value>
+  </data>
+  <data name="YoutubeUrl" xml:space="preserve">
+    <value>YouTube URL</value>
   </data>
 </root>

@@ -4,25 +4,25 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<h1>@Resources.Domain.Common.Edit</h1>
 
-<h4>Song</h4>
+<h4>@Resources.Domain.Common.Song</h4>
 <hr />
-<h6>This song is in @Model.FoldersCount folder(s)</h6>
+<h6>@Resources.Domain.Common.ThisSongIs @Model.FoldersCount @Resources.Domain.Common.Folders</h6>
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <input type="hidden" asp-for="@Model.Id" />
             <partial name="PartialCreateEdit" model="Model"/>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="@Resources.Domain.Common.Save" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@Resources.Domain.Common.BackToList</a>
 </div>
 
 @section Scripts {

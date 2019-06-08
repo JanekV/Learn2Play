@@ -79,6 +79,15 @@ namespace Resources.Domain {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to folder(s).
+        /// </summary>
+        public static string Folders {
+            get {
+                return ResourceManager.GetString("Folders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string Name {
@@ -102,6 +111,15 @@ namespace Resources.Domain {
         public static string SpotifyLink {
             get {
                 return ResourceManager.GetString("SpotifyLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This song is in.
+        /// </summary>
+        public static string ThisSongIs {
+            get {
+                return ResourceManager.GetString("ThisSongIs", resourceCulture);
             }
         }
     }

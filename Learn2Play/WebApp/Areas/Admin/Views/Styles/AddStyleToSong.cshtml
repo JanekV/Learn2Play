@@ -3,20 +3,20 @@
 @{
     ViewData["Title"] = "Add";}
 }
-<h1>Add</h1>
+<h1>@Resources.Domain.Common.Add</h1>
 
-<h4>Song: @Model.SongName</h4>
+<h4>@Resources.Domain.Common.Song: @Model.SongName</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-area="Admin" asp-action="AddToSong">
             <div class="form-group">
-                <label asp-for="@Model.StyleId" class="control-label"></label>
+                <label asp-for="@Model.StyleId" class="control-label">@Resources.Domain.Common.Style</label>
                 <select asp-for="@Model.StyleId" class ="form-control" asp-items="Model.StyleSelectList"></select>
             </div>
             <input type="hidden" asp-for="SongId" value="@Model.SongId"/>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@Resources.Domain.Common.Create" class="btn btn-primary" />
             </div>
             
         </form>
@@ -24,7 +24,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">@Resources.Domain.Common.BackToList</a>
 </div>
 
 @section Scripts {

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>@Resources.Domain.Common.Create</h1>
 
 <h4>Video</h4>
 <hr />
@@ -13,7 +13,7 @@
         <form asp-action="Create">
             <partial name="PartialCreateEdit" model="Model"/>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="@Resources.Domain.Common.Create" class="btn btn-primary" />
             </div>
         </form>
     </div>

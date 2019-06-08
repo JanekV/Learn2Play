@@ -7,30 +7,32 @@
 <h1>@Resources.Domain.Common.Details</h1>
 
 <div>
-    <h4>@Resources.Views.Shared._Layout.Chord</h4>
+    <h4>@Resources.Domain.Common.Chord</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ChordName)
+            @Resources.Domain.Common.Name
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ChordName)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ShapePicturePath)
+            @Resources.Domain.Chord.ShapePicturePath
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.ShapePicturePath)
         </dd>
         <dt class="col-sm-2">
-            Notes (<a asp-area="Admin" asp-controller="Notes" asp-action="CreateNoteForChord"  asp-route-chordId="@Model.Id">Add</a>)
+            @Resources.Domain.Common.NavNotes (<a asp-area="Admin" asp-controller="Notes"
+                                                         asp-action="CreateNoteForChord"  
+                                                         asp-route-chordId="@Model.Id">@Resources.Domain.Common.Add</a>)
         </dt>
         <dd class="col-sm-10">
             <ul>
                 @foreach (var note in Model.Notes)
                 {
-                    <li>@note.Name <a asp-action="Edit" asp-controller="Notes" asp-route-id="@note.Id">Edit</a> / 
-                        <a asp-action="Delete" asp-controller="Notes" asp-route-id="@note.Id">Delete</a></li>
+                    <li>@note.Name <a asp-action="Edit" asp-controller="Notes" asp-route-id="@note.Id">@Resources.Domain.Common.Edit</a> / 
+                        <a asp-action="Delete" asp-controller="Notes" asp-route-id="@note.Id">@Resources.Domain.Common.Delete</a></li>
                 }
             </ul>
         </dd>
