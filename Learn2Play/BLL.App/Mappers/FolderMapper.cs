@@ -32,8 +32,7 @@ namespace BLL.App.Mappers
                 Comment = folder.Comment
                 
             };
-
-
+            
             return res;
         }
 
@@ -50,5 +49,17 @@ namespace BLL.App.Mappers
             return res;
         }
 
+        public static BLL.App.DTO.FolderWithSong MapFromDAL(DAL.App.DTO.FolderWithSong folder)
+        {
+            var res = folder == null ? null : new BLL.App.DTO.FolderWithSong()
+            {
+                Id = folder.Id,
+                Name = folder.Name,
+                FolderType = folder.FolderType,
+                Comment = folder.Comment,
+                Songs = folder.Songs.ConvertAll(SongMapper.MapFromDAL)
+            };
+            return res;
+        }
     }
 }

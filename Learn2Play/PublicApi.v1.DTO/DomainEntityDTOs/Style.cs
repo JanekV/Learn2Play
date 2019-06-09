@@ -14,7 +14,5 @@ namespace PublicApi.v1.DTO.DomainEntityDTOs
         [MaxLength(1000)]
         [MinLength(1)]
         public string Description { get; set; }
-
-        //public ICollection<SongStyle> SongStyles { get; set; }
     }
 }

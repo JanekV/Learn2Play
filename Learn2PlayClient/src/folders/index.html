@@ -1,0 +1,35 @@
+<template>
+    <h1>Folders</h1>
+
+    <p>
+        <a route-href="route: foldersCreate">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                  Folder type
+              </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr repeat.for="folder of folders">
+                <td>
+                    ${folder.name}
+                </td>
+                <td>
+                  ${folder.folderType}
+                </td>
+                <td>
+                    <a route-href="route: foldersEdit; params.bind: {id: folder.id}">Edit</a> |
+                    <a route-href="route: foldersDetails; params.bind: {id: folder.id}">Details</a> |
+                    <a route-href="route: foldersDelete; params.bind: {id: folder.id}">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>   
+</template>

@@ -1,4 +1,5 @@
 using System;
+using Domain.Enums;
 using externalDTO = PublicApi.v1.DTO.DomainEntityDTOs;
 using internalDTO = BLL.App.DTO.DomainEntityDTOs;
 
@@ -28,7 +29,7 @@ namespace PublicApi.v1.Mappers
             {
                 Id = folder.Id,
                 Name = folder.Name,
-                FolderType = folder.FolderType,
+                FolderType = folder.FolderType.ToString(),
                 Comment = folder.Comment
                 
             };
@@ -43,9 +44,24 @@ namespace PublicApi.v1.Mappers
             {
                 Id = folder.Id,
                 Name = folder.Name,
-                FolderType = folder.FolderType,
+                FolderType = (FolderType) Enum.Parse(typeof(FolderType), folder.FolderType),
                 Comment = folder.Comment
             };
+
+            return res;
+        }
+        
+        public static PublicApi.v1.DTO.FolderWithSongs MapFromBLL(BLL.App.DTO.FolderWithSong folder)
+        {
+            var res = folder == null ? null : new PublicApi.v1.DTO.FolderWithSongs
+            {
+                Id = folder.Id,
+                Name = folder.Name,
+                FolderType = folder.FolderType,
+                Comment = folder.Comment,
+                Songs = folder.Songs.ConvertAll(SongMapper.MapFromBLL)
+            };
+
 
             return res;
         }

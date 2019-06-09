@@ -27,7 +27,7 @@ export class Index{
 
   attached() {
     log.debug('attached');
-    this.notesService.fetchAll().then(
+    this.notesService.fetchAll(undefined).then(
       jsonData => {
         log.debug('jsonData', jsonData);
         this.notes = jsonData;

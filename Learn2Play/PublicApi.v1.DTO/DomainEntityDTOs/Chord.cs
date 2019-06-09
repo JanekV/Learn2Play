@@ -17,9 +17,5 @@ namespace PublicApi.v1.DTO.DomainEntityDTOs
         [Required]
         [Display(Name = "ShapePicturePath", ResourceType = typeof(Resources.Domain.Chord))]
         public string ShapePicturePath { get; set; }
-
-
-        //public ICollection<SongChord> SongChords { get; set; }
-        //public ICollection<ChordNote> ChordNotes { get; set; }
     }
 }

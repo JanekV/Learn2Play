@@ -31,8 +31,8 @@ namespace PublicApi.v1.Mappers
                 YouTubeUrl = video.YouTubeUrl,
                 AuthorChannelLink = video.AuthorChannelLink,
                 LocalPath = video.LocalPath,
-                SongId = video.SongId,
-                Song = SongMapper.MapFromBLL(video.Song)              
+                /*SongId = video.SongId,
+                Song = SongMapper.MapFromBLL(video.Song)  */            
             };
 
 
@@ -47,8 +47,8 @@ namespace PublicApi.v1.Mappers
                 YouTubeUrl = video.YouTubeUrl,
                 AuthorChannelLink = video.AuthorChannelLink,
                 LocalPath = video.LocalPath,
-                SongId = video.SongId,
-                Song = SongMapper.MapFromExternal(video.Song) 
+                /*SongId = video.SongId,
+                Song = SongMapper.MapFromExternal(video.Song) */
             };
 
             return res;

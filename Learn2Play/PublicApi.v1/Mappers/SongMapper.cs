@@ -30,9 +30,9 @@ namespace PublicApi.v1.Mappers
                 Name = song.Name,
                 Author = song.Author,
                 SpotifyLink = song.SpotifyLink,
-                Description = song.Description,
-                SongKeyId = song.SongKeyId,
-                SongKey = SongKeyMapper.MapFromBLL(song.SongKey)
+                //Description = song.Description,
+                /*SongKeyId = song.SongKeyId,
+                SongKey = SongKeyMapper.MapFromBLL(song.SongKey)*/
                 
             };
 
@@ -48,11 +48,33 @@ namespace PublicApi.v1.Mappers
                 Name = song.Name,
                 Author = song.Author,
                 SpotifyLink = song.SpotifyLink,
-                Description = song.Description,
-                SongKeyId = song.SongKeyId,
-                SongKey = SongKeyMapper.MapFromExternal(song.SongKey)
+                //Description = song.Description,
+                /*SongKeyId = song.SongKeyId,
+                SongKey = SongKeyMapper.MapFromExternal(song.SongKey)*/
             };
 
+            return res;
+        }
+        public static PublicApi.v1.DTO.SongWithEverything MapFromBLL(BLL.App.DTO.SongWithEverything songWithEverything)
+        {
+            var res = songWithEverything == null
+                ? null
+                : new PublicApi.v1.DTO.SongWithEverything()
+                {
+                    Id = songWithEverything.Id,
+                    Name = songWithEverything.SongName,
+                    Author = songWithEverything.SongAuthor,
+                    SpotifyLink = songWithEverything.SpotifyLink,
+                    Description = songWithEverything.SongDescription,
+
+                    SongKeyNote = songWithEverything.SongKeyNoteName,
+                    SongKeyDescription = songWithEverything.SongKeyDescription,
+                    
+                    Instruments = songWithEverything.Instruments.ConvertAll(InstrumentMapper.MapFromBLL),
+                    Styles = songWithEverything.Styles.ConvertAll(StyleMapper.MapFromBLL),
+                    Chords = songWithEverything.Chords.ConvertAll(ChordMapper.MapFromBLL),
+                    Videos = songWithEverything.Videos.ConvertAll(VideoMapper.MapFromBLL)
+                };
             return res;
         }
 

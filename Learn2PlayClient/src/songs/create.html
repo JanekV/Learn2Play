@@ -1,0 +1,39 @@
+<template>
+  <h1>Create</h1>
+
+  <h4>Song</h4>
+  <hr/>
+  <div class="row">
+    <div class="col-md-4">
+      <!-- remove "on" from front of on<somethingevent> ad point out method in your aurelia class-->
+      <form method="post" submit.delegate="submit()">
+
+        <div class="form-group">
+          <label class="control-label" for="Name">Name</label>
+          <!-- value.bind - bind this value to class variable -->
+          <input class="form-control" type="text"
+                 id="Name" name="Name" value.bind="song.name"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="SongType">Song type</label>
+          <input class="form-control" type="text"
+                 id="SongType" name="SongType" value.bind="song.songType"/>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="Comment">Comment</label>
+          <textarea class="form-control" type="text"
+                 id="Comment" name="Comment" value.bind="song.comment"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Create" class="btn btn-primary"/>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div>
+    <a route-href="route: songsIndex">Back to List</a>
+  </div>
+
+
+</template>

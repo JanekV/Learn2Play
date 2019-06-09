@@ -7,7 +7,7 @@ namespace PublicApi.v1.DTO.DomainEntityDTOs
     {
         public int Id { get; set; }
 
-        public FolderType FolderType { get; set; }
+        public string FolderType { get; set; }
         
         [MaxLength(64)]
         [MinLength(1)]

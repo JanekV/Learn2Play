@@ -36,19 +36,19 @@ namespace WebApp.ApiControllers.v1_0
 
         // GET: api/Songs/5
         /// <summary>
-        /// Get a Song object by id.
+        /// Get a Song with everything else, videos, styles etc included.
         /// </summary>
         /// <param name="id">Unique integer used for identification of objects.</param>
-        /// <returns>Song object with given id.</returns>
+        /// <returns>SongWithEverything object with given id.</returns>
         /// <response code="200">Song was successfully retrieved.</response>
         /// <response code="404">Song was not found.</response>
         [ProducesResponseType(typeof(PublicApi.v1.DTO.DomainEntityDTOs.Song),
             StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpGet("{id}")]
-        public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Song>> GetSong(int id)
+        public async Task<ActionResult<PublicApi.v1.DTO.SongWithEverything>> GetSong(int id)
         {
-            var song = PublicApi.v1.Mappers.SongMapper.MapFromBLL(await _bll.Songs.FindAsync(id));
+            var song = PublicApi.v1.Mappers.SongMapper.MapFromBLL(await _bll.Songs.GetSongWithEverythingAsync(id));
 
             if (song == null)
             {
@@ -57,6 +57,7 @@ namespace WebApp.ApiControllers.v1_0
 
             return song;
         }
+/*
 
         // PUT: api/Songs/5
         /// <summary>
@@ -64,7 +65,7 @@ namespace WebApp.ApiControllers.v1_0
         /// </summary>
         /// <param name="id">Unique integer used for identification of objects.</param>
         /// <param name="song">PublicApi.v1.DTO.DomainEntityDTOs.Song type object.</param>
-        /// <returns>NoContent();</returns>:TODO Add a better description!
+        /// <returns>NoContent();</returns>
         /// <response code="204">Song was successfully retrieved.</response>
         /// <response code="400">Song was not found.</response>
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -88,7 +89,7 @@ namespace WebApp.ApiControllers.v1_0
         /// Create and post a new Song object.
         /// </summary>
         /// <param name="song">PublicApi.v1.DTO.DomainEntityDTOs.Song type object.</param>
-        /// <returns>CreatedAtAction();</returns>:TODO Add a better description!
+        /// <returns>CreatedAtAction();</returns>
         /// <response code="201">Song was successfully created.</response>
         /// <response code="400">Song was not created.</response>
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -125,6 +126,6 @@ namespace WebApp.ApiControllers.v1_0
             await _bll.SaveChangesAsync();
 
             return NoContent();
-        }
+        }*/
     }
 }

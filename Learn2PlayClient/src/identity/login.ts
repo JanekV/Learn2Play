@@ -10,9 +10,8 @@ export var log = LogManager.getLogger('Identity.Login');
 @autoinject
 export class Login {
 
-  // TODO: Remove fixed username and password
-  private email: string = "a@a.ee";
-  private password: string = "Password";
+  private email: string = "";
+  private password: string = "";
 
   constructor(
     private identityService: IdentityService,

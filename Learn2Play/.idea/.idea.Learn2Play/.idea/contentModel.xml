@@ -82,6 +82,7 @@
           <e p="UserInstrument.cs" t="Include" />
           <e p="Video.cs" t="Include" />
         </e>
+        <e p="FolderWithSong.cs" t="Include" />
         <e p="Identity" t="Include">
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
@@ -182,6 +183,7 @@
           <e p="UserInstrument.cs" t="Include" />
           <e p="Video.cs" t="Include" />
         </e>
+        <e p="FolderWithSong.cs" t="Include" />
         <e p="Identity" t="Include">
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
@@ -327,6 +329,7 @@
         <e p="PublicApi.v1.csproj" t="IncludeRecursive" />
       </e>
       <e p="PublicApi.v1.DTO" t="IncludeRecursive">
+        <e p="AddSongToFolder.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DomainEntityDTOs" t="Include">
           <e p="Chord.cs" t="Include" />
@@ -347,6 +350,8 @@
           <e p="UserInstrument.cs" t="Include" />
           <e p="Video.cs" t="Include" />
         </e>
+        <e p="FolderWithSong.cs" t="Include" />
+        <e p="FolderWithSongs.cs" t="Include" />
         <e p="Identity" t="Include">
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
@@ -359,6 +364,7 @@
           </e>
         </e>
         <e p="PublicApi.v1.DTO.csproj" t="IncludeRecursive" />
+        <e p="SongWithEverything.cs" t="Include" />
       </e>
       <e p="Resources" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -2010,13 +2016,52 @@
       </e>
     </e>
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\@types" t="IncludeRecursive">
+      <e p="anymatch" t="IncludeRecursive" />
       <e p="bootstrap" t="IncludeRecursive" />
       <e p="jquery" t="IncludeRecursive" />
+      <e p="lodash" t="IncludeRecursive" />
+      <e p="node" t="IncludeRecursive" />
       <e p="sizzle" t="IncludeRecursive" />
+      <e p="tapable" t="IncludeRecursive" />
+      <e p="uglify-js" t="IncludeRecursive" />
+      <e p="webpack" t="IncludeRecursive" />
     </e>
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-animator-css" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-bootstrapper" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-cli" t="IncludeRecursive" />
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-fetch-client" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-testing" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-tools" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\aurelia-webpack-plugin" t="IncludeRecursive" />
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\bootstrap" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\copy-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\core-js" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\css-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\del" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\duplicate-package-checker-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\expose-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\file-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\gulp" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\gulp-rename" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\html-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\html-webpack-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\istanbul-instrumenter-loader" t="IncludeRecursive" />
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\jquery" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\json-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\mini-css-extract-plugin" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\minimatch" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\opn" t="IncludeRecursive" />
     <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\popper.js" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\source-map" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\style-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\through2" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\ts-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\ts-node" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\url-loader" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\vinyl-fs" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack-bundle-analyzer" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack-cli" t="IncludeRecursive" />
+    <e p="C:\Users\X\RiderProjects\Learn2Play\Learn2PlayClient\node_modules\webpack-dev-server" t="IncludeRecursive" />
   </component>
 </project>

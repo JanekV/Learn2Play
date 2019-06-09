@@ -1,0 +1,79 @@
+<template>
+
+  <h1>Details</h1>
+
+  <div>
+    <h4>Song</h4>
+    <hr />
+    <dl class="row">
+      <dt class = "col-sm-2">
+        Name and author
+      </dt>
+      <dd class = "col-sm-10">
+        ${songWithevErything.name} - ${songWithevErything.author}
+      </dd>
+    </dl>
+    <dl class="row">
+      <dt class = "col-sm-2">
+        Listen on Spotify
+      </dt>
+      <dd class = "col-sm-10">
+        <iframe src="https://open.spotify.com/embed/track/${songWithEverything.spotifyLink}"
+                        width="280" height="80" frameborder="0" allowtransparency="true"
+                        allow="encrypted-media"></iframe>
+      </dd>
+    </dl>
+    <dl class="row">
+      <dt class = "col-sm-2">
+        Description
+      </dt>
+      <dd class = "col-lg-6">
+        ${songWithEverything.description}
+      </dd>
+    </dl>
+    <dl class="row"> 
+        <dt class = "col-sm-2">
+            Song key note
+        </dt>
+        <dd class = "col-sm-6">
+          ${songWithEverything.songKeyNote}
+        </dd>
+        <dt class = "col-sm-2">
+          How to play
+        </dt>
+        <dd class = "col-sm-6">
+          ${songWithEverything.songKeyDescription}
+        </dd>
+    </dl>
+    <ul>
+      <li class="" repeat.for="instrument of songWithEverything.instruments">
+          <a class="text-dark">
+              ${instrument.name}
+          </a>
+      </li>
+      <li class="" repeat.for="style of songWithEverything.styles">
+          <a class="text-dark">
+              ${style.name}
+          </a>
+      </li>
+      <li class="" repeat.for="chord of songWithEverything.chords">
+          <a class="text-dark">
+              ${chord.name}
+          </a>
+      </li>
+      <li class="" repeat.for="video of songWithEverything.videos">
+          <a class="text-dark">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/${video.youTubeUrl}"
+                frameborder="0" allow="accelerometer; encrypted-media;
+                gyroscope; picture-in-picture" allowfullscreen>
+              </iframe>
+          </a>
+          <a href.bind="video.authorChannelLink">Author channel</a>
+      </li>
+    </ul>
+  </div>
+  <div>
+    <a route-href="route: songsIndex">Back to List</a>
+  </div>
+
+</template>

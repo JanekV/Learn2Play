@@ -26,10 +26,12 @@ export class BaseService<TEntity extends IBaseEntity> {
 
 
 
-  fetchAll(): Promise<TEntity[]> {
+  fetchAll(queryParameters: string | undefined): Promise<TEntity[]> {
     // TODO: use config
     let url = this.serviceAppConfig.apiUrl + this.serviceEndPoint;
-
+    if(queryParameters !== undefined){
+      url = url + '/' + queryParameters;
+    }
     return this.serviceHttpClient.fetch(url,
       {
         cache: 'no-store',

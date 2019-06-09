@@ -20,17 +20,12 @@ namespace PublicApi.v1.DTO.DomainEntityDTOs
         [MinLength(1)]
         public string SpotifyLink { get; set; }
         
-        [MaxLength(1000)]
+        /*[MaxLength(1000)]
         [MinLength(1)]
-        public string Description { get; set; }
+        public string Description { get; set; }*/
 
-        public int SongKeyId { get; set; }
-        public SongKey SongKey { get; set; }
-
-        //public ICollection<SongInFolder> SongInFolders { get; set; }
-        //public ICollection<SongInstrument> SongInstruments { get; set; }
-        //public ICollection<SongStyle> SongStyles { get; set; }
-        //public ICollection<SongChord> SongChords { get; set; }
-        //public ICollection<Video> Videos { get; set; }
+        /*public int SongKeyId { get; set; }
+        public SongKey SongKey { get; set; }*/
+        
     }
 }
