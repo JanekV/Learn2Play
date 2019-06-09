@@ -40,7 +40,7 @@ export class Index{
     log.debug('unbind');
   }
   loadData(){
-    this.songsService.fetchAll(this.search === '' ? this.search : '?search=' + this.search).then(
+    this.songsService.fetchAll('?search=' + this.search).then(
       jsonData => {
         log.debug('jsonData', jsonData);
         this.songs = jsonData;

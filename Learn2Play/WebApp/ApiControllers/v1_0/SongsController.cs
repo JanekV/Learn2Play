@@ -28,11 +28,17 @@ namespace WebApp.ApiControllers.v1_0
         [ProducesResponseType(typeof(IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Song>),
             StatusCodes.Status200OK)]
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Song>>> GetSongs()
+        public async Task<ActionResult<IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Song>>> GetSongs(string search)
         {
-            return (await _bll.Songs.AllAsyncWithInclude())
+            if (string.IsNullOrWhiteSpace(search))
+            {
+                return (await _bll.Songs.AllAsyncWithInclude())
+                    .Select(PublicApi.v1.Mappers.SongMapper.MapFromBLL).ToList();
+            }
+            return (await _bll.Songs.SearchSongs(search))
                 .Select(PublicApi.v1.Mappers.SongMapper.MapFromBLL).ToList();
         }
+        
 
         // GET: api/Songs/5
         /// <summary>
