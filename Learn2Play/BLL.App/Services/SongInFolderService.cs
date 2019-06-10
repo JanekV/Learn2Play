@@ -19,5 +19,10 @@ namespace BLL.App.Services
         {
             return (await Uow.SongInFolders.AllAsyncWithInclude()).Select(SongInFolderMapper.MapFromDAL).ToList();
         }
+
+        public void RemoveSong(int folderId, int songId)
+        {
+            Uow.SongInFolders.RemoveSong(folderId, songId);
+        }
     }
 }

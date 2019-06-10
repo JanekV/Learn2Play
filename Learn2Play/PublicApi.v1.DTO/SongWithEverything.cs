@@ -18,5 +18,6 @@ namespace PublicApi.v1.DTO
         public List<Style> Styles { get; set; }
         public List<Chord> Chords { get; set; }
         public List<Video> Videos { get; set; }
+        public List<Folder> Folders { get; set; }
     }
 }

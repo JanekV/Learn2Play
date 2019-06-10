@@ -12,6 +12,9 @@ namespace Contracts.DAL.App.Repositories
         Task<List<DALAppDTO.FolderWithSong>> AllWithSongsAsync(int userId);
         Task<DALAppDTO.FolderWithSong> FindFolderWithSongsAsync(int folderId, int userId);
         Task<List<DALAppDTO.DomainEntityDTOs.Folder>> AllAsync(int userId);
+        Task<DALAppDTO.DomainEntityDTOs.Folder> AddForUserAsync(DALAppDTO.DomainEntityDTOs.Folder folder, int userId);
+        Task<DALAppDTO.DomainEntityDTOs.Folder> UpdateForUser(DALAppDTO.DomainEntityDTOs.Folder folder, int userId);
+        Task<List<DALAppDTO.DomainEntityDTOs.Folder>> AllWithSongId(int songId, int userId);
     }
     
     public interface IFolderRepository<TDALEntity>: IBaseRepository<TDALEntity> 

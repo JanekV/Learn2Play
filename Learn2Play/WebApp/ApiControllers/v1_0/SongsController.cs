@@ -2,8 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Contracts.BLL.App;
+using ee.itcollege.javalg.Identity;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PublicApi.v1.Mappers;
 
 namespace WebApp.ApiControllers.v1_0
 {
@@ -51,6 +55,7 @@ namespace WebApp.ApiControllers.v1_0
         [ProducesResponseType(typeof(PublicApi.v1.DTO.DomainEntityDTOs.Song),
             StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [HttpGet("{id}")]
         public async Task<ActionResult<PublicApi.v1.DTO.SongWithEverything>> GetSong(int id)
         {
@@ -60,36 +65,37 @@ namespace WebApp.ApiControllers.v1_0
             {
                 return NotFound();
             }
+            song.Folders = (await _bll.Folders.AllWithSongId(id, User.GetUserId())).ConvertAll(FolderMapper.MapFromBLL);
 
             return song;
         }
-/*
 
         // PUT: api/Songs/5
         /// <summary>
         /// Update a Song object with given id.
         /// </summary>
-        /// <param name="id">Unique integer used for identification of objects.</param>
-        /// <param name="song">PublicApi.v1.DTO.DomainEntityDTOs.Song type object.</param>
+        /// <param name="songId"></param>
+        /// <param name="folderIds"></param>
         /// <returns>NoContent();</returns>
         /// <response code="204">Song was successfully retrieved.</response>
         /// <response code="400">Song was not found.</response>
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutSong(int id, PublicApi.v1.DTO.DomainEntityDTOs.Song song)
+        [HttpPut("{songId}")]
+        public async Task<IActionResult> PutSong(int songId, int[] folderIds)
         {
-            if (id != song.Id)
+            if (songId == 0 || folderIds.Length < 1)
             {
                 return BadRequest();
             }
 
-            _bll.Songs.Update(PublicApi.v1.Mappers.SongMapper.MapFromExternal(song));
+            await _bll.UserFolders.AddSongToFoldersAsync(User.GetUserId(), songId, folderIds);
             await _bll.SaveChangesAsync();
 
             return NoContent();
         }
-
+/*
         // POST: api/Songs
         /// <summary>
         /// Create and post a new Song object.

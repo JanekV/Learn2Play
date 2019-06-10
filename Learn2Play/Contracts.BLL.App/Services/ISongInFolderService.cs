@@ -6,6 +6,6 @@ namespace Contracts.BLL.App.Services
 {
     public interface ISongInFolderService : IBaseEntityService<BLLAppDTO.SongInFolder>, ISongInFolderRepository<BLLAppDTO.SongInFolder>
     {
-        
+        void RemoveSong(int folderId, int songId);
     }
 }

@@ -7,6 +7,7 @@ namespace Contracts.DAL.App.Repositories
 {   
     public interface IUserFolderRepository : IUserFolderRepository<DALAppDTO.DomainEntityDTOs.UserFolder>
     {
+        Task AddSongToFoldersAsync(int userId, int songId, int[] folderIds);
     }
     public interface IUserFolderRepository<TDALEntity>: IBaseRepository<TDALEntity> 
         where TDALEntity : class, new()

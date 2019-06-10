@@ -25,6 +25,17 @@
         ${folder.comment}
       </dd>
     </dl>
+    <dl class="row">
+        <form>
+          <div class = "">
+            Songs
+          </div>
+          <div class="" repeat.for="song of folder.songs">
+            <label>${song.name} - ${song.author}</label>
+            <input type="button" value="Remove"  class="btn btn-danger" click.delegate="removeSong(song.id)" />
+          </div>
+        </form>
+    </dl>
   </div>
   <div>
     <!-- if.bind - add/remove element to dom based on predicate -->

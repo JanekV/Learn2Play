@@ -33,9 +33,19 @@ namespace BLL.App.Services
             return (await Uow.Folders.AllAsync(userId)).ConvertAll(FolderMapper.MapFromDAL);
         }
 
-        public Task<Folder> FindByFolderAndSongIdAsync(int folderId, int songId, int userId)
+        public async Task<Folder> AddForUserAsync(Folder folder, int userId)
         {
-            throw new System.NotImplementedException();
+            return FolderMapper.MapFromDAL(await Uow.Folders.AddForUserAsync(FolderMapper.MapFromBLL(folder), userId));
+        }
+
+        public async Task<Folder> UpdateForUser(Folder folder, int userId)
+        {
+            return FolderMapper.MapFromDAL(await Uow.Folders.UpdateForUser(FolderMapper.MapFromBLL(folder), userId));
+        }
+
+        public async Task<List<Folder>> AllWithSongId(int songId, int userId)
+        {
+            return (await Uow.Folders.AllWithSongId(songId, userId)).ConvertAll(FolderMapper.MapFromDAL);
         }
     }
 }

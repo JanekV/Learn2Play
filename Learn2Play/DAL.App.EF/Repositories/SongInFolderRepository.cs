@@ -23,7 +23,16 @@ namespace DAL.App.EF.Repositories
                 .Select(e => SongInFolderMapper.MapFromDomain(e))
                 .ToListAsync();
         }
-        
+
+        public async void RemoveSong(int folderId, int songId)
+        {
+            var res = await RepositoryDbSet.FirstOrDefaultAsync(sif => sif.FolderId == folderId && sif.SongId == songId);
+            if (res != null)
+            {
+                RepositoryDbSet.Remove(res);
+            }
+        }
+
         public async Task<DAL.App.DTO.DomainEntityDTOs.SongInFolder> FindAsync(int id)
         {
             

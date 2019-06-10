@@ -17,6 +17,40 @@ namespace DAL.App.EF.Repositories
         {
         }
 
+        public async Task<Folder> UpdateForUser(Folder folder, int userId)
+        {
+            return await RepositoryDbContext.UserFolders
+                       .FirstOrDefaultAsync(uf => uf.FolderId == folder.Id && uf.AppUserId == userId) != null ? base.Update(folder) : null;
+        }
+
+        public async Task<List<Folder>> AllWithSongId(int songId, int userId)
+        {
+            var userFolders = await RepositoryDbContext.UserFolders.Where(uf => uf.AppUserId == userId).ToListAsync();
+            var folders = new List<Folder>();
+            foreach (var userFolder in userFolders)
+            {
+                var folder = await RepositoryDbContext.SongInFolders
+                    .Where(sif => sif.FolderId == userFolder.FolderId && sif.SongId == songId)
+                    .Select(sif => sif.Folder)
+                    .FirstOrDefaultAsync();
+                folders.Add(FolderMapper.MapFromDomain(folder));
+                
+            }
+            return folders;
+        }
+
+        public async Task<Folder> AddForUserAsync(Folder folder, int userId)
+        {
+            folder = await base.AddAsync(folder);
+            await RepositoryDbContext.UserFolders.AddAsync(new UserFolder()
+            {
+                AppUserId = userId,
+                FolderId = folder.Id,
+                Folder = FolderMapper.MapFromDAL(folder)
+            });
+            return folder;
+        }
+
         public async Task<List<FolderWithSong>> AllWithSongsAsync(int userId)
         {
             var res = await RepositoryDbContext.UserFolders

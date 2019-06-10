@@ -7,6 +7,7 @@ namespace Contracts.DAL.App.Repositories
 {   
     public interface ISongInFolderRepository : ISongInFolderRepository<DALAppDTO.DomainEntityDTOs.SongInFolder>
     {
+        void RemoveSong(int folderId, int songId);
     }
     public interface ISongInFolderRepository<TDALEntity>: IBaseRepository<TDALEntity> 
         where TDALEntity : class, new()

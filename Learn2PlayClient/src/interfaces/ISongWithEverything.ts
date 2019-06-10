@@ -3,6 +3,7 @@ import { IInstrument } from "./IInstrument";
 import { IStyle } from "./IStyle";
 import { IChord } from "./IChord";
 import { IVideo } from "./IVideo";
+import { IFolder } from "./IFolder";
 
 export interface ISongWithEverything extends IBaseEntity {
   name: string;
@@ -16,4 +17,5 @@ export interface ISongWithEverything extends IBaseEntity {
   styles: IStyle[];
   chords: IChord[];
   video: IVideo[];
+  folders: IFolder[];
 }

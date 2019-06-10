@@ -19,5 +19,10 @@ namespace BLL.App.Services
         {
             return (await Uow.UserFolders.AllAsyncWithInclude()).Select(UserFolderMapper.MapFromDAL).ToList();
         }
+
+        public async Task AddSongToFoldersAsync(int userId, int songId, int[] folderIds)
+        {
+            await Uow.UserFolders.AddSongToFoldersAsync( userId, songId, folderIds);
+        }
     }
 }

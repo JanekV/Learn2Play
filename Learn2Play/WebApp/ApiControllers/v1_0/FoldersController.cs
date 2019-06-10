@@ -6,9 +6,11 @@ using ee.itcollege.javalg.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using PublicApi.v1.DTO;
 using PublicApi.v1.DTO.DomainEntityDTOs;
+using PublicApi.v1.DTO.Identity;
 using PublicApi.v1.Mappers;
 
 namespace WebApp.ApiControllers.v1_0
@@ -34,8 +36,13 @@ namespace WebApp.ApiControllers.v1_0
         [ProducesResponseType(typeof(IEnumerable<PublicApi.v1.DTO.DomainEntityDTOs.Folder>),
             StatusCodes.Status200OK)]        
         [HttpGet]
-        public async Task<List<Folder>> GetFolders()
+        public async Task<List<Folder>> GetFolders(int songId)
         {
+            if (songId > 0)
+            {
+                return (await _bll.Folders.AllWithSongId(songId, User.GetUserId()))
+                    .Select(PublicApi.v1.Mappers.FolderMapper.MapFromBLL).ToList();
+            }
             return (await _bll.Folders.AllAsync(User.GetUserId()))
                 .Select(PublicApi.v1.Mappers.FolderMapper.MapFromBLL).ToList();
         }
@@ -81,7 +88,7 @@ namespace WebApp.ApiControllers.v1_0
                 return BadRequest();
             }
 
-            _bll.Folders.Update(PublicApi.v1.Mappers.FolderMapper.MapFromExternal(folder));
+            await _bll.Folders.UpdateForUser(PublicApi.v1.Mappers.FolderMapper.MapFromExternal(folder), User.GetUserId());
             await _bll.SaveChangesAsync();
 
             return NoContent();
@@ -100,7 +107,7 @@ namespace WebApp.ApiControllers.v1_0
         public async Task<ActionResult<PublicApi.v1.DTO.DomainEntityDTOs.Folder>> PostFolder(PublicApi.v1.DTO.DomainEntityDTOs.Folder folder)
         {
             folder = PublicApi.v1.Mappers.FolderMapper.MapFromBLL(
-                await _bll.Folders.AddAsync(PublicApi.v1.Mappers.FolderMapper.MapFromExternal(folder)));
+                await _bll.Folders.AddForUserAsync(PublicApi.v1.Mappers.FolderMapper.MapFromExternal(folder), User.GetUserId()));
             
             await _bll.SaveChangesAsync();
 
@@ -139,42 +146,19 @@ namespace WebApp.ApiControllers.v1_0
 
             return NoContent();
         }
-        /// <summary>
-        /// Get a Folder object by id and all songs in db.
-        /// </summary>
-        /// <param name="folderId">Unique integer used for identification of objects.</param>
-        /// <returns>Folder object with given id and all songs.</returns>
-        /// <response code="200">Folder was successfully retrieved.</response>
-        /// <response code="404">Folder was not found.</response>
-        [ProducesResponseType(typeof(PublicApi.v1.DTO.AddSongToFolder),
-            StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        [HttpGet("{id}")]
-        public async Task<AddSongToFolder> GetFolderWithAllSongs(int folderId)
-        {
-            var folder = await _bll.Folders.FindAsync(folderId);
-            var fws = new AddSongToFolder()
-            {
-                FolderId = folderId,
-                FolderName = folder.Name,
-                Songs = (await _bll.Songs.AllAsync()).ConvertAll(SongMapper.MapFromBLL)
-            };
-            return fws;
-        }
 
         /// <summary>
         /// Removes a song from a folder if the folder belongs to the user.
         /// </summary>
         /// <returns>NoContent();</returns>
-        /// <response code="204">Folder with given id was successfully deleted.</response>
-        /// <response code="404">Folder with given id was not found.</response>
+        /// <response code="204">Song was successfully removed.</response>
+        /// <response code="404">Folder or song were not found.</response>
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [HttpDelete("{songId}/{folderId}")]
         public async Task<IActionResult> RemoveSong(int songId, int folderId)
         {
-            var folder = await _bll.Folders.FindByFolderAndSongIdAsync(folderId, songId, User.GetUserId());
-            _bll.SongChords.Remove(folder.Id);
+            _bll.SongInFolders.RemoveSong(folderId, songId);
             await _bll.SaveChangesAsync();
             return NoContent();
         }

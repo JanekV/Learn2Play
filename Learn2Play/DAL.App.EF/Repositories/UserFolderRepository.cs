@@ -6,6 +6,7 @@ using DAL.App.EF.Mappers;
 using ee.itcollege.javalg.DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Folder = DAL.App.DTO.DomainEntityDTOs.Folder;
 
 namespace DAL.App.EF.Repositories
 {
@@ -23,20 +24,31 @@ namespace DAL.App.EF.Repositories
                 .Select(e => UserFolderMapper.MapFromDomain(e))
                 .ToListAsync();
         }
-        
+
+        public async Task AddSongToFoldersAsync(int userId, int songId, int[] folderIds)
+        {
+            var song = await RepositoryDbContext.Songs.FindAsync(songId);
+            foreach (var id in folderIds)
+            {
+                var userFolder = await RepositoryDbSet.FirstOrDefaultAsync(uf => uf.AppUserId == userId && uf.FolderId == id);
+                if (userFolder == null) continue;
+                var songInFolder =
+                    await RepositoryDbContext.SongInFolders.FirstOrDefaultAsync(sif => sif.FolderId == id);
+                if (songInFolder == null)
+                {
+                    await RepositoryDbContext.SongInFolders.AddAsync(new SongInFolder()
+                    {
+                        FolderId = id,
+                        Folder = userFolder.Folder,
+                        Song = song,
+                        SongId = songId
+                    });
+                }
+            }
+        }
+
         public async Task<DAL.App.DTO.DomainEntityDTOs.UserFolder> FindAsync(int id)
         {
-            /*var userFolder = await base.FindAsync(id);
-            if (userFolder != null)
-            {
-                await RepositoryDbContext.Entry(userFolder)
-                    .Reference(uf => uf.AppUser).LoadAsync();
-                await RepositoryDbContext.Entry(userFolder)
-                    .Reference(uf => uf.Folder).LoadAsync();
-            }
-            return userFolder;
-            */
-
             var userFolder = await RepositoryDbSet
                 .Include(uf => uf.AppUser)
                 .Include(uf => uf.Folder)

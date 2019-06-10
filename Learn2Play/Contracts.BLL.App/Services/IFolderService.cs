@@ -13,6 +13,9 @@ namespace Contracts.BLL.App.Services
         Task<List<FolderWithSong>> AllWithSongsAsync(int userId);
         Task<FolderWithSong> FindFolderWithSongsAsync(int folderId, int userId);
         Task<List<BLLAppDTO.Folder>> AllAsync(int userId);
-        Task<BLLAppDTO.Folder> FindByFolderAndSongIdAsync(int folderId, int songId, int userId);
+        Task<BLLAppDTO.Folder> AddForUserAsync(BLLAppDTO.Folder folder, int userId);
+        Task<BLLAppDTO.Folder> UpdateForUser(BLLAppDTO.Folder folder, int userId);
+        Task<List<BLLAppDTO.Folder>> AllWithSongId(int songId, int userId);
     }
 }
+

@@ -1,5 +1,5 @@
 import { FoldersService } from 'services/folders-service';
-import { LogManager, View, autoinject } from "aurelia-framework";
+import { LogManager, View, autoinject, bindable } from "aurelia-framework";
 import { RouteConfig, NavigationInstruction, Router } from "aurelia-router";
 import { IFolder } from "interfaces/IFolder";
 
@@ -59,5 +59,16 @@ export class Details{
 
   deactivate() {
     log.debug('deactivate');
+  }
+  // =============== Custom stuff =======================
+  removeSong(id: number):void{
+    log.debug('remove song');
+    this.foldersService.removeSong(id, this.folder.id).then(response => {
+      if (response.status == 204){
+        this.router.navigateToRoute("foldersIndex");
+      } else {
+        log.debug('response', response);
+      }
+    });
   }
 }
