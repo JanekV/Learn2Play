@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using BLL.App.DTO.DomainEntityDTOs;
-using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace BLL.App.DTO
 {
@@ -26,7 +25,6 @@ namespace BLL.App.DTO
         
         public List<Video> Videos { get; set; }
         public List<int> InstrumentIds { get; set; }
-        public SelectList SongKeySelectList { get; set; }
         public int SongKeyId { get; set; }
     }
 }

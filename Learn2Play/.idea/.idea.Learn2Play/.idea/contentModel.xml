@@ -455,6 +455,7 @@
             <e p="ViewModels" t="Include">
               <e p="ChordCreateEditViewModel.cs" t="Include" />
               <e p="ChordWithNoteViewModel.cs" t="Include" />
+              <e p="SongCreateEditViewModel.cs" t="Include" />
               <e p="SongCreateViewModel.cs" t="Include" />
               <e p="SongWithChordViewModel.cs" t="Include" />
               <e p="SongWithInstrumentViewModel.cs" t="Include" />

@@ -8,8 +8,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using WebApp.Areas.Admin.ViewModels;
+using WebApp.ViewModels;
 using Chord = BLL.App.DTO.DomainEntityDTOs.Chord;
 using Instrument = BLL.App.DTO.DomainEntityDTOs.Instrument;
+using SongCreateEditViewModel = WebApp.Areas.Admin.ViewModels.SongCreateEditViewModel;
 using Style = BLL.App.DTO.DomainEntityDTOs.Style;
 using Video = BLL.App.DTO.DomainEntityDTOs.Video;
 
@@ -58,7 +60,7 @@ namespace WebApp.Areas.Admin.Controllers
         // GET: Songs/Create
         public async Task<IActionResult> Create()
         {
-            var vm = new SongCreateViewModel();
+            var vm = new SongCreateEditViewModel();
             vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
                 nameof(SongKey.Id), nameof(SongKey.Description));
             return View(vm);
@@ -69,7 +71,7 @@ namespace WebApp.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(SongCreateViewModel vm)
+        public async Task<IActionResult> Create(SongCreateEditViewModel vm)
         {
             if (ModelState.IsValid)
             {
@@ -90,14 +92,16 @@ namespace WebApp.Areas.Admin.Controllers
                 return NotFound();
             }
 
-            var song = await _bll.Songs.GetSongWithEverythingAsync(id.Value);
+            var song = await _bll.Songs.FindAsync(id);
             if (song == null)
             {
                 return NotFound();
             }
-            song.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
-                nameof(SongKey.Id), nameof(SongKey.Description));
-            return View(song);
+            var vm = new SongCreateEditViewModel();
+            vm.Song = song;
+            vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
+                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
+            return View(vm);
         }
 
         // POST: Songs/Edit/5
@@ -105,22 +109,22 @@ namespace WebApp.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, BLL.App.DTO.SongWithEverything swe)
+        public async Task<IActionResult> Edit(int id, SongCreateEditViewModel vm)
         {
-            if (id != swe.Id)
+            if (id != vm.Song.Id)
             {
                 return NotFound();
             }
 
             if (ModelState.IsValid)
             {
-                await _bll.Songs.UpdateSongWithEverything(swe);
+                _bll.Songs.Update(vm.Song);
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            swe.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
-                nameof(SongKey.Id), nameof(SongKey.Description));
-            return View(swe);
+            vm.SongKeySelectList = new SelectList(await _bll.SongKeys.AllAsyncWithInclude(),
+                nameof(SongKey.Id), nameof(SongKey.Description), vm.Song.SongKeyId);
+            return View(vm);
         }
 
         // GET: Songs/Delete/5

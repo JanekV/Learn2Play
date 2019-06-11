@@ -1,4 +1,4 @@
-@model BLL.App.DTO.SongWithEverything
+@model WebApp.Areas.Admin.ViewModels.SongCreateEditViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -8,11 +8,13 @@
 
 <h4>@Resources.Domain.Common.Song</h4>
 <hr />
+@*
 <h6>@Resources.Domain.Common.ThisSongIs @Model.FoldersCount @Resources.Domain.Common.Folders</h6>
+*@
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
-            <input type="hidden" asp-for="@Model.Id" />
+            <input type="hidden" asp-for="Song.Id" />
             <partial name="PartialCreateEdit" model="Model"/>
             <div class="form-group">
                 <input type="submit" value="@Resources.Domain.Common.Save" class="btn btn-primary" />
