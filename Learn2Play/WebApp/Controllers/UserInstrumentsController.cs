@@ -16,7 +16,7 @@ using WebApp.ViewModels;
 
 namespace WebApp.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "DbAdmin")]
     public class UserInstrumentsController : Controller
     {
         private readonly IAppBLL _bll;

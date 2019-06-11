@@ -184,8 +184,10 @@ namespace WebApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApiVersionDescriptionProvider provider)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApiVersionDescriptionProvider provider,
+            AppDbContext context, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
+            DAL.App.EF.SeedUsers.SeedInitUsers(context, userManager, roleManager);
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

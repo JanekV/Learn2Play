@@ -10,10 +10,12 @@ using Microsoft.EntityFrameworkCore;
 using DAL.App.EF;
 using Domain;
 using Domain.Identity;
+using Microsoft.AspNetCore.Authorization;
 using Folder = BLL.App.DTO.DomainEntityDTOs.Folder;
 
 namespace WebApp.Controllers
 {
+    [Authorize(Roles = "DbAdmin")]
     public class FoldersController : Controller
     {
         private readonly IAppBLL _bll;
