@@ -20,21 +20,22 @@ export class SongsService extends BaseService<ISong> {
   async fetchSWE(id: number): Promise<ISongWithEverything> {
     let url = this.appConfig.apiUrl + 'Songs/' + id;
 
-    try {
-      const response = await this.httpClient.fetch(url, {
-        cache: 'no-store',
-        headers: {
-          Authorization: 'Bearer ' + this.appConfig.jwt,
-        }
+    return this.httpClient.fetch(url, {
+      cache: 'no-store',
+      headers: {
+        Authorization: 'Bearer ' + this.appConfig.jwt,
+      }
+    })
+      .then(response => {
+        log.debug('resonse', response);
+        return response.json();
+      })
+      .then(jsonData => {
+        log.debug('jsonData', jsonData);
+        return jsonData;
+      }).catch(reason => {
+        log.debug('catch reason', reason);
       });
-      log.debug('resonse', response);
-      const jsonData = await response.json();
-      log.debug('jsonData', jsonData);
-      return jsonData;
-    }
-    catch (reason) {
-      log.debug('catch reason', reason);
-    }
   }
 
   // Given song and folder id's, put song in folder

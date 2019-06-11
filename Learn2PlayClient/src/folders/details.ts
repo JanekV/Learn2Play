@@ -63,12 +63,16 @@ export class Details{
   // =============== Custom stuff =======================
   removeSong(id: number):void{
     log.debug('remove song');
-    this.foldersService.removeSong(id, this.folder.id).then(response => {
-      if (response.status == 204){
-        this.router.navigateToRoute("foldersIndex");
-      } else {
-        log.debug('response', response);
-      }
+    if(this.folder !== null){
+      this.foldersService.removeSong(id, this.folder.id).then(response => {
+        if (response.status == 204){
+          this.router.navigateToRoute("foldersIndex");
+        } else {
+          log.debug('response', response);
+        }
     });
+    } else {
+      log.debug('folder is null!');
+    }
   }
 }

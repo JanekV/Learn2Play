@@ -88,10 +88,7 @@
       <label>
         Add to folder(s):
         <select multiple value.bind="folderIds">
-          <option repeat.for="f of folders"
-                model.bind="f.id">
-            ${f.Name} - ${f.folderType}
-          </option>
+          <option repeat.for="f of folders" model.bind="f.id">${f.name}</option>
         </select>
       </label>
     </div>

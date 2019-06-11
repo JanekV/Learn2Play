@@ -31,7 +31,7 @@
             Songs
           </div>
           <div class="" repeat.for="song of folder.songs">
-            <label>${song.name} - ${song.author}</label>
+            <a route-href="route: songsDetails; params.bind: {id: song.id}">${song.name} - ${song.author}</a>
             <input type="button" value="Remove"  class="btn btn-danger" click.delegate="removeSong(song.id)" />
           </div>
         </form>

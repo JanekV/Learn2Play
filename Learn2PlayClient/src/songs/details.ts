@@ -74,15 +74,16 @@ export class Details{
   // =============== Stuffffff =======================
   putInFolders():void {
     log.debug('putInFolder called' + this.folderIds)
-    this.songService.putSongInFolder(this.song.id, this.folderIds).then(
-      response => {
-        if (response.status == 204){
-          this.router.navigateToRoute("songsIndex");
-        } else {
-          log.error('Error in response!', response);
+    if(this.song !== null){
+      this.songService.putSongInFolder(this.song.id, this.folderIds).then(
+        response => {
+          if (response.status == 204){
+            this.router.navigateToRoute("songsIndex");
+          } else {
+            log.error('Error in response!', response);
+          }
         }
-      }
-    )
-
+      )
+    }
   }
 }

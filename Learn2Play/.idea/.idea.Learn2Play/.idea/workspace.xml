@@ -6,88 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/SongInFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL.App/Services/UserFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/ISongInFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.BLL.App/Services/IUserFolderService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.BLL.App/Services/IUserFolderService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/IFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/IFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/ISongInFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/IUserFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/Repositories/IUserFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Contracts.DAL.App/obj/Debug/netstandard2.0/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/SongInFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/Repositories/UserFolderRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/bin/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/DAL.App.EF/obj/Debug/netstandard2.0/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PublicApi.v1.DTO/SongWithEverything.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PublicApi.v1.DTO/SongWithEverything.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ApiControllers/v1_0/FoldersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ApiControllers/v1_0/FoldersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/ApiControllers/v1_0/SongsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/ApiControllers/v1_0/SongsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/Contracts.DAL.App.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/DAL.App.EF.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/BrowserMetrics/BrowserMetrics-5CADE835-1494.pma" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/BudgetDatabase/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/BudgetDatabase/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_0" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_2" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_3" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cache/data_3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Code Cache/js/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Code Cache/js/index-dir/the-real-index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cookies" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Cookies" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Current Session" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Current Session" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Current Tabs" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Current Tabs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Extension State/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Extension State/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Feature Engagement Tracker/AvailabilityDB/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Feature Engagement Tracker/AvailabilityDB/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Feature Engagement Tracker/EventDB/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Feature Engagement Tracker/EventDB/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/GPUCache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/GPUCache/data_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/History" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/History" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/History Provider Cache" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/History Provider Cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Local Storage/leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Local Storage/leveldb/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Login Data" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Login Data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Network Persistent State" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Network Persistent State" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Preferences" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Preferences" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Secure Preferences" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Secure Preferences" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Session Storage/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Session Storage/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Shortcuts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Shortcuts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Site Characteristics Database/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Site Characteristics Database/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/Code Cache/js/index-dir/the-real-index" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Storage/ext/gfdkimpbcpahaombhbimeihdjnejgicl/def/Code Cache/js/index-dir/the-real-index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Sync Data/LevelDB/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Sync Data/LevelDB/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/TransportSecurity" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/TransportSecurity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Web Data" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/Web Data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/data_reduction_proxy_leveldb/CURRENT" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/data_reduction_proxy_leveldb/CURRENT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/data_reduction_proxy_leveldb/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/data_reduction_proxy_leveldb/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/data_reduction_proxy_leveldb/MANIFEST-000002" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/page_load_capping_opt_out.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/shared_proto_db/metadata/LOG" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Default/shared_proto_db/metadata/LOG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Last Version" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Last Version" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Local State" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/Local State" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/ShaderCache/GPUCache/data_0" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/ShaderCache/GPUCache/data_0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/ShaderCache/GPUCache/data_1" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/ShaderCache/GPUCache/data_1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/ShaderCache/GPUCache/data_3" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/ShaderCache/GPUCache/data_3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/chrome_shutdown_ms.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/.chrome/chrome_shutdown_ms.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/folders/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/folders/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/folders/details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/folders/details.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/interfaces/ISongWithEverything.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/interfaces/ISongWithEverything.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/services/folders-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/services/folders-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/services/songs-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/services/songs-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/songs/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/songs/details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/songs/details.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/songs/details.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/songs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/songs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/tsconfig.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,110 +35,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/WebApp/ApiControllers/v1_0/SongsController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="92" column="94" selection-start-line="92" selection-start-column="94" selection-end-line="92" selection-end-column="94" />
-              <folding>
-                <marker date="1560183678667" expanded="false" signature="6:331" ph="..." />
-                <marker date="1560183678667" expanded="true" signature="369:5666" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="519:5664" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="609:653" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="689:900" ph="/// Get all Song objects ... " />
-                <marker date="1560183678667" expanded="true" signature="909:1029" ph="[...]" />
-                <marker date="1560183678667" expanded="true" signature="1164:1545" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="1225:1399" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="1592:2003" ph="/// Get a Song with everything else, videos, styles etc included. ... " />
-                <marker date="1560183678667" expanded="true" signature="2012:2119" ph="[...]" />
-                <marker date="1560183678667" expanded="true" signature="2384:2761" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="2541:2604" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="2799:3155" ph="/// Update a Song object with given id. ... " />
-                <marker date="1560183678667" expanded="true" signature="3474:3784" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="3537:3602" ph="{...}" />
-                <marker date="1560183678667" expanded="true" signature="3785:5658" ph="/* Create and post a new Song object. ... */" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BLL.App/Services/FolderService.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-              <folding>
-                <marker date="1560179693004" expanded="true" signature="6:315" ph="..." />
-                <marker date="1560179693004" expanded="true" signature="343:1895" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="502:1893" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="589:654" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="733:855" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="949:1075" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="1137:1250" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="1328:1468" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="1544:1682" ph="{...}" />
-                <marker date="1560179693004" expanded="true" signature="1761:1887" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-              <folding>
-                <marker date="1560180638819" expanded="false" signature="6:320" ph="..." />
-                <marker date="1560180638819" expanded="true" signature="355:4259" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="492:4257" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="612:632" ph="{...}" />
-                <marker date="1560180638819" expanded="false" signature="708:925" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="1004:1634" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="1231:1596" ph="{...}" />
-                <marker date="1560180638819" expanded="false" signature="1712:2046" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="1861:2007" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="2125:2986" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="2299:2599" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="2711:2933" ph="{...}" />
-                <marker date="1560180638819" expanded="false" signature="3080:3945" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="3281:3581" ph="{...}" />
-                <marker date="1560180638819" expanded="true" signature="3678:3910" ph="{...}" />
-                <marker date="1560180638819" expanded="false" signature="4007:4251" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebApp/ApiControllers/v1_0/FoldersController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-480">
-              <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+            <state relative-caret-position="60">
+              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
               <folding>
-                <marker date="1560194366573" expanded="false" signature="6:466" ph="..." />
-                <marker date="1560194366573" expanded="true" signature="504:6793" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="736:6791" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="828:872" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="882:1117" ph="/// Get all Folder objects for current user. ... " />
-                <marker date="1560194366573" expanded="true" signature="1126:1248" ph="[...]" />
-                <marker date="1560194366573" expanded="true" signature="1337:1728" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="1375:1571" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="1738:2130" ph="/// Get a Folder object by id if user owns the folder. ... " />
-                <marker date="1560194366573" expanded="true" signature="2139:2240" ph="[...]" />
-                <marker date="1560194366573" expanded="true" signature="2420:2702" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="2601:2664" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="2712:3170" ph="/// Update a Folder object with given id. ... " />
-                <marker date="1560194366573" expanded="true" signature="3431:3749" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="3474:3539" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="3759:4130" ph="/// Create and post a new Folder object. ... " />
-                <marker date="1560194366573" expanded="true" signature="4416:5122" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="4981:5102" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="5132:5521" ph="/// Delete a Folder object with given id. ... " />
-                <marker date="1560194366573" expanded="true" signature="5778:6066" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="5879:5942" ph="{...}" />
-                <marker date="1560194366573" expanded="true" signature="6076:6382" ph="/// Removes a song from a folder if the folder belongs to the user. ... " />
-                <marker date="1560194366573" expanded="true" signature="6629:6785" ph="{...}" />
+                <marker date="1560244056130" expanded="false" signature="6:466" ph="..." />
+                <marker date="1560244056130" expanded="true" signature="504:6793" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="736:6791" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="828:872" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="882:1117" ph="/// Get all Folder objects for current user. ... " />
+                <marker date="1560244056130" expanded="true" signature="1126:1248" ph="[...]" />
+                <marker date="1560244056130" expanded="true" signature="1337:1728" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="1375:1571" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="1738:2130" ph="/// Get a Folder object by id if user owns the folder. ... " />
+                <marker date="1560244056130" expanded="true" signature="2139:2240" ph="[...]" />
+                <marker date="1560244056130" expanded="true" signature="2420:2702" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="2601:2664" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="2712:3170" ph="/// Update a Folder object with given id. ... " />
+                <marker date="1560244056130" expanded="true" signature="3431:3749" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="3474:3539" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="3759:4130" ph="/// Create and post a new Folder object. ... " />
+                <marker date="1560244056130" expanded="true" signature="4416:5122" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="4981:5102" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="5132:5521" ph="/// Delete a Folder object with given id. ... " />
+                <marker date="1560244056130" expanded="true" signature="5778:6066" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="5879:5942" ph="{...}" />
+                <marker date="1560244056130" expanded="true" signature="6076:6382" ph="/// Removes a song from a folder if the folder belongs to the user. ... " />
+                <marker date="1560244056130" expanded="true" signature="6629:6785" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -877,8 +726,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="y" value="4" />
-    <option name="width" value="1271" />
+    <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -889,7 +737,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
@@ -901,42 +748,14 @@
             <path>
               <item name="" type="784c90a0:SolutionExplorerRootNode" />
               <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="BLL.App" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="DAL.App.EF" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="DAL.App.EF" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="Repositories" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
               <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="ApiControllers" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="Learn2Play" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="WebApp" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="ApiControllers" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="v1_0" type="24d0babc:SolutionExplorerModelNode" />
             </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1079,14 +898,8 @@
       <workItem from="1560071730241" duration="5831000" />
       <workItem from="1560088886785" duration="17892000" />
       <workItem from="1560157409784" duration="8110000" />
-      <workItem from="1560178228629" duration="10012000" />
-    </task>
-    <task id="LOCAL-00009" summary="Replaced context with uow in all API controllers">
-      <created>1552835024545</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1552835024545</updated>
+      <workItem from="1560178228629" duration="10323000" />
+      <workItem from="1560241853440" duration="2748000" />
     </task>
     <task id="LOCAL-00010" summary="Replaced all viewbag/data stuff. Problem with UserInstrument ones and AppUserRepo">
       <created>1553801491380</created>
@@ -1424,11 +1237,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560110709216</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Song details view working, can add songs to folders, delete bug">
+      <created>1560194640388</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1560194640389</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="426435000" />
+    <option name="totallyTimeSpent" value="429494000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1440,17 +1260,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="4" width="1271" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22708505" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22609401" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" weight="0.44444445" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.498998" visible="true" weight="0.33760685" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39209402" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1483,7 +1302,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added 3rd layer dtos for public api and mappers. Not finished/working yet!!" />
     <MESSAGE value="gitignore change" />
     <MESSAGE value="added swagger, not working yet" />
     <MESSAGE value="swagger working" />
@@ -1508,7 +1326,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="Search working properly for songs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search working properly for songs" />
+    <MESSAGE value="Song details view working, can add songs to folders, delete bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Song details view working, can add songs to folders, delete bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1599,42 +1418,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Style.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <marker date="1560091283806" expanded="true" signature="89:378" ph="{...}" />
-            <marker date="1560091283806" expanded="true" signature="114:376" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Video.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="79" selection-start-line="21" selection-start-column="79" selection-end-line="21" selection-end-column="79" />
-          <folding>
-            <marker date="1560091191002" expanded="true" signature="89:626" ph="{...}" />
-            <marker date="1560091191002" expanded="true" signature="114:624" ph="{...}" />
-            <marker date="1560091191002" expanded="true" signature="505:617" ph="/* public int SongId { get; set; }  No need for in current functionality ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PublicApi.v1.DTO/DomainEntityDTOs/Song.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          <folding>
-            <marker date="1560092039846" expanded="true" signature="89:707" ph="{...}" />
-            <marker date="1560092039846" expanded="true" signature="113:705" ph="{...}" />
-            <marker date="1560092039846" expanded="true" signature="505:597" ph="/* [MaxLength(1000)] ... */" />
-            <marker date="1560092039846" expanded="true" signature="607:690" ph="/* public int SongKeyId { get; set; } ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Areas/Admin/Views/Songs/Index.cshtml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
@@ -2034,41 +1817,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2262">
-          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-          <folding>
-            <marker date="1559927998103" expanded="false" signature="6:1249" ph="..." />
-            <marker date="1559927998103" expanded="true" signature="1267:9575" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="1294:9573" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="1353:1416" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="1639:7526" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="1725:1989" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="2189:2285" ph="/* Unit of work and repositories ... */" />
-            <marker date="1559927998103" expanded="true" signature="2945:3033" ph="/* .AddDefaultIdentity&lt;AppUser&gt;() ... */" />
-            <marker date="1559927998103" expanded="true" signature="3252:3617" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="3685:3994" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="3788:3961" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="4244:4492" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="4536:4750" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="4815:4880" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="4967:5190" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="5606:6190" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="5806:6171" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="6435:7104" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="6499:6615" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="7119:7235" ph="/* services.AddMvc() ... */" />
-            <marker date="1559927998103" expanded="true" signature="7755:9567" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="7802:7923" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="7940:8199" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="8846:9191" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="8930:9173" ph="{...}" />
-            <marker date="1559927998103" expanded="true" signature="9242:9555" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -2284,31 +2032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
-          <folding>
-            <marker date="1560180638819" expanded="false" signature="6:320" ph="..." />
-            <marker date="1560180638819" expanded="true" signature="355:4259" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="492:4257" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="612:632" ph="{...}" />
-            <marker date="1560180638819" expanded="false" signature="708:925" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="1004:1634" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="1231:1596" ph="{...}" />
-            <marker date="1560180638819" expanded="false" signature="1712:2046" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="1861:2007" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="2125:2986" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="2299:2599" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="2711:2933" ph="{...}" />
-            <marker date="1560180638819" expanded="false" signature="3080:3945" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="3281:3581" ph="{...}" />
-            <marker date="1560180638819" expanded="true" signature="3678:3910" ph="{...}" />
-            <marker date="1560180638819" expanded="false" signature="4007:4251" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57139BFC-E1DA-4913-8884-2BBBF31D74D3/75/acb45102/List`1.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
@@ -2320,50 +2043,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="181">
           <caret line="143" column="6" selection-start-line="143" selection-start-column="6" selection-end-line="143" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/ApiControllers/v1_0/SongsController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="92" column="94" selection-start-line="92" selection-start-column="94" selection-end-line="92" selection-end-column="94" />
-          <folding>
-            <marker date="1560183678667" expanded="false" signature="6:331" ph="..." />
-            <marker date="1560183678667" expanded="true" signature="369:5666" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="519:5664" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="609:653" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="689:900" ph="/// Get all Song objects ... " />
-            <marker date="1560183678667" expanded="true" signature="909:1029" ph="[...]" />
-            <marker date="1560183678667" expanded="true" signature="1164:1545" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="1225:1399" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="1592:2003" ph="/// Get a Song with everything else, videos, styles etc included. ... " />
-            <marker date="1560183678667" expanded="true" signature="2012:2119" ph="[...]" />
-            <marker date="1560183678667" expanded="true" signature="2384:2761" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="2541:2604" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="2799:3155" ph="/// Update a Song object with given id. ... " />
-            <marker date="1560183678667" expanded="true" signature="3474:3784" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="3537:3602" ph="{...}" />
-            <marker date="1560183678667" expanded="true" signature="3785:5658" ph="/* Create and post a new Song object. ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BLL.App/Services/FolderService.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-          <folding>
-            <marker date="1560179693004" expanded="true" signature="6:315" ph="..." />
-            <marker date="1560179693004" expanded="true" signature="343:1895" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="502:1893" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="589:654" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="733:855" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="949:1075" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="1137:1250" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="1328:1468" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="1544:1682" ph="{...}" />
-            <marker date="1560179693004" expanded="true" signature="1761:1887" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2412,34 +2091,178 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/ApiControllers/v1_0/SongsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="92" column="94" selection-start-line="92" selection-start-column="94" selection-end-line="92" selection-end-column="94" />
+          <folding>
+            <marker date="1560183678667" expanded="false" signature="6:331" ph="..." />
+            <marker date="1560183678667" expanded="true" signature="369:5666" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="519:5664" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="609:653" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="689:900" ph="/// Get all Song objects ... " />
+            <marker date="1560183678667" expanded="true" signature="909:1029" ph="[...]" />
+            <marker date="1560183678667" expanded="true" signature="1164:1545" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="1225:1399" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="1592:2003" ph="/// Get a Song with everything else, videos, styles etc included. ... " />
+            <marker date="1560183678667" expanded="true" signature="2012:2119" ph="[...]" />
+            <marker date="1560183678667" expanded="true" signature="2384:2761" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="2541:2604" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="2799:3155" ph="/// Update a Song object with given id. ... " />
+            <marker date="1560183678667" expanded="true" signature="3474:3784" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="3537:3602" ph="{...}" />
+            <marker date="1560183678667" expanded="true" signature="3785:5658" ph="/* Create and post a new Song object. ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BLL.App/Services/FolderService.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="48" column="8" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
+          <folding>
+            <marker date="1560179693004" expanded="true" signature="6:315" ph="..." />
+            <marker date="1560179693004" expanded="true" signature="343:1895" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="502:1893" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="589:654" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="733:855" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="949:1075" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="1137:1250" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="1328:1468" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="1544:1682" ph="{...}" />
+            <marker date="1560179693004" expanded="true" signature="1761:1887" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
+          <folding>
+            <marker date="1560180638819" expanded="false" signature="6:320" ph="..." />
+            <marker date="1560180638819" expanded="true" signature="355:4259" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="492:4257" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="612:632" ph="{...}" />
+            <marker date="1560180638819" expanded="false" signature="708:925" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="1004:1634" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="1231:1596" ph="{...}" />
+            <marker date="1560180638819" expanded="false" signature="1712:2046" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="1861:2007" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="2125:2986" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="2299:2599" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="2711:2933" ph="{...}" />
+            <marker date="1560180638819" expanded="false" signature="3080:3945" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="3281:3581" ph="{...}" />
+            <marker date="1560180638819" expanded="true" signature="3678:3910" ph="{...}" />
+            <marker date="1560180638819" expanded="false" signature="4007:4251" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <marker date="1559498162875" expanded="false" signature="6:255" ph="..." />
+            <marker date="1559498162875" expanded="true" signature="273:600" ph="{...}" />
+            <marker date="1559498162875" expanded="true" signature="300:598" ph="{...}" />
+            <marker date="1559498162875" expanded="true" signature="353:427" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/ApiControllers/v1_0/Identity/AccountController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+          <folding>
+            <marker date="1558034037577" expanded="false" signature="6:405" ph="..." />
+            <marker date="1558034037577" expanded="true" signature="452:6020" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="615:6018" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="1103:1321" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="1331:1667" ph="/// Login method from API using JWT. ... " />
+            <marker date="1558034037577" expanded="true" signature="1891:3074" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="2036:2212" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="2434:3027" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="3092:3545" ph="/// Register method from API using JWT. ... " />
+            <marker date="1558034037577" expanded="true" signature="3838:5662" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="3884:5585" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="4113:5510" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="4217:4845" ph="/* var code = await _userManager.GenerateEmailConfirmationTokenAsync(appUser); ... */" />
+            <marker date="1558034037577" expanded="true" signature="5694:5809" ph="{...}" />
+            <marker date="1558034037577" expanded="true" signature="5843:6009" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2055">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding>
+            <marker date="1559927998103" expanded="false" signature="6:1249" ph="..." />
+            <marker date="1559927998103" expanded="true" signature="1267:9575" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="1294:9573" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="1353:1416" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="1639:7526" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="1725:1989" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="2189:2285" ph="/* Unit of work and repositories ... */" />
+            <marker date="1559927998103" expanded="true" signature="2945:3033" ph="/* .AddDefaultIdentity&lt;AppUser&gt;() ... */" />
+            <marker date="1559927998103" expanded="true" signature="3252:3617" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="3685:3994" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="3788:3961" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="4244:4492" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="4536:4750" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="4815:4880" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="4967:5190" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="5606:6190" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="5806:6171" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="6435:7104" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="6499:6615" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="7119:7235" ph="/* services.AddMvc() ... */" />
+            <marker date="1559927998103" expanded="true" signature="7755:9567" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="7802:7923" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="7940:8199" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="8846:9191" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="8930:9173" ph="{...}" />
+            <marker date="1559927998103" expanded="true" signature="9242:9555" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/ApiControllers/v1_0/FoldersController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-480">
-          <caret line="17" column="4" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
+        <state relative-caret-position="60">
+          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
           <folding>
-            <marker date="1560194366573" expanded="false" signature="6:466" ph="..." />
-            <marker date="1560194366573" expanded="true" signature="504:6793" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="736:6791" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="828:872" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="882:1117" ph="/// Get all Folder objects for current user. ... " />
-            <marker date="1560194366573" expanded="true" signature="1126:1248" ph="[...]" />
-            <marker date="1560194366573" expanded="true" signature="1337:1728" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="1375:1571" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="1738:2130" ph="/// Get a Folder object by id if user owns the folder. ... " />
-            <marker date="1560194366573" expanded="true" signature="2139:2240" ph="[...]" />
-            <marker date="1560194366573" expanded="true" signature="2420:2702" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="2601:2664" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="2712:3170" ph="/// Update a Folder object with given id. ... " />
-            <marker date="1560194366573" expanded="true" signature="3431:3749" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="3474:3539" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="3759:4130" ph="/// Create and post a new Folder object. ... " />
-            <marker date="1560194366573" expanded="true" signature="4416:5122" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="4981:5102" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="5132:5521" ph="/// Delete a Folder object with given id. ... " />
-            <marker date="1560194366573" expanded="true" signature="5778:6066" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="5879:5942" ph="{...}" />
-            <marker date="1560194366573" expanded="true" signature="6076:6382" ph="/// Removes a song from a folder if the folder belongs to the user. ... " />
-            <marker date="1560194366573" expanded="true" signature="6629:6785" ph="{...}" />
+            <marker date="1560244056130" expanded="false" signature="6:466" ph="..." />
+            <marker date="1560244056130" expanded="true" signature="504:6793" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="736:6791" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="828:872" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="882:1117" ph="/// Get all Folder objects for current user. ... " />
+            <marker date="1560244056130" expanded="true" signature="1126:1248" ph="[...]" />
+            <marker date="1560244056130" expanded="true" signature="1337:1728" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="1375:1571" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="1738:2130" ph="/// Get a Folder object by id if user owns the folder. ... " />
+            <marker date="1560244056130" expanded="true" signature="2139:2240" ph="[...]" />
+            <marker date="1560244056130" expanded="true" signature="2420:2702" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="2601:2664" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="2712:3170" ph="/// Update a Folder object with given id. ... " />
+            <marker date="1560244056130" expanded="true" signature="3431:3749" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="3474:3539" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="3759:4130" ph="/// Create and post a new Folder object. ... " />
+            <marker date="1560244056130" expanded="true" signature="4416:5122" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="4981:5102" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="5132:5521" ph="/// Delete a Folder object with given id. ... " />
+            <marker date="1560244056130" expanded="true" signature="5778:6066" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="5879:5942" ph="{...}" />
+            <marker date="1560244056130" expanded="true" signature="6076:6382" ph="/// Removes a song from a folder if the folder belongs to the user. ... " />
+            <marker date="1560244056130" expanded="true" signature="6629:6785" ph="{...}" />
           </folding>
         </state>
       </provider>

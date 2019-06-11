@@ -1,8 +1,9 @@
 {
-  "noImplicitAny": true,
-  "strictNullChecks": true,
+  
   "compileOnSave": false,
   "compilerOptions": {
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "module": "esnext",
     "skipLibCheck": true,
     "removeComments": true,
