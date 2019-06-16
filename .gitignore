@@ -363,4 +363,6 @@ TESTS-*.xml
 **/npm-debug.log
 **/lerna-debug.log
 
+nuget_api_key.txt
+
 test/cypress/integration/examples

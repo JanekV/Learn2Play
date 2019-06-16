@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_000f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_001d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_002d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_003d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_004d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_005d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_006d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/app-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/app-config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,11 +30,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="120" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="120" />
+            <state relative-caret-position="240">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="311">
+              <caret line="333" column="8" lean-forward="true" selection-start-line="333" selection-start-column="8" selection-end-line="333" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -661,7 +660,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Contracts.DAL.App/Repositories/IFolderRepository.cs" />
         <option value="$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1.DTO/SongWithEverything.cs" />
         <option value="$PROJECT_DIR$/WebApp/ApiControllers/v1_0/SongsController.cs" />
@@ -710,8 +708,9 @@
         <option value="$PROJECT_DIR$/WebApp/Controllers/NotesController.cs" />
         <option value="$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" />
         <option value="$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs" />
-        <option value="$PROJECT_DIR$/WebApp/appsettings.json" />
         <option value="$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh" />
+        <option value="$PROJECT_DIR$/WebApp/appsettings.json" />
+        <option value="$PROJECT_DIR$/../.gitignore" />
       </list>
     </option>
   </component>
@@ -907,14 +906,7 @@
       <workItem from="1560257000072" duration="31000" />
       <workItem from="1560259758439" duration="47000" />
       <workItem from="1560686449015" duration="1414000" />
-      <workItem from="1560695163077" duration="539000" />
-    </task>
-    <task id="LOCAL-00015" summary="Added template to Admin view">
-      <created>1554065004312</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1554065004312</updated>
+      <workItem from="1560695163077" duration="1117000" />
     </task>
     <task id="LOCAL-00016" summary="Fixed many to many relationships, tried to fix controllers but broke some :/">
       <created>1554653625387</created>
@@ -1252,11 +1244,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560259789147</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="cleanup">
+      <created>1560695952397</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1560695952398</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="440917000" />
+    <option name="totallyTimeSpent" value="441495000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1311,7 +1310,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Moved base stuff to nuget.org" />
     <MESSAGE value="git test after os nuke" />
     <MESSAGE value="Added Admin area and working on layout" />
     <MESSAGE value="Added more to admin area, fixed multilangstring update bug" />
@@ -1336,7 +1334,8 @@
     <MESSAGE value="fixes" />
     <MESSAGE value="mvp" />
     <MESSAGE value="mvpfinal" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvpfinal" />
+    <MESSAGE value="cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2591,11 +2590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4654" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -2605,8 +2599,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="120" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="120" />
+        <state relative-caret-position="240">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="333" column="8" lean-forward="true" selection-start-line="333" selection-start-column="8" selection-end-line="333" selection-end-column="8" />
         </state>
       </provider>
     </entry>
