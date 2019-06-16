@@ -9,6 +9,5 @@ dotnet build --configuration release
 # add .nuget files.
 dotnet pack --configuration release  
 
-# oy2pfyusmhpvpg3c7ypa6mjrq5kqxjluxgktfl5xdguo3q
 #publish all the package files
-nuget push -ApiKey oy2pfyusmhpvpg3c7ypa6mjrq5kqxjluxgktfl5xdguo3q -Source https://api.nuget.org/v3/index.json ee.itcollege.javalg**Release/ee.itcollege.javalg*.nupkg 
+nuget push -ApiKey [enter api key here] -Source [nuget url]

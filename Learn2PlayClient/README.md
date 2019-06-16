@@ -19,3 +19,27 @@ To enable hot module reload, do `au run --hmr`.
 ## Build for production
 
 Run `au build --env prod`.
+
+## Docker
+
+Pull latest nginx
+~~~
+docker pull nginx
+~~~
+Build, fist aurelia app then docker container
+~~~
+au build
+
+docker build -t nginxaurelia .
+~~~
+To run locally
+~~~
+docker run --name nginx  --rm -it -p 8080:80 nginxaurelia
+~~~
+
+Tag and push to docker
+~~~
+docker tag nginxaurelia <your_docker_username>/nginxaurelia:test
+
+docker push <your_docker_username>/nginxaurelia:test
+~~~

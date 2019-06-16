@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="012eac39-8df0-4835-9dce-064fa49a75d5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_000f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_001d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_002d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_003d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_004d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_005d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ERD/Learn2Play.vpp.bak_006d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Learn2Play/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/bin/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/Songs/Edit.g.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/Razor/Views/Songs/Edit.g.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/WebApp/obj/Debug/netcoreapp2.2/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Learn2PlayClient/src/app-config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Learn2PlayClient/src/app-config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +39,26 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="120" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="120" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -636,7 +661,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BLL.App/Services/FolderService.cs" />
         <option value="$PROJECT_DIR$/Contracts.DAL.App/Repositories/IFolderRepository.cs" />
         <option value="$PROJECT_DIR$/DAL.App.EF/Repositories/FolderRepository.cs" />
         <option value="$PROJECT_DIR$/PublicApi.v1.DTO/SongWithEverything.cs" />
@@ -683,17 +707,17 @@
         <option value="$PROJECT_DIR$/WebApp/Views/Songs/Edit.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Views/Songs/PartialCreateEdit.cshtml" />
         <option value="$PROJECT_DIR$/WebApp/Areas/Admin/Views/Songs/PartialCreateEdit.cshtml" />
-        <option value="$PROJECT_DIR$/WebApp/appsettings.json" />
         <option value="$PROJECT_DIR$/WebApp/Controllers/NotesController.cs" />
         <option value="$PROJECT_DIR$/WebApp/Controllers/ChordsController.cs" />
         <option value="$PROJECT_DIR$/WebApp/Controllers/ChordNotesController.cs" />
+        <option value="$PROJECT_DIR$/WebApp/appsettings.json" />
+        <option value="$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
-    <option name="y" value="4" />
-    <option name="width" value="1271" />
+    <option name="width" value="1294" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -704,11 +728,25 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="9a108dff:SolutionExplorerFileNode" />
+            </path>
+            <path>
+              <item name="" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="Learn2Play" type="9a108dff:SolutionExplorerFileNode" />
+              <item name="ee.itcollege.javalg" type="9a108dff:SolutionExplorerFileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -867,13 +905,9 @@
       <workItem from="1560178228629" duration="10323000" />
       <workItem from="1560241853440" duration="12140000" />
       <workItem from="1560257000072" duration="31000" />
-    </task>
-    <task id="LOCAL-00014" summary="Fixed issue with not being able to add stuff to the database and added Chords API controller">
-      <created>1554055338231</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1554055338231</updated>
+      <workItem from="1560259758439" duration="47000" />
+      <workItem from="1560686449015" duration="1414000" />
+      <workItem from="1560695163077" duration="539000" />
     </task>
     <task id="LOCAL-00015" summary="Added template to Admin view">
       <created>1554065004312</created>
@@ -1211,11 +1245,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560254118948</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="mvpfinal">
+      <created>1560259789146</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1560259789147</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="438917000" />
+    <option name="totallyTimeSpent" value="440917000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1227,9 +1268,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="4" width="1271" height="1047" extended-state="0" />
+    <frame x="-7" y="0" width="1294" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23451693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24230146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -1269,7 +1311,6 @@
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added content translation for Style entity, all works but editing makes changes to all values" />
     <MESSAGE value="Moved base stuff to nuget.org" />
     <MESSAGE value="git test after os nuke" />
     <MESSAGE value="Added Admin area and working on layout" />
@@ -1294,7 +1335,8 @@
     <MESSAGE value="seeding users and limiting access" />
     <MESSAGE value="fixes" />
     <MESSAGE value="mvp" />
-    <option name="LAST_COMMIT_MESSAGE" value="mvp" />
+    <MESSAGE value="mvpfinal" />
+    <option name="LAST_COMMIT_MESSAGE" value="mvpfinal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1372,71 +1414,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongKeysController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <marker date="1560245836761" expanded="false" signature="6:356" ph="..." />
-            <marker date="1560245836761" expanded="true" signature="386:4518" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="472:4516" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="565:609" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="684:772" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="866:1191" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="904:967" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="1083:1146" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="1274:1507" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="1517:1728" ph="/* POST: SongKeys/Create ... */" />
-            <marker date="1560245836761" expanded="true" signature="1861:2265" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="1907:2096" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="2353:2910" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="2391:2454" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="2571:2634" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="2920:3131" ph="/* POST: SongKeys/Edit/5 ... */" />
-            <marker date="1560245836761" expanded="true" signature="3270:3785" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="3317:3380" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="3417:3598" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="3877:4180" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="3915:3978" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="4072:4135" ph="{...}" />
-            <marker date="1560245836761" expanded="true" signature="4357:4510" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/Controllers/SongStylesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding>
-            <marker date="1560245836795" expanded="false" signature="6:356" ph="..." />
-            <marker date="1560245836795" expanded="true" signature="386:5249" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="474:5247" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="569:613" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="690:780" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="876:1187" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="914:977" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="1077:1140" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="1272:1689" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="1349:1648" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="1699:1912" ph="/* POST: SongStyles/Create ... */" />
-            <marker date="1560245836795" expanded="true" signature="2047:2613" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="2093:2286" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="2703:3434" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="2741:2804" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="2905:2968" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="3444:3657" ph="/* POST: SongStyles/Edit/5 ... */" />
-            <marker date="1560245836795" expanded="true" signature="3798:4502" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="3847:3910" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="3947:4132" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="4596:4907" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="4634:4697" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="4797:4860" ph="{...}" />
-            <marker date="1560245836795" expanded="true" signature="5086:5241" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WebApp/Controllers/StylesController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -2614,10 +2591,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
+    <entry file="file://$PROJECT_DIR$/../.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4654" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ee.itcollege.javalg/publish_nuget.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebApp/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="120" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="120" />
         </state>
       </provider>
     </entry>
