@@ -1,4 +1,4 @@
-Learn2Play
+<h1>Learn2Play
 
 Web application for beginners learning to play songs on guitar.
 
